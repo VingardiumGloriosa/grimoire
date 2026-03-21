@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Protection",
+    "description": "Shield yourself from negative energy, psychic attack, and environmental harm.",
+    "icon": "shield",
+    "stone_names": ["Black Tourmaline", "Obsidian", "Hematite", "Shungite", "Black Onyx", "Apache Tear"]
+  },
+  {
+    "name": "Love & Romance",
+    "description": "Open your heart to attract, deepen, and nurture romantic connection.",
+    "icon": "heart",
+    "stone_names": ["Rose Quartz", "Rhodochrosite", "Kunzite", "Chrysoprase", "Garnet", "Larimar"]
+  },
+  {
+    "name": "Abundance",
+    "description": "Attract prosperity, wealth, and opportunities into your life.",
+    "icon": "coins",
+    "stone_names": ["Citrine", "Pyrite", "Aventurine", "Jade", "Tiger's Eye", "Moss Agate"]
+  },
+  {
+    "name": "Healing",
+    "description": "Support the body's natural healing processes and restore energetic balance.",
+    "icon": "cross",
+    "stone_names": ["Clear Quartz", "Amethyst", "Bloodstone", "Green Calcite", "Prehnite", "Unakite"]
+  },
+  {
+    "name": "Intuition",
+    "description": "Strengthen your psychic abilities, inner knowing, and connection to higher wisdom.",
+    "icon": "eye",
+    "stone_names": ["Labradorite", "Amethyst", "Azurite", "Iolite", "Moonstone", "Tanzanite"]
+  },
+  {
+    "name": "Grounding",
+    "description": "Anchor your energy to the earth and find stability in times of chaos.",
+    "icon": "mountain",
+    "stone_names": ["Black Tourmaline", "Smoky Quartz", "Hematite", "Aragonite", "Red Jasper", "Shungite"]
+  },
+  {
+    "name": "Creativity",
+    "description": "Ignite inspiration, artistic expression, and innovative thinking.",
+    "icon": "palette",
+    "stone_names": ["Carnelian", "Sunstone", "Opal", "Lemon Quartz", "Fluorite"]
+  },
+  {
+    "name": "Communication",
+    "description": "Express yourself clearly, speak your truth, and improve understanding in relationships.",
+    "icon": "message-circle",
+    "stone_names": ["Lapis Lazuli", "Sodalite", "Aquamarine", "Amazonite", "Celestite", "Kyanite"]
+  },
+  {
+    "name": "Courage",
+    "description": "Build inner strength, overcome fear, and face challenges with confidence.",
+    "icon": "flame",
+    "stone_names": ["Carnelian", "Tiger's Eye", "Garnet", "Bloodstone", "Red Jasper", "Fire Agate"]
+  },
+  {
+    "name": "Peace & Calm",
+    "description": "Quiet the mind, ease anxiety, and cultivate deep inner stillness.",
+    "icon": "cloud",
+    "stone_names": ["Lepidolite", "Howlite", "Celestite", "Angelite", "Larimar", "Amethyst"]
+  },
+  {
+    "name": "Spiritual Growth",
+    "description": "Deepen your spiritual practice, expand consciousness, and connect to the divine.",
+    "icon": "sparkles",
+    "stone_names": ["Moldavite", "Selenite", "Charoite", "Spirit Quartz", "Danburite", "Apophyllite"]
+  },
+  {
+    "name": "Cleansing",
+    "description": "Purify your energy field, space, and other crystals from accumulated negativity.",
+    "icon": "droplets",
+    "stone_names": ["Selenite", "Clear Quartz", "Kyanite", "Shungite", "Black Tourmaline"]
+  },
+  {
+    "name": "Focus & Clarity",
+    "description": "Sharpen concentration, clear mental fog, and support decision-making.",
+    "icon": "target",
+    "stone_names": ["Fluorite", "Clear Quartz", "Sodalite", "Lemon Quartz", "Tiger's Eye", "Hematite"]
+  },
+  {
+    "name": "Self-Love",
+    "description": "Nurture your relationship with yourself through compassion, forgiveness, and acceptance.",
+    "icon": "heart-handshake",
+    "stone_names": ["Rose Quartz", "Rhodonite", "Rhodochrosite", "Kunzite", "Chrysoprase", "Moonstone"]
+  },
+  {
+    "name": "Transformation",
+    "description": "Navigate major life changes, release old patterns, and embrace personal evolution.",
+    "icon": "refresh-cw",
+    "stone_names": ["Malachite", "Moldavite", "Charoite", "Labradorite", "Obsidian", "Serpentine"]
+  }
+]

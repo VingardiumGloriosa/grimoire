@@ -1,0 +1,1522 @@
+[
+  {
+    "name": "Lavender",
+    "latin_name": "Lavandula angustifolia",
+    "description": "A fragrant perennial prized for its calming and purifying properties. Lavender has been used for centuries in sachets, baths, and incense to promote peace, restful sleep, and spiritual clarity.",
+    "planetary_ruler": "Mercury",
+    "element": "Air",
+    "chakra": "Crown",
+    "image_path": "herbs/lavender.svg",
+    "magical_uses": ["peace", "purification", "sleep", "love", "clarity"],
+    "medicinal_notes": ["Relieves anxiety and promotes relaxation", "Soothes headaches and migraines", "Antiseptic for minor burns and insect bites"],
+    "warnings": ["May cause drowsiness in large doses"],
+    "folklore": "In medieval Europe, lavender was strewn across floors to ward off plague and evil spirits. Placing lavender under a pillow was said to reveal the identity of one's future spouse in dreams.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Hecate", "Cernunnos", "Virgin Mary"],
+      "zodiac": ["Gemini", "Virgo"],
+      "festivals": ["Midsummer", "Imbolc"]
+    }
+  },
+  {
+    "name": "Rosemary",
+    "latin_name": "Rosmarinus officinalis",
+    "description": "A woody, aromatic herb associated with remembrance, fidelity, and mental clarity. Rosemary has been burned as incense in temples and homes since ancient times to cleanse sacred spaces and sharpen the mind.",
+    "planetary_ruler": "Sun",
+    "element": "Fire",
+    "chakra": "Third Eye",
+    "image_path": "herbs/rosemary.svg",
+    "magical_uses": ["protection", "memory", "purification", "love", "healing"],
+    "medicinal_notes": ["Improves memory and concentration", "Aids digestion and relieves bloating", "Stimulates circulation"],
+    "warnings": ["Avoid medicinal doses during pregnancy"],
+    "folklore": "Greek scholars wore rosemary garlands while studying to improve memory. It was placed in the hands of the dead to ensure they would not be forgotten in the afterlife.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Aphrodite", "Virgin Mary", "Hebe"],
+      "zodiac": ["Leo", "Aries"],
+      "festivals": ["Yule", "Beltane"]
+    }
+  },
+  {
+    "name": "White Sage",
+    "latin_name": "Salvia apiana",
+    "description": "A sacred cleansing herb native to the American Southwest, used extensively in smudging ceremonies. White sage clears negative energy and creates sacred space for ritual and meditation.",
+    "planetary_ruler": "Jupiter",
+    "element": "Air",
+    "chakra": "Crown",
+    "image_path": "herbs/white-sage.svg",
+    "magical_uses": ["purification", "protection", "wisdom", "banishing"],
+    "medicinal_notes": ["Antimicrobial properties when burned", "Traditional remedy for sore throats and colds", "Supports respiratory health"],
+    "warnings": ["Harvesting wild sage is controversial; source ethically", "Respect Indigenous traditions around its ceremonial use"],
+    "folklore": "Indigenous peoples of North America have burned white sage for millennia to purify spaces and people before ceremonies. The smoke is believed to carry prayers to the spirit world.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["White Buffalo Calf Woman", "Athena"],
+      "zodiac": ["Sagittarius", "Pisces"],
+      "festivals": ["Samhain", "Imbolc"]
+    }
+  },
+  {
+    "name": "Mugwort",
+    "latin_name": "Artemisia vulgaris",
+    "description": "A powerful visionary herb sacred to the moon and to dream work. Mugwort has been used across cultures to enhance psychic ability, induce prophetic dreams, and aid astral travel.",
+    "planetary_ruler": "Moon",
+    "element": "Earth",
+    "chakra": "Third Eye",
+    "image_path": "herbs/mugwort.svg",
+    "magical_uses": ["divination", "prophetic dreams", "astral travel", "protection"],
+    "medicinal_notes": ["Traditionally used as a digestive bitter", "Supports menstrual regularity", "Used in moxibustion in Traditional Chinese Medicine"],
+    "warnings": ["Avoid during pregnancy as it is a uterine stimulant", "May cause allergic reactions in those sensitive to ragweed"],
+    "folklore": "Named for the goddess Artemis, mugwort was placed in shoes by Roman soldiers to prevent fatigue on long marches. Sleeping on a mugwort pillow is said to produce vivid, prophetic dreams.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Artemis", "Diana", "Hecate"],
+      "zodiac": ["Cancer", "Libra"],
+      "festivals": ["Midsummer", "Samhain"]
+    }
+  },
+  {
+    "name": "Chamomile",
+    "latin_name": "Matricaria chamomilla",
+    "description": "A gentle, sun-loving herb known as the plant healer for its ability to revive ailing plants grown nearby. Chamomile brings calm, prosperity, and peaceful energy to any working.",
+    "planetary_ruler": "Sun",
+    "element": "Water",
+    "chakra": "Solar Plexus",
+    "image_path": "herbs/chamomile.svg",
+    "magical_uses": ["peace", "prosperity", "sleep", "luck", "purification"],
+    "medicinal_notes": ["Soothes digestive upset and nausea", "Promotes restful sleep", "Anti-inflammatory for skin irritations"],
+    "warnings": ["May cause reactions in those allergic to ragweed"],
+    "folklore": "Known in old English as 'maythen,' chamomile was one of the nine sacred herbs listed in the Anglo-Saxon Lacnunga. Gamblers would wash their hands in chamomile tea to ensure luck at cards.",
+    "growing_season": "Spring to Summer",
+    "correspondences": {
+      "deities": ["Ra", "Cernunnos", "Lugh"],
+      "zodiac": ["Leo", "Cancer"],
+      "festivals": ["Midsummer", "Lughnasadh"]
+    }
+  },
+  {
+    "name": "Thyme",
+    "latin_name": "Thymus vulgaris",
+    "description": "A courageous herb associated with bravery, purification, and psychic vision. In ancient times, thyme was burned to fumigate temples and given to warriors heading into battle.",
+    "planetary_ruler": "Venus",
+    "element": "Water",
+    "chakra": "Heart",
+    "image_path": "herbs/thyme.svg",
+    "magical_uses": ["courage", "purification", "healing", "psychic vision", "love"],
+    "medicinal_notes": ["Powerful antiseptic and expectorant", "Soothes coughs and bronchitis", "Supports immune function"],
+    "warnings": [],
+    "folklore": "Medieval knights embroidered thyme on their scarves as a symbol of courage. Faeries were believed to dance in patches of wild thyme, and planting it in a garden was said to attract them.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Aphrodite", "Ares", "Freya"],
+      "zodiac": ["Taurus", "Libra"],
+      "festivals": ["Beltane", "Midsummer"]
+    }
+  },
+  {
+    "name": "Basil",
+    "latin_name": "Ocimum basilicum",
+    "description": "A herb of duality, associated with both love and strife across different cultures. In many traditions basil draws wealth, love, and protection, and it remains a staple in prosperity magic.",
+    "planetary_ruler": "Mars",
+    "element": "Fire",
+    "chakra": "Heart",
+    "image_path": "herbs/basil.svg",
+    "magical_uses": ["prosperity", "love", "protection", "courage", "exorcism"],
+    "medicinal_notes": ["Anti-inflammatory and antioxidant properties", "Aids digestion", "Supports stress reduction as an adaptogen"],
+    "warnings": [],
+    "folklore": "In Italian folk magic, basil is a symbol of love — a pot of basil on a windowsill signals romantic availability. In Haiti, basil is associated with the loa Erzulie and is used in love rituals.",
+    "growing_season": "Summer",
+    "correspondences": {
+      "deities": ["Vishnu", "Erzulie", "Krishna"],
+      "zodiac": ["Aries", "Scorpio"],
+      "festivals": ["Beltane", "Midsummer"]
+    }
+  },
+  {
+    "name": "Peppermint",
+    "latin_name": "Mentha x piperita",
+    "description": "A stimulating and purifying herb that sharpens the mind and quickens energy. Peppermint has been used to heal, to call spirits, and to increase the power of any magical working.",
+    "planetary_ruler": "Mercury",
+    "element": "Air",
+    "chakra": "Throat",
+    "image_path": "herbs/peppermint.svg",
+    "magical_uses": ["healing", "purification", "energy", "psychic ability", "travel"],
+    "medicinal_notes": ["Relieves nausea and indigestion", "Eases tension headaches when applied topically", "Clears sinus congestion"],
+    "warnings": ["May worsen acid reflux in some individuals"],
+    "folklore": "In Greek mythology, the nymph Minthe was transformed into the mint plant by Persephone. The Romans crowned themselves with peppermint wreaths at feasts, believing it stimulated the appetite and the mind.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Pluto", "Persephone", "Hecate"],
+      "zodiac": ["Gemini", "Virgo"],
+      "festivals": ["Lughnasadh", "Mabon"]
+    }
+  },
+  {
+    "name": "Bay Laurel",
+    "latin_name": "Laurus nobilis",
+    "description": "The sacred tree of Apollo, bay laurel bestows victory, prophecy, and protection. Burning bay leaves is one of the oldest forms of divination and wish magic in the Western tradition.",
+    "planetary_ruler": "Sun",
+    "element": "Fire",
+    "chakra": "Third Eye",
+    "image_path": "herbs/bay-laurel.svg",
+    "magical_uses": ["protection", "prophecy", "wishes", "victory", "wisdom"],
+    "medicinal_notes": ["Aids digestion when used in cooking", "Anti-inflammatory properties", "Traditional remedy for respiratory complaints"],
+    "warnings": [],
+    "folklore": "The Oracle at Delphi chewed bay leaves and inhaled their smoke to enter prophetic trances. Writing a wish on a bay leaf and burning it is a folk spell that persists to this day across many traditions.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Apollo", "Daphne", "Ceres"],
+      "zodiac": ["Leo", "Sagittarius"],
+      "festivals": ["Imbolc", "Midsummer"]
+    }
+  },
+  {
+    "name": "Yarrow",
+    "latin_name": "Achillea millefolium",
+    "description": "A warrior's herb and powerful wound healer, yarrow bridges the worlds of the living and the dead. It is used for courage, psychic protection, and divination, particularly with the I Ching.",
+    "planetary_ruler": "Venus",
+    "element": "Water",
+    "chakra": "Third Eye",
+    "image_path": "herbs/yarrow.svg",
+    "magical_uses": ["courage", "divination", "love", "psychic protection", "healing"],
+    "medicinal_notes": ["Staunches bleeding and promotes wound healing", "Reduces fever by promoting perspiration", "Eases menstrual cramps"],
+    "warnings": ["Avoid during pregnancy", "May cause skin sensitivity in some individuals"],
+    "folklore": "Named for the Greek hero Achilles, who used yarrow to heal his soldiers' battle wounds. In China, dried yarrow stalks have been used for I Ching divination for thousands of years.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Achilles", "Aphrodite", "Hermes"],
+      "zodiac": ["Taurus", "Libra"],
+      "festivals": ["Midsummer", "Samhain"]
+    }
+  },
+  {
+    "name": "Vervain",
+    "latin_name": "Verbena officinalis",
+    "description": "One of the most sacred herbs in European magic, vervain was revered by Druids, Romans, and folk healers alike. It is a powerful ally for protection, enchantment, and opening the way between worlds.",
+    "planetary_ruler": "Venus",
+    "element": "Earth",
+    "chakra": "Heart",
+    "image_path": "herbs/vervain.svg",
+    "magical_uses": ["protection", "enchantment", "love", "purification", "peace"],
+    "medicinal_notes": ["Traditional nervine for anxiety and tension", "Supports liver and gallbladder function", "Mild pain relief"],
+    "warnings": ["Avoid during pregnancy"],
+    "folklore": "The Druids gathered vervain with great ceremony, offering honey to the earth in return. It was called 'herba sacra' by the Romans and was used to sweep and purify temple altars.",
+    "growing_season": "Summer to Fall",
+    "correspondences": {
+      "deities": ["Cerridwen", "Isis", "Thor", "Venus"],
+      "zodiac": ["Taurus", "Libra"],
+      "festivals": ["Midsummer", "Beltane"]
+    }
+  },
+  {
+    "name": "Elderflower",
+    "latin_name": "Sambucus nigra",
+    "description": "The elder tree is a gateway between the fae realm and the mortal world. Its flowers bring blessings, healing, and protection, while the tree itself demands respect and reciprocity.",
+    "planetary_ruler": "Venus",
+    "element": "Water",
+    "chakra": "Crown",
+    "image_path": "herbs/elderflower.svg",
+    "magical_uses": ["protection", "healing", "blessing", "fae magic", "prosperity"],
+    "medicinal_notes": ["Supports immune function during colds and flu", "Gentle diaphoretic to reduce fever", "Anti-inflammatory for sinus congestion"],
+    "warnings": ["Raw elderberries and bark can cause nausea; always cook berries before consuming"],
+    "folklore": "It was forbidden to cut an elder tree without asking permission of the Elder Mother, a spirit dwelling within. Falling asleep beneath an elder on Midsummer's Eve was said to transport one to the land of the fae.",
+    "growing_season": "Spring to Summer",
+    "correspondences": {
+      "deities": ["Holda", "Venus", "Hylde-Moer"],
+      "zodiac": ["Libra", "Pisces"],
+      "festivals": ["Midsummer", "Beltane"]
+    }
+  },
+  {
+    "name": "Stinging Nettle",
+    "latin_name": "Urtica dioica",
+    "description": "A fiercely protective and nourishing herb that teaches boundaries. Nettle is rich in iron and minerals, and its sting is itself a form of medicine, long used to stimulate circulation.",
+    "planetary_ruler": "Mars",
+    "element": "Fire",
+    "chakra": "Root",
+    "image_path": "herbs/stinging-nettle.svg",
+    "magical_uses": ["protection", "banishing", "healing", "courage", "boundaries"],
+    "medicinal_notes": ["Highly nutritious, rich in iron, calcium, and vitamins", "Traditional remedy for allergies and hay fever", "Supports kidney and urinary health"],
+    "warnings": ["Wear gloves when harvesting fresh nettles to avoid stings"],
+    "folklore": "In Norse mythology, nettle was sacred to Thor and was thrown on fires during storms to protect the household from lightning. Grasping nettles was a folk test of courage and devotion.",
+    "growing_season": "Spring to Summer",
+    "correspondences": {
+      "deities": ["Thor", "Mars", "Brigid"],
+      "zodiac": ["Aries", "Scorpio"],
+      "festivals": ["Imbolc", "Ostara"]
+    }
+  },
+  {
+    "name": "Dandelion",
+    "latin_name": "Taraxacum officinale",
+    "description": "A humble yet powerful herb of wishes, divination, and resilience. Every part of the dandelion is useful, and its ability to thrive anywhere makes it a symbol of persistence and solar energy.",
+    "planetary_ruler": "Jupiter",
+    "element": "Air",
+    "chakra": "Solar Plexus",
+    "image_path": "herbs/dandelion.svg",
+    "magical_uses": ["wishes", "divination", "spirit communication", "resilience"],
+    "medicinal_notes": ["Supports liver and digestive health", "Natural diuretic supporting kidney function", "Rich in vitamins A, C, and K"],
+    "warnings": [],
+    "folklore": "Blowing on a dandelion seed head to make a wish is one of the most enduring folk spells. The number of seeds remaining was said to tell the hour, or to reveal how many years until marriage.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Brigid", "Hecate", "Belenos"],
+      "zodiac": ["Sagittarius", "Pisces"],
+      "festivals": ["Ostara", "Beltane"]
+    }
+  },
+  {
+    "name": "Rose",
+    "latin_name": "Rosa damascena",
+    "description": "The queen of flowers and the supreme herb of love, devotion, and beauty. Rose petals and rose water have been central to love magic, sacred rites, and healing across every culture for millennia.",
+    "planetary_ruler": "Venus",
+    "element": "Water",
+    "chakra": "Heart",
+    "image_path": "herbs/rose.svg",
+    "magical_uses": ["love", "beauty", "healing", "divination", "devotion"],
+    "medicinal_notes": ["Rose water soothes inflammation and skin irritation", "Mildly astringent and cooling", "Rose hip tea is rich in vitamin C"],
+    "warnings": [],
+    "folklore": "In Greek myth, the first roses sprang from the blood of Adonis and the tears of Aphrodite. Sub rosa — 'under the rose' — meant that anything spoken beneath a hanging rose was bound to secrecy.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Aphrodite", "Venus", "Isis", "Freya"],
+      "zodiac": ["Taurus", "Libra"],
+      "festivals": ["Beltane", "Midsummer"]
+    }
+  },
+  {
+    "name": "Jasmine",
+    "latin_name": "Jasminum officinale",
+    "description": "A night-blooming flower of prophetic dreams, sensuality, and lunar magic. Jasmine's intoxicating scent opens psychic channels and draws love, abundance, and spiritual visions.",
+    "planetary_ruler": "Neptune",
+    "element": "Water",
+    "chakra": "Sacral",
+    "image_path": "herbs/jasmine.svg",
+    "magical_uses": ["love", "prophetic dreams", "prosperity", "sensuality", "moon magic"],
+    "medicinal_notes": ["Jasmine tea calms the nervous system", "Traditionally used as an aphrodisiac", "Aromatherapy for anxiety and depression"],
+    "warnings": [],
+    "folklore": "In Hindu tradition, jasmine is sacred to Vishnu and is worn by brides to ensure a happy marriage. In Persian poetry, jasmine symbolizes the beloved, and its oil was worth more than gold.",
+    "growing_season": "Summer to Fall",
+    "correspondences": {
+      "deities": ["Vishnu", "Diana", "Kama"],
+      "zodiac": ["Cancer", "Pisces"],
+      "festivals": ["Midsummer", "Beltane"]
+    }
+  },
+  {
+    "name": "Cinnamon",
+    "latin_name": "Cinnamomum verum",
+    "description": "A fiery spice of prosperity, success, and spiritual power. Cinnamon accelerates the energy of any spell it is added to and has been prized as a sacred offering since ancient Egypt.",
+    "planetary_ruler": "Sun",
+    "element": "Earth",
+    "chakra": "Sacral",
+    "image_path": "herbs/cinnamon.svg",
+    "magical_uses": ["prosperity", "success", "power", "protection", "healing"],
+    "medicinal_notes": ["Supports healthy blood sugar levels", "Warming carminative for digestion", "Antimicrobial and antifungal properties"],
+    "warnings": ["Cassia cinnamon in large doses can stress the liver; prefer Ceylon cinnamon"],
+    "folklore": "The ancient Egyptians used cinnamon in embalming, and it was burned as temple incense throughout the ancient world. Phoenix nests were said to be built of cinnamon sticks and myrrh.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Ra", "Aphrodite", "Bast"],
+      "zodiac": ["Aries", "Leo"],
+      "festivals": ["Yule", "Mabon"]
+    }
+  },
+  {
+    "name": "Clove",
+    "latin_name": "Syzygium aromaticum",
+    "description": "A pungent, warming spice that drives away negativity and attracts abundance. Cloves have long been carried in charm bags, stuck into candles, and burned to stop gossip and harmful speech.",
+    "planetary_ruler": "Jupiter",
+    "element": "Fire",
+    "chakra": "Root",
+    "image_path": "herbs/clove.svg",
+    "magical_uses": ["protection", "prosperity", "banishing", "love", "exorcism"],
+    "medicinal_notes": ["Powerful analgesic for toothache", "Antimicrobial and anti-parasitic", "Supports digestive health"],
+    "warnings": ["Clove oil can burn skin if applied undiluted"],
+    "folklore": "Oranges studded with cloves — pomanders — were carried during the plague to ward off disease and evil. In Southeast Asian traditions, cloves were chewed before speaking to royalty to sweeten the breath.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Jupiter", "Lakshmi", "Ganesha"],
+      "zodiac": ["Sagittarius", "Aquarius"],
+      "festivals": ["Yule", "Samhain"]
+    }
+  },
+  {
+    "name": "Frankincense",
+    "latin_name": "Boswellia sacra",
+    "description": "One of the most ancient and sacred resins, frankincense elevates consciousness, consecrates sacred space, and carries prayers to the divine. It is the gold standard of spiritual purification.",
+    "planetary_ruler": "Sun",
+    "element": "Fire",
+    "chakra": "Crown",
+    "image_path": "herbs/frankincense.svg",
+    "magical_uses": ["purification", "consecration", "meditation", "protection", "blessing"],
+    "medicinal_notes": ["Anti-inflammatory used for joint pain", "Supports respiratory health", "Traditionally used to promote meditation and calm"],
+    "warnings": [],
+    "folklore": "One of the three gifts of the Magi, frankincense has been burned in temples from Egypt to Rome to Mesopotamia. The smoke was believed to be a direct channel to the gods and was said to drive out all evil.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Ra", "Baal", "Christ", "Isis"],
+      "zodiac": ["Leo", "Sagittarius"],
+      "festivals": ["Yule", "Imbolc", "Ostara"]
+    }
+  },
+  {
+    "name": "Myrrh",
+    "latin_name": "Commiphora myrrha",
+    "description": "A bitter, sacred resin of death, transformation, and deep healing. Myrrh is the companion of frankincense — where frankincense lifts, myrrh grounds, purifies, and protects through shadow work.",
+    "planetary_ruler": "Moon",
+    "element": "Water",
+    "chakra": "Root",
+    "image_path": "herbs/myrrh.svg",
+    "magical_uses": ["protection", "healing", "purification", "spirituality", "transformation"],
+    "medicinal_notes": ["Antimicrobial and supports oral health", "Traditional wound healer", "Anti-inflammatory for gums and throat"],
+    "warnings": ["Avoid during pregnancy"],
+    "folklore": "Myrrh was used in Egyptian embalming and was sacred to Isis. In Greek myth, the tree was born from Myrrha's tears after she was transformed by the gods, making it a resin of sorrow and redemption.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Isis", "Adonis", "Hecate", "Cybele"],
+      "zodiac": ["Cancer", "Scorpio"],
+      "festivals": ["Samhain", "Yule"]
+    }
+  },
+  {
+    "name": "Garden Sage",
+    "latin_name": "Salvia officinalis",
+    "description": "The herb of wisdom and longevity, garden sage has been a cornerstone of European folk medicine and magic for centuries. It is said that where sage grows well, the woman of the house rules.",
+    "planetary_ruler": "Jupiter",
+    "element": "Air",
+    "chakra": "Throat",
+    "image_path": "herbs/garden-sage.svg",
+    "magical_uses": ["wisdom", "longevity", "protection", "wishes", "purification"],
+    "medicinal_notes": ["Soothes sore throats when gargled as tea", "Supports memory and cognitive function", "Reduces excessive perspiration"],
+    "warnings": ["Avoid medicinal doses during pregnancy or while nursing"],
+    "folklore": "An old English proverb asks, 'Why should a man die whilst sage grows in his garden?' Sage was planted on graves to protect the souls of the dead and was one of the four ingredients of Four Thieves Vinegar.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Zeus", "Jupiter", "Chiron"],
+      "zodiac": ["Sagittarius", "Pisces"],
+      "festivals": ["Samhain", "Mabon"]
+    }
+  },
+  {
+    "name": "St. John's Wort",
+    "latin_name": "Hypericum perforatum",
+    "description": "A powerful solar herb of light, protection, and joy. Traditionally gathered on Midsummer's Eve, St. John's Wort banishes depression and dark spirits alike with its radiant golden energy.",
+    "planetary_ruler": "Sun",
+    "element": "Fire",
+    "chakra": "Solar Plexus",
+    "image_path": "herbs/st-johns-wort.svg",
+    "magical_uses": ["protection", "banishing", "courage", "strength", "divination"],
+    "medicinal_notes": ["Widely used for mild to moderate depression", "Soothes nerve pain when applied as oil", "Promotes wound healing"],
+    "warnings": ["Causes photosensitivity; avoid prolonged sun exposure", "Interacts with many medications including antidepressants and birth control"],
+    "folklore": "Hung over doorways on Midsummer's Eve to keep evil spirits from entering the home. The tiny holes in the leaves were said to be where the devil pricked them in fury at the plant's protective power.",
+    "growing_season": "Summer",
+    "correspondences": {
+      "deities": ["Baldur", "Lugh", "Apollo"],
+      "zodiac": ["Leo"],
+      "festivals": ["Midsummer"]
+    }
+  },
+  {
+    "name": "Valerian",
+    "latin_name": "Valeriana officinalis",
+    "description": "A potent sedative herb with a pungent root that cats adore. Valerian is used in magic for love, protection, and peaceful sleep, and its strong scent was believed to lure animal spirits.",
+    "planetary_ruler": "Venus",
+    "element": "Water",
+    "chakra": "Root",
+    "image_path": "herbs/valerian.svg",
+    "magical_uses": ["love", "protection", "sleep", "harmony", "animal magic"],
+    "medicinal_notes": ["Widely used for insomnia and sleep disorders", "Calms anxiety and nervous tension", "Relaxes muscle spasms"],
+    "warnings": ["May cause drowsiness; avoid driving after use", "Can intensify the effects of sedative medications"],
+    "folklore": "The Pied Piper of Hamelin was said to have used valerian to lure rats from the town. In folk magic, a sprig of valerian hung in the home stopped unwanted visitors from calling.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Aphrodite", "Venus"],
+      "zodiac": ["Taurus", "Libra"],
+      "festivals": ["Beltane", "Samhain"]
+    }
+  },
+  {
+    "name": "Wormwood",
+    "latin_name": "Artemisia absinthium",
+    "description": "A bitter herb of visions, spirits, and the threshold between worlds. Sacred to Artemis and a key ingredient of absinthe, wormwood opens the doors of perception but demands respect.",
+    "planetary_ruler": "Pluto",
+    "element": "Fire",
+    "chakra": "Third Eye",
+    "image_path": "herbs/wormwood.svg",
+    "magical_uses": ["divination", "spirit communication", "banishing", "psychic vision"],
+    "medicinal_notes": ["Traditional vermifuge for intestinal parasites", "Bitter digestive tonic in small amounts", "Used in traditional absinthe preparation"],
+    "warnings": ["Toxic in large doses due to thujone content", "Avoid during pregnancy"],
+    "folklore": "Wormwood is referenced in the Book of Revelation as the star that poisons the waters. It was burned alongside mugwort on Samhain to aid communication with the dead and was said to counteract poisoning by hemlock.",
+    "growing_season": "Summer to Fall",
+    "correspondences": {
+      "deities": ["Artemis", "Diana", "Mars"],
+      "zodiac": ["Aries", "Scorpio"],
+      "festivals": ["Samhain", "Midsummer"]
+    }
+  },
+  {
+    "name": "Comfrey",
+    "latin_name": "Symphytum officinale",
+    "description": "Known as 'knitbone' for its remarkable ability to speed the healing of broken bones and torn tissue. Comfrey is also used magically for safe travel and to protect one's home and possessions.",
+    "planetary_ruler": "Saturn",
+    "element": "Water",
+    "chakra": "Root",
+    "image_path": "herbs/comfrey.svg",
+    "magical_uses": ["healing", "safe travel", "protection", "money"],
+    "medicinal_notes": ["Accelerates bone and tissue healing when applied topically", "Soothes sprains, bruises, and inflammation", "Contains allantoin which promotes cell growth"],
+    "warnings": ["For external use only; internal use can cause liver damage", "Do not apply to broken skin"],
+    "folklore": "Travelers carried comfrey root to ensure a safe journey and the return of their luggage. In folk magic, tucking comfrey into a suitcase guaranteed that your belongings would not be lost or stolen.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Hecate", "Saturn"],
+      "zodiac": ["Capricorn", "Aquarius"],
+      "festivals": ["Mabon", "Samhain"]
+    }
+  },
+  {
+    "name": "Lemon Balm",
+    "latin_name": "Melissa officinalis",
+    "description": "A gentle, joyful herb that lifts the spirits and attracts bees and love alike. Lemon balm is a soothing nervine that brings calm without sedation, making it ideal for anxious hearts.",
+    "planetary_ruler": "Moon",
+    "element": "Water",
+    "chakra": "Heart",
+    "image_path": "herbs/lemon-balm.svg",
+    "magical_uses": ["love", "healing", "success", "joy", "calm"],
+    "medicinal_notes": ["Calms anxiety and lifts mild depression", "Antiviral, particularly effective against cold sores", "Supports healthy digestion"],
+    "warnings": [],
+    "folklore": "The name 'Melissa' comes from the Greek word for honeybee. Beekeepers rubbed lemon balm on hives to attract new swarms, and Paracelsus called it the 'elixir of life,' believing it could fully revitalize the body.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Artemis", "Diana", "Melissa"],
+      "zodiac": ["Cancer", "Pisces"],
+      "festivals": ["Beltane", "Midsummer"]
+    }
+  },
+  {
+    "name": "Angelica",
+    "latin_name": "Angelica archangelica",
+    "description": "A towering, powerful herb said to have been revealed by the Archangel Michael as a cure for plague. Angelica is one of the strongest protective herbs, creating an impenetrable shield against evil.",
+    "planetary_ruler": "Sun",
+    "element": "Fire",
+    "chakra": "Solar Plexus",
+    "image_path": "herbs/angelica.svg",
+    "magical_uses": ["protection", "exorcism", "healing", "visions", "blessing"],
+    "medicinal_notes": ["Warming digestive tonic and carminative", "Supports respiratory health during colds", "Traditional remedy for rheumatic complaints"],
+    "warnings": ["Causes photosensitivity; avoid sun exposure after topical use", "Avoid during pregnancy"],
+    "folklore": "Angelica was said to bloom on the feast day of Michael the Archangel and was the most reliable defense against witchcraft and plague. Carrying the root was believed to extend one's lifespan.",
+    "growing_season": "Spring to Summer",
+    "correspondences": {
+      "deities": ["Archangel Michael", "Venus"],
+      "zodiac": ["Leo", "Cancer"],
+      "festivals": ["Imbolc", "Midsummer"]
+    }
+  },
+  {
+    "name": "Calendula",
+    "latin_name": "Calendula officinalis",
+    "description": "The bright marigold of legal matters, psychic dreams, and solar devotion. Calendula follows the sun across the sky and brings its warm, golden healing energy to skin, spirit, and courtroom alike.",
+    "planetary_ruler": "Sun",
+    "element": "Fire",
+    "chakra": "Solar Plexus",
+    "image_path": "herbs/calendula.svg",
+    "magical_uses": ["protection", "legal matters", "prophetic dreams", "respect"],
+    "medicinal_notes": ["Excellent wound healer and skin soother", "Anti-inflammatory and antifungal", "Supports lymphatic drainage"],
+    "warnings": [],
+    "folklore": "Calendula was scattered under the bed to induce prophetic dreams and was carried into court to ensure a favorable verdict. The Aztecs considered it a sacred flower of the dead, a tradition that persists in Day of the Dead celebrations.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Apollo", "Xochipilli", "Mary"],
+      "zodiac": ["Leo", "Aries"],
+      "festivals": ["Samhain", "Midsummer"]
+    }
+  },
+  {
+    "name": "Echinacea",
+    "latin_name": "Echinacea purpurea",
+    "description": "A potent immune-boosting herb and powerful offering spirit. Native American peoples used echinacea as an all-purpose remedy and as an offering to strengthen prayers and spells.",
+    "planetary_ruler": "Mars",
+    "element": "Earth",
+    "chakra": "Root",
+    "image_path": "herbs/echinacea.svg",
+    "magical_uses": ["strength", "offering", "prosperity", "healing"],
+    "medicinal_notes": ["Boosts immune system function", "Shortens duration of colds and flu", "Anti-inflammatory and antimicrobial"],
+    "warnings": ["May interact with immunosuppressant medications"],
+    "folklore": "The Cheyenne used echinacea root as an offering during sweat lodge ceremonies. It was considered a powerful spiritual amplifier — adding echinacea to any working was said to multiply its effectiveness.",
+    "growing_season": "Summer to Fall",
+    "correspondences": {
+      "deities": ["Mars", "Sekhmet"],
+      "zodiac": ["Aries", "Scorpio"],
+      "festivals": ["Lughnasadh", "Mabon"]
+    }
+  },
+  {
+    "name": "Hawthorn",
+    "latin_name": "Crataegus monogyna",
+    "description": "A deeply magical tree of the heart, the fae, and the threshold between worlds. Hawthorn guards the entrance to the otherworld and has been sacred in Celtic lands since time beyond memory.",
+    "planetary_ruler": "Mars",
+    "element": "Fire",
+    "chakra": "Heart",
+    "image_path": "herbs/hawthorn.svg",
+    "magical_uses": ["protection", "fae magic", "fertility", "heart healing"],
+    "medicinal_notes": ["Strengthens and regulates the heart", "Supports healthy blood pressure", "Traditionally used for grief and heartbreak"],
+    "warnings": ["May interact with heart medications; consult a practitioner"],
+    "folklore": "It was terrible luck to cut down a hawthorn tree, as it was the home of the fae. The ancient Irish believed that solitary hawthorns marked the entrance to the otherworld, and many are left standing in fields to this day.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Brigid", "Flora", "Cardea", "Olwen"],
+      "zodiac": ["Aries", "Scorpio"],
+      "festivals": ["Beltane"]
+    }
+  },
+  {
+    "name": "Catnip",
+    "latin_name": "Nepeta cataria",
+    "description": "A playful, love-drawing herb sacred to the Egyptian cat goddess Bast. Catnip is used in magic to attract love, happiness, and beauty, and to forge bonds between humans and their feline familiars.",
+    "planetary_ruler": "Venus",
+    "element": "Air",
+    "chakra": "Heart",
+    "image_path": "herbs/catnip.svg",
+    "magical_uses": ["love", "beauty", "happiness", "cat magic", "friendship"],
+    "medicinal_notes": ["Gentle sedative and sleep aid for humans", "Soothes digestive upset and colic in children", "Mild fever reducer"],
+    "warnings": [],
+    "folklore": "Bast's sacred herb — offerings of catnip were left at her temples. In Hoodoo, catnip is used in love sachets, and chewing the leaf before a difficult conversation was said to make the other person agreeable.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Bast", "Sekhmet"],
+      "zodiac": ["Taurus", "Libra", "Cancer"],
+      "festivals": ["Beltane", "Midsummer"]
+    }
+  },
+  {
+    "name": "Hyssop",
+    "latin_name": "Hyssopus officinalis",
+    "description": "The purification herb of the Bible, hyssop cleanses sin, sickness, and spiritual impurity. It is one of the most potent herbs for spiritual cleansing baths and floor washes in Hoodoo tradition.",
+    "planetary_ruler": "Jupiter",
+    "element": "Air",
+    "chakra": "Throat",
+    "image_path": "herbs/hyssop.svg",
+    "magical_uses": ["purification", "protection", "cleansing", "blessing"],
+    "medicinal_notes": ["Expectorant for coughs and bronchitis", "Supports digestive health", "Traditional remedy for sore throats"],
+    "warnings": ["Avoid during pregnancy", "Avoid with epilepsy as it may lower seizure threshold"],
+    "folklore": "Psalm 51 reads, 'Purge me with hyssop and I shall be clean.' In Hoodoo, a hyssop bath is the standard prescription for removing crossed conditions, jinxes, and spiritual uncleanliness.",
+    "growing_season": "Summer",
+    "correspondences": {
+      "deities": ["Jupiter", "David"],
+      "zodiac": ["Sagittarius", "Cancer"],
+      "festivals": ["Imbolc", "Ostara"]
+    }
+  },
+  {
+    "name": "Mandrake",
+    "latin_name": "Mandragora officinarum",
+    "description": "The most legendary of all magical plants, famed for its human-shaped root and its ear-splitting scream when uprooted. Mandrake is a potent amplifier of magic and a powerful protector.",
+    "planetary_ruler": "Pluto",
+    "element": "Earth",
+    "chakra": "Root",
+    "image_path": "herbs/mandrake.svg",
+    "magical_uses": ["protection", "fertility", "prosperity", "power", "love"],
+    "medicinal_notes": ["Historically used as an anesthetic and sedative", "Contains tropane alkaloids with narcotic properties", "Used in traditional European pain remedies"],
+    "warnings": ["Highly toxic; all parts are poisonous if ingested", "Handle with care and do not consume"],
+    "folklore": "Medieval lore insisted the mandrake root screamed when pulled from the earth, killing anyone who heard it. The prescribed method was to tie the root to a dog's tail and let the dog pull it free, sacrificing the animal.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Hecate", "Aphrodite", "Hathor", "Circe"],
+      "zodiac": ["Virgo", "Scorpio"],
+      "festivals": ["Samhain", "Beltane"]
+    }
+  },
+  {
+    "name": "Rue",
+    "latin_name": "Ruta graveolens",
+    "description": "The herb of grace and the great defender against the evil eye. Rue has been the premier protective herb across Mediterranean and Latin American traditions for centuries.",
+    "planetary_ruler": "Mars",
+    "element": "Earth",
+    "chakra": "Solar Plexus",
+    "image_path": "herbs/rue.svg",
+    "magical_uses": ["protection", "hex breaking", "evil eye", "banishing", "clarity"],
+    "medicinal_notes": ["Traditional bitter digestive tonic", "Used externally for insect repellent", "Historical antidote for poisons"],
+    "warnings": ["Can cause severe skin burns in sunlight (phototoxic)", "Strictly avoid during pregnancy"],
+    "folklore": "In Italy and Latin America, rue amulets are worn to ward off the evil eye (malocchio/mal de ojo). Judges carried rue into courtrooms to protect against jail fever, and it was one of the herbs used by grave robbers to avoid plague.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Diana", "Mars", "Aradia"],
+      "zodiac": ["Aries", "Leo"],
+      "festivals": ["Midsummer", "Samhain"]
+    }
+  },
+  {
+    "name": "Meadowsweet",
+    "latin_name": "Filipendula ulmaria",
+    "description": "One of the three most sacred herbs of the Druids, meadowsweet brings love, peace, and joy. Its sweet, almond-like fragrance was used to flavor mead and to strew on floors for celebrations.",
+    "planetary_ruler": "Jupiter",
+    "element": "Air",
+    "chakra": "Heart",
+    "image_path": "herbs/meadowsweet.svg",
+    "magical_uses": ["love", "peace", "happiness", "divination", "harmony"],
+    "medicinal_notes": ["Contains natural salicylates (aspirin precursor)", "Soothes heartburn and acid reflux", "Anti-inflammatory for joint pain"],
+    "warnings": ["Avoid if allergic to aspirin"],
+    "folklore": "Meadowsweet, water mint, and vervain were the three most sacred herbs of the Druids. In the Welsh Mabinogion, the magicians Math and Gwydion created the maiden Blodeuwedd from meadowsweet, broom, and oak flowers.",
+    "growing_season": "Summer",
+    "correspondences": {
+      "deities": ["Blodeuwedd", "Aine", "Brigid"],
+      "zodiac": ["Sagittarius", "Pisces"],
+      "festivals": ["Midsummer", "Lughnasadh"]
+    }
+  },
+  {
+    "name": "Dill",
+    "latin_name": "Anethum graveolens",
+    "description": "A gentle protective herb that guards children and the home. The name comes from the Norse 'dilla,' meaning to soothe, and dill has been used for millennia to calm babies and ward off evil.",
+    "planetary_ruler": "Mercury",
+    "element": "Air",
+    "chakra": "Solar Plexus",
+    "image_path": "herbs/dill.svg",
+    "magical_uses": ["protection", "luck", "prosperity", "love", "child protection"],
+    "medicinal_notes": ["Relieves colic and gas in infants", "Supports digestive health", "Stimulates appetite"],
+    "warnings": [],
+    "folklore": "Hanging dill over a cradle protected infants from evil spirits and nightmares. Carrying dill seeds was believed to attract money, and adding dill to a bath before a court appearance ensured a favorable outcome.",
+    "growing_season": "Spring to Summer",
+    "correspondences": {
+      "deities": ["Mercury", "Hermes"],
+      "zodiac": ["Gemini", "Virgo"],
+      "festivals": ["Midsummer", "Lughnasadh"]
+    }
+  },
+  {
+    "name": "Mullein",
+    "latin_name": "Verbascum thapsus",
+    "description": "The 'hag's taper,' a tall sentinel plant whose dried stalks were dipped in tallow and burned as torches. Mullein lights the way in darkness, both literally and spiritually, offering courage and protection.",
+    "planetary_ruler": "Saturn",
+    "element": "Fire",
+    "chakra": "Throat",
+    "image_path": "herbs/mullein.svg",
+    "magical_uses": ["protection", "courage", "divination", "graveyard work", "banishing"],
+    "medicinal_notes": ["Excellent lung and respiratory remedy", "Soothes earaches when infused as oil", "Demulcent for sore throats and dry coughs"],
+    "warnings": [],
+    "folklore": "Mullein torches were carried through graveyards and into dark places for protection. In Appalachian folk magic, mullein was called 'graveyard dust' and was a suitable substitute in spells calling for that ingredient.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Hecate", "Circe", "Odysseus"],
+      "zodiac": ["Capricorn", "Aquarius"],
+      "festivals": ["Samhain", "Yule"]
+    }
+  },
+  {
+    "name": "Hibiscus",
+    "latin_name": "Hibiscus sabdariffa",
+    "description": "A lush, tropical flower of passion, love divination, and independence. Hibiscus draws passionate love and desire, and is sacred to goddesses of love and beauty across many cultures.",
+    "planetary_ruler": "Neptune",
+    "element": "Water",
+    "chakra": "Sacral",
+    "image_path": "herbs/hibiscus.svg",
+    "magical_uses": ["love", "passion", "divination", "beauty", "independence"],
+    "medicinal_notes": ["Lowers blood pressure as a tea", "Rich in vitamin C and antioxidants", "Supports urinary tract health"],
+    "warnings": ["May interact with blood pressure medications"],
+    "folklore": "In Hawaiian tradition, wearing a hibiscus behind the left ear signals that one is taken, while behind the right ear means available. In Egyptian love magic, hibiscus tea was drunk to inflame desire.",
+    "growing_season": "Summer to Fall",
+    "correspondences": {
+      "deities": ["Kali", "Venus", "Oshun"],
+      "zodiac": ["Scorpio", "Libra"],
+      "festivals": ["Beltane", "Midsummer"]
+    }
+  },
+  {
+    "name": "Ginger",
+    "latin_name": "Zingiber officinale",
+    "description": "A fiery root of success, power, and acceleration. Ginger adds heat and momentum to any spell, accelerating results and empowering the practitioner. It is also a potent love and money herb.",
+    "planetary_ruler": "Mars",
+    "element": "Earth",
+    "chakra": "Sacral",
+    "image_path": "herbs/ginger.svg",
+    "magical_uses": ["power", "success", "love", "money", "healing"],
+    "medicinal_notes": ["Highly effective for nausea and motion sickness", "Anti-inflammatory for joint pain", "Supports circulatory health"],
+    "warnings": ["May thin the blood; use caution with blood-thinning medications"],
+    "folklore": "Pacific Island navigators chewed ginger root before setting sail and spat it at approaching storms to calm them. In Hoodoo, ginger root is carried in a mojo bag to ensure that spells work quickly.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Mars", "Ares", "Pele"],
+      "zodiac": ["Aries", "Sagittarius"],
+      "festivals": ["Yule", "Mabon"]
+    }
+  },
+  {
+    "name": "Parsley",
+    "latin_name": "Petroselinum crispum",
+    "description": "A herb of death, rebirth, and protection associated with the underworld. Parsley's slow germination was explained by the folk belief that the seeds had to travel to hell and back seven times before sprouting.",
+    "planetary_ruler": "Mercury",
+    "element": "Air",
+    "chakra": "Solar Plexus",
+    "image_path": "herbs/parsley.svg",
+    "magical_uses": ["protection", "purification", "death rites", "communication"],
+    "medicinal_notes": ["Rich in vitamins A, C, and K", "Freshens breath naturally", "Traditional diuretic"],
+    "warnings": ["Avoid large medicinal doses during pregnancy"],
+    "folklore": "The ancient Greeks associated parsley with death and used it to crown tombs. Transplanting parsley was said to bring terrible luck, and it was believed to grow best for the wicked — or simply for a strong-willed woman.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Persephone", "Mercury", "Hermes"],
+      "zodiac": ["Gemini", "Virgo"],
+      "festivals": ["Samhain", "Mabon"]
+    }
+  },
+  {
+    "name": "Plantain",
+    "latin_name": "Plantago major",
+    "description": "The humble 'waybread,' a roadside healer that follows humanity wherever it goes. Plantain is one of the most accessible and powerful healing herbs, drawing out poison, venom, and negative energy.",
+    "planetary_ruler": "Venus",
+    "element": "Earth",
+    "chakra": "Heart",
+    "image_path": "herbs/plantain.svg",
+    "magical_uses": ["healing", "protection", "strength", "snake magic"],
+    "medicinal_notes": ["Draws out splinters, stings, and insect venom", "Soothes minor wounds, burns, and rashes", "Mild expectorant for coughs"],
+    "warnings": [],
+    "folklore": "Called 'white man's footprint' by Native Americans because it grew wherever European colonists walked. In the Anglo-Saxon Nine Herbs Charm, plantain is praised as the 'mother of herbs' and credited with defeating poison.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Venus", "Brigid"],
+      "zodiac": ["Taurus", "Capricorn"],
+      "festivals": ["Ostara", "Lughnasadh"]
+    }
+  },
+  {
+    "name": "Sandalwood",
+    "latin_name": "Santalum album",
+    "description": "A sacred wood of meditation, spiritual elevation, and divine connection. Sandalwood's rich, warm scent has been used in temples across India, China, and the Middle East for thousands of years.",
+    "planetary_ruler": "Neptune",
+    "element": "Water",
+    "chakra": "Crown",
+    "image_path": "herbs/sandalwood.svg",
+    "magical_uses": ["meditation", "spirituality", "protection", "wishes", "healing"],
+    "medicinal_notes": ["Calming and grounding in aromatherapy", "Traditionally used for urinary tract infections", "Anti-inflammatory for skin conditions"],
+    "warnings": ["True sandalwood is endangered; source sustainably"],
+    "folklore": "In Hindu tradition, sandalwood paste is applied to the forehead to open the third eye during prayer. Buddhist monks burn sandalwood to invite calm and awareness, and it is one of the offerings to the dead in many Asian cultures.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Vishnu", "Lakshmi", "Shiva", "Kuan Yin"],
+      "zodiac": ["Cancer", "Pisces"],
+      "festivals": ["Mabon", "Yule"]
+    }
+  },
+  {
+    "name": "Patchouli",
+    "latin_name": "Pogostemon cablin",
+    "description": "An earthy, grounding herb of prosperity, fertility, and desire. Patchouli's rich scent attracts money and love while keeping the practitioner rooted to the material world during spiritual work.",
+    "planetary_ruler": "Saturn",
+    "element": "Earth",
+    "chakra": "Root",
+    "image_path": "herbs/patchouli.svg",
+    "magical_uses": ["prosperity", "love", "fertility", "grounding", "lust"],
+    "medicinal_notes": ["Antifungal and antibacterial properties", "Used in aromatherapy for anxiety", "Traditionally used as an insect repellent"],
+    "warnings": [],
+    "folklore": "Patchouli leaves were used to scent Indian silk exports in the 19th century, and the smell became synonymous with luxury and the exotic East. In Hoodoo, patchouli is a staple of money-drawing and love-drawing formulas.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Gaia", "Pan", "Saturn"],
+      "zodiac": ["Capricorn", "Taurus"],
+      "festivals": ["Mabon", "Samhain"]
+    }
+  },
+  {
+    "name": "Dragon's Blood",
+    "latin_name": "Daemonorops draco",
+    "description": "A vivid red resin of power, protection, and potency. Dragon's blood amplifies the strength of any spell and is used to empower inks, incense, and protective seals across many magical traditions.",
+    "planetary_ruler": "Pluto",
+    "element": "Fire",
+    "chakra": "Root",
+    "image_path": "herbs/dragons-blood.svg",
+    "magical_uses": ["power", "protection", "banishing", "love", "amplification"],
+    "medicinal_notes": ["Traditional wound healer and blood-stauncher", "Antimicrobial resin used in traditional medicine", "Used in Traditional Chinese Medicine for blood circulation"],
+    "warnings": [],
+    "folklore": "Dragon's blood ink was used to write spells and seals of power. The resin was said to be formed from the mingled blood of dragons and elephants locked in mortal combat, granting it the ferocity of both beasts.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Mars", "Ares", "Set"],
+      "zodiac": ["Aries", "Scorpio"],
+      "festivals": ["Samhain", "Midsummer"]
+    }
+  },
+  {
+    "name": "Witch Hazel",
+    "latin_name": "Hamamelis virginiana",
+    "description": "A divining shrub used for centuries to locate hidden water and buried treasure. Witch hazel's forked branches make natural dowsing rods, and the plant itself heals, protects, and reveals what is hidden.",
+    "planetary_ruler": "Saturn",
+    "element": "Water",
+    "chakra": "Third Eye",
+    "image_path": "herbs/witch-hazel.svg",
+    "magical_uses": ["divination", "protection", "healing", "dowsing", "clarity"],
+    "medicinal_notes": ["Powerful astringent for skin conditions", "Soothes hemorrhoids and varicose veins", "Reduces inflammation and swelling"],
+    "warnings": [],
+    "folklore": "Witch hazel branches were the preferred material for dowsing rods in colonial America. The name 'witch' comes from the Middle English 'wych,' meaning flexible, though the plant became associated with divination and cunning folk.",
+    "growing_season": "Fall to Winter",
+    "correspondences": {
+      "deities": ["Hecate", "Saturn", "Cerridwen"],
+      "zodiac": ["Capricorn", "Scorpio"],
+      "festivals": ["Samhain", "Yule"]
+    }
+  },
+  {
+    "name": "Lemongrass",
+    "latin_name": "Cymbopogon citratus",
+    "description": "A cleansing, clarifying herb that opens roads and clears obstacles. Lemongrass is used across tropical folk magic traditions to repel snakes, clear negative energy, and sharpen psychic vision.",
+    "planetary_ruler": "Uranus",
+    "element": "Air",
+    "chakra": "Solar Plexus",
+    "image_path": "herbs/lemongrass.svg",
+    "magical_uses": ["purification", "psychic vision", "road opening", "repelling negativity"],
+    "medicinal_notes": ["Aids digestion and relieves bloating", "Natural insect repellent", "Reduces fever"],
+    "warnings": [],
+    "folklore": "In Brazilian folk magic, lemongrass tea baths are taken to remove negative energy and open paths to success. In Southeast Asia, it is planted around homes to repel snakes and evil spirits alike.",
+    "growing_season": "Summer to Fall",
+    "correspondences": {
+      "deities": ["Mercury", "Elegua", "Ganesh"],
+      "zodiac": ["Gemini", "Aquarius"],
+      "festivals": ["Ostara", "Imbolc"]
+    }
+  },
+  {
+    "name": "Juniper",
+    "latin_name": "Juniperus communis",
+    "description": "An ancient protective evergreen used to guard thresholds and purify the home. Juniper berries and boughs have been burned for cleansing across Scottish, Norse, and Native American traditions.",
+    "planetary_ruler": "Sun",
+    "element": "Fire",
+    "chakra": "Root",
+    "image_path": "herbs/juniper.svg",
+    "magical_uses": ["protection", "purification", "banishing", "health", "anti-theft"],
+    "medicinal_notes": ["Supports kidney and urinary tract health", "Warming digestive tonic", "Antimicrobial berry used in traditional remedies"],
+    "warnings": ["Avoid during pregnancy", "Avoid with kidney disease"],
+    "folklore": "In Scotland, juniper was burned in the 'saining' ritual at New Year to purify the home — all windows and doors were sealed while the smoke filled every room. Juniper planted by the door prevented witches from entering.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Thor", "Brigid", "Astarte"],
+      "zodiac": ["Leo", "Sagittarius"],
+      "festivals": ["Yule", "Imbolc"]
+    }
+  },
+  {
+    "name": "Borage",
+    "latin_name": "Borago officinalis",
+    "description": "The herb of courage and gladness, with brilliant blue star-shaped flowers. Roman soldiers drank borage wine before battle, and it remains a powerful ally for facing fears and lifting the spirits.",
+    "planetary_ruler": "Uranus",
+    "element": "Air",
+    "chakra": "Heart",
+    "image_path": "herbs/borage.svg",
+    "magical_uses": ["courage", "joy", "psychic ability", "protection"],
+    "medicinal_notes": ["Rich in gamma-linolenic acid (GLA)", "Supports adrenal function during stress", "Traditional remedy for melancholy"],
+    "warnings": ["Contains pyrrolizidine alkaloids; avoid long-term internal use"],
+    "folklore": "The old saying goes, 'Borage for courage.' Celtic warriors drank borage-infused wine before battle, and the herb was floated in the cups of those about to embark on dangerous journeys.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Jupiter", "Thor", "Mars"],
+      "zodiac": ["Sagittarius", "Aquarius"],
+      "festivals": ["Beltane", "Midsummer"]
+    }
+  },
+  {
+    "name": "Marjoram",
+    "latin_name": "Origanum majorana",
+    "description": "A herb of love, comfort, and peaceful passage. Marjoram was planted on graves to comfort the dead and given to the grieving to ease sorrow. It brings warmth and love to any home.",
+    "planetary_ruler": "Mercury",
+    "element": "Air",
+    "chakra": "Heart",
+    "image_path": "herbs/marjoram.svg",
+    "magical_uses": ["love", "grief healing", "protection", "happiness", "health"],
+    "medicinal_notes": ["Relieves anxiety and promotes sleep", "Eases muscle cramps and spasms", "Supports healthy digestion"],
+    "warnings": [],
+    "folklore": "The Greeks believed that if marjoram grew on a grave, the deceased was happy in the afterlife. Aphrodite was said to have first cultivated marjoram, and its sweet scent was her blessing on the herb of love.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Aphrodite", "Venus", "Osiris"],
+      "zodiac": ["Gemini", "Virgo"],
+      "festivals": ["Beltane", "Samhain"]
+    }
+  },
+  {
+    "name": "Turmeric",
+    "latin_name": "Curcuma longa",
+    "description": "A golden root of purification, fertility, and prosperity sacred in Hindu tradition. Turmeric's vibrant color represents the energy of the sun and is used in rituals of blessing, protection, and abundance.",
+    "planetary_ruler": "Jupiter",
+    "element": "Earth",
+    "chakra": "Solar Plexus",
+    "image_path": "herbs/turmeric.svg",
+    "magical_uses": ["purification", "prosperity", "protection", "fertility"],
+    "medicinal_notes": ["Powerful anti-inflammatory (curcumin)", "Supports liver health", "Antioxidant properties"],
+    "warnings": ["May interact with blood-thinning medications"],
+    "folklore": "In Hindu weddings, the haldi ceremony involves anointing the bride and groom with turmeric paste for purification and to invite prosperity. Turmeric water is sprinkled in new homes to bless and protect them.",
+    "growing_season": "Summer to Fall",
+    "correspondences": {
+      "deities": ["Lakshmi", "Ganesha", "Parvati"],
+      "zodiac": ["Sagittarius", "Leo"],
+      "festivals": ["Mabon", "Yule"]
+    }
+  },
+  {
+    "name": "Cardamom",
+    "latin_name": "Elettaria cardamomum",
+    "description": "An aromatic spice of love, passion, and mental clarity known as the queen of spices. Cardamom warms the heart and loosens the tongue, making it a favourite in love and eloquence workings.",
+    "planetary_ruler": "Venus",
+    "element": "Water",
+    "chakra": "Sacral",
+    "image_path": "herbs/cardamom.svg",
+    "magical_uses": ["love", "passion", "clarity", "eloquence", "confidence"],
+    "medicinal_notes": ["Aids digestion and relieves nausea", "Freshens breath", "Supports respiratory health"],
+    "warnings": [],
+    "folklore": "In Arabian Nights tales, cardamom was an aphrodisiac brewed into coffee to seduce. In ancient Egypt, it was chewed to whiten teeth and sweeten the breath, and was burned as incense to purify temples.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Venus", "Erzulie", "Aphrodite"],
+      "zodiac": ["Libra", "Taurus"],
+      "festivals": ["Beltane", "Midsummer"]
+    }
+  },
+  {
+    "name": "Star Anise",
+    "latin_name": "Illicium verum",
+    "description": "A star-shaped spice of psychic power, luck, and spiritual protection. Star anise is burned to increase psychic awareness and is placed on altars as a symbol of the sacred directions.",
+    "planetary_ruler": "Uranus",
+    "element": "Air",
+    "chakra": "Third Eye",
+    "image_path": "herbs/star-anise.svg",
+    "magical_uses": ["psychic ability", "luck", "protection", "dreams", "purification"],
+    "medicinal_notes": ["Relieves digestive discomfort and bloating", "Contains shikimic acid used in antiviral medicine", "Traditional remedy for colic"],
+    "warnings": ["Do not confuse with toxic Japanese star anise (Illicium anisatum)"],
+    "folklore": "Star anise was placed on bedside altars to prevent nightmares and placed in charm bags to bring good luck. Its eight-pointed star shape was seen as a natural sacred geometry, representing wholeness and cosmic order.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Jupiter", "Mercury", "Hermes"],
+      "zodiac": ["Sagittarius", "Pisces"],
+      "festivals": ["Yule", "Imbolc"]
+    }
+  },
+  {
+    "name": "Passionflower",
+    "latin_name": "Passiflora incarnata",
+    "description": "A hypnotic vine of peace, sleep, and spiritual friendship. Passionflower calms the restless mind and brings harmony to relationships, dissolving conflicts and promoting understanding.",
+    "planetary_ruler": "Neptune",
+    "element": "Water",
+    "chakra": "Crown",
+    "image_path": "herbs/passionflower.svg",
+    "magical_uses": ["peace", "friendship", "sleep", "calm", "attraction"],
+    "medicinal_notes": ["Effective for insomnia and sleep disorders", "Reduces anxiety without sedation", "Soothes nervous tension and restlessness"],
+    "warnings": ["May interact with sedative medications"],
+    "folklore": "Spanish missionaries named the flower after the Passion of Christ, seeing the crucifixion story in its elaborate structure. In folk magic, placing passionflower in a home brings peace to the household and ends quarrels.",
+    "growing_season": "Summer to Fall",
+    "correspondences": {
+      "deities": ["Venus", "Christ"],
+      "zodiac": ["Libra", "Pisces"],
+      "festivals": ["Ostara", "Beltane"]
+    }
+  },
+  {
+    "name": "Skullcap",
+    "latin_name": "Scutellaria lateriflora",
+    "description": "A powerful nervine herb that brings deep peace and fidelity. Skullcap is used in binding spells and peace workings, and is one of the strongest herbal allies for anxiety and nervous exhaustion.",
+    "planetary_ruler": "Saturn",
+    "element": "Water",
+    "chakra": "Third Eye",
+    "image_path": "herbs/skullcap.svg",
+    "magical_uses": ["peace", "fidelity", "binding", "relaxation", "oath keeping"],
+    "medicinal_notes": ["Potent nervine for anxiety and panic", "Supports recovery from nervous exhaustion", "Traditionally used for withdrawal symptoms"],
+    "warnings": ["Very high doses may cause liver stress"],
+    "folklore": "In Hoodoo, skullcap is sewn into a wife's pillow to keep her husband faithful. The plant's helmet-shaped flowers gave it its name and associated it with oaths and binding commitments.",
+    "growing_season": "Summer",
+    "correspondences": {
+      "deities": ["Saturn", "Hera"],
+      "zodiac": ["Capricorn", "Scorpio"],
+      "festivals": ["Samhain", "Mabon"]
+    }
+  },
+  {
+    "name": "Saffron",
+    "latin_name": "Crocus sativus",
+    "description": "The most precious spice in the world, saffron is associated with joy, wealth, and spiritual illumination. Its golden threads color food, fabric, and sacred ritual with the light of the sun.",
+    "planetary_ruler": "Sun",
+    "element": "Fire",
+    "chakra": "Crown",
+    "image_path": "herbs/saffron.svg",
+    "magical_uses": ["happiness", "wealth", "healing", "psychic power", "love"],
+    "medicinal_notes": ["Traditionally used for depression and mood enhancement", "Supports eye health", "Anti-inflammatory properties"],
+    "warnings": ["Very high doses can be toxic; use culinary amounts"],
+    "folklore": "Cleopatra bathed in saffron-infused milk for its beautifying properties. In Persia, saffron was thrown into the wind to summon storms, and a pinch added to any spell was said to guarantee its success.",
+    "growing_season": "Fall",
+    "correspondences": {
+      "deities": ["Ra", "Eos", "Ashtoreth"],
+      "zodiac": ["Leo", "Aries"],
+      "festivals": ["Mabon", "Ostara"]
+    }
+  },
+  {
+    "name": "Motherwort",
+    "latin_name": "Leonurus cardiaca",
+    "description": "The lionhearted herb of motherhood, courage, and heart protection. Motherwort calms heart palpitations and anxious spirits, lending fierce maternal strength to those who need it most.",
+    "planetary_ruler": "Venus",
+    "element": "Water",
+    "chakra": "Heart",
+    "image_path": "herbs/motherwort.svg",
+    "magical_uses": ["protection", "courage", "family harmony", "heart healing"],
+    "medicinal_notes": ["Calms heart palpitations and tachycardia", "Eases anxiety and panic attacks", "Supports menstrual regularity"],
+    "warnings": ["Avoid during pregnancy as it is a uterine stimulant"],
+    "folklore": "The Latin name Leonurus means 'lion's tail,' reflecting the fierce courage motherwort bestows. It was planted by cottage doors to protect the family within and was said to promote longevity in those who drank it as tea.",
+    "growing_season": "Summer",
+    "correspondences": {
+      "deities": ["Brigid", "Isis", "Hestia"],
+      "zodiac": ["Leo", "Cancer"],
+      "festivals": ["Imbolc", "Beltane"]
+    }
+  },
+  {
+    "name": "Oat Straw",
+    "latin_name": "Avena sativa",
+    "description": "A nourishing, grounding herb that restores depleted nerves and brings prosperity. Oat straw is the harvest herb of abundance, and carrying oats ensures that one will never go without.",
+    "planetary_ruler": "Venus",
+    "element": "Earth",
+    "chakra": "Root",
+    "image_path": "herbs/oat-straw.svg",
+    "magical_uses": ["prosperity", "grounding", "fertility", "money"],
+    "medicinal_notes": ["Deeply nourishing nervine for burnout", "Rich in minerals including calcium and silica", "Supports bone and skin health"],
+    "warnings": [],
+    "folklore": "Sowing wild oats is a well-known expression rooted in agricultural magic — oats symbolized fertility and abundance. A sheaf of oats was left in the field after harvest as an offering to the earth to ensure the next year's crop.",
+    "growing_season": "Spring to Summer",
+    "correspondences": {
+      "deities": ["Demeter", "Ceres", "Brigid"],
+      "zodiac": ["Taurus", "Virgo"],
+      "festivals": ["Lughnasadh", "Mabon"]
+    }
+  },
+  {
+    "name": "Bergamot",
+    "latin_name": "Monarda didyma",
+    "description": "A bright, uplifting herb of success and money drawing with citrus-scented flowers. Bergamot is a staple of Hoodoo prosperity work and brings financial success when carried or burned.",
+    "planetary_ruler": "Mercury",
+    "element": "Air",
+    "chakra": "Solar Plexus",
+    "image_path": "herbs/bergamot.svg",
+    "magical_uses": ["success", "prosperity", "clarity", "confidence", "money"],
+    "medicinal_notes": ["Antimicrobial and supports respiratory health", "Traditional remedy for colds and sore throats", "Calming in aromatherapy"],
+    "warnings": [],
+    "folklore": "In Hoodoo tradition, bergamot is one of the essential money-drawing herbs. It is carried in the wallet, rubbed on money, or added to a bath before financial negotiations. Its uplifting scent was said to drive away despair.",
+    "growing_season": "Summer",
+    "correspondences": {
+      "deities": ["Mercury", "Hermes", "Fortuna"],
+      "zodiac": ["Gemini", "Aquarius"],
+      "festivals": ["Lughnasadh", "Ostara"]
+    }
+  },
+  {
+    "name": "Eucalyptus",
+    "latin_name": "Eucalyptus globulus",
+    "description": "A purifying, healing tree of the Australian bush whose pungent oil clears congestion of the body, mind, and spirit. Eucalyptus is used for healing, protection, and energetic cleansing.",
+    "planetary_ruler": "Moon",
+    "element": "Water",
+    "chakra": "Throat",
+    "image_path": "herbs/eucalyptus.svg",
+    "magical_uses": ["healing", "purification", "protection", "cleansing"],
+    "medicinal_notes": ["Powerful decongestant for sinuses and lungs", "Antimicrobial and antiviral", "Supports respiratory health in steam inhalation"],
+    "warnings": ["Eucalyptus oil is toxic if ingested", "Keep away from small children and pets"],
+    "folklore": "Aboriginal Australians have used eucalyptus for thousands of years as a medicine and ceremonial cleanser. The trees were called 'fever trees' by early colonists who noticed that swamp drainage and eucalyptus planting reduced malaria.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Artemis", "Diana"],
+      "zodiac": ["Cancer", "Pisces"],
+      "festivals": ["Imbolc", "Ostara"]
+    }
+  },
+  {
+    "name": "Tobacco",
+    "latin_name": "Nicotiana tabacum",
+    "description": "A powerful sacred plant of offering and communication with the spirit world. Tobacco is one of the most important ceremonial plants in Native American traditions and should be approached with deep respect.",
+    "planetary_ruler": "Mars",
+    "element": "Air",
+    "chakra": "Crown",
+    "image_path": "herbs/tobacco.svg",
+    "magical_uses": ["offering", "spirit communication", "purification", "prayer"],
+    "medicinal_notes": ["Used ceremonially, not recreationally, in traditional contexts", "Traditional poultice for insect bites and stings", "Antimicrobial properties when applied externally"],
+    "warnings": ["Highly addictive and harmful when smoked recreationally", "Used only ceremonially in traditional practice"],
+    "folklore": "In many Indigenous traditions, tobacco is the first plant given to humanity and is the primary offering to the spirit world. Leaving tobacco at the base of a plant before harvesting shows respect and ensures the plant's spirit remains at peace.",
+    "growing_season": "Summer",
+    "correspondences": {
+      "deities": ["Great Spirit", "Elegua"],
+      "zodiac": ["Aries", "Scorpio"],
+      "festivals": ["Samhain", "Midsummer"]
+    }
+  },
+  {
+    "name": "Honeysuckle",
+    "latin_name": "Lonicera japonica",
+    "description": "A sweetly intoxicating vine of prosperity, psychic development, and steadfast devotion. Honeysuckle draws money, sharpens intuition, and binds lovers together with its tenacious, twining growth.",
+    "planetary_ruler": "Jupiter",
+    "element": "Earth",
+    "chakra": "Third Eye",
+    "image_path": "herbs/honeysuckle.svg",
+    "magical_uses": ["prosperity", "psychic ability", "love", "protection", "devotion"],
+    "medicinal_notes": ["Traditional Chinese remedy for fevers and infections", "Anti-inflammatory and antiviral", "Supports immune function"],
+    "warnings": ["Berries of some species are toxic; use only flowers"],
+    "folklore": "Bringing honeysuckle into the house was said to bring a wedding within the year. In the language of flowers, honeysuckle means devoted affection. Its sweet nectar was sipped by children as fairy food in English countryside lore.",
+    "growing_season": "Spring to Summer",
+    "correspondences": {
+      "deities": ["Jupiter", "Fortuna", "Cerridwen"],
+      "zodiac": ["Sagittarius", "Cancer"],
+      "festivals": ["Beltane", "Midsummer"]
+    }
+  },
+  {
+    "name": "Black Pepper",
+    "latin_name": "Piper nigrum",
+    "description": "The king of spices and a potent protector that banishes evil and jealousy. Black pepper's biting heat drives away negativity, and it has been used in protective magic across African and Asian traditions.",
+    "planetary_ruler": "Mars",
+    "element": "Earth",
+    "chakra": "Root",
+    "image_path": "herbs/black-pepper.svg",
+    "magical_uses": ["protection", "banishing", "courage", "exorcism"],
+    "medicinal_notes": ["Improves nutrient absorption (especially curcumin)", "Supports digestion", "Warming carminative"],
+    "warnings": [],
+    "folklore": "Black pepper was once worth its weight in gold and was used to pay taxes and ransoms. In Hoodoo, black pepper mixed with salt is scattered across a threshold to keep enemies from crossing, and it is thrown after someone to make them leave.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Mars", "Ares", "Kali"],
+      "zodiac": ["Aries", "Scorpio"],
+      "festivals": ["Samhain", "Yule"]
+    }
+  },
+  {
+    "name": "Heather",
+    "latin_name": "Calluna vulgaris",
+    "description": "A hardy moorland plant of luck, protection, and otherworldly beauty. White heather is among the luckiest charms in Scottish tradition, and all heather connects the living world to the fae realm.",
+    "planetary_ruler": "Neptune",
+    "element": "Water",
+    "chakra": "Crown",
+    "image_path": "herbs/heather.svg",
+    "magical_uses": ["luck", "protection", "rain magic", "fae magic", "beauty"],
+    "medicinal_notes": ["Traditional remedy for kidney and urinary complaints", "Mildly antiseptic", "Used in baths for rheumatic pain"],
+    "warnings": [],
+    "folklore": "In Scottish Highlands lore, white heather grew where no blood had been shed and was supremely lucky to find. Heather ale was brewed by the Picts according to a recipe supposedly lost when the last Pictish king died rather than reveal it.",
+    "growing_season": "Summer to Fall",
+    "correspondences": {
+      "deities": ["Isis", "Osiris", "Aine"],
+      "zodiac": ["Libra", "Pisces"],
+      "festivals": ["Midsummer", "Lughnasadh"]
+    }
+  },
+  {
+    "name": "Vetiver",
+    "latin_name": "Chrysopogon zizanioides",
+    "description": "A deeply grounding root grass that anchors energy to the earth. Vetiver is used for protection, money drawing, and to break hexes, with its smoky, earthy scent calming even the most agitated spirits.",
+    "planetary_ruler": "Venus",
+    "element": "Earth",
+    "chakra": "Root",
+    "image_path": "herbs/vetiver.svg",
+    "magical_uses": ["grounding", "money", "protection", "hex breaking", "love"],
+    "medicinal_notes": ["Deeply calming in aromatherapy", "Traditional remedy for insomnia", "Cooling and soothing for irritated skin"],
+    "warnings": [],
+    "folklore": "In India, vetiver screens are hung in doorways and soaked with water to cool the air during hot seasons. In Hoodoo, vetiver root is called 'khus khus' and is one of the most important ingredients in money-drawing oils.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Lakshmi", "Venus", "Gaia"],
+      "zodiac": ["Taurus", "Capricorn"],
+      "festivals": ["Mabon", "Samhain"]
+    }
+  },
+  {
+    "name": "Willow",
+    "latin_name": "Salix alba",
+    "description": "The tree of the moon, water, and sorrow that bends but does not break. Willow is sacred to goddesses of death and rebirth and is used for moon magic, healing, and wishes.",
+    "planetary_ruler": "Moon",
+    "element": "Water",
+    "chakra": "Sacral",
+    "image_path": "herbs/willow.svg",
+    "magical_uses": ["moon magic", "wishes", "healing", "enchantment", "grief"],
+    "medicinal_notes": ["Contains salicin, the precursor to aspirin", "Traditional pain reliever and anti-inflammatory", "Reduces fever"],
+    "warnings": ["Avoid if allergic to aspirin"],
+    "folklore": "Knocking on willow wood was the original 'knock on wood' for luck. Weeping willows were planted in graveyards for mourning, and casting a wish onto a willow leaf and throwing it into running water was a potent folk spell.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Hecate", "Persephone", "Brigid", "Cerridwen"],
+      "zodiac": ["Cancer", "Pisces"],
+      "festivals": ["Samhain", "Imbolc"]
+    }
+  },
+  {
+    "name": "Nutmeg",
+    "latin_name": "Myristica fragrans",
+    "description": "A warming spice of luck, prosperity, and fidelity prized in both kitchen and magical craft. Nutmeg carried in the pocket draws money, and worn as a charm ensures faithfulness.",
+    "planetary_ruler": "Jupiter",
+    "element": "Earth",
+    "chakra": "Solar Plexus",
+    "image_path": "herbs/nutmeg.svg",
+    "magical_uses": ["luck", "prosperity", "fidelity", "health", "psychic ability"],
+    "medicinal_notes": ["Aids digestion in small amounts", "Traditionally used for insomnia", "Warming pain relief for joints"],
+    "warnings": ["Toxic in large doses; limit to culinary quantities"],
+    "folklore": "Carrying a whole nutmeg in the pocket was a popular folk charm for attracting luck and money. In Elizabethan England, nutmeg was carried as a protection against plague and was worth more per ounce than gold.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Jupiter", "Fortuna"],
+      "zodiac": ["Sagittarius", "Pisces"],
+      "festivals": ["Yule", "Mabon"]
+    }
+  },
+  {
+    "name": "Aloe Vera",
+    "latin_name": "Aloe barbadensis",
+    "description": "A succulent of protection, healing, and beauty revered since ancient Egypt. Aloe was called the 'plant of immortality' and was hung over doorways to repel evil and attract good fortune.",
+    "planetary_ruler": "Moon",
+    "element": "Water",
+    "chakra": "Heart",
+    "image_path": "herbs/aloe-vera.svg",
+    "magical_uses": ["protection", "healing", "beauty", "luck", "moon magic"],
+    "medicinal_notes": ["Soothes burns, cuts, and skin irritations", "Supports digestive health when taken as juice", "Moisturizing and cooling for skin"],
+    "warnings": ["Internal use of aloe latex can cause cramping and diarrhea"],
+    "folklore": "Cleopatra credited aloe vera for her legendary beauty. In African folk tradition, aloe hung over the door protects the home from evil. The Egyptians buried pharaohs with aloe plants to provide healing in the afterlife.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Isis", "Venus", "Bast"],
+      "zodiac": ["Cancer", "Libra"],
+      "festivals": ["Midsummer", "Ostara"]
+    }
+  },
+  {
+    "name": "Garlic",
+    "latin_name": "Allium sativum",
+    "description": "The legendary vampire repellent and one of the most powerful protective herbs ever known. Garlic banishes evil, breaks hexes, and shields the home from all manner of malevolent forces.",
+    "planetary_ruler": "Mars",
+    "element": "Earth",
+    "chakra": "Root",
+    "image_path": "herbs/garlic.svg",
+    "magical_uses": ["protection", "banishing", "exorcism", "healing", "anti-theft"],
+    "medicinal_notes": ["Powerful antimicrobial and antiviral", "Supports cardiovascular health", "Boosts immune function"],
+    "warnings": ["May interact with blood-thinning medications"],
+    "folklore": "Garlic has been hung over doorways to repel vampires, demons, and the evil eye across Europe, the Middle East, and Asia. Roman soldiers ate it for strength, Greek midwives placed it in birthing rooms, and sailors carried it for protection at sea.",
+    "growing_season": "Fall to Summer",
+    "correspondences": {
+      "deities": ["Hecate", "Mars", "Sekhmet"],
+      "zodiac": ["Aries", "Scorpio"],
+      "festivals": ["Samhain", "Midsummer"]
+    }
+  },
+  {
+    "name": "Hemp",
+    "latin_name": "Cannabis sativa",
+    "description": "An ancient sacred plant of vision, healing, and meditation used ceremonially in Hindu, Scythian, and African traditions. Hemp fiber has clothed humanity for millennia and its seeds are deeply nourishing.",
+    "planetary_ruler": "Uranus",
+    "element": "Water",
+    "chakra": "Crown",
+    "image_path": "herbs/hemp.svg",
+    "magical_uses": ["meditation", "healing", "vision", "divination", "love"],
+    "medicinal_notes": ["Hemp seeds are rich in omega fatty acids and protein", "CBD from hemp supports anxiety and pain relief", "Traditional use for relaxation and inflammation"],
+    "warnings": ["Legal status varies by jurisdiction; check local laws"],
+    "folklore": "The Scythians threw hemp seeds on hot stones in funeral rites, inhaling the vapor to honor the dead. In Hindu tradition, bhang (hemp preparation) is sacred to Shiva and consumed during Holi. Viking women used hemp in seidr (seeress) rituals.",
+    "growing_season": "Summer",
+    "correspondences": {
+      "deities": ["Shiva", "Freya", "Saturn"],
+      "zodiac": ["Capricorn", "Aquarius"],
+      "festivals": ["Samhain", "Midsummer"]
+    }
+  },
+  {
+    "name": "Damiana",
+    "latin_name": "Turnera diffusa",
+    "description": "A warming, aphrodisiac herb of passion, love, and psychic vision from the Mexican highlands. Damiana has been used for centuries in love magic and as a gateway to visionary states.",
+    "planetary_ruler": "Mars",
+    "element": "Fire",
+    "chakra": "Sacral",
+    "image_path": "herbs/damiana.svg",
+    "magical_uses": ["love", "passion", "psychic vision", "lust"],
+    "medicinal_notes": ["Traditional aphrodisiac and reproductive tonic", "Supports mood and mild depression", "Traditionally used for nervous anxiety"],
+    "warnings": ["May interact with diabetes medications"],
+    "folklore": "Mexican folk tradition holds that damiana tea was the original margarita ingredient, and the first margarita bottle was shaped like a damiana liqueur bottle. Indigenous peoples of Mexico smoked damiana for its mildly euphoric effects during ceremony.",
+    "growing_season": "Summer to Fall",
+    "correspondences": {
+      "deities": ["Aphrodite", "Venus", "Xochiquetzal"],
+      "zodiac": ["Aries", "Scorpio"],
+      "festivals": ["Beltane", "Midsummer"]
+    }
+  },
+  {
+    "name": "Ashwagandha",
+    "latin_name": "Withania somnifera",
+    "description": "The 'strength of the stallion,' ashwagandha is an Ayurvedic adaptogen that rebuilds vitality, calms anxiety, and restores the body's resilience. It is the foundation herb of Ayurvedic rejuvenation.",
+    "planetary_ruler": "Mars",
+    "element": "Earth",
+    "chakra": "Root",
+    "image_path": "herbs/ashwagandha.svg",
+    "magical_uses": ["strength", "vitality", "protection", "grounding"],
+    "medicinal_notes": ["Adaptogen that reduces cortisol and stress", "Supports immune function and stamina", "Traditionally used for vitality and longevity"],
+    "warnings": ["Avoid during pregnancy", "May interact with thyroid medications"],
+    "folklore": "In Ayurvedic tradition, ashwagandha was given to the weak and elderly to restore the strength of a young horse. The name translates to 'smell of the horse,' referring both to the root's scent and the vigor it bestows.",
+    "growing_season": "Summer to Fall",
+    "correspondences": {
+      "deities": ["Ashvins", "Mars", "Durga"],
+      "zodiac": ["Aries", "Capricorn"],
+      "festivals": ["Mabon", "Yule"]
+    }
+  },
+  {
+    "name": "Holy Basil",
+    "latin_name": "Ocimum tenuiflorum",
+    "description": "Sacred tulsi, one of the holiest plants in Hindu tradition and an incarnation of the goddess Lakshmi. Holy basil purifies body and spirit and is grown in nearly every Hindu household as a divine protector.",
+    "planetary_ruler": "Jupiter",
+    "element": "Air",
+    "chakra": "Heart",
+    "image_path": "herbs/holy-basil.svg",
+    "magical_uses": ["protection", "purification", "devotion", "luck", "love"],
+    "medicinal_notes": ["Powerful adaptogen for stress resilience", "Supports respiratory and immune health", "Balances blood sugar levels"],
+    "warnings": ["May thin the blood; use caution with anticoagulant medications"],
+    "folklore": "Every Hindu household traditionally grows tulsi near the entrance for divine protection. The plant is worshipped daily, and marriages have been performed between people and tulsi plants to confer blessings. Dying with a tulsi leaf ensures passage to heaven.",
+    "growing_season": "Summer",
+    "correspondences": {
+      "deities": ["Lakshmi", "Vishnu", "Krishna"],
+      "zodiac": ["Sagittarius", "Leo"],
+      "festivals": ["Ostara", "Midsummer"]
+    }
+  },
+  {
+    "name": "Mistletoe",
+    "latin_name": "Viscum album",
+    "description": "The sacred 'all-healer' of the Druids, mistletoe grows between earth and sky on the branches of host trees. It is a herb of fertility, protection, and the liminal space between worlds.",
+    "planetary_ruler": "Sun",
+    "element": "Air",
+    "chakra": "Crown",
+    "image_path": "herbs/mistletoe.svg",
+    "magical_uses": ["protection", "fertility", "love", "hunting", "healing"],
+    "medicinal_notes": ["Traditionally used to lower blood pressure", "Immune-modulating properties under research", "Historical sedative and antispasmodic"],
+    "warnings": ["All parts are toxic if ingested, especially berries", "Use externally or symbolically only"],
+    "folklore": "The Druids harvested mistletoe from oak trees with a golden sickle on the sixth night of the moon. In Norse mythology, a mistletoe arrow killed the god Baldur, and his mother Frigg declared it a symbol of love, giving rise to the kissing tradition.",
+    "growing_season": "Year-round",
+    "correspondences": {
+      "deities": ["Frigga", "Baldur", "Apollo", "Cernunnos"],
+      "zodiac": ["Leo", "Sagittarius"],
+      "festivals": ["Yule", "Midsummer"]
+    }
+  },
+  {
+    "name": "Violet",
+    "latin_name": "Viola odorata",
+    "description": "A shy woodland flower of love, modesty, and wishes. Violets are sacred to Aphrodite and have been used in love magic since ancient Greece, where they symbolized both desire and faithfulness.",
+    "planetary_ruler": "Neptune",
+    "element": "Water",
+    "chakra": "Heart",
+    "image_path": "herbs/violet.svg",
+    "magical_uses": ["love", "wishes", "peace", "healing", "protection"],
+    "medicinal_notes": ["Soothes coughs and sore throats as a syrup", "Mildly laxative", "Anti-inflammatory for skin conditions"],
+    "warnings": [],
+    "folklore": "In Greek myth, Zeus created violets to feed his lover Io after turning her into a cow. Napoleon's supporters adopted the violet as their secret symbol, calling him 'Corporal Violet' because he promised to return in the violet season.",
+    "growing_season": "Spring",
+    "correspondences": {
+      "deities": ["Aphrodite", "Venus", "Io"],
+      "zodiac": ["Libra", "Pisces"],
+      "festivals": ["Ostara", "Beltane"]
+    }
+  },
+  {
+    "name": "Black Cohosh",
+    "latin_name": "Actaea racemosa",
+    "description": "A powerful root of courage, protection, and female empowerment. Black cohosh is used to drive away dark spirits and to strengthen the resolve of those who face intimidation or oppression.",
+    "planetary_ruler": "Pluto",
+    "element": "Fire",
+    "chakra": "Root",
+    "image_path": "herbs/black-cohosh.svg",
+    "magical_uses": ["protection", "courage", "banishing", "empowerment"],
+    "medicinal_notes": ["Widely used for menopausal symptoms", "Supports hormonal balance", "Traditional remedy for menstrual cramps"],
+    "warnings": ["Avoid during pregnancy", "May rarely affect liver function; monitor with long-term use"],
+    "folklore": "In Hoodoo, black cohosh root is called 'black snake root' and is used to drive away evil and empower women in difficult situations. Native American women used it extensively for reproductive health, and it was a key herb of Eclectic medicine.",
+    "growing_season": "Summer",
+    "correspondences": {
+      "deities": ["Hecate", "Lilith", "Morrigan"],
+      "zodiac": ["Scorpio", "Capricorn"],
+      "festivals": ["Samhain", "Mabon"]
+    }
+  },
+  {
+    "name": "Clary Sage",
+    "latin_name": "Salvia sclarea",
+    "description": "The 'clear eye,' a visionary sage that brings clarity, euphoria, and prophetic insight. Clary sage clears confusion and opens the inner eye, making it valuable for divination and dream work.",
+    "planetary_ruler": "Moon",
+    "element": "Earth",
+    "chakra": "Third Eye",
+    "image_path": "herbs/clary-sage.svg",
+    "magical_uses": ["clarity", "divination", "dreams", "euphoria", "vision"],
+    "medicinal_notes": ["Balances hormones and eases menstrual discomfort", "Calming and antidepressant in aromatherapy", "Reduces blood pressure"],
+    "warnings": ["Avoid during pregnancy", "May intensify the effects of alcohol"],
+    "folklore": "The name 'clary' derives from the Latin 'clarus' meaning clear, as the seeds were used to remove foreign objects from the eyes. Drinking clary sage wine was said to produce intoxication and vivid, sometimes prophetic visions.",
+    "growing_season": "Spring to Summer",
+    "correspondences": {
+      "deities": ["Hecate", "Artemis", "Selene"],
+      "zodiac": ["Cancer", "Pisces"],
+      "festivals": ["Samhain", "Midsummer"]
+    }
+  },
+  {
+    "name": "Horsetail",
+    "latin_name": "Equisetum arvense",
+    "description": "A living fossil, unchanged for 350 million years, horsetail is a herb of fertility, endurance, and deep earth magic. Its high silica content strengthens bones, hair, and nails, and its energy is one of ancient persistence.",
+    "planetary_ruler": "Saturn",
+    "element": "Earth",
+    "chakra": "Root",
+    "image_path": "herbs/horsetail.svg",
+    "magical_uses": ["fertility", "endurance", "grounding", "snake magic"],
+    "medicinal_notes": ["Rich in silica for bone, hair, and nail health", "Supports kidney and urinary tract function", "Traditionally used to stop bleeding"],
+    "warnings": ["Avoid with kidney disease", "Not recommended for long-term use without supervision"],
+    "folklore": "Horsetail is one of the oldest plants on Earth, predating the dinosaurs. In folk magic, holding a horsetail stalk was said to attract snakes, and the plant was used in fertility rites connected to the deep, ancient earth.",
+    "growing_season": "Spring to Summer",
+    "correspondences": {
+      "deities": ["Saturn", "Gaia", "Cernunnos"],
+      "zodiac": ["Capricorn", "Aquarius"],
+      "festivals": ["Ostara", "Mabon"]
+    }
+  },
+  {
+    "name": "Lotus",
+    "latin_name": "Nelumbo nucifera",
+    "description": "The supreme flower of spiritual awakening, purity, and transcendence. Rising from mud to bloom in perfect beauty, the lotus symbolizes enlightenment and the soul's journey from darkness to light.",
+    "planetary_ruler": "Neptune",
+    "element": "Water",
+    "chakra": "Crown",
+    "image_path": "herbs/lotus.svg",
+    "magical_uses": ["spirituality", "meditation", "blessing", "protection", "enlightenment"],
+    "medicinal_notes": ["Seeds and root are nutritious and support digestion", "Traditionally used to calm the mind and promote sleep", "Flower used in traditional Asian medicine for bleeding"],
+    "warnings": [],
+    "folklore": "In Hindu tradition, Brahma was born seated on a lotus emerging from Vishnu's navel. In Egyptian mythology, the lotus was the first flower to emerge from the primordial waters and gave birth to the sun god Ra each morning.",
+    "growing_season": "Summer",
+    "correspondences": {
+      "deities": ["Vishnu", "Brahma", "Lakshmi", "Ra", "Buddha"],
+      "zodiac": ["Cancer", "Pisces"],
+      "festivals": ["Midsummer", "Ostara"]
+    }
+  },
+  {
+    "name": "Cinquefoil",
+    "latin_name": "Potentilla reptans",
+    "description": "The five-fingered grass, a powerful all-purpose magical herb. Each of its five leaves represents love, money, health, power, and wisdom, making it one of the most versatile herbs in folk magic.",
+    "planetary_ruler": "Jupiter",
+    "element": "Air",
+    "chakra": "Solar Plexus",
+    "image_path": "herbs/cinquefoil.svg",
+    "magical_uses": ["prosperity", "protection", "wisdom", "eloquence", "power"],
+    "medicinal_notes": ["Astringent for sore throats and mouth ulcers", "Traditional remedy for diarrhea", "Used as a fever reducer"],
+    "warnings": [],
+    "folklore": "Cinquefoil was carried by medieval witches for its five-fold blessings: love, money, health, power, and wisdom. In Hoodoo, it is called 'five finger grass' and is used in mojo bags for gamblers and those seeking favor in court.",
+    "growing_season": "Spring to Fall",
+    "correspondences": {
+      "deities": ["Jupiter", "Mercury", "Fortuna"],
+      "zodiac": ["Sagittarius", "Gemini"],
+      "festivals": ["Lughnasadh", "Midsummer"]
+    }
+  },
+  {
+    "name": "Anise",
+    "latin_name": "Pimpinella anisum",
+    "description": "A sweet, licorice-scented seed that wards off nightmares and evil spirits. Anise has been used in protection magic since Roman times and is especially potent for ensuring peaceful, prophetic sleep.",
+    "planetary_ruler": "Jupiter",
+    "element": "Air",
+    "chakra": "Third Eye",
+    "image_path": "herbs/anise.svg",
+    "magical_uses": ["protection", "purification", "sleep", "youth", "psychic ability"],
+    "medicinal_notes": ["Relieves gas and digestive discomfort", "Supports respiratory health and soothes coughs", "Mild expectorant"],
+    "warnings": ["May cause allergic reactions in those sensitive to plants in the carrot family"],
+    "folklore": "Roman wedding cakes were flavored with anise to ensure a sweet marriage and were offered to guests to prevent indigestion. Anise-filled pillows were used to prevent nightmares, and the scent was said to repel the evil eye.",
+    "growing_season": "Summer",
+    "correspondences": {
+      "deities": ["Apollo", "Mercury", "Hermes"],
+      "zodiac": ["Sagittarius", "Gemini"],
+      "festivals": ["Imbolc", "Mabon"]
+    }
+  }
+]

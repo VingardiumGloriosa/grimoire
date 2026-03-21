@@ -1,0 +1,11 @@
+node_modules/
+.next/
+.env.local
+.env*.local
+*.tsbuildinfo
+next-env.d.ts
+.vercel/
+out/
+.claude/
+CLAUDE.md
+Bugs.md

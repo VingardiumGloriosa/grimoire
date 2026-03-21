@@ -1,0 +1,602 @@
+[
+  {
+    "number": 1,
+    "category": "life_path",
+    "title": "The Leader",
+    "description": "Life Path 1 individuals are born pioneers, destined to forge new trails and lead by example. They possess an innate drive toward independence and originality that sets them apart from the crowd. Their life journey centers on developing self-reliance, asserting individuality, and channeling ambition into creative endeavors. When aligned with their purpose, they become powerful catalysts for change and innovation.",
+    "keywords": ["independence", "ambition", "originality", "determination", "courage", "initiative"],
+    "strengths": ["Natural leadership ability", "Strong willpower and determination", "Creative and innovative thinking", "Self-motivated and driven"],
+    "challenges": ["Tendency toward stubbornness or arrogance", "Difficulty accepting help from others", "Impatience with slower-paced individuals"],
+    "compatible_numbers": [3, 5, 9]
+  },
+  {
+    "number": 1,
+    "category": "expression",
+    "title": "The Pioneer",
+    "description": "Expression Number 1 reveals a personality that communicates with authority and directness. These individuals express themselves best when taking charge and presenting original ideas. Their natural mode of interaction is assertive, confident, and forward-thinking. They are most fulfilled when their talents are directed toward creating something entirely new rather than maintaining existing structures.",
+    "keywords": ["authority", "directness", "innovation", "confidence", "assertiveness"],
+    "strengths": ["Commanding presence in communication", "Ability to inspire and motivate others", "Talent for original thought"],
+    "challenges": ["Can come across as domineering", "May dismiss collaborative input", "Struggles with diplomacy"],
+    "compatible_numbers": [3, 5, 7]
+  },
+  {
+    "number": 1,
+    "category": "soul_urge",
+    "title": "The Independent Spirit",
+    "description": "A Soul Urge of 1 reveals a deep inner craving for autonomy and self-determination. At the core, these individuals desire to stand on their own merits and be recognized for their unique contributions. They feel most alive when blazing their own path, free from the constraints of others' expectations. This inner drive can manifest as a restless need to prove oneself and achieve distinction.",
+    "keywords": ["autonomy", "self-determination", "distinction", "freedom", "achievement"],
+    "strengths": ["Unwavering inner resolve", "Clarity of personal vision", "Courage to stand alone", "Strong sense of identity"],
+    "challenges": ["Fear of dependency or vulnerability", "Inner loneliness from self-imposed isolation"],
+    "compatible_numbers": [3, 5, 9]
+  },
+  {
+    "number": 1,
+    "category": "personality",
+    "title": "The Trailblazer",
+    "description": "Personality Number 1 projects an image of confidence, strength, and self-assurance to the outer world. Others perceive these individuals as natural leaders who are capable, decisive, and unafraid of challenge. Their outward demeanor is one of independence and competence, often drawing others to follow their example. They carry themselves with a sense of purpose that commands respect.",
+    "keywords": ["confidence", "strength", "decisiveness", "competence", "authority"],
+    "strengths": ["Projects natural authority", "Inspires confidence in others", "Appears capable under pressure"],
+    "challenges": ["May seem intimidating or unapproachable", "Can appear emotionally guarded", "Risk of being perceived as self-centered"],
+    "compatible_numbers": [2, 5, 7]
+  },
+  {
+    "number": 1,
+    "category": "general",
+    "title": "The Monad",
+    "description": "The number 1 represents the primal force of creation, the initial spark from which all things originate. In Pythagorean tradition, it is the source number, indivisible and self-generating. It carries the vibration of new beginnings, raw potential, and the courage to step into the unknown. Those influenced by this number are learning the lessons of selfhood, will, and the responsible use of personal power.",
+    "keywords": ["creation", "beginning", "unity", "will", "potential", "origin"],
+    "strengths": ["Boundless creative potential", "Ability to initiate and manifest", "Resilience in adversity", "Strong sense of purpose"],
+    "challenges": ["Ego imbalance", "Difficulty with patience and cooperation"],
+    "compatible_numbers": [3, 5, 9]
+  },
+  {
+    "number": 2,
+    "category": "life_path",
+    "title": "The Peacemaker",
+    "description": "Life Path 2 individuals are natural diplomats whose journey revolves around cooperation, balance, and sensitivity to others. They possess a rare gift for understanding both sides of any situation and bringing harmony where there is discord. Their life purpose involves learning to trust their deep intuition while navigating the delicate art of partnership. They thrive when serving as the quiet force that holds groups and relationships together.",
+    "keywords": ["diplomacy", "cooperation", "sensitivity", "balance", "intuition", "partnership"],
+    "strengths": ["Exceptional emotional intelligence", "Natural mediator and peacekeeper", "Deep intuitive awareness", "Patient and supportive presence"],
+    "challenges": ["Over-sensitivity to criticism", "Tendency toward indecisiveness", "Risk of losing identity in relationships"],
+    "compatible_numbers": [4, 6, 8]
+  },
+  {
+    "number": 2,
+    "category": "expression",
+    "title": "The Diplomat",
+    "description": "Expression Number 2 communicates through tact, grace, and attentive listening. These individuals express their talents best in collaborative settings where their gift for finding common ground can shine. They have an innate ability to sense the unspoken needs and emotions of those around them. Their expressive gifts lie in bringing people together and creating environments of mutual respect and understanding.",
+    "keywords": ["tact", "grace", "listening", "collaboration", "empathy"],
+    "strengths": ["Masterful at reading social dynamics", "Creates harmony in group settings", "Expresses care through thoughtful action"],
+    "challenges": ["May suppress personal opinions to keep peace", "Can be overly passive in communication", "Struggles to assert boundaries"],
+    "compatible_numbers": [1, 6, 8]
+  },
+  {
+    "number": 2,
+    "category": "soul_urge",
+    "title": "The Harmonizer",
+    "description": "A Soul Urge of 2 reveals a deep inner longing for love, companionship, and emotional connection. At their core, these individuals crave peaceful relationships and environments where sensitivity is valued rather than dismissed. They feel most fulfilled when nurturing deep bonds and facilitating understanding between people. This inner desire can make them extraordinarily empathetic but also vulnerable to emotional overwhelm.",
+    "keywords": ["love", "companionship", "peace", "connection", "nurturing"],
+    "strengths": ["Profound capacity for empathy", "Creates deep emotional bonds", "Instinctive understanding of others' needs", "Gentle and nurturing spirit"],
+    "challenges": ["Emotional dependency on others' approval", "Difficulty being alone", "Tendency to absorb others' pain"],
+    "compatible_numbers": [4, 6, 9]
+  },
+  {
+    "number": 2,
+    "category": "personality",
+    "title": "The Gentle Presence",
+    "description": "Personality Number 2 projects warmth, approachability, and quiet grace. Others see these individuals as kind, considerate, and easy to confide in. Their outward manner is unassuming and receptive, making people feel safe and heard in their company. They radiate a calming energy that naturally draws others seeking comfort or counsel.",
+    "keywords": ["warmth", "approachability", "grace", "gentleness", "receptivity"],
+    "strengths": ["Puts others at ease immediately", "Projects genuine kindness", "Appears trustworthy and sincere"],
+    "challenges": ["May be perceived as weak or overly passive", "Can seem indecisive to more assertive types", "Risk of being overlooked or underestimated"],
+    "compatible_numbers": [1, 4, 8]
+  },
+  {
+    "number": 2,
+    "category": "general",
+    "title": "The Dyad",
+    "description": "The number 2 embodies the principle of duality, polarity, and the sacred feminine. In Pythagorean numerology, it represents the first division from unity, bringing forth the concepts of receptivity and reflection. It carries the vibration of partnership, patience, and the quiet power of yielding. Those under its influence are learning the lessons of cooperation, trust, and finding strength in gentleness rather than force.",
+    "keywords": ["duality", "receptivity", "reflection", "patience", "polarity", "partnership"],
+    "strengths": ["Balances opposing forces", "Channels receptive wisdom", "Masters the art of timing", "Finds power in subtlety"],
+    "challenges": ["Navigating self-doubt", "Balancing giving with receiving"],
+    "compatible_numbers": [4, 6, 8]
+  },
+  {
+    "number": 3,
+    "category": "life_path",
+    "title": "The Creative",
+    "description": "Life Path 3 individuals walk a journey defined by creative self-expression, joy, and communication. They are gifted with vivid imaginations and an infectious enthusiasm that lights up any room they enter. Their life purpose involves learning to channel their abundant creative energy into focused artistic or communicative endeavors. When balanced, they become powerful conduits of inspiration, uplifting others through words, art, or sheer presence.",
+    "keywords": ["creativity", "expression", "joy", "communication", "inspiration", "imagination"],
+    "strengths": ["Exceptional verbal and artistic talents", "Natural ability to uplift and entertain", "Optimistic and enthusiastic energy", "Vivid and fertile imagination"],
+    "challenges": ["Tendency to scatter energy across too many projects", "Difficulty with discipline and follow-through", "Vulnerability to mood swings and self-doubt"],
+    "compatible_numbers": [1, 5, 9]
+  },
+  {
+    "number": 3,
+    "category": "expression",
+    "title": "The Communicator",
+    "description": "Expression Number 3 reveals talents that flow most naturally through words, art, and social engagement. These individuals are born communicators with a gift for making complex ideas accessible and entertaining. Their expressive style is colorful, warm, and often theatrical in the best sense. They find their greatest fulfillment when their creative output touches, moves, or inspires others.",
+    "keywords": ["articulation", "charm", "artistry", "sociability", "wit"],
+    "strengths": ["Gifted storyteller and conversationalist", "Brings creative flair to any endeavor", "Naturally charming and magnetic"],
+    "challenges": ["Prone to gossip or superficial chatter", "May use humor to deflect deeper emotions", "Can struggle with sustained focus"],
+    "compatible_numbers": [1, 5, 7]
+  },
+  {
+    "number": 3,
+    "category": "soul_urge",
+    "title": "The Joyful Heart",
+    "description": "A Soul Urge of 3 reveals an inner longing to express, create, and experience the fullness of life's beauty. Deep within, these individuals crave the freedom to share their unique vision with the world without censorship or restraint. They feel most alive when immersed in creative flow or meaningful social connection. This soul desire drives them toward artistic pursuits and environments where playfulness and authenticity are celebrated.",
+    "keywords": ["self-expression", "beauty", "freedom", "playfulness", "authenticity"],
+    "strengths": ["Deep well of creative inspiration", "Authentic emotional expression", "Natural sense of beauty and aesthetics", "Childlike wonder and openness"],
+    "challenges": ["Fear of criticism stifling expression", "Emotional volatility when creativity is blocked"],
+    "compatible_numbers": [1, 5, 9]
+  },
+  {
+    "number": 3,
+    "category": "personality",
+    "title": "The Entertainer",
+    "description": "Personality Number 3 projects an image of warmth, wit, and social magnetism. Others perceive these individuals as fun-loving, expressive, and endlessly engaging. Their outward persona sparkles with humor and creative flair, making them the life of social gatherings. They carry an aura of youthful exuberance that makes others feel more alive in their presence.",
+    "keywords": ["charm", "humor", "magnetism", "expressiveness", "vivacity"],
+    "strengths": ["Instantly likeable and approachable", "Commands attention in social settings", "Projects infectious optimism"],
+    "challenges": ["May be seen as frivolous or unfocused", "Risk of appearing attention-seeking", "Can mask deeper feelings behind a cheerful exterior"],
+    "compatible_numbers": [5, 6, 9]
+  },
+  {
+    "number": 3,
+    "category": "general",
+    "title": "The Triad",
+    "description": "The number 3 represents synthesis, creative manifestation, and the principle of growth. In Pythagorean thought, it is the first number to have a beginning, middle, and end, symbolizing completeness in motion. It carries the vibration of artistic expression, social connection, and the fertile union of opposing forces producing something new. Those influenced by 3 are learning to harness the power of joy and creative output as spiritual practice.",
+    "keywords": ["synthesis", "growth", "expression", "fertility", "joy", "manifestation"],
+    "strengths": ["Channels creative abundance", "Bridges communication gaps", "Generates enthusiasm and momentum", "Transforms ideas into tangible form"],
+    "challenges": ["Overindulgence and excess", "Difficulty with structure and routine"],
+    "compatible_numbers": [1, 5, 9]
+  },
+  {
+    "number": 4,
+    "category": "life_path",
+    "title": "The Builder",
+    "description": "Life Path 4 individuals are the architects of the material world, destined to create lasting structures and systems. They possess an extraordinary capacity for hard work, discipline, and methodical planning that others often lack. Their life journey involves learning to build solid foundations, whether in career, family, or community, through patience and perseverance. When they embrace their purpose, they become the bedrock upon which others can rely.",
+    "keywords": ["stability", "discipline", "hard work", "structure", "reliability", "foundation"],
+    "strengths": ["Exceptional organizational skills", "Unwavering dedication and work ethic", "Practical problem-solving ability", "Creates lasting and reliable systems"],
+    "challenges": ["Rigidity and resistance to change", "Tendency toward overwork and burnout", "Difficulty expressing emotions or embracing spontaneity"],
+    "compatible_numbers": [2, 6, 8]
+  },
+  {
+    "number": 4,
+    "category": "expression",
+    "title": "The Organizer",
+    "description": "Expression Number 4 reveals talents rooted in systematic thinking, practical application, and meticulous attention to detail. These individuals express themselves best through tangible accomplishment and well-crafted work. Their communication style is grounded, clear, and reliable rather than flashy or dramatic. They find fulfillment in bringing order from chaos and building things that stand the test of time.",
+    "keywords": ["precision", "methodology", "reliability", "craftsmanship", "thoroughness"],
+    "strengths": ["Excels at project management and execution", "Produces high-quality, dependable work", "Communicates with clarity and accuracy"],
+    "challenges": ["May come across as rigid or overly serious", "Struggles with abstract or theoretical discussions", "Can be perceived as controlling"],
+    "compatible_numbers": [2, 6, 8]
+  },
+  {
+    "number": 4,
+    "category": "soul_urge",
+    "title": "The Grounded Soul",
+    "description": "A Soul Urge of 4 reveals a deep inner need for security, order, and a sense of accomplishment through tangible results. At their core, these individuals crave a stable foundation from which to build their lives with confidence and purpose. They feel most at peace when their environment is organized, their finances are secure, and their efforts produce measurable outcomes. This inner drive can manifest as a profound commitment to duty and a desire to leave a lasting legacy.",
+    "keywords": ["security", "order", "accomplishment", "legacy", "stability"],
+    "strengths": ["Inner fortitude and resilience", "Deep sense of responsibility", "Satisfaction through meaningful work", "Grounded emotional foundation"],
+    "challenges": ["Fear of instability driving excessive control", "Difficulty relaxing or letting go", "Inner rigidity limiting growth"],
+    "compatible_numbers": [2, 6, 8]
+  },
+  {
+    "number": 4,
+    "category": "personality",
+    "title": "The Dependable One",
+    "description": "Personality Number 4 projects an image of solidity, trustworthiness, and quiet competence. Others perceive these individuals as the person you call when you need something done right and on time. Their outward demeanor communicates steadiness and practicality, inspiring confidence in their reliability. They present themselves with a no-nonsense professionalism that earns deep respect.",
+    "keywords": ["trustworthiness", "solidity", "competence", "professionalism", "steadiness"],
+    "strengths": ["Projects absolute reliability", "Inspires trust through consistent behavior", "Appears grounded and capable"],
+    "challenges": ["May seem boring or predictable to others", "Can appear inflexible or overly cautious", "Risk of being taken for granted"],
+    "compatible_numbers": [2, 6, 8]
+  },
+  {
+    "number": 4,
+    "category": "general",
+    "title": "The Tetrad",
+    "description": "The number 4 represents the material plane, stability, and the manifestation of order in the physical world. In Pythagorean tradition, the tetrad was considered sacred as the number of the square, embodying balance and solidity in all directions. It carries the vibration of earth, the four elements, and the four cardinal directions. Those under its influence are learning mastery over the material realm through discipline, patience, and honest labor.",
+    "keywords": ["materiality", "order", "earth", "solidity", "endurance", "form"],
+    "strengths": ["Masters physical-plane challenges", "Creates enduring structures", "Embodies discipline as a virtue", "Grounds abstract ideas into reality"],
+    "challenges": ["Overattachment to material security", "Resistance to spiritual or abstract growth"],
+    "compatible_numbers": [2, 6, 8]
+  },
+  {
+    "number": 5,
+    "category": "life_path",
+    "title": "The Free Spirit",
+    "description": "Life Path 5 individuals are here to experience the full spectrum of human existence through adventure, change, and sensory exploration. They possess an insatiable curiosity and a deep need for personal freedom that drives them to seek variety in all aspects of life. Their journey involves learning to embrace change as a teacher while developing enough discipline to channel their restless energy constructively. When balanced, they become versatile, magnetic individuals who inspire others to live more fully.",
+    "keywords": ["freedom", "adventure", "change", "versatility", "curiosity", "experience"],
+    "strengths": ["Remarkable adaptability and resourcefulness", "Magnetic and engaging personality", "Thrives under changing circumstances", "Open-minded and progressive thinking"],
+    "challenges": ["Difficulty with commitment and follow-through", "Tendency toward excess and overindulgence", "Restlessness that disrupts stability"],
+    "compatible_numbers": [1, 3, 7]
+  },
+  {
+    "number": 5,
+    "category": "expression",
+    "title": "The Adventurer",
+    "description": "Expression Number 5 reveals talents best expressed through dynamic, ever-changing environments and engaging communication. These individuals are natural promoters, travelers, and storytellers who thrive when sharing experiences with others. Their expressive style is energetic, persuasive, and marked by a quick wit that adapts effortlessly to any audience. They find fulfillment in roles that offer variety, movement, and the freedom to explore new horizons.",
+    "keywords": ["dynamism", "persuasion", "adaptability", "wit", "versatility"],
+    "strengths": ["Exceptional at engaging diverse audiences", "Quick learner who masters new skills rapidly", "Brings energy and excitement to communication"],
+    "challenges": ["May spread talents too thin", "Can be unreliable with long-term commitments", "Prone to exaggeration for effect"],
+    "compatible_numbers": [1, 3, 9]
+  },
+  {
+    "number": 5,
+    "category": "soul_urge",
+    "title": "The Seeker",
+    "description": "A Soul Urge of 5 reveals an inner hunger for freedom, variety, and the thrill of new experience. At their deepest level, these individuals crave liberation from routine, convention, and anything that feels confining. They feel most alive when exploring unfamiliar territory, whether physical, intellectual, or experiential. This powerful inner drive can lead to a richly textured life but also a pattern of restless searching if the need for novelty is never tempered by purpose.",
+    "keywords": ["liberation", "exploration", "novelty", "thrill", "discovery"],
+    "strengths": ["Fearless approach to new experiences", "Inner compass that seeks growth through change", "Passionate and fully engaged with life", "Embraces the unknown with enthusiasm"],
+    "challenges": ["Inner restlessness that resists contentment", "Difficulty distinguishing freedom from escapism"],
+    "compatible_numbers": [1, 3, 7]
+  },
+  {
+    "number": 5,
+    "category": "personality",
+    "title": "The Magnetic One",
+    "description": "Personality Number 5 projects an image of vitality, attractiveness, and exciting unpredictability. Others perceive these individuals as adventurous, charismatic, and full of life. Their outward energy is electric and draws people in with the promise of something interesting always happening around them. They carry themselves with a casual confidence that suggests they have seen and done more than most.",
+    "keywords": ["vitality", "charisma", "attractiveness", "spontaneity", "energy"],
+    "strengths": ["Instantly captivating presence", "Projects an aura of exciting possibility", "Appears youthful and vibrant regardless of age"],
+    "challenges": ["May seem unreliable or flighty", "Can appear self-indulgent", "Risk of being seen as commitment-averse"],
+    "compatible_numbers": [1, 3, 7]
+  },
+  {
+    "number": 5,
+    "category": "general",
+    "title": "The Pentad",
+    "description": "The number 5 represents the midpoint of the single digits, embodying change, sensory experience, and the dynamic tension between freedom and responsibility. In Pythagorean tradition, the pentad symbolized the union of the first masculine and feminine numbers (2+3), representing the marriage of opposites. It carries the vibration of the five senses and the human experience in its fullest physical expression. Those influenced by 5 are learning to navigate change as the only constant and to find wisdom through direct experience.",
+    "keywords": ["change", "sensation", "midpoint", "dynamism", "experience", "freedom"],
+    "strengths": ["Embraces transformation as growth", "Lives fully in the present moment", "Bridges different worlds and perspectives", "Catalyzes change in stagnant situations"],
+    "challenges": ["Excess and lack of moderation", "Instability from constant motion"],
+    "compatible_numbers": [1, 3, 7]
+  },
+  {
+    "number": 6,
+    "category": "life_path",
+    "title": "The Nurturer",
+    "description": "Life Path 6 individuals are devoted caretakers whose journey centers on love, responsibility, and service to home and community. They possess a powerful sense of duty and an innate understanding of what others need to feel safe, loved, and supported. Their life purpose involves learning to balance selfless giving with healthy boundaries and self-care. When they honor both their nurturing instincts and their own needs, they become pillars of warmth and stability for everyone around them.",
+    "keywords": ["love", "responsibility", "nurturing", "home", "service", "harmony"],
+    "strengths": ["Extraordinary capacity for unconditional love", "Natural healer and counselor", "Creates beautiful, harmonious environments", "Deeply loyal and protective"],
+    "challenges": ["Tendency toward martyrdom and self-sacrifice", "Difficulty saying no or setting boundaries", "Can become controlling under the guise of caring"],
+    "compatible_numbers": [2, 4, 9]
+  },
+  {
+    "number": 6,
+    "category": "expression",
+    "title": "The Caretaker",
+    "description": "Expression Number 6 reveals talents that shine brightest in service, healing, and the creation of beauty and comfort. These individuals express themselves most naturally through acts of care, artistic creation, and community building. Their communicative gifts center on counsel, encouragement, and the ability to see the best in others. They find deepest fulfillment when their work directly improves the quality of life for those they touch.",
+    "keywords": ["service", "beauty", "counsel", "comfort", "healing"],
+    "strengths": ["Creates warmth and belonging wherever they go", "Gifted at resolving family and community conflicts", "Expresses love through practical action"],
+    "challenges": ["May neglect personal ambitions for others' needs", "Can become preachy or moralistic", "Struggles when care is not reciprocated"],
+    "compatible_numbers": [2, 4, 8]
+  },
+  {
+    "number": 6,
+    "category": "soul_urge",
+    "title": "The Devoted Heart",
+    "description": "A Soul Urge of 6 reveals a profound inner need to love, protect, and be needed by others. At their core, these individuals yearn for a harmonious home, a loving family, and the knowledge that their presence makes a tangible difference. They feel most at peace when surrounded by those they love and when beauty, order, and warmth pervade their environment. This deep desire to nurture can be both their greatest gift and their heaviest burden.",
+    "keywords": ["devotion", "protection", "family", "beauty", "belonging"],
+    "strengths": ["Boundless capacity for devotion", "Deep satisfaction in nurturing others", "Inner sense of aesthetic beauty", "Powerful protective instincts"],
+    "challenges": ["Codependency and enmeshment", "Guilt when prioritizing self over others", "Idealization of relationships leading to disappointment"],
+    "compatible_numbers": [2, 4, 9]
+  },
+  {
+    "number": 6,
+    "category": "personality",
+    "title": "The Warm Hearth",
+    "description": "Personality Number 6 projects an image of warmth, compassion, and domestic grace. Others perceive these individuals as nurturing, approachable, and inherently trustworthy with matters of the heart. Their outward demeanor radiates a comforting stability that makes others feel cared for and welcome. They often appear poised, aesthetically refined, and naturally drawn to creating beauty in their surroundings.",
+    "keywords": ["warmth", "compassion", "grace", "trustworthiness", "refinement"],
+    "strengths": ["Projects maternal or paternal warmth", "Appears aesthetically polished and tasteful", "Inspires deep trust and confiding"],
+    "challenges": ["May appear overprotective or smothering", "Can seem judgmental about others' lifestyle choices", "Risk of appearing self-righteous"],
+    "compatible_numbers": [2, 3, 4]
+  },
+  {
+    "number": 6,
+    "category": "general",
+    "title": "The Hexad",
+    "description": "The number 6 represents harmony, balance, and the perfection of domestic love. In Pythagorean numerology, it was considered the first perfect number (1+2+3=6), symbolizing the union of all parts into a harmonious whole. It carries the vibration of Venus, beauty, and the sacred responsibility of care. Those influenced by 6 are learning that true strength lies in vulnerability, service, and the courage to love without condition.",
+    "keywords": ["harmony", "perfection", "Venus", "domesticity", "responsibility", "beauty"],
+    "strengths": ["Embodies unconditional love in action", "Creates harmony from discord", "Bridges the ideal and the practical", "Sustains community bonds"],
+    "challenges": ["Perfectionism in relationships", "Sacrificing self-identity for the role of caretaker"],
+    "compatible_numbers": [2, 4, 9]
+  },
+  {
+    "number": 7,
+    "category": "life_path",
+    "title": "The Seeker of Truth",
+    "description": "Life Path 7 individuals walk a deeply introspective path devoted to the pursuit of knowledge, wisdom, and spiritual understanding. They possess a penetrating intellect and an innate skepticism that compels them to look beneath the surface of everything. Their life journey involves learning to balance analytical thinking with intuitive knowing and to find connection with others despite their need for solitude. When they trust their inner wisdom, they become profound teachers and seekers who illuminate hidden truths.",
+    "keywords": ["wisdom", "introspection", "analysis", "spirituality", "solitude", "truth"],
+    "strengths": ["Brilliant analytical and research abilities", "Deep spiritual awareness and intuition", "Independent and original thinker", "Natural philosopher and truth-seeker"],
+    "challenges": ["Tendency toward isolation and emotional detachment", "Difficulty trusting others or opening up", "Perfectionism that leads to chronic dissatisfaction"],
+    "compatible_numbers": [1, 5, 9]
+  },
+  {
+    "number": 7,
+    "category": "expression",
+    "title": "The Analyst",
+    "description": "Expression Number 7 reveals talents rooted in research, investigation, and the distillation of complex information into meaningful insight. These individuals express themselves best through careful study, writing, and one-on-one intellectual exchange rather than group settings. Their communicative style is precise, thoughtful, and often laced with dry wit. They find fulfillment when their work contributes to deeper understanding of life's mysteries.",
+    "keywords": ["research", "insight", "precision", "contemplation", "investigation"],
+    "strengths": ["Exceptional capacity for deep analysis", "Produces work of intellectual rigor", "Communicates complex ideas with clarity"],
+    "challenges": ["May seem aloof or intellectually superior", "Struggles with small talk and social niceties", "Can be overly critical of others' reasoning"],
+    "compatible_numbers": [1, 3, 5]
+  },
+  {
+    "number": 7,
+    "category": "soul_urge",
+    "title": "The Mystic Within",
+    "description": "A Soul Urge of 7 reveals a profound inner need to understand the deeper meaning behind existence. At their core, these individuals crave solitude, reflection, and access to knowledge that transcends the mundane. They feel most aligned when pursuing questions that others find too abstract or uncomfortable to explore. This inner drive toward understanding can lead to remarkable spiritual depth but also a sense of being fundamentally different from the world around them.",
+    "keywords": ["understanding", "solitude", "mystery", "depth", "transcendence"],
+    "strengths": ["Access to deep intuitive wisdom", "Inner richness and self-sufficiency", "Capacity for profound spiritual experience", "Comfort with life's unanswerable questions"],
+    "challenges": ["Inner isolation and feelings of alienation", "Difficulty sharing inner world with others"],
+    "compatible_numbers": [1, 5, 9]
+  },
+  {
+    "number": 7,
+    "category": "personality",
+    "title": "The Enigma",
+    "description": "Personality Number 7 projects an image of mystery, intelligence, and quiet depth. Others perceive these individuals as thoughtful, somewhat reserved, and possessing knowledge or awareness that is not immediately apparent. Their outward demeanor is dignified and composed, often giving the impression of someone who sees more than they reveal. This air of mystery can be deeply attractive, drawing others who sense hidden depths.",
+    "keywords": ["mystery", "intelligence", "dignity", "reserve", "depth"],
+    "strengths": ["Projects intellectual authority", "Creates an intriguing and attractive mystique", "Appears wise beyond circumstance"],
+    "challenges": ["May seem cold or emotionally unavailable", "Can appear secretive or distrustful", "Risk of being perceived as a loner"],
+    "compatible_numbers": [1, 2, 5]
+  },
+  {
+    "number": 7,
+    "category": "general",
+    "title": "The Heptad",
+    "description": "The number 7 represents the bridge between the material and spiritual worlds, embodying the quest for inner truth and divine knowledge. In Pythagorean tradition, 7 was considered the most sacred of single digits, indivisible and self-contained, belonging to neither the material tetrad (1-4) nor the spiritual triad above. It carries the vibration of contemplation, mysticism, and the inner journey toward enlightenment. Those under its influence are learning that the deepest answers are found not in the outer world but within the silent chambers of the self.",
+    "keywords": ["sacred", "contemplation", "mysticism", "inner truth", "bridge", "enlightenment"],
+    "strengths": ["Connects material and spiritual understanding", "Accesses knowledge through intuition", "Embodies the archetype of the wise hermit", "Penetrates illusion to find truth"],
+    "challenges": ["Balancing inner life with outer engagement", "Avoiding spiritual bypassing of human needs"],
+    "compatible_numbers": [1, 5, 9]
+  },
+  {
+    "number": 8,
+    "category": "life_path",
+    "title": "The Powerhouse",
+    "description": "Life Path 8 individuals are here to master the material world through the responsible wielding of power, authority, and abundance. They possess a natural executive ability and an instinctive understanding of how systems of wealth and influence operate. Their life journey involves learning that true power comes with proportional responsibility and that material success must be balanced with integrity and generosity. When aligned, they become formidable forces for both personal achievement and collective prosperity.",
+    "keywords": ["power", "abundance", "authority", "achievement", "ambition", "karma"],
+    "strengths": ["Natural business acumen and financial intelligence", "Commanding presence and executive ability", "Extraordinary determination and endurance", "Ability to manifest large-scale visions"],
+    "challenges": ["Workaholism and neglect of personal relationships", "Struggle with the corrupting influence of power", "Karmic lessons around money and control"],
+    "compatible_numbers": [2, 4, 6]
+  },
+  {
+    "number": 8,
+    "category": "expression",
+    "title": "The Executive",
+    "description": "Expression Number 8 reveals talents that manifest most powerfully in leadership, management, and the orchestration of large endeavors. These individuals express themselves through achievement, strategic vision, and the ability to turn abstract goals into material reality. Their communicative style is authoritative, efficient, and results-oriented. They find fulfillment when their efforts produce tangible, measurable success that benefits not only themselves but their wider sphere of influence.",
+    "keywords": ["leadership", "strategy", "authority", "efficiency", "achievement"],
+    "strengths": ["Masterful at organizing people and resources", "Projects confidence that attracts opportunity", "Excels in high-stakes decision-making"],
+    "challenges": ["Can be perceived as ruthless or materialistic", "May prioritize results over relationships", "Struggles to delegate or trust others' competence"],
+    "compatible_numbers": [2, 4, 6]
+  },
+  {
+    "number": 8,
+    "category": "soul_urge",
+    "title": "The Ambitious Soul",
+    "description": "A Soul Urge of 8 reveals a deep inner drive for achievement, recognition, and the mastery of the material realm. At their core, these individuals crave the satisfaction of building something significant and the respect that comes with demonstrable success. They feel most alive when pursuing ambitious goals and overcoming formidable obstacles. This powerful inner ambition, when balanced with wisdom, becomes a force for tremendous good in the world.",
+    "keywords": ["achievement", "mastery", "recognition", "success", "impact"],
+    "strengths": ["Unshakeable inner determination", "Instinctive understanding of value and exchange", "Deep resilience in the face of setbacks", "Vision for large-scale impact"],
+    "challenges": ["Equating self-worth with material achievement", "Inner fear of failure or loss of status", "Difficulty finding satisfaction in non-material rewards"],
+    "compatible_numbers": [2, 4, 6]
+  },
+  {
+    "number": 8,
+    "category": "personality",
+    "title": "The Authority",
+    "description": "Personality Number 8 projects an image of success, power, and commanding presence. Others perceive these individuals as accomplished, influential, and someone to be taken seriously in matters of business and worldly affairs. Their outward demeanor communicates competence and ambition, often making a strong impression in professional settings. They carry themselves with the assured bearing of someone accustomed to responsibility.",
+    "keywords": ["success", "power", "influence", "competence", "stature"],
+    "strengths": ["Commands respect in professional environments", "Projects financial competence and success", "Appears capable of handling major responsibilities"],
+    "challenges": ["May seem intimidating or status-obsessed", "Can appear emotionally distant or calculating", "Risk of being perceived as valuing money over people"],
+    "compatible_numbers": [2, 4, 6]
+  },
+  {
+    "number": 8,
+    "category": "general",
+    "title": "The Ogdoad",
+    "description": "The number 8 represents the principle of karmic balance, material mastery, and the infinite cycle of cause and effect. In Pythagorean tradition, the ogdoad was associated with justice and cosmic equilibrium. Turned on its side, it becomes the lemniscate, the symbol of infinity and eternal flow. It carries the vibration of abundance, authority, and the spiritual lesson that power and responsibility are inseparable. Those under its influence are learning that what they give to the world returns to them in equal measure.",
+    "keywords": ["karma", "infinity", "balance", "authority", "abundance", "justice"],
+    "strengths": ["Manifests vision into material reality", "Understands the laws of cause and effect", "Wields influence with growing wisdom", "Builds enduring institutions and legacies"],
+    "challenges": ["Karmic tests around ethics and power", "Learning that abundance is not solely material"],
+    "compatible_numbers": [2, 4, 6]
+  },
+  {
+    "number": 9,
+    "category": "life_path",
+    "title": "The Humanitarian",
+    "description": "Life Path 9 individuals carry the wisdom of all preceding numbers and are destined for a life of compassion, service, and universal love. They possess a broad vision that extends beyond personal concerns to embrace the welfare of humanity as a whole. Their life journey involves learning to release attachment, practice forgiveness, and channel their deep empathy into meaningful service. When they surrender to their highest calling, they become inspiring examples of selfless love and transformative compassion.",
+    "keywords": ["compassion", "service", "wisdom", "completion", "humanitarianism", "release"],
+    "strengths": ["Profound empathy and universal compassion", "Artistic and creative brilliance", "Wisdom drawn from wide-ranging experience", "Natural teacher and inspirational figure"],
+    "challenges": ["Difficulty letting go of the past", "Tendency toward self-righteousness or martyrdom", "Emotional overwhelm from absorbing global suffering"],
+    "compatible_numbers": [1, 3, 6]
+  },
+  {
+    "number": 9,
+    "category": "expression",
+    "title": "The Visionary",
+    "description": "Expression Number 9 reveals talents that find their highest expression in service to a cause greater than the self. These individuals communicate with a breadth of understanding and emotional depth that can move audiences to tears or action. Their expressive gifts are often artistic, philosophical, or humanitarian in nature. They find fulfillment when their work contributes to healing, justice, or the elevation of human consciousness.",
+    "keywords": ["vision", "compassion", "artistry", "philosophy", "service"],
+    "strengths": ["Communicates with emotional depth and universal appeal", "Artistic expression that transcends the personal", "Inspires others toward higher ideals"],
+    "challenges": ["Can come across as preachy or self-important", "May struggle to focus on practical details", "Difficulty receiving as gracefully as they give"],
+    "compatible_numbers": [1, 3, 6]
+  },
+  {
+    "number": 9,
+    "category": "soul_urge",
+    "title": "The Universal Heart",
+    "description": "A Soul Urge of 9 reveals a deep inner calling toward unconditional love and service to all of humanity. At their core, these individuals yearn to make the world a better place and feel a profound connection to the suffering and joy of all beings. They feel most fulfilled when giving of themselves without expectation of return and when their compassion produces tangible healing in the world. This expansive inner love, when properly channeled, becomes a transformative force.",
+    "keywords": ["unconditional love", "service", "healing", "universality", "altruism"],
+    "strengths": ["Boundless capacity for forgiveness", "Deep connection to the collective human experience", "Inner wisdom born of empathy", "Genuine desire for universal well-being"],
+    "challenges": ["Difficulty maintaining personal boundaries", "Inner grief over the state of the world"],
+    "compatible_numbers": [1, 3, 6]
+  },
+  {
+    "number": 9,
+    "category": "personality",
+    "title": "The Sage",
+    "description": "Personality Number 9 projects an image of worldly wisdom, sophistication, and compassionate understanding. Others perceive these individuals as cultured, broad-minded, and possessing a depth of experience that commands quiet respect. Their outward demeanor suggests someone who has lived fully and arrived at a place of generous acceptance. They carry an air of completion and maturity that draws people seeking guidance or understanding.",
+    "keywords": ["wisdom", "sophistication", "compassion", "maturity", "generosity"],
+    "strengths": ["Projects cultured worldliness", "Appears approachable yet wise", "Inspires trust through evident compassion"],
+    "challenges": ["May seem emotionally distant or detached", "Can appear to have already moved beyond ordinary concerns", "Risk of projecting superiority through excessive tolerance"],
+    "compatible_numbers": [1, 3, 5]
+  },
+  {
+    "number": 9,
+    "category": "general",
+    "title": "The Ennead",
+    "description": "The number 9 represents completion, universal wisdom, and the culmination of the single-digit cycle. In Pythagorean numerology, it was revered as the number of finality and fulfillment, containing within it all previous numbers (any number multiplied by 9 ultimately reduces back to 9). It carries the vibration of selfless love, karmic completion, and the surrender of the personal for the universal. Those influenced by 9 are learning the ultimate spiritual lesson: that in giving everything away, we receive everything in return.",
+    "keywords": ["completion", "universality", "surrender", "fulfillment", "wisdom", "selflessness"],
+    "strengths": ["Contains the wisdom of all numbers", "Transforms personal experience into universal truth", "Embodies the cycle of death and rebirth", "Channels compassion into world-changing action"],
+    "challenges": ["Difficulty with endings and letting go", "Balancing universal love with personal needs"],
+    "compatible_numbers": [1, 3, 6]
+  },
+  {
+    "number": 11,
+    "category": "life_path",
+    "title": "The Illuminator",
+    "description": "Master Number 11 is the most intuitive of all life paths, carrying the amplified vibration of spiritual insight, divine inspiration, and visionary consciousness. These individuals are cosmic antennae, receiving transmissions from higher planes of awareness that they are destined to translate into earthly form. Their journey is one of extraordinary sensitivity and spiritual responsibility, walking the razor's edge between illumination and nervous overwhelm. When they learn to channel their heightened perception without being consumed by it, they become beacons of light whose very presence awakens others to higher truth.",
+    "keywords": ["illumination", "intuition", "vision", "inspiration", "mastery", "spiritual channel"],
+    "strengths": ["Extraordinary psychic and intuitive abilities", "Capacity to inspire and awaken masses", "Receives divine guidance and higher knowledge", "Bridges the seen and unseen worlds"],
+    "challenges": ["Extreme nervous sensitivity and anxiety", "Pressure of living up to a master vibration", "Difficulty grounding visionary insights into practical reality"],
+    "compatible_numbers": [2, 4, 6]
+  },
+  {
+    "number": 11,
+    "category": "expression",
+    "title": "The Inspired Messenger",
+    "description": "Master Expression Number 11 reveals talents of an extraordinarily high spiritual order, channeled through inspired communication and visionary artistry. These individuals are conduits for ideas that originate beyond the personal mind, expressing truths that resonate at the soul level. Their communicative gifts carry an electric quality that can shift the consciousness of those who receive them. When they surrender to the flow of inspiration rather than trying to control it, their expression becomes a form of spiritual transmission.",
+    "keywords": ["prophecy", "channeling", "inspiration", "revelation", "transmission"],
+    "strengths": ["Communicates with transcendent power and beauty", "Artistic expression that carries spiritual force", "Inspires paradigm shifts in others' thinking", "Natural spiritual teacher and guide"],
+    "challenges": ["Enormous pressure to live up to the master vibration", "May struggle to articulate visions in accessible language", "Risk of being dismissed as impractical or delusional"],
+    "compatible_numbers": [2, 6, 9]
+  },
+  {
+    "number": 11,
+    "category": "soul_urge",
+    "title": "The Divine Channel",
+    "description": "A Master Soul Urge of 11 reveals a soul that has incarnated with the sacred purpose of channeling higher wisdom into the earthly plane. At the deepest level, these individuals feel a burning inner knowing that they are here for a spiritual mission that transcends ordinary existence. They experience an almost unbearable sensitivity to the energies around them and a constant pull toward the numinous and transcendent. This exalted inner drive demands that they honor their spiritual gifts while learning to survive the intensity of carrying such heightened awareness.",
+    "keywords": ["divine purpose", "channeling", "transcendence", "awakening", "sacred mission"],
+    "strengths": ["Direct access to higher spiritual guidance", "Profound inner knowing that transcends logic", "Soul-level commitment to spiritual service", "Capacity to catalyze spiritual awakening in others"],
+    "challenges": ["Overwhelming intensity of spiritual sensitivity", "Feeling crushed by the weight of spiritual purpose"],
+    "compatible_numbers": [2, 4, 6]
+  },
+  {
+    "number": 11,
+    "category": "personality",
+    "title": "The Luminous Presence",
+    "description": "Master Personality Number 11 projects an unmistakable aura of spiritual light, charismatic magnetism, and otherworldly awareness. Others sense immediately that these individuals operate on a different frequency, possessing an almost ethereal quality that is both captivating and slightly unsettling. Their presence can feel electric, as though the air around them vibrates at a higher pitch. People are drawn to them instinctively, sensing a source of wisdom and inspiration that transcends the ordinary.",
+    "keywords": ["luminosity", "magnetism", "otherworldliness", "electricity", "presence"],
+    "strengths": ["Radiates an unmistakable spiritual light", "Captivates others with charismatic intensity", "Projects visionary awareness that inspires awe"],
+    "challenges": ["May overwhelm others with intense energy", "Can appear disconnected from everyday reality", "Risk of attracting those who project savior fantasies onto them"],
+    "compatible_numbers": [2, 6, 9]
+  },
+  {
+    "number": 11,
+    "category": "general",
+    "title": "The Master Intuitive",
+    "description": "Master Number 11 carries the doubled vibration of 1, amplified to a spiritual octave that transcends ordinary numerological interpretation. It is the first of the three master numbers, representing the gateway between the mortal and the divine, the conscious and the superconscious mind. In esoteric tradition, 11 is the number of revelation, prophetic vision, and the illumination that comes when spiritual energy flows unimpeded through a prepared vessel. Those carrying this vibration are old souls with a sacred contract to serve as intermediaries between worlds, though this gift extracts a tremendous personal cost in sensitivity and spiritual pressure.",
+    "keywords": ["mastery", "revelation", "gateway", "superconscious", "prophecy", "old soul"],
+    "strengths": ["Operates at the highest intuitive frequency", "Transmits spiritual light to the collective", "Embodies the archetype of the prophet and visionary", "Holds space between worlds with grace"],
+    "challenges": ["The tremendous personal cost of heightened sensitivity", "Learning to function in the mundane world while carrying sacred fire"],
+    "compatible_numbers": [2, 4, 6]
+  },
+  {
+    "number": 22,
+    "category": "life_path",
+    "title": "The Master Builder",
+    "description": "Master Number 22 represents the most powerful manifestation vibration in all of numerology, combining the spiritual vision of 11 with the practical mastery of 4 to create lasting structures that serve humanity. These individuals carry the extraordinary burden and blessing of being able to turn the grandest spiritual visions into material reality on a scale that can transform civilization itself. Their life journey demands that they develop both unwavering discipline and profound spiritual alignment, for their capacity to build is matched only by the magnitude of what they are called to create. When fully realized, the 22 life path produces the architects of a better world.",
+    "keywords": ["master building", "manifestation", "legacy", "transformation", "sacred architecture", "global impact"],
+    "strengths": ["Unparalleled ability to manifest vision into reality", "Combines spiritual wisdom with practical genius", "Capacity to create institutions that outlast lifetimes", "Natural command of both people and resources"],
+    "challenges": ["Crushing weight of unrealized potential", "Tendency toward nervous breakdown from the enormity of their calling", "Risk of becoming tyrannical when vision meets resistance"],
+    "compatible_numbers": [4, 6, 8]
+  },
+  {
+    "number": 22,
+    "category": "expression",
+    "title": "The Architect of Vision",
+    "description": "Master Expression Number 22 reveals talents of staggering scope, combining inspired vision with the practical ability to manifest it in the physical world. These individuals express themselves through grand-scale creation, institution building, and the orchestration of complex systems that serve a higher purpose. Their communicative power lies not just in words but in the tangible structures, organizations, and legacies they build. When their expression is fully aligned, they produce works that reshape the world and endure across generations.",
+    "keywords": ["architecture", "manifestation", "institution", "legacy", "orchestration"],
+    "strengths": ["Translates cosmic vision into practical blueprints", "Builds systems of extraordinary scope and endurance", "Communicates purpose through lasting achievement", "Commands resources in service of higher ideals"],
+    "challenges": ["May become paralyzed by the scale of their vision", "Struggles when others cannot see or share the grand design", "Risk of burnout from attempting to build at too great a scale"],
+    "compatible_numbers": [4, 6, 9]
+  },
+  {
+    "number": 22,
+    "category": "soul_urge",
+    "title": "The Cosmic Architect",
+    "description": "A Master Soul Urge of 22 reveals a soul that has incarnated with the sacred purpose of building something of permanent, transformative value for all of humanity. At their deepest level, these individuals feel an almost overwhelming inner compulsion to leave the world fundamentally better than they found it, not through small gestures but through monumental creation. They carry within them a blueprint for a better world that demands expression. This exalted soul desire requires that they master both the spiritual and material planes, for their inner vision will accept nothing less than manifestation on the grandest possible scale.",
+    "keywords": ["sacred purpose", "world-building", "transformation", "blueprint", "permanent legacy"],
+    "strengths": ["Inner vision of breathtaking scope and clarity", "Soul-deep commitment to lasting positive change", "Capacity to hold both spiritual and material mastery simultaneously", "Unshakeable conviction in their cosmic purpose"],
+    "challenges": ["Existential despair when vision remains unmanifested", "The loneliness of carrying a purpose few can comprehend"],
+    "compatible_numbers": [4, 6, 8]
+  },
+  {
+    "number": 22,
+    "category": "personality",
+    "title": "The Master Presence",
+    "description": "Master Personality Number 22 projects an image of formidable competence, visionary authority, and the quiet power of someone who operates on a scale most cannot fathom. Others sense that these individuals are playing a larger game, working toward goals that extend far beyond personal ambition into the realm of civilization-shaping endeavor. Their presence commands a unique blend of respect and awe, as though people instinctively recognize they are in the company of someone capable of extraordinary things. They carry themselves with the gravitas of builders who see the finished cathedral while others see only the scaffolding.",
+    "keywords": ["formidable", "visionary", "authority", "gravitas", "mastery"],
+    "strengths": ["Projects an aura of vast competence and vision", "Inspires others to contribute to something greater", "Radiates the quiet confidence of deep inner authority"],
+    "challenges": ["May intimidate others with the scope of their ambition", "Can appear impossibly demanding or perfectionistic", "Risk of seeming disconnected from ordinary human concerns"],
+    "compatible_numbers": [4, 6, 8]
+  },
+  {
+    "number": 22,
+    "category": "general",
+    "title": "The Master Builder",
+    "description": "Master Number 22 is the most powerful number in Pythagorean numerology, known as the Master Builder and sometimes called the Master Architect. It carries the doubled vibration of 2, amplified to a cosmic octave, and reduces to 4, grounding its spiritual power in material form. This number represents the rare ability to perceive divine blueprints and possess the practical genius to construct them in the physical world. Those carrying this vibration are entrusted with one of the most demanding spiritual assignments possible: to build bridges between heaven and earth, creating structures, institutions, or systems that serve humanity for generations. The 22 vibration demands everything and offers everything in return.",
+    "keywords": ["supreme manifestation", "divine architecture", "heaven and earth", "master builder", "cosmic responsibility", "enduring legacy"],
+    "strengths": ["Wields the most powerful manifestation energy in numerology", "Unites spiritual vision with material mastery", "Creates works that endure across generations", "Embodies the sacred marriage of heaven and earth"],
+    "challenges": ["The immense pressure of carrying the highest master vibration", "The risk of collapse when the weight of purpose exceeds human capacity"],
+    "compatible_numbers": [4, 6, 8]
+  },
+  {
+    "number": 33,
+    "category": "life_path",
+    "title": "The Master Teacher",
+    "description": "Master Number 33 is the rarest and most spiritually elevated of all life paths, embodying the Christ consciousness of unconditional love, selfless service, and spiritual mastery through compassion. These individuals carry the combined wisdom of 11 and 22, transcending both illumination and manifestation to arrive at the purest expression of divine love in human form. Their life journey is one of extraordinary sacrifice and equally extraordinary blessing, as they are called to heal, teach, and uplift humanity through the sheer power of their loving presence. The 33 life path represents the highest spiritual ideal attainable in a single lifetime, and those who carry it are entrusted with the sacred responsibility of demonstrating that love is the ultimate creative and transformative force in the universe.",
+    "keywords": ["master teacher", "Christ consciousness", "unconditional love", "spiritual mastery", "healing", "sacred service"],
+    "strengths": ["Embodies unconditional love as a living practice", "Heals through presence alone", "Teaches by example rather than doctrine", "Elevates the consciousness of all who encounter them"],
+    "challenges": ["The crushing weight of spiritual responsibility", "Risk of martyrdom and complete self-sacrifice", "The rarity of this path means profound isolation from peers"],
+    "compatible_numbers": [6, 9, 11]
+  },
+  {
+    "number": 33,
+    "category": "expression",
+    "title": "The Healer's Voice",
+    "description": "Master Expression Number 33 reveals the highest possible expressive gifts in numerology: the ability to communicate pure, healing love through every medium available. These individuals express themselves as master teachers, healers, and spiritual guides whose words carry the power to transform suffering into understanding and fear into faith. Their creative expression is infused with a compassion so profound that it bypasses the intellect and speaks directly to the soul. When fully realized, the 33 expression becomes a channel for divine love so powerful that it can heal wounds thought to be beyond repair.",
+    "keywords": ["healing voice", "divine love", "spiritual teaching", "compassion", "transformation"],
+    "strengths": ["Communicates with the power of pure compassion", "Heals through artistic and verbal expression", "Teaches spiritual truths that resonate across all traditions", "Transforms collective consciousness through creative output"],
+    "challenges": ["The near-impossible standard of living at this vibrational frequency", "Risk of emotional and spiritual exhaustion", "Difficulty expressing human needs amid such elevated purpose"],
+    "compatible_numbers": [6, 9, 11]
+  },
+  {
+    "number": 33,
+    "category": "soul_urge",
+    "title": "The Bodhisattva Heart",
+    "description": "A Master Soul Urge of 33 reveals a soul that has incarnated with the most exalted purpose available in the numerological system: to embody and radiate unconditional love as a force of planetary healing. At their deepest level, these individuals carry the bodhisattva vow, the commitment to remain in service to all sentient beings until all suffering is transformed. They feel the pain of the world as their own and experience no separation between personal happiness and collective well-being. This supreme soul desire demands nothing less than the complete surrender of the personal self to the service of divine love, making it both the most blessed and most demanding of all soul urges.",
+    "keywords": ["bodhisattva", "planetary healing", "surrender", "divine service", "collective consciousness"],
+    "strengths": ["Carries the purest love vibration available in numerology", "Experiences unity consciousness as a lived reality", "Capacity for compassion that transcends all boundaries", "Soul commitment to the liberation of all beings"],
+    "challenges": ["The profound suffering of carrying the world's pain", "Near-total sacrifice of personal desires and boundaries"],
+    "compatible_numbers": [6, 9, 11]
+  },
+  {
+    "number": 33,
+    "category": "personality",
+    "title": "The Radiant Healer",
+    "description": "Master Personality Number 33 projects an aura of such profound love, warmth, and spiritual authority that others experience their presence as genuinely healing. People sense immediately that they are in the company of someone who sees them with complete acceptance and compassion, without judgment or condition. Their outward demeanor radiates a serene, almost otherworldly tenderness that can bring tears to those who have long felt unseen or unloved. They carry themselves with the gentle authority of one who has mastered the ego and operates from a place of pure, selfless devotion to the well-being of all.",
+    "keywords": ["radiance", "healing presence", "unconditional acceptance", "serenity", "devotion"],
+    "strengths": ["Radiates healing love through mere presence", "Projects complete acceptance that transforms others", "Inspires the deepest trust and emotional safety"],
+    "challenges": ["Others may place unrealistic spiritual expectations upon them", "Can attract those who drain their compassionate energy", "Risk of being perceived as too saintly to be fully human"],
+    "compatible_numbers": [6, 9, 11]
+  },
+  {
+    "number": 33,
+    "category": "general",
+    "title": "The Master Teacher",
+    "description": "Master Number 33 stands at the apex of Pythagorean numerology as the Master Teacher, the number of supreme spiritual mastery and the fullest expression of love as a cosmic force. It combines the illumination of 11 with the manifestation power of 22, transcending both to arrive at a vibration of pure, unconditional compassion. In esoteric tradition, 33 corresponds to the age of the master's sacrifice and resurrection, symbolizing the death of the ego-self and the birth of universal consciousness. This number appears extremely rarely in its full power, as few souls are prepared to carry its extraordinary demands. Those who do are recognized across traditions as avatars, master teachers, and embodiments of the divine principle that love alone creates, sustains, and transforms all of existence.",
+    "keywords": ["supreme mastery", "avatar", "resurrection", "universal love", "ego death", "cosmic compassion"],
+    "strengths": ["Represents the highest spiritual attainment in numerology", "Embodies love as the fundamental force of creation", "Transcends the boundaries between teacher and teaching", "Carries the seed of universal spiritual awakening"],
+    "challenges": ["The almost superhuman demands of sustaining this vibration in human form", "The profound loneliness of walking the most rarified spiritual path"],
+    "compatible_numbers": [6, 9, 11]
+  }
+]

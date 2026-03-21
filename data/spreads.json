@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Single Card",
+    "description": "A quick one-card reading for concise insight or daily focus.",
+    "positions": [
+      { "id": "p1", "label": "Insight", "x": 0, "y": 0, "order": 1 }
+    ]
+  },
+  {
+    "name": "Three-Card Spread",
+    "description": "A chronological spread examining influences across past, present, and future.",
+    "positions": [
+      { "id": "p1", "label": "Past", "x": 0, "y": 0, "order": 1 },
+      { "id": "p2", "label": "Present", "x": 1, "y": 0, "order": 2 },
+      { "id": "p3", "label": "Future", "x": 2, "y": 0, "order": 3 }
+    ]
+  },
+  {
+    "name": "Blind Spot",
+    "description": "A four-card spread to enhance self-awareness and reveal hidden aspects of yourself.",
+    "positions": [
+      { "id": "p1", "label": "Obvious identity", "x": 1, "y": 0, "order": 1 },
+      { "id": "p2", "label": "Unconscious driving forces", "x": 0, "y": 1, "order": 2 },
+      { "id": "p3", "label": "Concealed aspects", "x": 2, "y": 1, "order": 3 },
+      { "id": "p4", "label": "The Blind Spot", "x": 1, "y": 2, "order": 4 }
+    ]
+  },
+  {
+    "name": "Cross Spread",
+    "description": "A four-card spread useful for questions, advice, and clarification.",
+    "positions": [
+      { "id": "p1", "label": "Topic focus", "x": 1, "y": 0, "order": 1 },
+      { "id": "p2", "label": "What not to do", "x": 0, "y": 1, "order": 2 },
+      { "id": "p3", "label": "What to do", "x": 2, "y": 1, "order": 3 },
+      { "id": "p4", "label": "Resulting outcome", "x": 1, "y": 2, "order": 4 }
+    ]
+  },
+  {
+    "name": "Horseshoe Spread",
+    "description": "A seven-card arc — more depth than a three-card reading, yet simpler than most advanced spreads.",
+    "positions": [
+      { "id": "p1", "label": "Past events", "x": 0, "y": 2, "order": 1 },
+      { "id": "p2", "label": "Current state", "x": 1, "y": 1, "order": 2 },
+      { "id": "p3", "label": "Hidden influences", "x": 2, "y": 0, "order": 3 },
+      { "id": "p4", "label": "Obstacles", "x": 3, "y": 0, "order": 4 },
+      { "id": "p5", "label": "External influences", "x": 4, "y": 0, "order": 5 },
+      { "id": "p6", "label": "Suggested action", "x": 5, "y": 1, "order": 6 },
+      { "id": "p7", "label": "Projected outcome", "x": 6, "y": 2, "order": 7 }
+    ]
+  },
+  {
+    "name": "Ankh Spread",
+    "description": "A nine-card spread examining causes behind trends, spiritual background, and future prospects.",
+    "positions": [
+      { "id": "p1", "label": "First significator", "x": 1, "y": 0, "order": 1 },
+      { "id": "p2", "label": "Second significator", "x": 2, "y": 0, "order": 2 },
+      { "id": "p3", "label": "Early causes", "x": 0, "y": 1, "order": 3 },
+      { "id": "p4", "label": "Current triggers", "x": 3, "y": 1, "order": 4 },
+      { "id": "p5", "label": "Spiritual perspective", "x": 1.5, "y": 2, "order": 5 },
+      { "id": "p6", "label": "Purpose and reasoning", "x": 1.5, "y": 3, "order": 6 },
+      { "id": "p7", "label": "Next step", "x": 1.5, "y": 4, "order": 7 },
+      { "id": "p8", "label": "Surprising experiences", "x": 1.5, "y": 5, "order": 8 },
+      { "id": "p9", "label": "Result", "x": 1.5, "y": 6, "order": 9 }
+    ]
+  },
+  {
+    "name": "Celtic Cross",
+    "description": "The most well-known tarot spread — ten cards covering situation, challenges, past, future, and outcome.",
+    "positions": [
+      { "id": "p1", "label": "Present situation", "x": 1, "y": 2, "order": 1 },
+      { "id": "p2", "label": "Challenge or crossing", "x": 1.5, "y": 2, "order": 2 },
+      { "id": "p3", "label": "Conscious thoughts", "x": 1, "y": 0, "order": 3 },
+      { "id": "p4", "label": "Unconscious emotions", "x": 1, "y": 4, "order": 4 },
+      { "id": "p5", "label": "Recent past", "x": 0, "y": 2, "order": 5 },
+      { "id": "p6", "label": "Near future", "x": 2, "y": 2, "order": 6 },
+      { "id": "p7", "label": "Your attitude", "x": 4, "y": 4, "order": 7 },
+      { "id": "p8", "label": "External influences", "x": 4, "y": 3, "order": 8 },
+      { "id": "p9", "label": "Hopes and fears", "x": 4, "y": 1, "order": 9 },
+      { "id": "p10", "label": "Final outcome", "x": 4, "y": 0, "order": 10 }
+    ]
+  },
+  {
+    "name": "Secret of the Priestess",
+    "description": "A nine-card alternative to the Celtic Cross by Hajo Banzhaf, exploring lunar phases and hidden knowledge.",
+    "positions": [
+      { "id": "p1", "label": "First significator", "x": 1, "y": 0, "order": 1 },
+      { "id": "p2", "label": "Second significator", "x": 2, "y": 0, "order": 2 },
+      { "id": "p3", "label": "Current influence", "x": 1.5, "y": 1, "order": 3 },
+      { "id": "p4", "label": "Waxing Moon — approaching", "x": 3, "y": 1, "order": 4 },
+      { "id": "p5", "label": "Waning Moon — receding", "x": 0, "y": 1, "order": 5 },
+      { "id": "p6", "label": "Dark — subconscious", "x": 0, "y": 2, "order": 6 },
+      { "id": "p7", "label": "Light — conscious", "x": 3, "y": 2, "order": 7 },
+      { "id": "p8", "label": "Next step", "x": 1.5, "y": 2, "order": 8 },
+      { "id": "p9", "label": "Secret of the High Priestess", "x": 1.5, "y": 3, "order": 9 }
+    ]
+  }
+]
