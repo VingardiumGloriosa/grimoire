@@ -38,11 +38,11 @@ export default function MoonPhaseIcon({
   // The shadow side depends on isWaxing
   function buildShadowPath(): string {
     if (illum <= 0.01) {
-      // New moon — entire disc is dark
+      // New moon: entire disc is dark
       return `M ${cx - r},${cy} A ${r},${r} 0 1,1 ${cx - r},${cy + 0.01} Z`
     }
     if (illum >= 0.99) {
-      // Full moon — entire disc is lit, no shadow
+      // Full moon: entire disc is lit, no shadow
       return ''
     }
 
@@ -92,7 +92,7 @@ export default function MoonPhaseIcon({
         </mask>
       </defs>
 
-      {/* Outer ring — subtle border */}
+      {/* Outer ring: subtle border */}
       <circle
         cx={cx}
         cy={cy}

@@ -40,14 +40,14 @@ export default async function ChartPage({ params }: ChartPageProps) {
     redirect("/auth")
   }
 
-  const { data: chart } = await supabase
+  const { data: chart, error: chartError } = await supabase
     .from("astrology_birth_charts")
     .select("*")
     .eq("id", params.id)
     .eq("user_id", user.id)
     .single()
 
-  if (!chart) {
+  if (chartError || !chart) {
     notFound()
   }
 
@@ -60,10 +60,14 @@ export default async function ChartPage({ params }: ChartPageProps) {
     typedChart.rising_sign,
   ].filter(Boolean)
 
-  const { data: interpretations } = await supabase
+  const { data: interpretations, error: interpError } = await supabase
     .from("astrology_interpretations")
     .select("*")
     .in("key", signKeys)
+
+  if (interpError) {
+    console.error('Failed to load interpretations:', interpError.message)
+  }
 
   const typedInterpretations = (interpretations as AstrologyInterpretation[]) || []
 
@@ -113,7 +117,7 @@ export default async function ChartPage({ params }: ChartPageProps) {
         </div>
         {typedChart.time_unknown && (
           <p className="font-body text-xs text-[var(--color-text-faint)] italic">
-            Birth time unknown — rising sign and house placements may be unavailable.
+            Birth time unknown. Rising sign and house placements may be unavailable.
           </p>
         )}
       </header>
@@ -180,12 +184,12 @@ export default async function ChartPage({ params }: ChartPageProps) {
         />
       </section>
 
-      {/* No chart data notice */}
+      {/* No chart data notice (older chart without planet data) */}
       {!hasPlanets && !hasAspects && (
         <section className="mb-10">
           <div className="border-l-2 border-[var(--color-border)] pl-4">
             <p className="font-body text-sm text-[var(--color-text-faint)] italic">
-              Detailed planetary data and aspects will be available once the FreeAstroAPI integration is complete. For now, your chart stores the big three (sun, moon, rising) and birth details.
+              This chart was created before planetary calculations were available. Delete it and create a new one to get full placements.
             </p>
           </div>
         </section>

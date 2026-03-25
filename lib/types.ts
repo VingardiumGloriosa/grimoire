@@ -186,7 +186,7 @@ export interface NumerologyResults {
   maturity: number
 }
 
-export interface NumerologyProfile {
+export interface NumerologyChart {
   id: string
   user_id: string
   label: string

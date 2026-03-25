@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import type { SpreadPosition, ReadingCard } from "@/lib/types"
 
 interface SpreadPositionSlotProps {
@@ -15,38 +16,38 @@ export default function SpreadPositionSlot({
   isActive,
   onClick,
 }: SpreadPositionSlotProps) {
-  // Empty — not yet filled, not active
+  // Empty: not yet filled, not active
   if (!card && !isActive) {
     return (
       <button
         onClick={onClick}
         className="flex aspect-[2/3] w-full flex-col items-center justify-center rounded border border-gold/20 bg-gradient-to-b from-[var(--color-surface-raised)] to-[var(--color-accent-subtle)]/30 transition-colors hover:border-gold/40"
       >
-        <span className="font-body text-[10px] font-medium text-[var(--color-text-faint)]">
+        <span className="font-body text-xs font-medium text-[var(--color-text-faint)]">
           {position.order}
         </span>
       </button>
     )
   }
 
-  // Active — currently selecting for this position
+  // Active: currently selecting for this position
   if (!card && isActive) {
     return (
       <button
         onClick={onClick}
         className="flex aspect-[2/3] w-full flex-col items-center justify-center gap-0.5 rounded border-2 border-gold bg-[var(--color-accent-subtle)] animate-pulse-slow"
       >
-        <span className="font-body text-[10px] font-semibold text-umber">
+        <span className="font-body text-xs font-semibold text-umber dark:text-warm-grey">
           {position.order}
         </span>
-        <span className="px-0.5 text-center font-body text-[8px] font-medium leading-tight text-forest">
+        <span className="px-0.5 text-center font-body text-[10px] font-medium leading-tight text-forest">
           {position.label}
         </span>
       </button>
     )
   }
 
-  // Filled — card has been placed
+  // Filled: card has been placed
   const isReversed = card!.orientation === "reversed"
   return (
     <button
@@ -57,10 +58,12 @@ export default function SpreadPositionSlot({
           : "border border-[var(--color-border)] hover:ring-1 hover:ring-gold/40"
       }`}
     >
-      <img
+      <Image
         src={card!.image_path}
         alt={card!.card_name}
-        className={`h-full w-full object-cover ${isReversed ? "rotate-180" : ""}`}
+        fill
+        sizes="80px"
+        className={`object-cover ${isReversed ? "rotate-180" : ""}`}
       />
     </button>
   )

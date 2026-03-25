@@ -12,7 +12,7 @@ interface JsonFieldProps {
   onChange: (value: Record<string, unknown>) => void
 }
 
-// Known structured shapes — render sub-editors instead of raw JSON
+// Known structured shapes: render sub-editors instead of raw JSON
 const KNOWN_SHAPES: Record<string, string[]> = {
   correspondences: ['deities', 'zodiac', 'festivals'],
 }

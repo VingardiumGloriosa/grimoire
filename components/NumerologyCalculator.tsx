@@ -3,21 +3,12 @@
 import { useState } from "react"
 import { computeAllNumbers } from "@/lib/numerology"
 import type { NumerologyResults, NumerologyInterpretation } from "@/lib/types"
+import { CATEGORY_MAP } from "@/lib/numerology-constants"
 import NumberCard from "@/components/NumberCard"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Save, Loader2, Hash } from "lucide-react"
-
-/** Maps result keys to human-readable category labels */
-const CATEGORY_MAP: Record<keyof NumerologyResults, string> = {
-  life_path: "Life Path",
-  expression: "Expression",
-  soul_urge: "Soul Urge",
-  personality: "Personality",
-  birthday: "Birthday",
-  maturity: "Maturity",
-}
 
 interface NumerologyCalculatorProps {
   interpretations: NumerologyInterpretation[]
@@ -28,12 +19,11 @@ export default function NumerologyCalculator({ interpretations }: NumerologyCalc
   const [birthDate, setBirthDate] = useState("")
   const [results, setResults] = useState<NumerologyResults | null>(null)
 
-  // Save profile state
+  // Save chart state
+  type SaveStatus = 'idle' | 'editing' | 'saving' | 'success' | 'error'
   const [label, setLabel] = useState("")
-  const [showSave, setShowSave] = useState(false)
-  const [saving, setSaving] = useState(false)
-  const [saveError, setSaveError] = useState<string | null>(null)
-  const [saveSuccess, setSaveSuccess] = useState(false)
+  const [saveStatus, setSaveStatus] = useState<SaveStatus>('idle')
+  const [saveErrorMsg, setSaveErrorMsg] = useState<string | null>(null)
 
   function handleCalculate(e: React.FormEvent) {
     e.preventDefault()
@@ -41,16 +31,15 @@ export default function NumerologyCalculator({ interpretations }: NumerologyCalc
 
     const computed = computeAllNumbers(fullName.trim(), birthDate)
     setResults(computed)
-    setShowSave(false)
-    setSaveSuccess(false)
-    setSaveError(null)
+    setSaveStatus('idle')
+    setSaveErrorMsg(null)
   }
 
   async function handleSave() {
     if (!results || !label.trim()) return
 
-    setSaving(true)
-    setSaveError(null)
+    setSaveStatus('saving')
+    setSaveErrorMsg(null)
 
     try {
       const response = await fetch("/api/numerology", {
@@ -64,22 +53,23 @@ export default function NumerologyCalculator({ interpretations }: NumerologyCalc
       })
 
       if (response.status === 401) {
-        setSaveError("Sign in to save your profile.")
+        setSaveStatus('error')
+        setSaveErrorMsg("Sign in to save your chart.")
         return
       }
 
       if (!response.ok) {
         const data = await response.json()
-        setSaveError(data.error || "Failed to save profile.")
+        setSaveStatus('error')
+        setSaveErrorMsg(data.error || "Failed to save chart.")
         return
       }
 
-      setSaveSuccess(true)
-      setShowSave(false)
+      setSaveStatus('success')
+      setTimeout(() => setSaveStatus('idle'), 3000)
     } catch {
-      setSaveError("Something went wrong. Please try again.")
-    } finally {
-      setSaving(false)
+      setSaveStatus('error')
+      setSaveErrorMsg("Something went wrong. Please try again.")
     }
   }
 
@@ -181,22 +171,22 @@ export default function NumerologyCalculator({ interpretations }: NumerologyCalc
             </div>
           )}
 
-          {/* Save profile */}
+          {/* Save chart */}
           <div className="divider-ornament" aria-hidden="true" />
 
-          {saveSuccess ? (
+          {saveStatus === 'success' ? (
             <p className="font-body text-sm text-[var(--color-secondary)] text-center">
-              Profile saved. View it in{" "}
-              <a href="/numerology/profiles" className="underline underline-offset-4 hover:text-[var(--color-primary)]">
-                your profiles
+              Chart saved. View it in{" "}
+              <a href="/numerology/charts" className="underline underline-offset-4 hover:text-[var(--color-primary)]">
+                your charts
               </a>
               .
             </p>
-          ) : showSave ? (
+          ) : saveStatus === 'editing' || saveStatus === 'saving' || saveStatus === 'error' ? (
             <div className="space-y-4">
               <div className="space-y-2">
                 <Label className="font-body text-sm text-[var(--color-text-muted)] uppercase tracking-wider">
-                  Profile Label
+                  Chart Label
                 </Label>
                 <Input
                   type="text"
@@ -206,16 +196,16 @@ export default function NumerologyCalculator({ interpretations }: NumerologyCalc
                   className="bg-[var(--color-surface)] border-[var(--color-border)] font-body placeholder:text-[var(--color-text-faint)]"
                 />
               </div>
-              {saveError && (
-                <p className="font-body text-sm text-[var(--color-blush)]">{saveError}</p>
+              {saveStatus === 'error' && saveErrorMsg && (
+                <p className="font-body text-sm text-[var(--color-blush)]">{saveErrorMsg}</p>
               )}
               <div className="flex gap-3">
                 <Button
                   onClick={handleSave}
-                  disabled={saving || !label.trim()}
+                  disabled={saveStatus === 'saving' || !label.trim()}
                   className="bg-forest text-parchment hover:bg-forest-deep font-body"
                 >
-                  {saving ? (
+                  {saveStatus === 'saving' ? (
                     <>
                       <Loader2 size={16} className="mr-2 animate-spin" />
                       Saving...
@@ -223,15 +213,15 @@ export default function NumerologyCalculator({ interpretations }: NumerologyCalc
                   ) : (
                     <>
                       <Save size={16} strokeWidth={1.5} className="mr-2" />
-                      Save Profile
+                      Save Chart
                     </>
                   )}
                 </Button>
                 <Button
                   variant="outline"
                   onClick={() => {
-                    setShowSave(false)
-                    setSaveError(null)
+                    setSaveStatus('idle')
+                    setSaveErrorMsg(null)
                   }}
                   className="font-body"
                 >
@@ -243,11 +233,11 @@ export default function NumerologyCalculator({ interpretations }: NumerologyCalc
             <div className="text-center">
               <Button
                 variant="outline"
-                onClick={() => setShowSave(true)}
+                onClick={() => setSaveStatus('editing')}
                 className="font-body"
               >
                 <Save size={16} strokeWidth={1.5} className="mr-2" />
-                Save This Profile
+                Save This Chart
               </Button>
             </div>
           )}

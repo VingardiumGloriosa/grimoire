@@ -3,6 +3,7 @@ import { createServerClient as createSupabaseServerClient } from '@supabase/ssr'
 import { createServerClient } from '@/lib/supabase-server'
 import { generateSynthesis } from '@/lib/interpret'
 import type { ReadingCard, SpreadPosition, Visibility } from '@/lib/types'
+import { validateBody, createReadingSchema, updateReadingNotesSchema } from '@/lib/validation'
 
 function getUserFromRequest(request: NextRequest) {
   return createSupabaseServerClient(
@@ -20,7 +21,7 @@ function getUserFromRequest(request: NextRequest) {
   )
 }
 
-// POST — Create a new reading
+// POST: Create a new reading
 export async function POST(request: NextRequest) {
   try {
     // Get the authenticated user
@@ -34,31 +35,9 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json()
-    const {
-      spread_name,
-      spread_positions,
-      cards,
-      intention,
-      date,
-      mood,
-      visibility,
-    }: {
-      spread_name: string
-      spread_positions: SpreadPosition[]
-      cards: ReadingCard[]
-      intention: string | null
-      date: string
-      mood: string | null
-      visibility: Visibility
-    } = body
-
-    // Validate required fields
-    if (!spread_name || !cards || cards.length === 0) {
-      return NextResponse.json(
-        { error: 'Missing required fields: spread_name, cards' },
-        { status: 400 }
-      )
-    }
+    const validation = validateBody(createReadingSchema, body)
+    if (!validation.success) return validation.error
+    const { spread_name, spread_positions, cards, intention, date, mood, visibility } = validation.data
 
     // Generate synthesis
     const synthesis = await generateSynthesis({
@@ -88,7 +67,7 @@ export async function POST(request: NextRequest) {
 
     if (error) {
       return NextResponse.json(
-        { error: `Failed to save reading: ${error.message}` },
+        { error: 'Failed to save reading' },
         { status: 500 }
       )
     }
@@ -100,7 +79,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// GET — List user's readings
+// GET: List user's readings
 export async function GET(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -112,28 +91,37 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
+    const { searchParams } = new URL(request.url)
+    const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10))
+    const limit = Math.min(100, Math.max(1, parseInt(searchParams.get('limit') || '50', 10)))
+    const from = (page - 1) * limit
+    const to = from + limit - 1
+
     const supabase = createServerClient()
-    const { data: readings, error } = await supabase
+    const { data: readings, error, count } = await supabase
       .from('tarot_readings')
-      .select('*')
+      .select('*', { count: 'exact' })
       .eq('user_id', user.id)
       .order('date', { ascending: false })
+      .range(from, to)
 
     if (error) {
       return NextResponse.json(
-        { error: `Failed to fetch readings: ${error.message}` },
+        { error: 'Failed to fetch readings' },
         { status: 500 }
       )
     }
 
-    return NextResponse.json(readings)
+    const response = NextResponse.json(readings)
+    response.headers.set('X-Total-Count', String(count ?? 0))
+    return response
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Internal server error'
     return NextResponse.json({ error: message }, { status: 500 })
   }
 }
 
-// DELETE — Delete a reading
+// DELETE: Delete a reading
 export async function DELETE(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -172,7 +160,7 @@ export async function DELETE(request: NextRequest) {
 
     if (error) {
       return NextResponse.json(
-        { error: `Failed to delete reading: ${error.message}` },
+        { error: 'Failed to delete reading' },
         { status: 500 }
       )
     }
@@ -184,7 +172,7 @@ export async function DELETE(request: NextRequest) {
   }
 }
 
-// PATCH — Update reading notes
+// PATCH: Update reading notes
 export async function PATCH(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -197,11 +185,9 @@ export async function PATCH(request: NextRequest) {
     }
 
     const body = await request.json()
-    const { id, notes }: { id: string; notes: string } = body
-
-    if (!id) {
-      return NextResponse.json({ error: 'Missing reading id' }, { status: 400 })
-    }
+    const validation = validateBody(updateReadingNotesSchema, body)
+    if (!validation.success) return validation.error
+    const { id, notes } = validation.data
 
     const supabase = createServerClient()
 
@@ -225,7 +211,7 @@ export async function PATCH(request: NextRequest) {
 
     if (error) {
       return NextResponse.json(
-        { error: `Failed to update reading: ${error.message}` },
+        { error: 'Failed to update reading' },
         { status: 500 }
       )
     }

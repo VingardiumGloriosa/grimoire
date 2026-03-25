@@ -1,12 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@/lib/supabase-server'
 import { ADMIN_TABLE_WHITELIST, type AdminTable } from '@/lib/admin-tables'
+import { checkRateLimit } from '@/lib/rate-limit'
 
 function isAllowedTable(table: string): table is AdminTable {
   return (ADMIN_TABLE_WHITELIST as readonly string[]).includes(table)
 }
 
 function checkAuth(request: NextRequest): NextResponse | null {
+  const clientIp = request.headers.get('x-forwarded-for')?.split(',')[0] || 'unknown'
+  if (!checkRateLimit(`admin:${clientIp}`)) {
+    return NextResponse.json({ error: 'Too many attempts. Try again later.' }, { status: 429 })
+  }
+
   const adminPassword = process.env.ADMIN_PASSWORD
   const provided = request.headers.get('X-Admin-Password')
   if (!adminPassword || provided !== adminPassword) {
@@ -15,7 +21,7 @@ function checkAuth(request: NextRequest): NextResponse | null {
   return null
 }
 
-// GET — List all rows from a whitelisted table
+// GET: List all rows from a whitelisted table
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ table: string }> }
@@ -37,7 +43,7 @@ export async function GET(
 
     if (error) {
       return NextResponse.json(
-        { error: `Failed to fetch: ${error.message}` },
+        { error: 'Failed to fetch' },
         { status: 500 }
       )
     }
@@ -49,7 +55,7 @@ export async function GET(
   }
 }
 
-// POST — Create a new row
+// POST: Create a new row
 export async function POST(
   request: NextRequest,
   { params }: { params: Promise<{ table: string }> }
@@ -65,7 +71,7 @@ export async function POST(
   try {
     const body = await request.json()
 
-    // Strip id and timestamps — let the DB handle them
+    // Strip id and timestamps; let the DB handle them
     const { id: _id, created_at: _c, updated_at: _u, ...fields } = body
 
     const supabase = createServerClient()
@@ -84,7 +90,7 @@ export async function POST(
         )
       }
       return NextResponse.json(
-        { error: `Failed to create: ${error.message}` },
+        { error: 'Failed to create' },
         { status: 500 }
       )
     }
@@ -96,7 +102,7 @@ export async function POST(
   }
 }
 
-// PUT — Update an existing row
+// PUT: Update an existing row
 export async function PUT(
   request: NextRequest,
   { params }: { params: Promise<{ table: string }> }
@@ -132,7 +138,7 @@ export async function PUT(
       .single()
 
     if (error) {
-      // Some tables don't have updated_at — retry without it
+      // Some tables don't have updated_at, retry without it
       if (error.message?.includes('updated_at')) {
         delete updateData.updated_at
         const { data: retryData, error: retryError } = await supabase
@@ -144,7 +150,7 @@ export async function PUT(
 
         if (retryError) {
           return NextResponse.json(
-            { error: `Failed to update: ${retryError.message}` },
+            { error: 'Failed to update' },
             { status: 500 }
           )
         }
@@ -158,7 +164,7 @@ export async function PUT(
         )
       }
       return NextResponse.json(
-        { error: `Failed to update: ${error.message}` },
+        { error: 'Failed to update' },
         { status: 500 }
       )
     }
@@ -170,7 +176,7 @@ export async function PUT(
   }
 }
 
-// DELETE — Remove a row by id
+// DELETE: Remove a row by id
 export async function DELETE(
   request: NextRequest,
   { params }: { params: Promise<{ table: string }> }
@@ -202,7 +208,7 @@ export async function DELETE(
 
     if (error) {
       return NextResponse.json(
-        { error: `Failed to delete: ${error.message}` },
+        { error: 'Failed to delete' },
         { status: 500 }
       )
     }

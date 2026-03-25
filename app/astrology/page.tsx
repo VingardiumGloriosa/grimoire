@@ -1,15 +1,18 @@
+import { pageMetadata } from '@/lib/metadata'
 import Link from "next/link"
+
+export const metadata = pageMetadata('Astrology', 'Birth charts, planetary placements, and daily horoscopes.')
 import HoroscopeCard from "@/components/HoroscopeCard"
 import { Star } from "lucide-react"
 
 export default function AstrologyPage() {
   return (
-    <main className="max-w-reading mx-auto px-6 py-10">
+    <main className="max-w-reading mx-auto px-6 sm:px-10 py-10">
       {/* Header */}
       <div className="mb-10">
-        <h1 className="font-display text-4xl mb-2">Astrology</h1>
+        <h1 className="font-display text-2xl sm:text-4xl mb-2">Astrology</h1>
         <p className="font-body text-lg italic text-[var(--color-text-muted)]">
-          The celestial language — planetary wisdom and daily guidance.
+          The celestial language: planetary wisdom and daily guidance.
         </p>
       </div>
 
@@ -31,7 +34,7 @@ export default function AstrologyPage() {
                   Birth Charts
                 </h2>
                 <p className="font-body text-sm text-[var(--color-text-muted)]">
-                  Create and explore your natal chart — sun, moon, rising, and planetary placements.
+                  Create and explore your natal chart: sun, moon, rising, and planetary placements.
                 </p>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import type { Herb } from "@/lib/types"
+import { ELEMENT_BADGE_STYLES } from "@/lib/design-tokens"
 import {
   Leaf,
   Globe,
@@ -11,16 +12,8 @@ interface HerbDetailProps {
   herb: Herb
 }
 
-const ELEMENT_STYLES: Record<string, string> = {
-  Fire: "bg-blush/15 text-blush",
-  Water: "bg-[var(--color-primary-subtle)] text-[var(--color-secondary)]",
-  Earth: "bg-sage-mist text-forest",
-  Air: "bg-gold-subtle text-umber",
-  Spirit: "bg-[var(--color-surface-raised)] text-[var(--color-text-muted)]",
-}
-
 export default function HerbDetail({ herb }: HerbDetailProps) {
-  const elementStyle = ELEMENT_STYLES[herb.element] || ELEMENT_STYLES.Spirit
+  const elementStyle = ELEMENT_BADGE_STYLES[herb.element] || ELEMENT_BADGE_STYLES.Spirit
 
   return (
     <div className="max-w-content mx-auto space-y-10">
@@ -57,7 +50,7 @@ export default function HerbDetail({ herb }: HerbDetailProps) {
             <Globe size={12} strokeWidth={1.5} />
             {herb.planetary_ruler}
           </span>
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-gold-subtle px-3 py-1 text-xs font-medium uppercase tracking-wider text-umber">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-gold-subtle dark:bg-linen px-3 py-1 text-xs font-medium uppercase tracking-wider text-umber dark:text-warm-grey">
             <Sparkles size={12} strokeWidth={1.5} />
             {herb.chakra}
           </span>
@@ -187,7 +180,7 @@ export default function HerbDetail({ herb }: HerbDetailProps) {
                 {herb.correspondences.zodiac.map((sign) => (
                   <span
                     key={sign}
-                    className="rounded-full bg-gold-subtle px-3 py-1 text-xs font-medium text-umber"
+                    className="rounded-full bg-gold-subtle dark:bg-linen px-3 py-1 text-xs font-medium text-umber dark:text-warm-grey"
                   >
                     {sign}
                   </span>
@@ -205,7 +198,7 @@ export default function HerbDetail({ herb }: HerbDetailProps) {
                 {herb.correspondences.festivals.map((festival) => (
                   <span
                     key={festival}
-                    className="rounded-full bg-sage-mist px-3 py-1 text-xs font-medium text-forest"
+                    className="rounded-full bg-sage-mist dark:bg-linen px-3 py-1 text-xs font-medium text-forest"
                   >
                     {festival}
                   </span>

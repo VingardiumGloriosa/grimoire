@@ -8,7 +8,7 @@ import { Plus } from 'lucide-react'
 import type { MoonJournalEntry } from '@/lib/types'
 
 export const metadata = {
-  title: 'Moon Journal — Grimoire',
+  title: 'Moon Journal',
   description: 'Your personal lunar reflections.',
 }
 
@@ -53,13 +53,19 @@ export default async function MoonJournalPage() {
   }
 
   const supabase = createServerClient()
-  const { data } = await supabase
+  const { data, error: queryError, count } = await supabase
     .from('moon_journal_entries')
-    .select('*')
+    .select('*', { count: 'exact' })
     .eq('user_id', user.id)
     .order('date', { ascending: false })
+    .range(0, 19)
+
+  if (queryError) {
+    console.error('Failed to load moon journal entries:', queryError.message)
+  }
 
   const entries: MoonJournalEntry[] = (data as MoonJournalEntry[]) ?? []
+  const totalCount = count ?? entries.length
 
   return (
     <main className="max-w-reading mx-auto px-6 py-10">
@@ -75,7 +81,7 @@ export default async function MoonJournalPage() {
         </Link>
       </div>
 
-      <MoonJournalList entries={entries} />
+      <MoonJournalList entries={entries} totalCount={totalCount} />
     </main>
   )
 }

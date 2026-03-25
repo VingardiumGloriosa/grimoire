@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    /* Grimoire Design System — Light Mode (Poisoned Garden) */
+    /* Grimoire Design System: Light Mode (Poisoned Garden) */
     --color-bg: #F2EDE4;
     --color-bg-edge: #E6E0D5;
     --color-surface: #FAF6F0;
@@ -19,9 +19,24 @@
     --color-secondary: #5C8A6B;
     --color-accent: #B8963E;
     --color-accent-subtle: #F0E4C8;
-    --color-blush: #5C1A2A;
+    --color-blush: #7A2E3F;
     --color-brown: #8B6347;
     --grain-opacity: 0.02;
+
+    /* RGB channel values for Tailwind opacity modifier support */
+    --color-bg-ch: 242 237 228;
+    --color-surface-raised-ch: 237 231 221;
+    --color-border-ch: 212 204 192;
+    --color-text-ch: 28 28 26;
+    --color-text-muted-ch: 110 103 93;
+    --color-primary-ch: 26 47 37;
+    --color-primary-hover-ch: 20 38 32;
+    --color-primary-subtle-ch: 228 235 231;
+    --color-secondary-ch: 92 138 107;
+    --color-accent-ch: 184 150 62;
+    --color-accent-subtle-ch: 240 228 200;
+    --color-blush-ch: 122 46 63;
+    --color-brown-ch: 139 99 71;
 
     /* shadcn/ui token mapping (HSL without wrapper) */
     --background: 36 28% 92%;
@@ -67,7 +82,7 @@
   }
 
   .dark {
-    /* Cool charcoal backgrounds — no brown */
+    /* Cool charcoal backgrounds, no brown */
     --color-bg: #121215;
     --color-bg-edge: #0B0B0E;
     --color-surface: #1A1A1F;
@@ -75,13 +90,13 @@
     --color-border: #2E2E36;
     /* Cool-tinted text */
     --color-text: #E6E4EB;
-    --color-text-muted: #908D98;
-    --color-text-faint: #504E58;
+    --color-text-muted: #9D9AA4;
+    --color-text-faint: #6E6C76;
     /* Phthalo greens */
     --color-primary: #3D8B78;
     --color-primary-hover: #4FA08B;
     --color-primary-subtle: #142B26;
-    --color-secondary: #2E7A6B;
+    --color-secondary: #3D9485;
     /* Gold reads well against cool darks */
     --color-accent: #C4A35A;
     --color-accent-subtle: #1E1A24;
@@ -89,6 +104,21 @@
     --color-blush: #9B2D4A;
     --color-brown: #8A6E78;
     --grain-opacity: 0.03;
+
+    /* RGB channel values for Tailwind opacity modifier support */
+    --color-bg-ch: 18 18 21;
+    --color-surface-raised-ch: 35 35 41;
+    --color-border-ch: 46 46 54;
+    --color-text-ch: 230 228 235;
+    --color-text-muted-ch: 157 154 164;
+    --color-primary-ch: 61 139 120;
+    --color-primary-hover-ch: 79 160 139;
+    --color-primary-subtle-ch: 20 43 38;
+    --color-secondary-ch: 61 148 133;
+    --color-accent-ch: 196 163 90;
+    --color-accent-subtle-ch: 30 26 36;
+    --color-blush-ch: 155 45 74;
+    --color-brown-ch: 138 110 120;
 
     --background: 240 12% 8%;
     --foreground: 260 15% 91%;
@@ -98,7 +128,7 @@
     --popover-foreground: 260 15% 91%;
     --primary: 163 38% 39%;
     --primary-foreground: 240 12% 8%;
-    --secondary: 163 45% 33%;
+    --secondary: 168 42% 41%;
     --secondary-foreground: 260 15% 91%;
     --muted: 240 10% 13%;
     --muted-foreground: 256 6% 58%;
@@ -124,7 +154,7 @@
     min-height: 100vh;
   }
 
-  /* Minimal grain — barely perceptible */
+  /* Minimal grain, barely perceptible */
   body::before {
     content: "";
     position: fixed;
@@ -143,7 +173,7 @@
 }
 
 @layer utilities {
-  /* Subtle gradient for card surfaces — replaces flat bg-surface */
+  /* Subtle gradient for card surfaces, replaces flat bg-surface */
   .surface-gradient {
     background: linear-gradient(
       145deg,
@@ -157,7 +187,7 @@
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
   }
   .hover-glow:hover {
-    box-shadow: 0 0 20px rgba(184, 150, 62, 0.15), 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 0 20px rgb(var(--color-accent-ch) / 0.15), 0 2px 8px rgb(0 0 0 / 0.04);
   }
 
   /* Dark radial gradient simulating velvet reading cloth */
@@ -216,9 +246,17 @@
   }
 }
 
-/* Reduced motion support */
+/* Global focus indicator */
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Reduced motion support — exempt decorative ivy animations */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *:not(.ivy-animate):not(.ivy-animate *),
+  *:not(.ivy-animate):not(.ivy-animate *)::before,
+  *:not(.ivy-animate):not(.ivy-animate *)::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;

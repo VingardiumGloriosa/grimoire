@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient as createSupabaseServerClient } from '@supabase/ssr'
 import { createServerClient } from '@/lib/supabase-server'
@@ -16,7 +18,7 @@ function getUserFromRequest(request: NextRequest) {
   )
 }
 
-// GET — Compute symbol frequency and moon phase correlation for the user
+// GET: Compute symbol frequency and moon phase correlation for the user
 export async function GET(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -31,7 +33,7 @@ export async function GET(request: NextRequest) {
       .select('symbols, moon_phase, vividness, lucid')
       .eq('user_id', user.id)
 
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+    if (error) return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
     if (!entries || entries.length === 0) {
       return NextResponse.json({ symbol_frequency: [], moon_correlation: [], total_entries: 0 })
     }

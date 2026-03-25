@@ -6,7 +6,7 @@ const VALID_SIGNS = [
   'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces',
 ]
 
-// GET — Public daily horoscope endpoint
+// GET: Public daily horoscope endpoint
 // ?sign=Aries&date=YYYY-MM-DD (date defaults to today)
 export async function GET(request: NextRequest) {
   try {
@@ -57,7 +57,7 @@ export async function GET(request: NextRequest) {
         content = generateLocalHoroscope(sign, date)
       }
     } catch {
-      // API unavailable — use local generation
+      // API unavailable, use local generation
       content = generateLocalHoroscope(sign, date)
     }
 
@@ -78,7 +78,7 @@ export async function GET(request: NextRequest) {
 
 const THEMES: Record<string, string[]> = {
   Aries: [
-    'Your pioneering spirit lights the way forward today. Trust your instincts — they are sharper than usual.',
+    'Your pioneering spirit lights the way forward today. Trust your instincts, they are sharper than usual.',
     'Bold action is favoured, but pause before charging ahead. A moment of reflection will strengthen your aim.',
     'The warrior in you seeks a worthy challenge. Channel that fire into something creative rather than combative.',
   ],
@@ -88,22 +88,22 @@ const THEMES: Record<string, string[]> = {
     'Beauty surrounds you if you take the time to notice. A sensory experience will restore your spirit.',
   ],
   Gemini: [
-    'Your mind dances between ideas today — let it. One of those passing thoughts contains a seed worth planting.',
+    'Your mind dances between ideas today. Let it. One of those passing thoughts contains a seed worth planting.',
     'Words carry extra weight right now. A conversation you nearly skip could shift your perspective entirely.',
     'Curiosity is your compass today. Follow the thread that intrigues you most, even if it leads somewhere unexpected.',
   ],
   Cancer: [
-    'Your intuition runs deep today. That gut feeling is not anxiety — it is wisdom trying to surface.',
-    'Home and heart are intertwined. A small act of nurturing — for yourself or someone else — ripples outward.',
+    'Your intuition runs deep today. That gut feeling is not anxiety; it is wisdom trying to surface.',
+    'Home and heart are intertwined. A small act of nurturing, for yourself or someone else, ripples outward.',
     'Emotions are messengers, not burdens. Sit with what rises today rather than pushing it away.',
   ],
   Leo: [
-    'Your natural radiance is amplified today. Share your warmth generously — it costs you nothing and means everything.',
+    'Your natural radiance is amplified today. Share your warmth generously, it costs you nothing and means everything.',
     'Creative expression wants to flow through you. Do not judge what emerges; simply let it come.',
     'The spotlight finds you whether you seek it or not. Use that visibility to uplift rather than merely shine.',
   ],
   Virgo: [
-    'Your eye for detail catches what others miss. Trust that analytical mind — it is a gift, not a curse.',
+    'Your eye for detail catches what others miss. Trust that analytical mind; it is a gift, not a curse.',
     'Perfectionism and progress are not the same thing. Choose progress today and watch how far it carries you.',
     'Service to others fills your cup, but remember: you cannot pour from empty. Tend to yourself first.',
   ],
@@ -115,11 +115,11 @@ const THEMES: Record<string, string[]> = {
   Scorpio: [
     'Transformation is not always dramatic. Sometimes it is a quiet shift that changes everything beneath the surface.',
     'Your ability to see beneath masks is sharp today. Use this power with compassion rather than suspicion.',
-    'Something you thought was finished may resurface. This is not regression — it is a deeper layer ready to heal.',
+    'Something you thought was finished may resurface. This is not regression; it is a deeper layer ready to heal.',
   ],
   Sagittarius: [
     'The horizon calls, even if travel is not possible. Feed your wanderlust through learning, reading, or conversation.',
-    'Your optimism is well-placed today. That sense of expansion is not naive — it is prophetic.',
+    'Your optimism is well-placed today. That sense of expansion is not naive; it is prophetic.',
     'A philosophical question stirs in you. Do not rush to answer it; the exploration itself is the treasure.',
   ],
   Capricorn: [

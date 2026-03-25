@@ -2,7 +2,7 @@
   {
     "name": "Water",
     "category": "Nature",
-    "description": "Water is one of the most universal dream symbols, representing the unconscious mind, emotions, and the flow of psychic energy. Its state — calm, turbulent, frozen, or murky — mirrors your emotional landscape. Jung considered water the most common symbol for the unconscious itself.",
+    "description": "Water is one of the most universal dream symbols, representing the unconscious mind, emotions, and the flow of psychic energy. Its state (calm, turbulent, frozen, or murky) mirrors your emotional landscape. Jung considered water the most common symbol for the unconscious itself.",
     "common_meanings": [
       "Emotional state and depth of feeling",
       "The unconscious mind surfacing",
@@ -12,7 +12,7 @@
       "Transition and transformation"
     ],
     "questions": [
-      "What was the water's state — calm, turbulent, or stagnant?",
+      "What was the water's state: calm, turbulent, or stagnant?",
       "Were you in the water, observing it, or trying to avoid it?",
       "Was the water clear or murky?",
       "Did the water feel threatening or inviting?"
@@ -22,7 +22,7 @@
   {
     "name": "Fire",
     "category": "Nature",
-    "description": "Fire in dreams represents transformation, passion, destruction, and illumination. It can signal creative energy demanding expression or anger that has been suppressed. In alchemical tradition, fire is the element of purification — burning away what no longer serves.",
+    "description": "Fire in dreams represents transformation, passion, destruction, and illumination. It can signal creative energy demanding expression or anger that has been suppressed. In alchemical tradition, fire is the element of purification, burning away what no longer serves.",
     "common_meanings": [
       "Passion, desire, or intense emotion",
       "Transformation and renewal",
@@ -92,7 +92,7 @@
     "questions": [
       "Were you on the shore, on a vessel, or submerged?",
       "Was the ocean calm, stormy, or something in between?",
-      "What lay beneath the surface — could you see into the depths?",
+      "What lay beneath the surface? Could you see into the depths?",
       "Did the ocean feel liberating or threatening?"
     ],
     "related_symbols": ["Water", "Fish", "Ocean Shore", "Swimming"]
@@ -100,7 +100,7 @@
   {
     "name": "Storm",
     "category": "Nature",
-    "description": "Storms in dreams signal emotional upheaval, inner conflict, or a crisis that demands attention. They can also represent catharsis — the necessary release of tension before clarity arrives. Lightning within a storm often points to sudden insight or revelation.",
+    "description": "Storms in dreams signal emotional upheaval, inner conflict, or a crisis that demands attention. They can also represent catharsis, the necessary release of tension before clarity arrives. Lightning within a storm often points to sudden insight or revelation.",
     "common_meanings": [
       "Emotional turmoil or inner conflict",
       "A crisis approaching or already underway",
@@ -112,7 +112,7 @@
     "questions": [
       "Were you sheltered from the storm or exposed to it?",
       "Was the storm approaching, overhead, or passing?",
-      "Did lightning strike — and if so, what did it illuminate?",
+      "Did lightning strike, and if so, what did it illuminate?",
       "How did you feel during the storm: terrified, exhilarated, or calm?"
     ],
     "related_symbols": ["Rain", "Fire", "Mountain", "Ocean"]
@@ -130,7 +130,7 @@
     ],
     "questions": [
       "Was the garden tended or wild?",
-      "What was growing — flowers, food, weeds?",
+      "What was growing: flowers, food, or weeds?",
       "Were you working in the garden or simply observing?",
       "What season was the garden in?"
     ],
@@ -139,7 +139,7 @@
   {
     "name": "Moon",
     "category": "Nature",
-    "description": "The moon is the quintessential symbol of the feminine, intuition, cycles, and the unconscious mind. Its phases mirror the rhythm of growth, fullness, and release. In Jungian terms, the moon often represents the anima — the inner feminine principle — and the realm of dreams, imagination, and receptivity.",
+    "description": "The moon is the quintessential symbol of the feminine, intuition, cycles, and the unconscious mind. Its phases mirror the rhythm of growth, fullness, and release. In Jungian terms, the moon often represents the anima, the inner feminine principle, and the realm of dreams, imagination, and receptivity.",
     "common_meanings": [
       "Intuition and inner knowing",
       "The feminine principle and receptivity",
@@ -149,7 +149,7 @@
       "Emotional sensitivity"
     ],
     "questions": [
-      "What phase was the moon in — full, crescent, or new?",
+      "What phase was the moon in: full, crescent, or new?",
       "Was the moonlight comforting or eerie?",
       "Were you drawn toward the moon or simply aware of it?",
       "What was illuminated by the moonlight, and what remained in shadow?"
@@ -159,14 +159,14 @@
   {
     "name": "Sun",
     "category": "Nature",
-    "description": "The sun represents consciousness, vitality, truth, and the rational mind. It is the counterpart to the moon — where the moon conceals, the sun reveals. A rising sun in dreams often signals hope and new beginnings, while a setting sun can indicate endings, completions, or the need to rest.",
+    "description": "The sun represents consciousness, vitality, truth, and the rational mind. It is the counterpart to the moon: where the moon conceals, the sun reveals. A rising sun in dreams often signals hope and new beginnings, while a setting sun can indicate endings, completions, or the need to rest.",
     "common_meanings": [
       "Consciousness, clarity, and truth",
       "Vitality, energy, and life force",
       "New beginnings and hope",
       "The masculine principle and active will",
       "Success, warmth, and fulfilment",
-      "Exposure — things brought to light"
+      "Exposure, things brought to light"
     ],
     "questions": [
       "Was the sun rising, at its zenith, or setting?",
@@ -179,7 +179,7 @@
   {
     "name": "Rain",
     "category": "Nature",
-    "description": "Rain symbolises emotional release, cleansing, sadness, and renewal. A gentle rain can represent tears finally shed or blessings received, while a torrential downpour may point to grief, depression, or feeling emotionally drenched. Rain also nourishes — it is what allows the garden to grow.",
+    "description": "Rain symbolises emotional release, cleansing, sadness, and renewal. A gentle rain can represent tears finally shed or blessings received, while a torrential downpour may point to grief, depression, or feeling emotionally drenched. Rain also nourishes; it is what allows the garden to grow.",
     "common_meanings": [
       "Emotional release and crying",
       "Cleansing and purification",
@@ -230,7 +230,7 @@
     ],
     "questions": [
       "Was the cat domestic or wild?",
-      "How did the cat behave toward you — affectionate, indifferent, or hostile?",
+      "How did the cat behave toward you: affectionate, indifferent, or hostile?",
       "What colour was the cat?",
       "Did the cat remind you of anyone in your waking life?"
     ],
@@ -259,7 +259,7 @@
   {
     "name": "Bird",
     "category": "Animals",
-    "description": "Birds embody freedom, aspiration, the soul, and messages from the unconscious. Their ability to fly connects them to the spiritual realm and higher perspective. The type of bird matters greatly — an eagle suggests power and vision, a crow may signal transformation or death, while a songbird often represents joy and creative expression.",
+    "description": "Birds embody freedom, aspiration, the soul, and messages from the unconscious. Their ability to fly connects them to the spiritual realm and higher perspective. The type of bird matters greatly: an eagle suggests power and vision, a crow may signal transformation or death, while a songbird often represents joy and creative expression.",
     "common_meanings": [
       "Freedom and liberation",
       "Spiritual aspiration and the soul",
@@ -279,7 +279,7 @@
   {
     "name": "Wolf",
     "category": "Animals",
-    "description": "The wolf represents the wild, instinctual self — the part of you that operates beyond social conditioning. In Jungian terms, the wolf often appears as a shadow figure, embodying repressed aggression, desire, or power. A lone wolf may reflect isolation or fierce independence, while a wolf pack suggests community and belonging to something primal.",
+    "description": "The wolf represents the wild, instinctual self, the part of you that operates beyond social conditioning. In Jungian terms, the wolf often appears as a shadow figure, embodying repressed aggression, desire, or power. A lone wolf may reflect isolation or fierce independence, while a wolf pack suggests community and belonging to something primal.",
     "common_meanings": [
       "The wild, instinctual self",
       "Repressed aggression or desire",
@@ -299,7 +299,7 @@
   {
     "name": "Spider",
     "category": "Animals",
-    "description": "Spiders weave webs, making them symbols of creativity, fate, patience, and the interconnectedness of all things. They can also represent the devouring mother archetype or feelings of being trapped. The spider's web is both a masterwork of creation and a trap — this duality is central to its dream meaning.",
+    "description": "Spiders weave webs, making them symbols of creativity, fate, patience, and the interconnectedness of all things. They can also represent the devouring mother archetype or feelings of being trapped. The spider's web is both a masterwork of creation and a trap. This duality is central to its dream meaning.",
     "common_meanings": [
       "Creativity and weaving your own fate",
       "Feeling trapped or entangled",
@@ -310,7 +310,7 @@
     ],
     "questions": [
       "Was the spider spinning a web, still, or moving toward you?",
-      "How large was the spider — tiny or exaggerated?",
+      "How large was the spider: tiny or exaggerated?",
       "Were you caught in the web or observing from outside?",
       "Did the spider evoke fear, respect, or curiosity?"
     ],
@@ -359,11 +359,11 @@
   {
     "name": "Teeth",
     "category": "Body",
-    "description": "Teeth dreams — especially teeth falling out, crumbling, or breaking — are among the most commonly reported dreams worldwide. They touch on deep anxieties about appearance, ageing, powerlessness, and communication. In Jungian analysis, teeth represent the ability to \"bite into\" life and assert oneself.",
+    "description": "Teeth dreams, especially teeth falling out, crumbling, or breaking, are among the most commonly reported dreams worldwide. They touch on deep anxieties about appearance, ageing, powerlessness, and communication. In Jungian analysis, teeth represent the ability to \"bite into\" life and assert oneself.",
     "common_meanings": [
       "Anxiety about appearance or ageing",
       "Loss of power or control",
-      "Communication difficulties — words you cannot speak",
+      "Communication difficulties, words you cannot speak",
       "Fear of embarrassment or exposure",
       "A major life transition",
       "Aggression and the ability to defend yourself"
@@ -385,14 +385,14 @@
       "Creativity and craftsmanship",
       "Connection and reaching out to others",
       "Helplessness (if bound or injured)",
-      "Guilt — the stain on one's hands",
+      "Guilt, the stain on one's hands",
       "Healing and the power of touch"
     ],
     "questions": [
       "Were your hands free, bound, injured, or transformed?",
-      "What were your hands doing — reaching, creating, destroying?",
+      "What were your hands doing: reaching, creating, or destroying?",
       "Were they your hands or someone else's?",
-      "Did you notice anything unusual about them — extra fingers, markings, light?"
+      "Did you notice anything unusual about them, such as extra fingers, markings, or light?"
     ],
     "related_symbols": ["Key", "Sword", "Ring", "Garden"]
   },
@@ -406,10 +406,10 @@
       "Feeling watched or judged",
       "Truth and clarity",
       "Denial or refusal to see",
-      "The soul — eyes as windows to the inner self"
+      "The soul, eyes as windows to the inner self"
     ],
     "questions": [
-      "Whose eyes did you see — your own, a stranger's, or a disembodied gaze?",
+      "Whose eyes did you see: your own, a stranger's, or a disembodied gaze?",
       "Were the eyes open, closed, or blind?",
       "What colour were the eyes, and what emotion did they hold?",
       "Did you feel seen, exposed, or comforted by the gaze?"
@@ -430,7 +430,7 @@
     ],
     "questions": [
       "Was your hair growing, being cut, falling out, or changing colour?",
-      "Who was handling the hair — you, or someone else?",
+      "Who was handling the hair: you, or someone else?",
       "How did the change in hair make you feel?",
       "Does your hair in the dream differ from your waking appearance?"
     ],
@@ -439,7 +439,7 @@
   {
     "name": "Blood",
     "category": "Body",
-    "description": "Blood is the essence of life itself — primal, visceral, and deeply symbolic. In dreams, it can represent life force, sacrifice, emotional pain, or family bonds (blood ties). Bleeding may indicate energy being drained or emotional wounds that need attention, while receiving blood can symbolise renewal and vitality.",
+    "description": "Blood is the essence of life itself, primal, visceral, and deeply symbolic. In dreams, it can represent life force, sacrifice, emotional pain, or family bonds (blood ties). Bleeding may indicate energy being drained or emotional wounds that need attention, while receiving blood can symbolise renewal and vitality.",
     "common_meanings": [
       "Life force and vitality",
       "Emotional pain or psychic wounds",
@@ -452,14 +452,14 @@
       "Were you bleeding, or was someone else?",
       "Where on the body was the blood coming from?",
       "Was the blood loss alarming or strangely calm?",
-      "Did the blood stain anything — hands, clothing, the ground?"
+      "Did the blood stain anything: hands, clothing, or the ground?"
     ],
     "related_symbols": ["Hands", "Sword", "Teeth", "Deceased Loved One"]
   },
   {
     "name": "Mirror",
     "category": "Objects",
-    "description": "The mirror is the quintessential symbol of self-reflection, truth, and confrontation with one's own image. What you see in a dream mirror may reveal how you truly perceive yourself — or it may show something unexpected, pointing to shadow aspects or hidden truths. A shattered mirror suggests a fragmented self-image.",
+    "description": "The mirror is the quintessential symbol of self-reflection, truth, and confrontation with one's own image. What you see in a dream mirror may reveal how you truly perceive yourself, or it may show something unexpected, pointing to shadow aspects or hidden truths. A shattered mirror suggests a fragmented self-image.",
     "common_meanings": [
       "Self-reflection and self-knowledge",
       "Confronting the shadow self",
@@ -486,13 +486,13 @@
       "Boundaries and privacy",
       "Blocked access or denied opportunity",
       "The threshold between conscious and unconscious",
-      "Choice — which door to open"
+      "Choice: which door to open"
     ],
     "questions": [
       "Was the door open, closed, or locked?",
       "Did you open it, or did someone else?",
       "What was on the other side?",
-      "How many doors were there — one choice or many?"
+      "How many doors were there: one choice or many?"
     ],
     "related_symbols": ["Key", "House", "Bridge", "Labyrinth"]
   },
@@ -510,7 +510,7 @@
     ],
     "questions": [
       "Did you find the key, receive it, or already possess it?",
-      "What did the key unlock — a door, a chest, something else?",
+      "What did the key unlock: a door, a chest, or something else?",
       "Was the key ornate or plain, old or new?",
       "Did you know what the key was for, or were you searching for its lock?"
     ],
@@ -519,7 +519,7 @@
   {
     "name": "Bridge",
     "category": "Objects",
-    "description": "A bridge connects two sides — two places, two states of being, two phases of life. Crossing a bridge in a dream represents transition, decision-making, and the courage to move from the known to the unknown. A broken or collapsing bridge may indicate fear that the path forward is not safe.",
+    "description": "A bridge connects two sides: two places, two states of being, two phases of life. Crossing a bridge in a dream represents transition, decision-making, and the courage to move from the known to the unknown. A broken or collapsing bridge may indicate fear that the path forward is not safe.",
     "common_meanings": [
       "Transition and crossing into a new phase",
       "Connection between opposing sides of yourself",
@@ -539,7 +539,7 @@
   {
     "name": "Clock",
     "category": "Objects",
-    "description": "Clocks represent the passage of time, mortality, urgency, and the pressure of deadlines — both literal and existential. A stopped clock may suggest that time feels frozen or that you are avoiding an inevitable change. A clock running backward can indicate a desire to return to the past or undo a decision.",
+    "description": "Clocks represent the passage of time, mortality, urgency, and the pressure of deadlines, both literal and existential. A stopped clock may suggest that time feels frozen or that you are avoiding an inevitable change. A clock running backward can indicate a desire to return to the past or undo a decision.",
     "common_meanings": [
       "Awareness of mortality and ageing",
       "Urgency and pressure",
@@ -572,14 +572,14 @@
       "Could you read the book, or were the pages blank or illegible?",
       "Was the book familiar or unknown to you?",
       "Were you reading, writing, or searching for the book?",
-      "What did the book's cover look like — old, new, ornate, plain?"
+      "What did the book's cover look like: old, new, ornate, or plain?"
     ],
     "related_symbols": ["Key", "School", "Eyes", "Mirror"]
   },
   {
     "name": "Sword",
     "category": "Objects",
-    "description": "The sword is a symbol of intellect, truth, conflict, and decisive action. It cuts through confusion and separates truth from illusion. In Jungian terms, the sword represents the discriminating function of the mind — the ability to analyse, judge, and sever what must be released. It can also represent aggression or the wounds of harsh words.",
+    "description": "The sword is a symbol of intellect, truth, conflict, and decisive action. It cuts through confusion and separates truth from illusion. In Jungian terms, the sword represents the discriminating function of the mind, the ability to analyse, judge, and sever what must be released. It can also represent aggression or the wounds of harsh words.",
     "common_meanings": [
       "Truth and intellectual clarity",
       "Conflict and confrontation",
@@ -610,7 +610,7 @@
     ],
     "questions": [
       "Were you wearing the ring, receiving it, or losing it?",
-      "What kind of ring was it — wedding band, signet, or something unusual?",
+      "What kind of ring was it: a wedding band, a signet, or something unusual?",
       "Was the ring too tight, too loose, or perfectly fitted?",
       "Who gave you the ring, or for whom was it intended?"
     ],
@@ -619,7 +619,7 @@
   {
     "name": "Flying",
     "category": "Actions",
-    "description": "Flying dreams are among the most exhilarating dream experiences. They represent freedom, transcendence, ambition, and the desire to rise above limitations. The ease or difficulty of flight matters — effortless soaring suggests confidence and liberation, while struggling to stay aloft may indicate that your aspirations feel out of reach.",
+    "description": "Flying dreams are among the most exhilarating dream experiences. They represent freedom, transcendence, ambition, and the desire to rise above limitations. The ease or difficulty of flight matters: effortless soaring suggests confidence and liberation, while struggling to stay aloft may indicate that your aspirations feel out of reach.",
     "common_meanings": [
       "Freedom and liberation from constraints",
       "Ambition and rising above challenges",
@@ -630,7 +630,7 @@
     ],
     "questions": [
       "Were you flying effortlessly or struggling to stay airborne?",
-      "How high were you — just above the ground or among the clouds?",
+      "How high were you: just above the ground or among the clouds?",
       "What were you flying over, and what did you see below?",
       "Did the flight feel joyful, terrifying, or both?"
     ],
@@ -639,7 +639,7 @@
   {
     "name": "Falling",
     "category": "Actions",
-    "description": "Falling dreams often jolt you awake with a physical sensation. They represent loss of control, failure, anxiety, and the fear of letting go. In Jungian analysis, falling can indicate a necessary descent into the unconscious — a surrender of ego control that, while frightening, may be necessary for growth.",
+    "description": "Falling dreams often jolt you awake with a physical sensation. They represent loss of control, failure, anxiety, and the fear of letting go. In Jungian analysis, falling can indicate a necessary descent into the unconscious, a surrender of ego control that, while frightening, may be necessary for growth.",
     "common_meanings": [
       "Loss of control or stability",
       "Fear of failure",
@@ -649,9 +649,9 @@
       "Feeling unsupported or abandoned"
     ],
     "questions": [
-      "What caused you to fall — did you jump, slip, or were you pushed?",
+      "What caused you to fall: did you jump, slip, or were you pushed?",
       "Did you land, wake up, or keep falling?",
-      "What were you falling from — a building, a cliff, the sky?",
+      "What were you falling from: a building, a cliff, or the sky?",
       "Was anyone watching you fall, or were you alone?"
     ],
     "related_symbols": ["Flying", "Climbing", "Tower", "Bridge"]
@@ -659,7 +659,7 @@
   {
     "name": "Running",
     "category": "Actions",
-    "description": "Running in dreams often reflects avoidance, pursuit, urgency, or the desire to escape something in waking life. Running toward something suggests motivation and purpose, while running away — especially in the common dream where your legs feel heavy — points to anxiety and the feeling that you cannot outpace your problems.",
+    "description": "Running in dreams often reflects avoidance, pursuit, urgency, or the desire to escape something in waking life. Running toward something suggests motivation and purpose, while running away, especially in the common dream where your legs feel heavy, points to anxiety and the feeling that you cannot outpace your problems.",
     "common_meanings": [
       "Avoidance or escape from a problem",
       "Anxiety and feeling pursued",
@@ -679,7 +679,7 @@
   {
     "name": "Swimming",
     "category": "Actions",
-    "description": "Swimming represents navigating your emotional life — how comfortably you move through feelings, relationships, and the unconscious. Swimming with ease suggests emotional competence, while struggling or drowning points to being overwhelmed. The type of water you swim in (clear pool, murky river, open ocean) adds further meaning.",
+    "description": "Swimming represents navigating your emotional life, reflecting how comfortably you move through feelings, relationships, and the unconscious. Swimming with ease suggests emotional competence, while struggling or drowning points to being overwhelmed. The type of water you swim in (clear pool, murky river, open ocean) adds further meaning.",
     "common_meanings": [
       "Navigating emotions skillfully",
       "Immersion in the unconscious",
@@ -690,7 +690,7 @@
     ],
     "questions": [
       "Were you swimming easily or struggling?",
-      "What kind of water were you in — pool, river, ocean?",
+      "What kind of water were you in: a pool, a river, or the ocean?",
       "Were you swimming toward something or just staying afloat?",
       "Could you see beneath the surface while swimming?"
     ],
@@ -699,7 +699,7 @@
   {
     "name": "Climbing",
     "category": "Actions",
-    "description": "Climbing represents ambition, effort, spiritual ascent, and the determination to overcome obstacles. The surface you climb — a mountain, a wall, a ladder, a tree — shapes the meaning. Climbing often requires both hands and demands focus, suggesting that the goal requires your full commitment and presence.",
+    "description": "Climbing represents ambition, effort, spiritual ascent, and the determination to overcome obstacles. The surface you climb (a mountain, a wall, a ladder, a tree) shapes the meaning. Climbing often requires both hands and demands focus, suggesting that the goal requires your full commitment and presence.",
     "common_meanings": [
       "Ambition and striving toward a goal",
       "Overcoming obstacles through effort",
@@ -709,7 +709,7 @@
       "Progress that requires patience"
     ],
     "questions": [
-      "What were you climbing — a mountain, stairs, a ladder, a wall?",
+      "What were you climbing: a mountain, stairs, a ladder, or a wall?",
       "Were you making progress or stuck?",
       "Could you see the top, or was it obscured?",
       "Were you climbing alone or with others?"
@@ -719,7 +719,7 @@
   {
     "name": "Dancing",
     "category": "Actions",
-    "description": "Dancing in dreams embodies joy, self-expression, harmony, and the integration of body and spirit. It can also represent the dance of life — the way you move with or against the rhythms of your circumstances. Dancing with a partner may reflect a relationship dynamic, while dancing alone suggests self-sufficiency and inner harmony.",
+    "description": "Dancing in dreams embodies joy, self-expression, harmony, and the integration of body and spirit. It can also represent the dance of life, the way you move with or against the rhythms of your circumstances. Dancing with a partner may reflect a relationship dynamic, while dancing alone suggests self-sufficiency and inner harmony.",
     "common_meanings": [
       "Joy and celebration",
       "Creative self-expression",
@@ -739,19 +739,19 @@
   {
     "name": "Hiding",
     "category": "Actions",
-    "description": "Hiding in dreams reflects avoidance, shame, self-protection, or the concealment of something you are not ready to face or reveal. The effectiveness of the hiding place matters — feeling safely hidden suggests healthy boundaries, while being found or inadequately concealed points to the futility of avoidance.",
+    "description": "Hiding in dreams reflects avoidance, shame, self-protection, or the concealment of something you are not ready to face or reveal. The effectiveness of the hiding place matters: feeling safely hidden suggests healthy boundaries, while being found or inadequately concealed points to the futility of avoidance.",
     "common_meanings": [
       "Avoidance of confrontation or truth",
       "Shame or guilt",
       "Self-protection and boundaries",
       "Secrets you are keeping",
       "Fear of being exposed",
-      "The shadow — aspects of self you conceal"
+      "The shadow, aspects of self you conceal"
     ],
     "questions": [
       "What or whom were you hiding from?",
       "Were you successfully hidden or about to be found?",
-      "Where were you hiding — a closet, under something, in darkness?",
+      "Where were you hiding: a closet, under something, or in darkness?",
       "Did hiding feel safe or suffocating?"
     ],
     "related_symbols": ["Shadow Figure", "Running", "Door", "Forest"]
@@ -759,7 +759,7 @@
   {
     "name": "Stranger",
     "category": "People",
-    "description": "Strangers in dreams typically represent unknown aspects of yourself — parts of your personality, potential, or shadow that you have not yet recognised or integrated. A helpful stranger may be a guide figure (the Jungian Self or Wise Old Man/Woman), while a menacing stranger often embodies projected fears or disowned qualities.",
+    "description": "Strangers in dreams typically represent unknown aspects of yourself, parts of your personality, potential, or shadow that you have not yet recognised or integrated. A helpful stranger may be a guide figure (the Jungian Self or Wise Old Man/Woman), while a menacing stranger often embodies projected fears or disowned qualities.",
     "common_meanings": [
       "Unknown aspects of yourself",
       "The anima or animus (contrasexual psyche)",
@@ -769,7 +769,7 @@
       "The archetype of the Other"
     ],
     "questions": [
-      "What was the stranger's demeanour — helpful, threatening, or neutral?",
+      "What was the stranger's demeanour: helpful, threatening, or neutral?",
       "Did the stranger remind you of anyone, even vaguely?",
       "What did the stranger say or do?",
       "Did you feel drawn to or repelled by this person?"
@@ -779,7 +779,7 @@
   {
     "name": "Child",
     "category": "People",
-    "description": "A child in dreams often represents your inner child — innocence, vulnerability, potential, and unprocessed emotions from childhood. The child archetype can also signify new beginnings, creativity, and the part of you that experiences wonder. A neglected or crying child may point to needs that have gone unmet.",
+    "description": "A child in dreams often represents your inner child: innocence, vulnerability, potential, and unprocessed emotions from childhood. The child archetype can also signify new beginnings, creativity, and the part of you that experiences wonder. A neglected or crying child may point to needs that have gone unmet.",
     "common_meanings": [
       "Your inner child and childhood self",
       "Innocence and vulnerability",
@@ -799,9 +799,9 @@
   {
     "name": "Shadow Figure",
     "category": "People",
-    "description": "The shadow figure is one of the most important Jungian dream symbols — a dark, often faceless presence that embodies everything you have repressed, denied, or refused to acknowledge about yourself. It is not evil; it is the disowned self. Confronting rather than fleeing the shadow figure is often the key to psychological integration.",
+    "description": "The shadow figure is one of the most important Jungian dream symbols, a dark, often faceless presence that embodies everything you have repressed, denied, or refused to acknowledge about yourself. It is not evil; it is the disowned self. Confronting rather than fleeing the shadow figure is often the key to psychological integration.",
     "common_meanings": [
-      "The Jungian shadow — repressed aspects of self",
+      "The Jungian shadow, repressed aspects of self",
       "Fear of the unknown within",
       "Guilt or shame made manifest",
       "An unacknowledged truth",
@@ -811,7 +811,7 @@
     "questions": [
       "Did the figure have any distinguishing features, or was it featureless?",
       "Did the shadow pursue you, stand still, or try to communicate?",
-      "What emotion did the figure evoke — terror, sadness, curiosity?",
+      "What emotion did the figure evoke: terror, sadness, or curiosity?",
       "Have you encountered this figure before in other dreams?"
     ],
     "related_symbols": ["Mirror", "Stranger", "Wolf", "Hiding"]
@@ -819,7 +819,7 @@
   {
     "name": "Deceased Loved One",
     "category": "People",
-    "description": "Dreams of someone who has died carry profound emotional weight. They may represent unfinished business, grief that needs processing, a desire for guidance, or the continuation of a bond that transcends death. In many traditions, these dreams are considered visitations — regardless of interpretation, they deserve to be honoured as deeply meaningful.",
+    "description": "Dreams of someone who has died carry profound emotional weight. They may represent unfinished business, grief that needs processing, a desire for guidance, or the continuation of a bond that transcends death. In many traditions, these dreams are considered visitations. Regardless of interpretation, they deserve to be honoured as deeply meaningful.",
     "common_meanings": [
       "Unresolved grief or longing",
       "A message or guidance from the departed",
@@ -831,7 +831,7 @@
     "questions": [
       "What did the person say or do in the dream?",
       "Did they appear as they were in life, or different somehow?",
-      "What emotion dominated the encounter — peace, sadness, urgency?",
+      "What emotion dominated the encounter: peace, sadness, or urgency?",
       "Is there something unresolved between you and this person?"
     ],
     "related_symbols": ["Blood", "House", "Child", "Moon"]
@@ -859,27 +859,27 @@
   {
     "name": "Twin",
     "category": "People",
-    "description": "Encountering your double or twin in a dream is a powerful encounter with the doppelganger archetype. It represents duality, the other side of your nature, and the tension between who you are and who you could be. The twin may embody your unlived life — the choices not taken, the person you might have become.",
+    "description": "Encountering your double or twin in a dream is a powerful encounter with the doppelganger archetype. It represents duality, the other side of your nature, and the tension between who you are and who you could be. The twin may embody your unlived life, the choices not taken, the person you might have become.",
     "common_meanings": [
       "Duality and the divided self",
       "The unlived life and unrealised potential",
       "Self-confrontation and self-awareness",
       "Balance between opposing qualities",
       "Identity confusion or crisis",
-      "The mirror self — who you are versus who you present"
+      "The mirror self, who you are versus who you present"
     ],
     "questions": [
       "Was your twin identical or subtly different?",
       "Did the twin feel friendly, hostile, or indifferent?",
       "Were you aware they were your double, or did the realisation come later?",
-      "What quality did the twin possess that you lack — or vice versa?"
+      "What quality did the twin possess that you lack, or vice versa?"
     ],
     "related_symbols": ["Mirror", "Shadow Figure", "Stranger", "Eyes"]
   },
   {
     "name": "House",
     "category": "Places",
-    "description": "The house is the most common symbol for the self in dreams. Different rooms represent different aspects of your psyche — the attic is the conscious mind and stored memories, the basement is the unconscious and repressed material, the kitchen is nourishment and transformation, and the bedroom is intimacy and rest. The state of the house reflects your inner state.",
+    "description": "The house is the most common symbol for the self in dreams. Different rooms represent different aspects of your psyche: the attic is the conscious mind and stored memories, the basement is the unconscious and repressed material, the kitchen is nourishment and transformation, and the bedroom is intimacy and rest. The state of the house reflects your inner state.",
     "common_meanings": [
       "The self and the psyche",
       "Different rooms as different aspects of self",
@@ -899,7 +899,7 @@
   {
     "name": "School",
     "category": "Places",
-    "description": "School dreams are extremely common, even decades after leaving formal education. They typically represent situations where you feel tested, judged, or unprepared. School can also symbolise the lessons life is presenting — the curriculum of your current growth. Forgetting a class or exam often reflects impostor syndrome or fear of not measuring up.",
+    "description": "School dreams are extremely common, even decades after leaving formal education. They typically represent situations where you feel tested, judged, or unprepared. School can also symbolise the lessons life is presenting, the curriculum of your current growth. Forgetting a class or exam often reflects impostor syndrome or fear of not measuring up.",
     "common_meanings": [
       "Feeling tested or judged",
       "Life lessons and personal growth",
@@ -919,7 +919,7 @@
   {
     "name": "Forest Path",
     "category": "Places",
-    "description": "A path through the forest represents your life's direction and the journey into the unknown. Unlike the forest itself (which is wild and disorienting), a path implies guidance — someone or something has walked this way before. The condition of the path, whether it forks, and what you encounter along it all shape its meaning.",
+    "description": "A path through the forest represents your life's direction and the journey into the unknown. Unlike the forest itself (which is wild and disorienting), a path implies guidance, since someone or something has walked this way before. The condition of the path, whether it forks, and what you encounter along it all shape its meaning.",
     "common_meanings": [
       "Life direction and personal journey",
       "Guidance through uncertain times",
@@ -931,7 +931,7 @@
     "questions": [
       "Was the path clear, overgrown, or forking?",
       "Were you walking alone or with companions?",
-      "What did you encounter along the path — obstacles, markers, creatures?",
+      "What did you encounter along the path: obstacles, markers, or creatures?",
       "Did the path have a visible destination, or did it disappear into the unknown?"
     ],
     "related_symbols": ["Forest", "Bridge", "Mountain", "Labyrinth"]
@@ -939,7 +939,7 @@
   {
     "name": "Ocean Shore",
     "category": "Places",
-    "description": "The shore is the liminal space where conscious and unconscious meet — the boundary between the solid ground of the known and the vast waters of the unknown. Standing on the shore represents contemplation, threshold moments, and the decision to wade deeper into emotional or psychological depths or to remain on firm ground.",
+    "description": "The shore is the liminal space where conscious and unconscious meet, the boundary between the solid ground of the known and the vast waters of the unknown. Standing on the shore represents contemplation, threshold moments, and the decision to wade deeper into emotional or psychological depths or to remain on firm ground.",
     "common_meanings": [
       "The threshold between known and unknown",
       "Contemplation and reflection",
@@ -951,7 +951,7 @@
     "questions": [
       "Were you walking along the shore, standing still, or about to enter the water?",
       "Was the tide coming in or going out?",
-      "What washed up on the shore — anything significant?",
+      "What washed up on the shore? Was anything significant?",
       "Were you alone on the shore or with someone?"
     ],
     "related_symbols": ["Ocean", "Water", "Bridge", "Moon"]
@@ -959,7 +959,7 @@
   {
     "name": "Labyrinth",
     "category": "Places",
-    "description": "The labyrinth is distinct from a maze — a maze has dead ends and is designed to confuse, while a labyrinth has a single winding path that always leads to the centre. In dreams, the labyrinth represents the journey inward, the twists of self-discovery, and the trust that the path — however circuitous — will bring you to the core truth. A maze-like labyrinth, however, may indicate confusion and entrapment.",
+    "description": "The labyrinth is distinct from a maze: a maze has dead ends and is designed to confuse, while a labyrinth has a single winding path that always leads to the centre. In dreams, the labyrinth represents the journey inward, the twists of self-discovery, and the trust that the path, however circuitous, will bring you to the core truth. A maze-like labyrinth, however, may indicate confusion and entrapment.",
     "common_meanings": [
       "The journey inward toward self-knowledge",
       "Confusion and feeling lost",
@@ -979,7 +979,7 @@
   {
     "name": "Tower",
     "category": "Places",
-    "description": "The tower represents isolation, ambition, ego structures, and the precarious heights of rigid thinking. It can be a place of vision and surveillance (seeing far from above) or a prison (locked away from the world). The collapsing tower — familiar from the Tarot — signals the sudden dismantling of false structures and the liberation that follows destruction.",
+    "description": "The tower represents isolation, ambition, ego structures, and the precarious heights of rigid thinking. It can be a place of vision and surveillance (seeing far from above) or a prison (locked away from the world). The collapsing tower, familiar from the Tarot, signals the sudden dismantling of false structures and the liberation that follows destruction.",
     "common_meanings": [
       "Isolation and withdrawal from the world",
       "Ego structures and rigid belief systems",

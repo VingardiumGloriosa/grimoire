@@ -3,7 +3,8 @@
 import { useState, useMemo } from 'react'
 import { Input } from '@/components/ui/input'
 import { Badge } from '@/components/ui/badge'
-import { Search, Check, X } from 'lucide-react'
+import { Search, Check, X, DatabaseZap } from 'lucide-react'
+import EmptyState from '@/components/EmptyState'
 import type { ColumnConfig } from '@/lib/admin-tables'
 
 interface DataTableProps {
@@ -30,7 +31,7 @@ export default function DataTable({ columns, rows, nameField, onRowClick }: Data
 
     switch (col.render) {
       case 'badge':
-        if (!val) return <span className="text-[var(--color-text-muted)]">—</span>
+        if (!val) return <span className="text-[var(--color-text-muted)]">-</span>
         return (
           <Badge
             variant="outline"
@@ -49,7 +50,7 @@ export default function DataTable({ columns, rows, nameField, onRowClick }: Data
 
       case 'tags': {
         const tags = Array.isArray(val) ? val : []
-        if (tags.length === 0) return <span className="text-[var(--color-text-muted)]">—</span>
+        if (tags.length === 0) return <span className="text-[var(--color-text-muted)]">-</span>
         const shown = tags.slice(0, 3)
         const remaining = tags.length - shown.length
         return (
@@ -58,13 +59,13 @@ export default function DataTable({ columns, rows, nameField, onRowClick }: Data
               <Badge
                 key={i}
                 variant="outline"
-                className="font-body text-[10px] border-[var(--color-border)]"
+                className="font-body text-xs border-[var(--color-border)]"
               >
                 {String(tag)}
               </Badge>
             ))}
             {remaining > 0 && (
-              <span className="text-[10px] text-[var(--color-text-muted)] font-body">
+              <span className="text-xs text-[var(--color-text-muted)] font-body">
                 +{remaining}
               </span>
             )}
@@ -76,7 +77,7 @@ export default function DataTable({ columns, rows, nameField, onRowClick }: Data
         const text = String(val ?? '')
         return (
           <span className="truncate max-w-[200px] block">
-            {text || <span className="text-[var(--color-text-muted)]">—</span>}
+            {text || <span className="text-[var(--color-text-muted)]">-</span>}
           </span>
         )
       }
@@ -104,7 +105,7 @@ export default function DataTable({ columns, rows, nameField, onRowClick }: Data
               {columns.map((col) => (
                 <th
                   key={col.key}
-                  className="px-4 py-2.5 text-left font-body text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wider"
+                  className="px-4 py-2.5 text-left font-body text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wider"
                 >
                   {col.label}
                 </th>
@@ -114,11 +115,11 @@ export default function DataTable({ columns, rows, nameField, onRowClick }: Data
           <tbody>
             {filtered.length === 0 ? (
               <tr>
-                <td
-                  colSpan={columns.length}
-                  className="px-4 py-8 text-center font-body text-sm text-[var(--color-text-muted)]"
-                >
-                  {search ? 'No matching records.' : 'No records yet.'}
+                <td colSpan={columns.length}>
+                  <EmptyState
+                    icon={search ? Search : DatabaseZap}
+                    message={search ? 'No matching records.' : 'No records yet.'}
+                  />
                 </td>
               </tr>
             ) : (
@@ -140,7 +141,7 @@ export default function DataTable({ columns, rows, nameField, onRowClick }: Data
         </table>
       </div>
 
-      <p className="text-xs text-[var(--color-text-muted)] font-body">
+      <p className="text-sm text-[var(--color-text-muted)] font-body">
         {filtered.length} of {rows.length} record{rows.length !== 1 ? 's' : ''}
       </p>
     </div>

@@ -45,7 +45,7 @@ interface InterpretationData {
 }
 
 async function main() {
-  const dataPath = path.join(process.cwd(), 'data', 'numerology-interpretations.json')
+  const dataPath = path.join(process.cwd(), 'data', 'numerology.json')
   if (!fs.existsSync(dataPath)) {
     console.error(`${dataPath} not found.`)
     process.exit(1)

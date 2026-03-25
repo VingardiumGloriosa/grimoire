@@ -1,4 +1,7 @@
+import { pageMetadata } from '@/lib/metadata'
 import { createServerClient as createSupabaseServerClient } from '@supabase/ssr'
+
+export const metadata = pageMetadata('Your Journal', 'Your personal tarot reading history.')
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import JournalList from '@/components/JournalList'
@@ -31,21 +34,28 @@ export default async function JournalPage() {
     redirect('/auth')
   }
 
-  const { data: readings } = await supabase
+  const { data: readings, error, count } = await supabase
     .from('tarot_readings')
-    .select('*')
+    .select('*', { count: 'exact' })
     .eq('user_id', user.id)
     .order('date', { ascending: false })
+    .range(0, 19)
+
+  if (error) {
+    console.error('Failed to load readings:', error.message)
+  }
+
+  const totalCount = count ?? (readings?.length ?? 0)
 
   return (
-    <main className="max-w-journal mx-auto px-6 py-10">
-      <h1 className="font-display text-4xl mb-2">Your Journal</h1>
+    <main className="max-w-journal mx-auto px-6 sm:px-10 py-10">
+      <h1 className="font-display text-2xl sm:text-4xl mb-2">Your Journal</h1>
       <p className="font-body text-[var(--color-text-muted)] mb-8">
-        {readings && readings.length > 0
-          ? `${readings.length} reading${readings.length === 1 ? '' : 's'} recorded.`
+        {totalCount > 0
+          ? `${totalCount} reading${totalCount === 1 ? '' : 's'} recorded.`
           : 'Your journal is waiting.'}
       </p>
-      <JournalList readings={(readings as TarotReading[]) || []} />
+      <JournalList readings={(readings as TarotReading[]) || []} totalCount={totalCount} />
     </main>
   )
 }

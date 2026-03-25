@@ -33,7 +33,7 @@ export default async function SymbolDetailPage({ params }: PageProps) {
   const supabase = createServerClient()
 
   const { data: symbol } = await supabase
-    .from('dream_symbols')
+    .from('dreams_symbols')
     .select('*')
     .eq('id', params.id)
     .single()
@@ -51,7 +51,7 @@ export default async function SymbolDetailPage({ params }: PageProps) {
   let personalMeaning: DreamUserSymbol | null = null
   if (user) {
     const { data } = await authClient
-      .from('dream_user_symbols')
+      .from('dreams_user_symbols')
       .select('*')
       .eq('user_id', user.id)
       .eq('core_symbol_id', params.id)

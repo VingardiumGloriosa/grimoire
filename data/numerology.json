@@ -1,0 +1,722 @@
+[
+  {
+    "number": 1,
+    "category": "Life Path",
+    "title": "The Pioneer",
+    "description": "Your life path is one of initiation and self-discovery, a trail blazed by your own hand through uncharted woods. You are here to learn the art of standing alone, of trusting the spark within you even when the world offers no map. Independence is not just your nature, it is your deepest lesson.",
+    "keywords": ["independence", "leadership", "originality", "ambition", "willpower"],
+    "strengths": ["natural leader", "self-motivated", "courageous", "innovative"],
+    "challenges": ["stubbornness", "isolation", "impatience"],
+    "compatible_numbers": [3, 5, 9]
+  },
+  {
+    "number": 1,
+    "category": "Expression",
+    "title": "The Torchbearer",
+    "description": "You express yourself with bold clarity, carrying ideas forward like a flame through darkness. Your voice is direct, your vision singular, and others look to you when they need someone unafraid to speak first. You communicate with the force of conviction, even when your words are few.",
+    "keywords": ["directness", "confidence", "authority", "vision"],
+    "strengths": ["inspiring speaker", "decisive", "original thinker", "commanding presence"],
+    "challenges": ["domineering tone", "dismissing input", "bluntness"],
+    "compatible_numbers": [5, 7, 9]
+  },
+  {
+    "number": 1,
+    "category": "Soul Urge",
+    "title": "The Inner Flame",
+    "description": "Deep within, you crave autonomy and the freedom to follow your own instincts without compromise. Your soul hungers to create something entirely your own, something no one else could have imagined. This inner fire drives you even when the outer world asks you to conform.",
+    "keywords": ["autonomy", "creation", "self-reliance", "drive"],
+    "strengths": ["fierce inner compass", "creative vision", "resilience", "self-trust"],
+    "challenges": ["loneliness", "difficulty asking for help", "restlessness"],
+    "compatible_numbers": [3, 5, 7]
+  },
+  {
+    "number": 1,
+    "category": "Personality",
+    "title": "The Sovereign",
+    "description": "To the world, you appear self-assured and capable, someone who walks into a room and quietly commands attention. Others perceive you as strong-willed and independent, often turning to you in moments of uncertainty. Your outer presence radiates purpose and quiet authority.",
+    "keywords": ["confidence", "authority", "independence", "strength"],
+    "strengths": ["magnetic presence", "inspires trust", "appears capable", "natural authority"],
+    "challenges": ["seeming unapproachable", "perceived arrogance", "difficulty showing vulnerability"],
+    "compatible_numbers": [2, 5, 9]
+  },
+  {
+    "number": 1,
+    "category": "Birthday",
+    "title": "The Catalyst",
+    "description": "Born under the energy of one, you carry the spark of new beginnings into everything you touch. Your birthday gifts you with the courage to start fresh, to strike first, and to trust that the path will reveal itself as you walk it. You are a natural initiator of change.",
+    "keywords": ["beginnings", "courage", "initiative", "self-expression"],
+    "strengths": ["quick starter", "bold", "self-directed", "inventive"],
+    "challenges": ["finishing what you start", "impatience with slowness", "ego attachment"],
+    "compatible_numbers": [1, 5, 7]
+  },
+  {
+    "number": 1,
+    "category": "Maturity",
+    "title": "The Elder Pioneer",
+    "description": "As you mature, you grow into a deeper understanding of what true independence means. The later years of your life call you to lead not through force but through authenticity, becoming a beacon for others who are still finding their own way. Your wisdom becomes your greatest act of creation.",
+    "keywords": ["self-mastery", "authentic leadership", "legacy", "wisdom"],
+    "strengths": ["mentorship", "clarity of purpose", "earned confidence", "visionary perspective"],
+    "challenges": ["learning to let go", "softening rigidity", "accepting support"],
+    "compatible_numbers": [3, 7, 9]
+  },
+  {
+    "number": 2,
+    "category": "Life Path",
+    "title": "The Peaceweaver",
+    "description": "Your life path winds through the spaces between people, through the quiet work of listening, holding, and bridging what seems divided. You are here to learn the profound strength of receptivity, to discover that softness is not weakness but a kind of magic all its own. Harmony is your deepest calling.",
+    "keywords": ["diplomacy", "sensitivity", "partnership", "balance", "intuition"],
+    "strengths": ["empathic listener", "natural mediator", "deeply intuitive", "patient"],
+    "challenges": ["indecisiveness", "over-giving", "fear of conflict"],
+    "compatible_numbers": [4, 6, 8]
+  },
+  {
+    "number": 2,
+    "category": "Expression",
+    "title": "The Gentle Voice",
+    "description": "You express yourself through subtlety and grace, choosing your words with the care of someone arranging wildflowers. Your communication is warm, considerate, and attuned to what others need to hear. You have a gift for making others feel seen without ever raising your voice.",
+    "keywords": ["tact", "warmth", "gentleness", "persuasion"],
+    "strengths": ["soothing communicator", "excellent listener", "emotionally articulate", "diplomatic"],
+    "challenges": ["being too indirect", "suppressing true feelings", "people-pleasing"],
+    "compatible_numbers": [1, 6, 8]
+  },
+  {
+    "number": 2,
+    "category": "Soul Urge",
+    "title": "The Hearth Keeper",
+    "description": "At your core, you long for deep and meaningful connection, for the kind of intimacy that asks nothing and gives everything. Your soul aches for harmony in your relationships and in the world around you. Peace is not just something you want, it is something you need to feel whole.",
+    "keywords": ["connection", "harmony", "love", "belonging"],
+    "strengths": ["deep emotional capacity", "devotion", "peacemaking instinct", "sensitivity as strength"],
+    "challenges": ["codependency", "losing yourself in others", "fear of being alone"],
+    "compatible_numbers": [4, 6, 9]
+  },
+  {
+    "number": 2,
+    "category": "Personality",
+    "title": "The Companion",
+    "description": "Others see you as approachable, kind, and easy to trust, someone who creates a sense of safety wherever you go. Your outer persona is gentle and cooperative, and people naturally open up in your presence. You are often the quiet anchor in any group.",
+    "keywords": ["warmth", "approachability", "kindness", "steadiness"],
+    "strengths": ["trustworthy presence", "calming energy", "quietly supportive", "graceful"],
+    "challenges": ["being overlooked", "seeming passive", "difficulty asserting boundaries"],
+    "compatible_numbers": [1, 4, 8]
+  },
+  {
+    "number": 2,
+    "category": "Birthday",
+    "title": "The Sensitive",
+    "description": "Born under the energy of two, you carry an innate awareness of the emotional undercurrents in any room. Your birthday gifts you with heightened sensitivity and a talent for cooperation, making you someone who naturally draws people together. You feel the world more deeply than most.",
+    "keywords": ["sensitivity", "cooperation", "awareness", "duality"],
+    "strengths": ["emotionally perceptive", "cooperative spirit", "gentle strength", "adaptable"],
+    "challenges": ["overwhelm from emotions", "difficulty saying no", "self-doubt"],
+    "compatible_numbers": [2, 6, 8]
+  },
+  {
+    "number": 2,
+    "category": "Maturity",
+    "title": "The Elder Peaceweaver",
+    "description": "In your later years, you step more fully into the role of mediator and wise companion. Maturity teaches you that true partnership begins with the relationship you hold with yourself. Your gift to the world becomes the peace you have cultivated within.",
+    "keywords": ["inner peace", "wise companionship", "emotional mastery", "grace"],
+    "strengths": ["deep empathy", "balanced relationships", "earned serenity", "intuitive wisdom"],
+    "challenges": ["releasing old resentments", "trusting your own needs", "standing firm"],
+    "compatible_numbers": [4, 6, 8]
+  },
+  {
+    "number": 3,
+    "category": "Life Path",
+    "title": "The Storyteller",
+    "description": "Your life path is a winding trail of color and song, a journey meant to be expressed in every medium you can find. You are here to learn that creativity is not a luxury but a necessity, that the stories you tell and the beauty you bring into being are as vital as bread and water. Joy is your compass.",
+    "keywords": ["creativity", "expression", "joy", "communication", "inspiration"],
+    "strengths": ["artistic talent", "magnetic personality", "optimistic spirit", "eloquent"],
+    "challenges": ["scattered focus", "superficiality", "emotional volatility"],
+    "compatible_numbers": [1, 5, 9]
+  },
+  {
+    "number": 3,
+    "category": "Expression",
+    "title": "The Bard",
+    "description": "You express yourself with a natural flair that draws others in, weaving words and ideas into something alive and captivating. Your communication style is colorful, animated, and infectious. Whether through speech, art, or gesture, you have a rare gift for making the invisible visible.",
+    "keywords": ["eloquence", "charm", "artistry", "vivacity"],
+    "strengths": ["natural entertainer", "creative communicator", "uplifting presence", "imaginative"],
+    "challenges": ["exaggeration", "difficulty with depth", "attention-seeking"],
+    "compatible_numbers": [1, 5, 7]
+  },
+  {
+    "number": 3,
+    "category": "Soul Urge",
+    "title": "The Muse",
+    "description": "Deep within, you crave the freedom to create without limits, to pour your inner world outward in vibrant, unapologetic color. Your soul longs for beauty, for laughter, for the electric thrill of inspiration striking like summer lightning. You need to express or you begin to wither.",
+    "keywords": ["inspiration", "beauty", "freedom", "self-expression"],
+    "strengths": ["boundless imagination", "emotional authenticity", "playful spirit", "contagious enthusiasm"],
+    "challenges": ["mood swings", "fear of being ordinary", "avoiding difficult emotions"],
+    "compatible_numbers": [1, 5, 9]
+  },
+  {
+    "number": 3,
+    "category": "Personality",
+    "title": "The Enchanter",
+    "description": "To the world, you appear bright, sociable, and full of life, someone who lights up a gathering simply by walking in. Your outer persona is warm and expressive, and people are drawn to your easy humor and creative energy. You seem to carry a pocket of sunshine wherever you go.",
+    "keywords": ["charisma", "brightness", "sociability", "expressiveness"],
+    "strengths": ["draws people in", "uplifting energy", "natural charm", "creative aura"],
+    "challenges": ["perceived as frivolous", "hiding pain behind humor", "difficulty being serious"],
+    "compatible_numbers": [5, 7, 9]
+  },
+  {
+    "number": 3,
+    "category": "Birthday",
+    "title": "The Creative Spark",
+    "description": "Born under the energy of three, you carry an innate gift for creative expression and social connection. Your birthday blesses you with optimism and a natural ability to uplift others through words, art, or simple presence. The world feels brighter when you allow your light to shine fully.",
+    "keywords": ["creativity", "optimism", "social grace", "expression"],
+    "strengths": ["artistic instinct", "joyful nature", "quick wit", "inspirational"],
+    "challenges": ["lack of discipline", "emotional scattering", "avoidance of hard truths"],
+    "compatible_numbers": [3, 6, 9]
+  },
+  {
+    "number": 3,
+    "category": "Maturity",
+    "title": "The Elder Bard",
+    "description": "As you mature, your creative gifts deepen from surface sparkle into true artistic mastery. The later years bring a richer, more grounded expression of your talents, one that speaks from lived experience rather than youthful exuberance. Your stories become medicine for those who hear them.",
+    "keywords": ["artistic mastery", "depth", "joyful wisdom", "storytelling"],
+    "strengths": ["seasoned creativity", "emotional depth", "wise humor", "cultural contribution"],
+    "challenges": ["letting go of vanity", "embracing silence", "finding meaning beyond applause"],
+    "compatible_numbers": [1, 6, 9]
+  },
+  {
+    "number": 4,
+    "category": "Life Path",
+    "title": "The Builder",
+    "description": "Your life path is one of steady, devoted labor, the kind that turns raw earth into a garden and rough stone into a home. You are here to learn the sacredness of structure, to discover that discipline and devotion are forms of love. What you build is meant to endure long after you have moved on.",
+    "keywords": ["stability", "discipline", "foundation", "hard work", "order"],
+    "strengths": ["reliable", "methodical", "patient builder", "deeply loyal"],
+    "challenges": ["rigidity", "resistance to change", "workaholism"],
+    "compatible_numbers": [2, 6, 8]
+  },
+  {
+    "number": 4,
+    "category": "Expression",
+    "title": "The Architect",
+    "description": "You express yourself with precision and care, building your thoughts like someone laying bricks, each one placed with intention. Your communication is grounded, practical, and trustworthy. Others rely on your words because they know you do not speak carelessly.",
+    "keywords": ["precision", "reliability", "practicality", "structure"],
+    "strengths": ["clear communicator", "detail-oriented", "trustworthy voice", "systematic thinker"],
+    "challenges": ["overly rigid expression", "difficulty with spontaneity", "seeming blunt"],
+    "compatible_numbers": [2, 6, 8]
+  },
+  {
+    "number": 4,
+    "category": "Soul Urge",
+    "title": "The Root Seeker",
+    "description": "At your core, you long for security, for ground beneath your feet and walls that hold. Your soul craves order and predictability, not out of fear but out of a deep knowing that the most beautiful things grow from stable roots. You need to feel anchored to feel alive.",
+    "keywords": ["security", "order", "rootedness", "permanence"],
+    "strengths": ["deep need for integrity", "commitment to quality", "inner steadiness", "devotion"],
+    "challenges": ["fear of uncertainty", "controlling tendencies", "difficulty trusting the unknown"],
+    "compatible_numbers": [2, 6, 8]
+  },
+  {
+    "number": 4,
+    "category": "Personality",
+    "title": "The Steady Hand",
+    "description": "Others see you as dependable and solid, the person they turn to when they need someone who will not falter. Your outer persona exudes calm competence, and people trust you instinctively. You carry yourself with the quiet dignity of old stone walls and deep-rooted oaks.",
+    "keywords": ["dependability", "solidity", "calm", "competence"],
+    "strengths": ["inspires confidence", "grounding presence", "practical demeanor", "unwavering"],
+    "challenges": ["seeming inflexible", "difficulty showing emotion", "perceived as dull"],
+    "compatible_numbers": [2, 6, 8]
+  },
+  {
+    "number": 4,
+    "category": "Birthday",
+    "title": "The Foundation Stone",
+    "description": "Born under the energy of four, you carry the gift of endurance and the ability to turn chaos into order. Your birthday blesses you with a natural talent for building things that last, whether relationships, projects, or homes. You are the ground others stand on when the world shakes.",
+    "keywords": ["endurance", "order", "reliability", "craftsmanship"],
+    "strengths": ["natural organizer", "strong work ethic", "practical wisdom", "loyal"],
+    "challenges": ["stubbornness", "resistance to change", "overwork"],
+    "compatible_numbers": [4, 6, 8]
+  },
+  {
+    "number": 4,
+    "category": "Maturity",
+    "title": "The Elder Builder",
+    "description": "In your later years, the structures you have spent a lifetime building become your legacy and your teacher. Maturity softens your rigidity and reveals that true stability comes not from control but from trust. Your wisdom is the kind that holds up roofs and keeps the fire burning.",
+    "keywords": ["legacy", "earned wisdom", "flexible strength", "stewardship"],
+    "strengths": ["generous mentor", "built to last", "patient teacher", "quiet authority"],
+    "challenges": ["releasing control", "accepting impermanence", "learning to rest"],
+    "compatible_numbers": [2, 6, 8]
+  },
+  {
+    "number": 5,
+    "category": "Life Path",
+    "title": "The Wanderer",
+    "description": "Your life path is a river that refuses to be dammed, always moving, always seeking the next bend. You are here to learn the wisdom of change, to discover that freedom is not running away but running toward the fullness of experience. Restlessness is your teacher, and the open road is your classroom.",
+    "keywords": ["freedom", "change", "adventure", "versatility", "curiosity"],
+    "strengths": ["adaptable", "resourceful", "adventurous spirit", "magnetic energy"],
+    "challenges": ["restlessness", "overindulgence", "commitment struggles"],
+    "compatible_numbers": [1, 3, 7]
+  },
+  {
+    "number": 5,
+    "category": "Expression",
+    "title": "The Shapeshifter",
+    "description": "You express yourself with a restless versatility, shifting tone and style like the wind changes direction. Your communication is lively, unpredictable, and often captivating, because you draw from a well of experience that most people cannot match. You make the unfamiliar feel exciting.",
+    "keywords": ["versatility", "energy", "wit", "adaptability"],
+    "strengths": ["engaging storyteller", "quick thinker", "persuasive", "culturally fluent"],
+    "challenges": ["inconsistency", "superficial breadth", "difficulty staying on topic"],
+    "compatible_numbers": [1, 3, 9]
+  },
+  {
+    "number": 5,
+    "category": "Soul Urge",
+    "title": "The Restless Heart",
+    "description": "Deep within, you ache for freedom and experience, for the thrill of the new and the unfamiliar. Your soul craves sensation, variety, and the feeling of being fully alive in every nerve and fiber. Routine feels like a slow death to you, and your inner world is always reaching for the horizon.",
+    "keywords": ["freedom", "sensation", "variety", "aliveness"],
+    "strengths": ["passion for life", "courageous heart", "insatiable curiosity", "openness"],
+    "challenges": ["fear of commitment", "excess", "inability to be still"],
+    "compatible_numbers": [1, 3, 7]
+  },
+  {
+    "number": 5,
+    "category": "Personality",
+    "title": "The Free Spirit",
+    "description": "To the world, you appear dynamic, exciting, and impossible to pin down. Your outer persona sparkles with energy and curiosity, and people are drawn to your sense of adventure. You carry an air of someone who has been everywhere and tasted everything.",
+    "keywords": ["dynamism", "excitement", "curiosity", "magnetism"],
+    "strengths": ["electrifying presence", "socially versatile", "youthful energy", "inspiring"],
+    "challenges": ["perceived as unreliable", "difficulty with depth", "seeming scattered"],
+    "compatible_numbers": [1, 3, 7]
+  },
+  {
+    "number": 5,
+    "category": "Birthday",
+    "title": "The Wind Dancer",
+    "description": "Born under the energy of five, you carry the gift of adaptability and a hunger for experience that never quite fades. Your birthday blesses you with quick reflexes, sharp senses, and the ability to thrive in change. You are most alive when the world is shifting beneath your feet.",
+    "keywords": ["adaptability", "change", "sensory awareness", "vitality"],
+    "strengths": ["quick learner", "resilient", "magnetic charm", "resourceful"],
+    "challenges": ["impulsiveness", "difficulty with patience", "scattered energy"],
+    "compatible_numbers": [1, 5, 7]
+  },
+  {
+    "number": 5,
+    "category": "Maturity",
+    "title": "The Elder Wanderer",
+    "description": "As you mature, your love of freedom transforms from restless seeking into a deep, earned wisdom about the nature of change itself. The later years teach you that true freedom is found not in constant motion but in the ability to be fully present wherever you are. Your stories become maps for others.",
+    "keywords": ["inner freedom", "presence", "experiential wisdom", "peace in motion"],
+    "strengths": ["wise traveler", "cultural wisdom", "adaptable elder", "grounded freedom"],
+    "challenges": ["settling into stillness", "finding contentment", "valuing depth over breadth"],
+    "compatible_numbers": [1, 3, 9]
+  },
+  {
+    "number": 6,
+    "category": "Life Path",
+    "title": "The Nurturer",
+    "description": "Your life path circles around the hearth, around the sacred work of tending to others and creating beauty in the everyday. You are here to learn that love is both your gift and your greatest lesson, that caring for others must never come at the cost of caring for yourself. Responsibility is your garden, and it blooms when watered with boundaries.",
+    "keywords": ["responsibility", "love", "nurturing", "harmony", "service"],
+    "strengths": ["devoted caretaker", "creates beauty", "deeply loving", "community builder"],
+    "challenges": ["martyrdom", "over-responsibility", "difficulty receiving"],
+    "compatible_numbers": [2, 4, 9]
+  },
+  {
+    "number": 6,
+    "category": "Expression",
+    "title": "The Healer's Voice",
+    "description": "You express yourself with warmth and care, choosing words that comfort and restore like a cup of herbal tea on a cold night. Your communication style is nurturing and protective, and you have a gift for saying exactly what someone needs to hear. You speak from the heart, always.",
+    "keywords": ["warmth", "comfort", "care", "sincerity"],
+    "strengths": ["healing words", "emotionally attuned", "encouraging", "honest with kindness"],
+    "challenges": ["lecturing", "unsolicited advice", "smothering with words"],
+    "compatible_numbers": [2, 4, 9]
+  },
+  {
+    "number": 6,
+    "category": "Soul Urge",
+    "title": "The Devoted Heart",
+    "description": "At your core, you long to love and be loved in return, to build a life overflowing with beauty, warmth, and meaningful connection. Your soul craves a home, not just walls and a roof, but the feeling of belonging and being needed. You find your deepest peace in service to those you cherish.",
+    "keywords": ["love", "home", "beauty", "devotion"],
+    "strengths": ["generous spirit", "aesthetic sensibility", "deep loyalty", "nurturing instinct"],
+    "challenges": ["losing yourself in others", "perfectionism in love", "difficulty letting go"],
+    "compatible_numbers": [2, 4, 9]
+  },
+  {
+    "number": 6,
+    "category": "Personality",
+    "title": "The Caretaker",
+    "description": "Others see you as warm, responsible, and deeply caring, the person everyone turns to when they need comfort or guidance. Your outer persona radiates domestic grace and a quiet strength that makes people feel safe. You carry yourself with the dignity of someone who knows the value of home.",
+    "keywords": ["warmth", "responsibility", "grace", "protectiveness"],
+    "strengths": ["trusted confidant", "comforting presence", "aesthetically refined", "dependable"],
+    "challenges": ["being taken for granted", "perceived as controlling", "difficulty saying no"],
+    "compatible_numbers": [2, 4, 8]
+  },
+  {
+    "number": 6,
+    "category": "Birthday",
+    "title": "The Hearth Tender",
+    "description": "Born under the energy of six, you carry an instinct for harmony and a deep need to create beauty in your surroundings. Your birthday gifts you with a natural eye for aesthetics and a heart that expands to hold everyone it loves. You are the warmth at the center of every gathering.",
+    "keywords": ["harmony", "beauty", "family", "responsibility"],
+    "strengths": ["natural homemaker", "artistic eye", "loyal heart", "community minded"],
+    "challenges": ["over-giving", "difficulty with boundaries", "self-neglect"],
+    "compatible_numbers": [2, 6, 9]
+  },
+  {
+    "number": 6,
+    "category": "Maturity",
+    "title": "The Elder Nurturer",
+    "description": "In your later years, your capacity for love deepens into a vast, unconditional warmth that no longer needs to control or fix. Maturity teaches you that the greatest act of nurturing is allowing others to find their own way. Your presence alone becomes a kind of healing.",
+    "keywords": ["unconditional love", "wise nurturing", "graceful aging", "release"],
+    "strengths": ["wise caretaker", "boundary-honoring love", "peaceful home", "generational healing"],
+    "challenges": ["accepting imperfect outcomes", "releasing grown children", "resting without guilt"],
+    "compatible_numbers": [2, 4, 9]
+  },
+  {
+    "number": 7,
+    "category": "Life Path",
+    "title": "The Seeker",
+    "description": "Your life path leads inward, through silent forests and candlelit libraries, toward the questions that have no easy answers. You are here to learn the art of deep knowing, to trust your intuition even when logic cannot follow. Solitude is your sanctuary, and truth is your north star.",
+    "keywords": ["wisdom", "introspection", "spirituality", "analysis", "solitude"],
+    "strengths": ["profound thinker", "highly intuitive", "spiritually attuned", "analytical mind"],
+    "challenges": ["emotional withdrawal", "overthinking", "distrust of others"],
+    "compatible_numbers": [3, 5, 9]
+  },
+  {
+    "number": 7,
+    "category": "Expression",
+    "title": "The Oracle",
+    "description": "You express yourself with a quiet depth that makes others lean in to listen more closely. Your communication is thoughtful, precise, and often layered with meaning that reveals itself slowly. You do not waste words, and when you speak, it carries the weight of genuine reflection.",
+    "keywords": ["depth", "precision", "insight", "mystery"],
+    "strengths": ["thought-provoking", "insightful writer", "careful speaker", "intellectually honest"],
+    "challenges": ["being misunderstood", "seeming aloof", "difficulty with small talk"],
+    "compatible_numbers": [1, 3, 5]
+  },
+  {
+    "number": 7,
+    "category": "Soul Urge",
+    "title": "The Inner Mystic",
+    "description": "Deep within, you crave understanding, the kind that goes beyond the surface into the hidden architecture of reality. Your soul is drawn to mystery, to silence, to the spaces between words where truth lives. You need time alone with your thoughts the way others need food and water.",
+    "keywords": ["understanding", "mystery", "silence", "truth"],
+    "strengths": ["spiritual depth", "penetrating insight", "love of learning", "inner stillness"],
+    "challenges": ["isolation", "spiritual bypassing", "difficulty with intimacy"],
+    "compatible_numbers": [1, 5, 9]
+  },
+  {
+    "number": 7,
+    "category": "Personality",
+    "title": "The Sage",
+    "description": "To the world, you appear thoughtful, reserved, and quietly enigmatic. Others sense a depth in you that they cannot quite reach, and this gives you an aura of mystery. Your outer persona is calm and self-contained, like a still pond that reflects everything but reveals nothing of its own depths.",
+    "keywords": ["mystery", "calm", "depth", "reserve"],
+    "strengths": ["intriguing presence", "intellectual aura", "dignified bearing", "calming influence"],
+    "challenges": ["seeming cold", "difficulty connecting casually", "perceived as secretive"],
+    "compatible_numbers": [3, 5, 9]
+  },
+  {
+    "number": 7,
+    "category": "Birthday",
+    "title": "The Contemplative",
+    "description": "Born under the energy of seven, you carry a natural gift for seeing beneath surfaces and finding meaning where others see only noise. Your birthday blesses you with sharp intuition and a mind that never stops questioning. You are the quiet one in the corner who understands everything.",
+    "keywords": ["intuition", "analysis", "depth", "perception"],
+    "strengths": ["keen observer", "naturally wise", "research-minded", "spiritually gifted"],
+    "challenges": ["social awkwardness", "perfectionism", "skepticism"],
+    "compatible_numbers": [3, 5, 7]
+  },
+  {
+    "number": 7,
+    "category": "Maturity",
+    "title": "The Elder Sage",
+    "description": "As you mature, your intellectual seeking transforms into genuine wisdom, the kind that comes from having sat with the unanswerable long enough to find peace there. The later years invite you to share your insights with others, to become the teacher your younger self was always seeking.",
+    "keywords": ["true wisdom", "spiritual mastery", "peaceful knowing", "teaching"],
+    "strengths": ["wise teacher", "spiritual elder", "deep acceptance", "intuitive mastery"],
+    "challenges": ["coming out of seclusion", "sharing knowledge generously", "embracing human connection"],
+    "compatible_numbers": [3, 5, 9]
+  },
+  {
+    "number": 8,
+    "category": "Life Path",
+    "title": "The Sovereign",
+    "description": "Your life path is one of power, abundance, and the great responsibility that comes with both. You are here to learn how to wield influence with integrity, to understand that true wealth is measured not just in gold but in the good you do with it. Mastery of the material world is your sacred task.",
+    "keywords": ["power", "abundance", "authority", "achievement", "karma"],
+    "strengths": ["natural executive", "financially astute", "goal-oriented", "commanding"],
+    "challenges": ["materialism", "power struggles", "workaholism"],
+    "compatible_numbers": [2, 4, 6]
+  },
+  {
+    "number": 8,
+    "category": "Expression",
+    "title": "The Commander",
+    "description": "You express yourself with authority and conviction, carrying the weight of your words like someone accustomed to being obeyed. Your communication is strategic, purposeful, and often persuasive enough to move mountains. You speak as someone who has earned the right to lead.",
+    "keywords": ["authority", "strategy", "conviction", "influence"],
+    "strengths": ["persuasive speaker", "strategic thinker", "commanding tone", "business-minded"],
+    "challenges": ["intimidating others", "valuing results over feelings", "difficulty with vulnerability"],
+    "compatible_numbers": [2, 4, 6]
+  },
+  {
+    "number": 8,
+    "category": "Soul Urge",
+    "title": "The Ambitious Heart",
+    "description": "At your core, you crave achievement and the tangible proof that your efforts have made a mark on the world. Your soul hungers for success, not from vanity but from a deep-seated need to prove your worth through what you can build and accomplish. You measure your inner life by outer results.",
+    "keywords": ["achievement", "success", "recognition", "power"],
+    "strengths": ["relentless drive", "inner strength", "ambition as fuel", "material wisdom"],
+    "challenges": ["never feeling enough", "equating worth with wealth", "burnout"],
+    "compatible_numbers": [2, 4, 6]
+  },
+  {
+    "number": 8,
+    "category": "Personality",
+    "title": "The Powerhouse",
+    "description": "To the world, you appear strong, capable, and thoroughly in control. Others sense your ambition and respect your commanding presence, often looking to you for direction in matters of business or practical affairs. You carry yourself with the assurance of someone who knows what they want and how to get it.",
+    "keywords": ["strength", "capability", "ambition", "control"],
+    "strengths": ["inspires respect", "projects competence", "natural authority", "polished image"],
+    "challenges": ["seeming ruthless", "difficulty relaxing", "intimidating demeanor"],
+    "compatible_numbers": [2, 4, 6]
+  },
+  {
+    "number": 8,
+    "category": "Birthday",
+    "title": "The Manifestor",
+    "description": "Born under the energy of eight, you carry a powerful ability to turn vision into reality and ideas into tangible form. Your birthday gifts you with a natural understanding of how the material world works and how to move within it with confidence. You were born to build empires, however you define them.",
+    "keywords": ["manifestation", "power", "business acumen", "determination"],
+    "strengths": ["natural manager", "financially intelligent", "strong-willed", "productive"],
+    "challenges": ["obsession with status", "difficulty with leisure", "domineering tendencies"],
+    "compatible_numbers": [2, 4, 8]
+  },
+  {
+    "number": 8,
+    "category": "Maturity",
+    "title": "The Elder Sovereign",
+    "description": "In your later years, your relationship with power and abundance transforms into something far more generous and wise. Maturity teaches you that the greatest legacy is not what you accumulate but what you give back. Your authority softens into stewardship, and your wealth becomes a river that nourishes everything it touches.",
+    "keywords": ["generosity", "stewardship", "karmic balance", "wise authority"],
+    "strengths": ["philanthropic spirit", "earned respect", "material and spiritual balance", "legacy building"],
+    "challenges": ["letting go of control", "redefining success", "trusting the next generation"],
+    "compatible_numbers": [2, 4, 6]
+  },
+  {
+    "number": 9,
+    "category": "Life Path",
+    "title": "The Healer",
+    "description": "Your life path is one of compassion, completion, and the bittersweet beauty of letting go. You are here to learn that the deepest love asks nothing in return, that giving without expectation is both your greatest gift and your most difficult lesson. You carry the wisdom of all numbers within you.",
+    "keywords": ["compassion", "completion", "humanitarianism", "wisdom", "release"],
+    "strengths": ["deeply compassionate", "universally loving", "wise beyond years", "artistic"],
+    "challenges": ["difficulty letting go", "emotional heaviness", "martyrdom"],
+    "compatible_numbers": [1, 3, 6]
+  },
+  {
+    "number": 9,
+    "category": "Expression",
+    "title": "The Visionary",
+    "description": "You express yourself with a breadth and generosity that encompasses the whole human experience. Your communication carries a universal quality, speaking to something larger than any single person or moment. Others feel that your words come from a place of deep understanding and genuine care for the world.",
+    "keywords": ["universality", "generosity", "vision", "compassion"],
+    "strengths": ["inspiring speaker", "broad perspective", "emotionally generous", "culturally aware"],
+    "challenges": ["preachiness", "emotional overwhelm", "difficulty with personal expression"],
+    "compatible_numbers": [1, 3, 6]
+  },
+  {
+    "number": 9,
+    "category": "Soul Urge",
+    "title": "The Compassionate Heart",
+    "description": "Deep within, you long to heal the world, to ease suffering wherever you find it and to leave this place better than you found it. Your soul aches with an empathy so vast it sometimes threatens to drown you. You need to serve a purpose larger than yourself to feel truly at peace.",
+    "keywords": ["healing", "service", "empathy", "transcendence"],
+    "strengths": ["boundless compassion", "selfless love", "deep wisdom", "spiritual generosity"],
+    "challenges": ["absorbing others' pain", "neglecting personal needs", "grief that never fully resolves"],
+    "compatible_numbers": [1, 3, 6]
+  },
+  {
+    "number": 9,
+    "category": "Personality",
+    "title": "The Philanthropist",
+    "description": "Others see you as generous, worldly, and deeply humane, someone whose concern extends far beyond their own circle. Your outer persona radiates warmth and a kind of weary wisdom, as though you have seen much and forgiven more. People sense that you carry something ancient within you.",
+    "keywords": ["generosity", "wisdom", "warmth", "worldliness"],
+    "strengths": ["universally approachable", "dignified bearing", "naturally compassionate", "culturally rich"],
+    "challenges": ["seeming detached", "difficulty with personal closeness", "perceived sadness"],
+    "compatible_numbers": [1, 3, 6]
+  },
+  {
+    "number": 9,
+    "category": "Birthday",
+    "title": "The Old Soul",
+    "description": "Born under the energy of nine, you carry the accumulated wisdom of all the numbers before you. Your birthday gifts you with compassion, artistic talent, and a natural understanding of life's cycles of beginning and ending. You are the one who holds the door open for others, even when it means being last to walk through.",
+    "keywords": ["wisdom", "completion", "compassion", "artistry"],
+    "strengths": ["emotionally mature", "artistically gifted", "selfless", "universally caring"],
+    "challenges": ["carrying too much", "difficulty receiving", "melancholy"],
+    "compatible_numbers": [3, 6, 9]
+  },
+  {
+    "number": 9,
+    "category": "Maturity",
+    "title": "The Elder Healer",
+    "description": "As you mature, the compassion you have always carried becomes truly unconditional, freed from the need to fix or save. The later years bring a profound acceptance of life's impermanence and a gentleness that touches everyone who comes near you. You become the kind of elder that others seek out simply to sit beside.",
+    "keywords": ["unconditional love", "acceptance", "gentle wisdom", "transcendence"],
+    "strengths": ["profound peace", "selfless service", "spiritual completion", "graceful release"],
+    "challenges": ["final letting go", "accepting your own worthiness", "receiving as freely as you give"],
+    "compatible_numbers": [1, 3, 6]
+  },
+  {
+    "number": 11,
+    "category": "Life Path",
+    "title": "The Illuminator",
+    "description": "Your life path is a bridge between the seen and the unseen, a calling to channel inspiration from realms most people only glimpse in dreams. You are here to learn that your heightened sensitivity is not a burden but a gift, that the light you carry can illuminate the way for others. Yours is a master path, and it asks everything of you.",
+    "keywords": ["intuition", "illumination", "inspiration", "spiritual messenger", "sensitivity"],
+    "strengths": ["visionary insight", "deeply intuitive", "spiritually gifted", "inspiring presence"],
+    "challenges": ["nervous tension", "self-doubt", "feeling overwhelmed by potential"],
+    "compatible_numbers": [2, 4, 6]
+  },
+  {
+    "number": 11,
+    "category": "Expression",
+    "title": "The Channel",
+    "description": "You express yourself as though receiving from somewhere beyond, your words carrying a charge that others can feel even when they cannot explain it. Your communication has a prophetic quality, a sense that what you say comes from a deeper well than most people can access. You speak and the room shifts.",
+    "keywords": ["inspiration", "channeling", "magnetism", "prophecy"],
+    "strengths": ["electrifying communicator", "spiritually attuned voice", "visionary expression", "deeply moving"],
+    "challenges": ["erratic delivery", "difficulty grounding ideas", "overwhelming others"],
+    "compatible_numbers": [2, 6, 9]
+  },
+  {
+    "number": 11,
+    "category": "Soul Urge",
+    "title": "The Inner Luminary",
+    "description": "Deep within, you crave spiritual connection and the ability to bring light to places of darkness. Your soul longs to fulfill a higher purpose, something that transcends the ordinary and touches the divine. This inner knowing can feel like a blessing and a burden in equal measure.",
+    "keywords": ["spiritual purpose", "illumination", "higher calling", "transcendence"],
+    "strengths": ["profound spiritual longing", "visionary imagination", "empathic depth", "idealistic fire"],
+    "challenges": ["anxiety from unmet potential", "spiritual pressure", "difficulty with the mundane"],
+    "compatible_numbers": [2, 4, 6]
+  },
+  {
+    "number": 11,
+    "category": "Personality",
+    "title": "The Beacon",
+    "description": "To the world, you appear luminous and slightly otherworldly, as though you see things that others miss entirely. Your outer persona carries an unmistakable intensity that draws people in and makes them wonder what you know that they do not. There is something magnetic and almost electric about your presence.",
+    "keywords": ["luminosity", "intensity", "otherworldliness", "magnetism"],
+    "strengths": ["captivating presence", "spiritual aura", "inspires awe", "deeply memorable"],
+    "challenges": ["seeming unstable", "difficulty fitting in", "intimidating sensitivity"],
+    "compatible_numbers": [2, 6, 9]
+  },
+  {
+    "number": 11,
+    "category": "Birthday",
+    "title": "The Lightning Rod",
+    "description": "Born under the master energy of eleven, you carry an amplified sensitivity that picks up on frequencies most people cannot detect. Your birthday gifts you with visionary potential and the ability to inspire others simply by being yourself. You are a conduit for something larger, and learning to manage that energy is your lifelong work.",
+    "keywords": ["amplified intuition", "vision", "sensitivity", "spiritual potential"],
+    "strengths": ["heightened perception", "natural healer", "inspirational", "creative visionary"],
+    "challenges": ["energetic overwhelm", "nervous system strain", "difficulty with ordinary life"],
+    "compatible_numbers": [2, 4, 6]
+  },
+  {
+    "number": 11,
+    "category": "Maturity",
+    "title": "The Elder Illuminator",
+    "description": "As you mature, the nervous intensity of your earlier years settles into a steady, radiant glow. The later years bring a deeper trust in your gifts and a calmer relationship with your own sensitivity. You become the kind of person whose mere presence feels like a candle lit in a dark room.",
+    "keywords": ["steady light", "spiritual maturity", "calm intensity", "trusted guide"],
+    "strengths": ["serene wisdom", "grounded spirituality", "gentle power", "illuminating presence"],
+    "challenges": ["accepting your humanity", "releasing the need to be extraordinary", "finding peace in simplicity"],
+    "compatible_numbers": [2, 4, 6]
+  },
+  {
+    "number": 22,
+    "category": "Life Path",
+    "title": "The Master Builder",
+    "description": "Your life path is one of extraordinary potential, a calling to take grand visions and give them form in the physical world. You are here to learn that dreams are not enough, that the greatest spiritual act is building something real that serves the many. You carry the architect's eye and the laborer's hands, and the world needs both.",
+    "keywords": ["mastery", "vision", "manifestation", "service", "architecture"],
+    "strengths": ["turns vision into reality", "immense discipline", "practical idealist", "natural leader"],
+    "challenges": ["crushing self-expectation", "paralysis from potential", "neglecting personal life"],
+    "compatible_numbers": [4, 6, 8]
+  },
+  {
+    "number": 22,
+    "category": "Expression",
+    "title": "The Grand Architect",
+    "description": "You express yourself with the precision of a master craftsperson and the vision of a dreamer, somehow holding both simultaneously. Your communication carries weight and ambition, and when you share an idea, others can see the cathedral you are describing even before the first stone is laid. You speak blueprints into existence.",
+    "keywords": ["precision", "grand vision", "practical idealism", "authority"],
+    "strengths": ["visionary communicator", "inspires large-scale action", "systematic and ambitious", "deeply credible"],
+    "challenges": ["overwhelming others with scale", "impatience with small talk", "difficulty simplifying"],
+    "compatible_numbers": [4, 6, 8]
+  },
+  {
+    "number": 22,
+    "category": "Soul Urge",
+    "title": "The Builder's Heart",
+    "description": "At your core, you long to leave a lasting mark on the world, to build something so meaningful that it outlives you by generations. Your soul craves the fusion of spiritual vision and material accomplishment, the feeling of putting your hands into the earth and pulling out something sacred. Nothing less than legacy will satisfy you.",
+    "keywords": ["legacy", "creation", "lasting impact", "sacred work"],
+    "strengths": ["massive inner drive", "spiritual ambition", "devotion to craft", "world-building instinct"],
+    "challenges": ["feeling the weight of destiny", "difficulty with the ordinary", "impostor syndrome at scale"],
+    "compatible_numbers": [4, 6, 8]
+  },
+  {
+    "number": 22,
+    "category": "Personality",
+    "title": "The Cornerstone",
+    "description": "Others see you as someone of unusual substance and capability, a person who seems built to carry more than most. Your outer persona radiates competence, vision, and an almost supernatural level of determination. People look at you and see someone who could build a bridge across an impossible gap.",
+    "keywords": ["substance", "capability", "determination", "vision"],
+    "strengths": ["commands deep respect", "radiates purpose", "practically visionary", "unshakeable presence"],
+    "challenges": ["seeming larger than life", "difficulty relating on a personal level", "carrying the world's weight"],
+    "compatible_numbers": [4, 6, 8]
+  },
+  {
+    "number": 22,
+    "category": "Birthday",
+    "title": "The Master Manifester",
+    "description": "Born under the master energy of twenty-two, you carry an extraordinary capacity to manifest on a grand scale. Your birthday gifts you with the rare combination of visionary thinking and practical follow-through, the ability to dream big and actually build what you dream. This is both your greatest power and your heaviest responsibility.",
+    "keywords": ["mastery", "manifestation", "grand scale", "practical vision"],
+    "strengths": ["exceptional builder", "strategic mind", "disciplined dreamer", "transformative leader"],
+    "challenges": ["burnout from expectations", "difficulty with rest", "pressure of potential"],
+    "compatible_numbers": [4, 6, 8]
+  },
+  {
+    "number": 22,
+    "category": "Maturity",
+    "title": "The Elder Architect",
+    "description": "In your later years, the structures you have built become monuments to a life lived with extraordinary purpose. Maturity brings a gentler relationship with your own ambition and a recognition that the greatest things you have built may be the people you have lifted along the way. Your legacy speaks for itself.",
+    "keywords": ["legacy fulfilled", "gentle mastery", "mentorship", "lasting impact"],
+    "strengths": ["monumental legacy", "wise builder", "generous mentor", "peaceful accomplishment"],
+    "challenges": ["learning to step back", "trusting others with your vision", "finding peace beyond achievement"],
+    "compatible_numbers": [4, 6, 8]
+  },
+  {
+    "number": 33,
+    "category": "Life Path",
+    "title": "The Master Healer",
+    "description": "Your life path is the rarest and most demanding of all, a calling to embody unconditional love and to uplift humanity through the sheer force of your compassion. You are here to learn that healing others begins with healing yourself, and that the love you carry has the power to transform everything it touches. This is the path of the spiritual teacher.",
+    "keywords": ["unconditional love", "spiritual teaching", "compassion", "healing", "selflessness"],
+    "strengths": ["boundless love", "natural teacher", "deeply healing presence", "spiritual authority"],
+    "challenges": ["savior complex", "emotional exhaustion", "impossibly high standards"],
+    "compatible_numbers": [6, 9, 11]
+  },
+  {
+    "number": 33,
+    "category": "Expression",
+    "title": "The Sacred Voice",
+    "description": "You express yourself with a warmth and sincerity that touches the deepest places in those who listen. Your communication carries the energy of a benediction, a blessing spoken into being through ordinary words. When you speak from your truest self, your voice has the power to heal wounds that have been open for years.",
+    "keywords": ["blessing", "healing words", "sincerity", "sacred communication"],
+    "strengths": ["profoundly moving speaker", "healing communicator", "authentic voice", "spiritually powerful"],
+    "challenges": ["carrying others' burdens through words", "preachiness", "emotional depletion from expression"],
+    "compatible_numbers": [6, 9, 11]
+  },
+  {
+    "number": 33,
+    "category": "Soul Urge",
+    "title": "The Heart of the World",
+    "description": "Deep within, you carry a love so vast it sometimes feels as though your heart belongs to the whole world rather than to yourself alone. Your soul craves the opportunity to uplift, to teach, to heal on the grandest scale possible. This is both your most beautiful quality and the one most likely to break you if you do not learn to tend your own garden first.",
+    "keywords": ["universal love", "spiritual service", "cosmic compassion", "upliftment"],
+    "strengths": ["infinite compassion", "spiritual devotion", "selfless love", "visionary heart"],
+    "challenges": ["self-sacrifice", "inability to set boundaries", "spiritual exhaustion"],
+    "compatible_numbers": [6, 9, 11]
+  },
+  {
+    "number": 33,
+    "category": "Personality",
+    "title": "The Blessing",
+    "description": "To the world, you appear as a rare and gentle light, someone whose presence feels like a benediction. Others sense something almost saintly in your bearing, a warmth that asks nothing and gives everything. People are drawn to you not for what you do but for who you are at the most fundamental level.",
+    "keywords": ["radiance", "gentleness", "saintliness", "unconditional warmth"],
+    "strengths": ["healing presence", "radiates love", "deeply trusted", "spiritually magnetic"],
+    "challenges": ["being put on a pedestal", "difficulty being human", "others projecting perfection onto you"],
+    "compatible_numbers": [6, 9, 11]
+  },
+  {
+    "number": 33,
+    "category": "Birthday",
+    "title": "The Master Teacher",
+    "description": "Born under the master energy of thirty-three, you carry the most potent healing frequency of all the numbers. Your birthday gifts you with an almost supernatural capacity for compassion and the ability to teach through love rather than instruction. You are here to remind the world what unconditional kindness looks and feels like.",
+    "keywords": ["master healing", "teaching through love", "compassion", "spiritual gift"],
+    "strengths": ["extraordinary empath", "natural spiritual teacher", "heart-centered leader", "transformative love"],
+    "challenges": ["carrying the weight of the world", "impossibly high self-expectations", "emotional overwhelm"],
+    "compatible_numbers": [6, 9, 11]
+  },
+  {
+    "number": 33,
+    "category": "Maturity",
+    "title": "The Elder Teacher",
+    "description": "As you mature, the immense love you have always carried finds its most powerful expression in quiet acts of service and gentle wisdom shared without agenda. The later years bring a peace that comes from having loved fully and given freely, a deep knowing that your life has been a gift to others. You become love itself, distilled into a human life.",
+    "keywords": ["embodied love", "peaceful service", "spiritual fulfillment", "gentle wisdom"],
+    "strengths": ["pure-hearted elder", "effortless compassion", "spiritual completeness", "living blessing"],
+    "challenges": ["accepting your own imperfection", "allowing others to care for you", "resting in what is rather than what could be"],
+    "compatible_numbers": [6, 9, 11]
+  }
+]

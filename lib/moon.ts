@@ -22,7 +22,7 @@ const PHASE_LABELS: Record<MoonPhaseKey, string> = {
 
 /**
  * Compute moon phase data for a given date using the synodic period.
- * No external API needed — pure calculation from a known new moon reference.
+ * No external API needed; pure calculation from a known new moon reference.
  */
 export function computeMoonPhase(date: Date): MoonPhaseData {
   const msPerDay = 86400000

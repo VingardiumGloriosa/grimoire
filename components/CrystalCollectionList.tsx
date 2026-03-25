@@ -4,9 +4,12 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import type { Crystal, CrystalCollectionEntry } from "@/lib/types"
+import { ELEMENT_BADGE_STYLES } from "@/lib/design-tokens"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import ConfirmDialog from "@/components/ConfirmDialog"
 import { Gem, Trash2 } from "lucide-react"
+import { toast } from "sonner"
 
 interface CollectionEntryWithStone extends CrystalCollectionEntry {
   crystals_stones: Crystal
@@ -16,36 +19,38 @@ interface CrystalCollectionListProps {
   entries: CollectionEntryWithStone[]
 }
 
-const ELEMENT_COLORS: Record<string, string> = {
-  Fire: "bg-blush/15 text-blush",
-  Water: "bg-[#1a3a4a]/15 text-[#2e7a9b]",
-  Earth: "bg-gold-subtle text-umber",
-  Air: "bg-sage-mist text-forest",
-  Spirit: "bg-[var(--color-accent-subtle)] text-[var(--color-accent)]",
-}
-
 export default function CrystalCollectionList({ entries: initialEntries }: CrystalCollectionListProps) {
   const router = useRouter()
   const [entries, setEntries] = useState(initialEntries)
   const [deletingId, setDeletingId] = useState<string | null>(null)
+  const [deleteTarget, setDeleteTarget] = useState<string | null>(null)
 
-  async function handleRemove(e: React.MouseEvent, entryId: string) {
+  function handleRemoveClick(e: React.MouseEvent, entryId: string) {
     e.preventDefault()
     e.stopPropagation()
+    setDeleteTarget(entryId)
+  }
 
-    if (!confirm("Remove this crystal from your collection?")) return
+  async function confirmRemove() {
+    if (!deleteTarget) return
 
-    setDeletingId(entryId)
+    setDeletingId(deleteTarget)
     try {
-      const res = await fetch(`/api/crystals/collection?id=${entryId}`, {
+      const res = await fetch(`/api/crystals/collection?id=${deleteTarget}`, {
         method: "DELETE",
       })
       if (res.ok) {
-        setEntries((prev) => prev.filter((entry) => entry.id !== entryId))
+        setEntries((prev) => prev.filter((entry) => entry.id !== deleteTarget))
         router.refresh()
+        toast.success("Crystal removed from collection")
+      } else {
+        toast.error("Failed to remove crystal")
       }
+    } catch {
+      toast.error("Failed to remove crystal")
     } finally {
       setDeletingId(null)
+      setDeleteTarget(null)
     }
   }
 
@@ -94,7 +99,7 @@ export default function CrystalCollectionList({ entries: initialEntries }: Cryst
                     <div className="flex items-center gap-2">
                       <span
                         className={`rounded-full px-2.5 py-0.5 text-xs font-medium uppercase tracking-wider ${
-                          ELEMENT_COLORS[crystal.element] ?? "bg-[var(--color-surface-raised)] text-[var(--color-text-muted)]"
+                          ELEMENT_BADGE_STYLES[crystal.element] ?? "bg-[var(--color-surface-raised)] text-[var(--color-text-muted)]"
                         }`}
                       >
                         {crystal.element}
@@ -112,10 +117,10 @@ export default function CrystalCollectionList({ entries: initialEntries }: Cryst
                   <Button
                     variant="ghost"
                     size="icon"
-                    onClick={(e) => handleRemove(e, entry.id)}
+                    onClick={(e) => handleRemoveClick(e, entry.id)}
                     disabled={deletingId === entry.id}
-                    className="shrink-0 opacity-0 transition-opacity group-hover:opacity-100 text-[var(--color-text-faint)] hover:bg-blush/10 hover:text-blush disabled:opacity-50"
-                    title="Remove from collection"
+                    className="shrink-0 min-h-[44px] min-w-[44px] opacity-60 transition-opacity hover:opacity-100 text-[var(--color-text-faint)] hover:bg-blush/10 hover:text-blush disabled:opacity-50"
+                    aria-label="Remove crystal"
                   >
                     <Trash2 size={14} strokeWidth={1.5} />
                   </Button>
@@ -125,6 +130,16 @@ export default function CrystalCollectionList({ entries: initialEntries }: Cryst
           </Link>
         )
       })}
+
+      <ConfirmDialog
+        open={deleteTarget !== null}
+        onOpenChange={(open) => { if (!open) setDeleteTarget(null) }}
+        title="Remove this crystal?"
+        description="It will be removed from your collection."
+        confirmLabel="Remove"
+        onConfirm={confirmRemove}
+        loading={deletingId === deleteTarget}
+      />
     </div>
   )
 }

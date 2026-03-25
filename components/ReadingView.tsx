@@ -6,6 +6,7 @@ import PositionCard from "@/components/PositionCard"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Pencil, Check } from "lucide-react"
+import { toast } from "sonner"
 
 interface ReadingViewProps {
   reading: TarotReading
@@ -16,6 +17,7 @@ export default function ReadingView({ reading }: ReadingViewProps) {
   const [isEditingNotes, setIsEditingNotes] = useState(false)
   const [saving, setSaving] = useState(false)
   const [saved, setSaved] = useState(false)
+  const [saveError, setSaveError] = useState<string | null>(null)
 
   const sortedCards = [...reading.cards].sort(
     (a, b) => a.position_order - b.position_order
@@ -33,8 +35,17 @@ export default function ReadingView({ reading }: ReadingViewProps) {
     ? reading.synthesis.split("\n\n").filter((p) => p.trim())
     : []
 
+  // Render a paragraph with **bold** markdown converted to <strong> tags
+  function renderWithBold(text: string) {
+    const parts = text.split(/\*\*(.+?)\*\*/g)
+    return parts.map((part, i) =>
+      i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+    )
+  }
+
   async function handleSaveNotes() {
     setSaving(true)
+    setSaveError(null)
     try {
       const response = await fetch(`/api/readings`, {
         method: "PATCH",
@@ -49,9 +60,14 @@ export default function ReadingView({ reading }: ReadingViewProps) {
         setSaved(true)
         setIsEditingNotes(false)
         setTimeout(() => setSaved(false), 2000)
+        toast.success("Notes saved")
+      } else {
+        setSaveError("Failed to save notes. Please try again.")
+        toast.error("Failed to save notes")
       }
     } catch {
-      // Silently handle — user can retry
+      setSaveError("Failed to save notes. Please try again.")
+      toast.error("Failed to save notes")
     } finally {
       setSaving(false)
     }
@@ -69,7 +85,7 @@ export default function ReadingView({ reading }: ReadingViewProps) {
             {formattedDate}
           </span>
           {reading.mood && (
-            <span className="rounded-full bg-sage-mist px-3 py-0.5 text-xs font-medium uppercase tracking-wider text-forest">
+            <span className="rounded-full bg-sage-mist dark:bg-linen px-3 py-0.5 text-xs font-medium uppercase tracking-wider text-forest">
               {reading.mood}
             </span>
           )}
@@ -85,16 +101,6 @@ export default function ReadingView({ reading }: ReadingViewProps) {
         </div>
       )}
 
-      {/* Cards */}
-      <section className="space-y-6">
-        <h2 className="font-display text-2xl text-charcoal">The Cards</h2>
-        <div className="grid gap-6 sm:grid-cols-2">
-          {sortedCards.map((card) => (
-            <PositionCard key={card.card_id} card={card} />
-          ))}
-        </div>
-      </section>
-
       {/* Synthesis */}
       {synthesisParagraphs.length > 0 && (
         <section className="space-y-4">
@@ -106,12 +112,22 @@ export default function ReadingView({ reading }: ReadingViewProps) {
                 key={i}
                 className="font-body text-lg leading-relaxed text-charcoal"
               >
-                {paragraph}
+                {renderWithBold(paragraph)}
               </p>
             ))}
           </div>
         </section>
       )}
+
+      {/* Cards */}
+      <section className="space-y-6">
+        <h2 className="font-display text-2xl text-charcoal">The Cards</h2>
+        <div className="grid gap-6 sm:grid-cols-2">
+          {sortedCards.map((card) => (
+            <PositionCard key={card.card_id} card={card} />
+          ))}
+        </div>
+      </section>
 
       {/* Notes */}
       <section className="space-y-3 pt-8"><div className="divider-ornament mb-6" aria-hidden="true" />
@@ -124,7 +140,7 @@ export default function ReadingView({ reading }: ReadingViewProps) {
               variant="ghost"
               size="sm"
               onClick={() => setIsEditingNotes(true)}
-              className="font-body text-forest hover:bg-sage-mist"
+              className="font-body text-forest hover:bg-sage-mist dark:hover:bg-linen"
             >
               <Pencil className="h-4 w-4 mr-1.5" strokeWidth={1.5} />
               Edit
@@ -161,6 +177,9 @@ export default function ReadingView({ reading }: ReadingViewProps) {
                 {saving ? "Saving..." : "Save Notes"}
               </Button>
             </div>
+            {saveError && (
+              <p className="font-body text-xs text-blush mt-2">{saveError}</p>
+            )}
           </div>
         ) : (
           <div>

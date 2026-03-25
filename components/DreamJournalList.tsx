@@ -5,12 +5,16 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import type { DreamEntry, MoonPhaseKey } from '@/lib/types'
 import { Card, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import ConfirmDialog from '@/components/ConfirmDialog'
 import MoonPhaseIcon from '@/components/MoonPhaseIcon'
 import VividnessIndicator from '@/components/VividnessIndicator'
-import { CloudMoon, Trash2, Eye } from 'lucide-react'
+import { CloudMoon, Loader2, Trash2, Eye } from 'lucide-react'
+import { toast } from 'sonner'
 
 interface DreamJournalListProps {
   entries: DreamEntry[]
+  totalCount: number
 }
 
 const WAXING_PHASES: MoonPhaseKey[] = [
@@ -22,28 +26,62 @@ const WAXING_PHASES: MoonPhaseKey[] = [
 
 export default function DreamJournalList({
   entries: initialEntries,
+  totalCount: initialTotalCount,
 }: DreamJournalListProps) {
   const router = useRouter()
   const [entries, setEntries] = useState(initialEntries)
   const [deletingId, setDeletingId] = useState<string | null>(null)
+  const [deleteTarget, setDeleteTarget] = useState<string | null>(null)
+  const [page, setPage] = useState(1)
+  const [totalCount, setTotalCount] = useState<number>(initialTotalCount)
+  const [loadingMore, setLoadingMore] = useState(false)
 
-  async function handleDelete(e: React.MouseEvent, entryId: string) {
+  async function loadMore() {
+    setLoadingMore(true)
+    try {
+      const nextPage = page + 1
+      const res = await fetch(`/api/dreams/entries?page=${nextPage}&limit=20`)
+      if (res.ok) {
+        const data: DreamEntry[] = await res.json()
+        const headerCount = res.headers.get('X-Total-Count')
+        if (headerCount) setTotalCount(parseInt(headerCount, 10))
+        setEntries((prev) => [...prev, ...data])
+        setPage(nextPage)
+      }
+    } catch {
+      toast.error('Failed to load more dream entries')
+    } finally {
+      setLoadingMore(false)
+    }
+  }
+
+  function handleDeleteClick(e: React.MouseEvent, entryId: string) {
     e.preventDefault()
     e.stopPropagation()
+    setDeleteTarget(entryId)
+  }
 
-    if (!confirm('Delete this dream entry? This cannot be undone.')) return
+  async function confirmDelete() {
+    if (!deleteTarget) return
 
-    setDeletingId(entryId)
+    setDeletingId(deleteTarget)
     try {
-      const res = await fetch(`/api/dreams/entries?id=${entryId}`, {
+      const res = await fetch(`/api/dreams/entries?id=${deleteTarget}`, {
         method: 'DELETE',
       })
       if (res.ok) {
-        setEntries((prev) => prev.filter((e) => e.id !== entryId))
+        setEntries((prev) => prev.filter((e) => e.id !== deleteTarget))
+        setTotalCount((prev) => Math.max(0, prev - 1))
         router.refresh()
+        toast.success("Dream entry deleted")
+      } else {
+        toast.error("Failed to delete dream entry")
       }
+    } catch {
+      toast.error("Failed to delete dream entry")
     } finally {
       setDeletingId(null)
+      setDeleteTarget(null)
     }
   }
 
@@ -86,10 +124,10 @@ export default function DreamJournalList({
                       {entry.title}
                     </h3>
                     <button
-                      onClick={(e) => handleDelete(e, entry.id)}
+                      onClick={(e) => handleDeleteClick(e, entry.id)}
                       disabled={deletingId === entry.id}
-                      className="shrink-0 rounded-md p-1.5 text-[var(--color-text-faint)] opacity-0 transition-all hover:bg-[var(--color-blush)]/10 hover:text-[var(--color-blush)] group-hover:opacity-100 disabled:opacity-50"
-                      title="Delete dream entry"
+                      className="shrink-0 rounded-md p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-[var(--color-text-faint)] opacity-60 transition-all hover:bg-[var(--color-blush)]/10 hover:text-[var(--color-blush)] hover:opacity-100 disabled:opacity-50"
+                      aria-label="Delete dream entry"
                     >
                       <Trash2 size={14} strokeWidth={1.5} />
                     </button>
@@ -146,6 +184,35 @@ export default function DreamJournalList({
           </Link>
         )
       })}
+
+      {entries.length < totalCount && (
+        <div className="flex flex-col items-center gap-2 pt-6">
+          <p className="font-body text-sm text-[var(--color-text-muted)]">
+            Showing {entries.length} of {totalCount}
+          </p>
+          <Button
+            variant="outline"
+            onClick={loadMore}
+            disabled={loadingMore}
+            className="font-body"
+          >
+            {loadingMore ? (
+              <><Loader2 size={14} className="mr-2 animate-spin" />Loading...</>
+            ) : (
+              'Load more'
+            )}
+          </Button>
+        </div>
+      )}
+
+      <ConfirmDialog
+        open={deleteTarget !== null}
+        onOpenChange={(open) => { if (!open) setDeleteTarget(null) }}
+        title="Delete this dream entry?"
+        description="This action cannot be undone."
+        onConfirm={confirmDelete}
+        loading={deletingId === deleteTarget}
+      />
     </div>
   )
 }

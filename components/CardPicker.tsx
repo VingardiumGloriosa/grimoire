@@ -12,6 +12,7 @@ import {
   DialogDescription,
   DialogFooter,
 } from "@/components/ui/dialog"
+import Image from "next/image"
 import { Search, ArrowUp, ArrowDown } from "lucide-react"
 
 interface CardPickerProps {
@@ -108,7 +109,7 @@ export default function CardPicker({
       </div>
 
       {/* Card Grid (compact) */}
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-3 max-h-[400px] overflow-y-auto pr-1">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-3 max-h-[60vh] overflow-y-auto pr-1">
         {filteredCards.map((card) => {
           const isSelected = selectedCardIds.includes(card.id)
           return (
@@ -122,12 +123,16 @@ export default function CardPicker({
                   : "border-[var(--color-border)] hover:border-gold hover:shadow-glow-gold hover:-translate-y-0.5 surface-gradient"
               }`}
             >
-              <img
-                src={card.image_path}
-                alt={card.name}
-                className="w-full object-cover"
-                style={{ aspectRatio: "2/3" }}
-              />
+              <div className="relative" style={{ aspectRatio: "2/3" }}>
+                <Image
+                  src={card.image_path}
+                  alt={card.name}
+                  fill
+                  sizes="120px"
+                  className="object-cover"
+                  loading="lazy"
+                />
+              </div>
               <div className="p-2">
                 <p className="font-body text-xs font-semibold text-charcoal leading-tight truncate">
                   {card.name}
@@ -163,13 +168,14 @@ export default function CardPicker({
             </DialogHeader>
 
             <div className="flex justify-center py-4">
-              <img
+              <Image
                 src={pendingCard.image_path}
                 alt={pendingCard.name}
-                className={`w-36 rounded-md transition-transform duration-300 ${
+                width={144}
+                height={216}
+                className={`rounded-md transition-transform duration-300 ${
                   orientation === "reversed" ? "rotate-180" : ""
                 }`}
-                style={{ aspectRatio: "2/3" }}
               />
             </div>
 

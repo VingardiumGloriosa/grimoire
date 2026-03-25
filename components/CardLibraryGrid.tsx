@@ -10,6 +10,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog"
+import Image from "next/image"
 import { Search } from "lucide-react"
 
 type FilterTab = "all" | "Major Arcana" | "Wands" | "Cups" | "Swords" | "Pentacles"
@@ -93,19 +94,21 @@ export default function CardLibraryGrid({ cards }: CardLibraryGridProps) {
           <button
             key={card.id}
             onClick={() => setSelectedCard(card)}
-            className="group text-left rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden transition-all duration-200 hover:border-gold hover:shadow-[0_0_12px_rgba(196,163,90,0.2)] hover:-translate-y-0.5"
+            className="group text-left rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden transition-all duration-200 hover:border-gold hover:shadow-[0_0_12px_rgb(var(--color-accent-ch) / 0.2)] hover:-translate-y-0.5"
           >
-            {/* Image area — 65% */}
+            {/* Image area: 65% */}
             <div className="relative" style={{ paddingBottom: "97.5%" }}>
-              {/* 65% of a 2/3 aspect container */}
-              <img
+              <Image
                 src={card.image_path}
                 alt={card.name}
-                className="absolute inset-0 w-full h-full object-cover"
+                fill
+                sizes="(max-width: 640px) 50vw, 200px"
+                className="object-cover"
+                loading="lazy"
               />
             </div>
 
-            {/* Info area — 35% */}
+            {/* Info area: 35% */}
             <div className="p-4 space-y-2">
               <h3 className="font-display text-base text-charcoal leading-tight">
                 {card.name}
@@ -114,7 +117,7 @@ export default function CardLibraryGrid({ cards }: CardLibraryGridProps) {
                 {card.keywords.slice(0, 3).map((kw) => (
                   <span
                     key={kw}
-                    className="rounded-sm bg-gold-subtle px-2 py-0.5 text-xs font-medium uppercase tracking-wider text-umber"
+                    className="rounded-sm bg-gold-subtle dark:bg-linen px-2 py-0.5 text-xs font-medium uppercase tracking-wider text-umber dark:text-warm-grey"
                   >
                     {kw}
                   </span>
@@ -142,7 +145,7 @@ export default function CardLibraryGrid({ cards }: CardLibraryGridProps) {
         }}
       >
         {selectedCard && (
-          <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto bg-[var(--color-surface)]">
+          <DialogContent className="max-w-full sm:max-w-2xl w-full max-h-[85vh] overflow-y-auto bg-[var(--color-surface)]">
             <DialogHeader>
               <DialogTitle className="font-display text-2xl text-charcoal">
                 {selectedCard.name}
@@ -155,11 +158,12 @@ export default function CardLibraryGrid({ cards }: CardLibraryGridProps) {
             <div className="grid gap-6 sm:grid-cols-[200px_1fr]">
               {/* Card Image */}
               <div className="flex justify-center sm:justify-start">
-                <img
+                <Image
                   src={selectedCard.image_path}
                   alt={selectedCard.name}
-                  className="w-48 rounded-md"
-                  style={{ aspectRatio: "2/3" }}
+                  width={192}
+                  height={288}
+                  className="rounded-md"
                 />
               </div>
 
@@ -170,7 +174,7 @@ export default function CardLibraryGrid({ cards }: CardLibraryGridProps) {
                   {selectedCard.keywords.map((kw) => (
                     <span
                       key={kw}
-                      className="rounded-sm bg-gold-subtle px-2 py-0.5 text-xs font-medium uppercase tracking-wider text-umber"
+                      className="rounded-sm bg-gold-subtle dark:bg-linen px-2 py-0.5 text-xs font-medium uppercase tracking-wider text-umber dark:text-warm-grey"
                     >
                       {kw}
                     </span>

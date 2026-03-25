@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient as createSupabaseServerClient } from '@supabase/ssr'
 import { createServerClient } from '@/lib/supabase-server'
+import { calculateChart } from '@/lib/astro-calc'
 import type { PlanetPlacement, HouseCusp, Aspect, ChartData } from '@/lib/types'
+import { validateBody, createBirthChartSchema } from '@/lib/validation'
 
 function getUserFromRequest(request: NextRequest) {
   return createSupabaseServerClient(
@@ -17,7 +19,7 @@ function getUserFromRequest(request: NextRequest) {
   )
 }
 
-// POST — Create a new birth chart
+// POST: Create a new birth chart
 export async function POST(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -25,41 +27,40 @@ export async function POST(request: NextRequest) {
     if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
     const body = await request.json()
-    const { label, birth_date, birth_time, birth_location, latitude, longitude, timezone } = body
-
-    if (!label || !birth_date || !birth_location || latitude === undefined || longitude === undefined) {
-      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
-    }
+    const validation = validateBody(createBirthChartSchema, body)
+    if (!validation.success) return validation.error
+    const { label, birth_date, birth_time, birth_location, latitude, longitude, timezone } = validation.data
 
     const timeUnknown = !birth_time
 
-    // Compute sun sign from birth date (always available as local fallback)
-    const sunSign = computeSunSign(birth_date)
+    // Compute chart using local astronomical calculations
+    const tzOffset = parseTimezoneOffset(timezone || 'UTC', birth_date, birth_time || '12:00')
+    const calcResult = calculateChart(
+      birth_date,
+      birth_time || '12:00',
+      latitude,
+      longitude,
+      tzOffset,
+    )
 
-    // Try to get chart data from FreeAstroAPI
-    let chartData: ChartData
-    let moonSign = 'Unknown'
-    let risingSign: string | null = timeUnknown ? null : 'Unknown'
+    const sunSign = calcResult.planets.find(p => p.planet === 'Sun')?.sign || computeSunSign(birth_date)
+    const moonSign = calcResult.moonSign
+    const risingSign = timeUnknown ? null : calcResult.risingSign
 
-    try {
-      const astroResult = await fetchChartFromAPI(
-        birth_date,
-        birth_time || '12:00',
-        latitude,
-        longitude,
-        timezone || 'UTC'
-      )
-
-      chartData = astroResult.chartData
-      moonSign = astroResult.moonSign || moonSign
-      risingSign = timeUnknown ? null : (astroResult.risingSign || risingSign)
-    } catch {
-      // API unavailable — store empty chart data with local sun sign only
-      chartData = {
-        planets: [],
-        houses: [],
-        aspects: [],
-      }
+    const chartData: ChartData = {
+      planets: calcResult.planets.map(p => ({
+        planet: p.planet,
+        sign: p.sign,
+        degree: Math.round(p.degree * 100) / 100,
+        house: p.house,
+        retrograde: p.retrograde,
+      })),
+      houses: calcResult.houses.map(h => ({
+        house: h.house,
+        sign: h.sign,
+        degree: Math.round(h.degree * 100) / 100,
+      })),
+      aspects: calcResult.aspects,
     }
 
     const supabase = createServerClient()
@@ -83,7 +84,7 @@ export async function POST(request: NextRequest) {
       .select()
       .single()
 
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+    if (error) return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
     return NextResponse.json(chart, { status: 201 })
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Internal server error'
@@ -91,7 +92,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// GET — List user's charts
+// GET: List user's charts
 export async function GET(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -113,26 +114,34 @@ export async function GET(request: NextRequest) {
 
       if (error) {
         if (error.code === 'PGRST116') return NextResponse.json({ error: 'Not found' }, { status: 404 })
-        return NextResponse.json({ error: error.message }, { status: 500 })
+        return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
       }
       return NextResponse.json(data)
     }
 
-    const { data, error } = await supabase
+    const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10))
+    const limit = Math.min(100, Math.max(1, parseInt(searchParams.get('limit') || '50', 10)))
+    const from = (page - 1) * limit
+    const to = from + limit - 1
+
+    const { data, error, count } = await supabase
       .from('astrology_birth_charts')
-      .select('*')
+      .select('*', { count: 'exact' })
       .eq('user_id', user.id)
       .order('created_at', { ascending: false })
+      .range(from, to)
 
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
-    return NextResponse.json(data)
+    if (error) return NextResponse.json({ error: 'Failed to fetch charts' }, { status: 500 })
+    const response = NextResponse.json(data)
+    response.headers.set('X-Total-Count', String(count ?? 0))
+    return response
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Internal server error'
     return NextResponse.json({ error: message }, { status: 500 })
   }
 }
 
-// DELETE — Delete a chart
+// DELETE: Delete a chart
 export async function DELETE(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -155,7 +164,7 @@ export async function DELETE(request: NextRequest) {
     }
 
     const { error } = await supabase.from('astrology_birth_charts').delete().eq('id', id)
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+    if (error) return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
     return NextResponse.json({ success: true })
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Internal server error'
@@ -211,7 +220,7 @@ async function fetchChartFromAPI(
     seconds: 0,
     latitude: lat,
     longitude: lon,
-    timezone: parseTimezoneOffset(tz),
+    timezone: parseTimezoneOffset(tz, birthDate, birthTime),
     settings: {
       observation_point: 'geocentric',
       ayanamsha: 'tropical',
@@ -234,7 +243,8 @@ async function fetchChartFromAPI(
   })
 
   if (!planetRes.ok) {
-    throw new Error(`FreeAstroAPI planets endpoint returned ${planetRes.status}`)
+    const errorBody = await planetRes.text().catch(() => 'no body')
+    throw new Error(`FreeAstroAPI planets endpoint returned ${planetRes.status}: ${errorBody.substring(0, 200)}`)
   }
 
   const planetData = await planetRes.json()
@@ -254,7 +264,12 @@ async function fetchChartFromAPI(
         ? p.sign_id
         : null
 
-    const sign = p.sign || p.zodiac_sign || (signIndex !== null ? SIGN_NAMES[signIndex] : 'Unknown')
+    // Some APIs use 0-indexed sign IDs, some use 1-indexed. Try both.
+    let signFromIndex: string | undefined
+    if (signIndex !== null) {
+      signFromIndex = SIGN_NAMES[signIndex] || SIGN_NAMES[signIndex - 1]
+    }
+    const sign = p.sign || p.zodiac_sign || signFromIndex || 'Unknown'
     const degree = p.full_degree ?? p.normDegree ?? p.degree ?? 0
     const house = p.house ?? p.house_id ?? 1
     const retrograde = p.isRetro === 'true' || p.isRetro === true || p.is_retrograde === true
@@ -331,33 +346,48 @@ function findSunSignFromPlanets(planets: PlanetPlacement[]): string | null {
   return sun?.sign || null
 }
 
-function parseTimezoneOffset(tz: string): number {
-  // Common timezone offsets — enough for the timezone list we offer
-  const offsets: Record<string, number> = {
-    'UTC': 0,
-    'America/New_York': -5,
-    'America/Chicago': -6,
-    'America/Denver': -7,
-    'America/Los_Angeles': -8,
-    'America/Anchorage': -9,
-    'Pacific/Honolulu': -10,
-    'America/Sao_Paulo': -3,
-    'America/Argentina/Buenos_Aires': -3,
-    'Europe/London': 0,
-    'Europe/Paris': 1,
-    'Europe/Berlin': 1,
-    'Europe/Moscow': 3,
-    'Africa/Cairo': 2,
-    'Asia/Dubai': 4,
-    'Asia/Kolkata': 5.5,
-    'Asia/Bangkok': 7,
-    'Asia/Shanghai': 8,
-    'Asia/Tokyo': 9,
-    'Asia/Seoul': 9,
-    'Australia/Sydney': 11,
-    'Pacific/Auckland': 13,
+function parseTimezoneOffset(tz: string, birthDate?: string, birthTime?: string): number {
+  try {
+    // Build a date in the target timezone to determine the real UTC offset,
+    // accounting for daylight saving time on that specific date.
+    const dateStr = birthDate || '2000-01-01'
+    const timeStr = birthTime || '12:00'
+    const [year, month, day] = dateStr.split('-').map(Number)
+    const [hour, minute] = timeStr.split(':').map(Number)
+
+    // Create a formatter that outputs the UTC offset for the given timezone
+    const formatter = new Intl.DateTimeFormat('en-US', {
+      timeZone: tz,
+      timeZoneName: 'shortOffset',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false,
+    })
+
+    // Format a date near the birth date to get the offset string
+    const testDate = new Date(Date.UTC(year, month - 1, day, hour, minute))
+    const parts = formatter.formatToParts(testDate)
+    const offsetPart = parts.find((p) => p.type === 'timeZoneName')
+
+    if (offsetPart) {
+      // offsetPart.value is like "GMT-4", "GMT+5:30", "GMT+1", "GMT"
+      const match = offsetPart.value.match(/GMT([+-]?)(\d+)(?::(\d+))?/)
+      if (match) {
+        const sign = match[1] === '-' ? -1 : 1
+        const hours = parseInt(match[2], 10)
+        const minutes = match[3] ? parseInt(match[3], 10) : 0
+        return sign * (hours + minutes / 60)
+      }
+      // "GMT" with no offset means UTC
+      if (offsetPart.value === 'GMT') return 0
+    }
+  } catch {
+    // Fall back to 0 if timezone is unrecognized
   }
-  return offsets[tz] ?? 0
+  return 0
 }
 
 // ─── Helpers ───

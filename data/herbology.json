@@ -124,7 +124,7 @@
     "magical_uses": ["prosperity", "love", "protection", "courage", "exorcism"],
     "medicinal_notes": ["Anti-inflammatory and antioxidant properties", "Aids digestion", "Supports stress reduction as an adaptogen"],
     "warnings": [],
-    "folklore": "In Italian folk magic, basil is a symbol of love — a pot of basil on a windowsill signals romantic availability. In Haiti, basil is associated with the loa Erzulie and is used in love rituals.",
+    "folklore": "In Italian folk magic, basil is a symbol of love, and a pot of basil on a windowsill signals romantic availability. In Haiti, basil is associated with the loa Erzulie and is used in love rituals.",
     "growing_season": "Summer",
     "correspondences": {
       "deities": ["Vishnu", "Erzulie", "Krishna"],
@@ -276,7 +276,7 @@
     "magical_uses": ["love", "beauty", "healing", "divination", "devotion"],
     "medicinal_notes": ["Rose water soothes inflammation and skin irritation", "Mildly astringent and cooling", "Rose hip tea is rich in vitamin C"],
     "warnings": [],
-    "folklore": "In Greek myth, the first roses sprang from the blood of Adonis and the tears of Aphrodite. Sub rosa — 'under the rose' — meant that anything spoken beneath a hanging rose was bound to secrecy.",
+    "folklore": "In Greek myth, the first roses sprang from the blood of Adonis and the tears of Aphrodite. Sub rosa ('under the rose') meant that anything spoken beneath a hanging rose was bound to secrecy.",
     "growing_season": "Spring to Fall",
     "correspondences": {
       "deities": ["Aphrodite", "Venus", "Isis", "Freya"],
@@ -333,7 +333,7 @@
     "magical_uses": ["protection", "prosperity", "banishing", "love", "exorcism"],
     "medicinal_notes": ["Powerful analgesic for toothache", "Antimicrobial and anti-parasitic", "Supports digestive health"],
     "warnings": ["Clove oil can burn skin if applied undiluted"],
-    "folklore": "Oranges studded with cloves — pomanders — were carried during the plague to ward off disease and evil. In Southeast Asian traditions, cloves were chewed before speaking to royalty to sweeten the breath.",
+    "folklore": "Oranges studded with cloves (pomanders) were carried during the plague to ward off disease and evil. In Southeast Asian traditions, cloves were chewed before speaking to royalty to sweeten the breath.",
     "growing_season": "Year-round",
     "correspondences": {
       "deities": ["Jupiter", "Lakshmi", "Ganesha"],
@@ -363,7 +363,7 @@
   {
     "name": "Myrrh",
     "latin_name": "Commiphora myrrha",
-    "description": "A bitter, sacred resin of death, transformation, and deep healing. Myrrh is the companion of frankincense — where frankincense lifts, myrrh grounds, purifies, and protects through shadow work.",
+    "description": "A bitter, sacred resin of death, transformation, and deep healing. Myrrh is the companion of frankincense: where frankincense lifts, myrrh grounds, purifies, and protects through shadow work.",
     "planetary_ruler": "Moon",
     "element": "Water",
     "chakra": "Root",
@@ -542,7 +542,7 @@
     "magical_uses": ["strength", "offering", "prosperity", "healing"],
     "medicinal_notes": ["Boosts immune system function", "Shortens duration of colds and flu", "Anti-inflammatory and antimicrobial"],
     "warnings": ["May interact with immunosuppressant medications"],
-    "folklore": "The Cheyenne used echinacea root as an offering during sweat lodge ceremonies. It was considered a powerful spiritual amplifier — adding echinacea to any working was said to multiply its effectiveness.",
+    "folklore": "The Cheyenne used echinacea root as an offering during sweat lodge ceremonies. It was considered a powerful spiritual amplifier, and adding echinacea to any working was said to multiply its effectiveness.",
     "growing_season": "Summer to Fall",
     "correspondences": {
       "deities": ["Mars", "Sekhmet"],
@@ -580,7 +580,7 @@
     "magical_uses": ["love", "beauty", "happiness", "cat magic", "friendship"],
     "medicinal_notes": ["Gentle sedative and sleep aid for humans", "Soothes digestive upset and colic in children", "Mild fever reducer"],
     "warnings": [],
-    "folklore": "Bast's sacred herb — offerings of catnip were left at her temples. In Hoodoo, catnip is used in love sachets, and chewing the leaf before a difficult conversation was said to make the other person agreeable.",
+    "folklore": "Bast's sacred herb, offerings of catnip were left at her temples. In Hoodoo, catnip is used in love sachets, and chewing the leaf before a difficult conversation was said to make the other person agreeable.",
     "growing_season": "Spring to Fall",
     "correspondences": {
       "deities": ["Bast", "Sekhmet"],
@@ -751,7 +751,7 @@
     "magical_uses": ["protection", "purification", "death rites", "communication"],
     "medicinal_notes": ["Rich in vitamins A, C, and K", "Freshens breath naturally", "Traditional diuretic"],
     "warnings": ["Avoid large medicinal doses during pregnancy"],
-    "folklore": "The ancient Greeks associated parsley with death and used it to crown tombs. Transplanting parsley was said to bring terrible luck, and it was believed to grow best for the wicked — or simply for a strong-willed woman.",
+    "folklore": "The ancient Greeks associated parsley with death and used it to crown tombs. Transplanting parsley was said to bring terrible luck, and it was believed to grow best for the wicked, or simply for a strong-willed woman.",
     "growing_season": "Spring to Fall",
     "correspondences": {
       "deities": ["Persephone", "Mercury", "Hermes"],
@@ -884,7 +884,7 @@
     "magical_uses": ["protection", "purification", "banishing", "health", "anti-theft"],
     "medicinal_notes": ["Supports kidney and urinary tract health", "Warming digestive tonic", "Antimicrobial berry used in traditional remedies"],
     "warnings": ["Avoid during pregnancy", "Avoid with kidney disease"],
-    "folklore": "In Scotland, juniper was burned in the 'saining' ritual at New Year to purify the home — all windows and doors were sealed while the smoke filled every room. Juniper planted by the door prevented witches from entering.",
+    "folklore": "In Scotland, juniper was burned in the 'saining' ritual at New Year to purify the home, and all windows and doors were sealed while the smoke filled every room. Juniper planted by the door prevented witches from entering.",
     "growing_season": "Year-round",
     "correspondences": {
       "deities": ["Thor", "Brigid", "Astarte"],
@@ -1074,7 +1074,7 @@
     "magical_uses": ["prosperity", "grounding", "fertility", "money"],
     "medicinal_notes": ["Deeply nourishing nervine for burnout", "Rich in minerals including calcium and silica", "Supports bone and skin health"],
     "warnings": [],
-    "folklore": "Sowing wild oats is a well-known expression rooted in agricultural magic — oats symbolized fertility and abundance. A sheaf of oats was left in the field after harvest as an offering to the earth to ensure the next year's crop.",
+    "folklore": "Sowing wild oats is a well-known expression rooted in agricultural magic, as oats symbolized fertility and abundance. A sheaf of oats was left in the field after harvest as an offering to the earth to ensure the next year's crop.",
     "growing_season": "Spring to Summer",
     "correspondences": {
       "deities": ["Demeter", "Ceres", "Brigid"],

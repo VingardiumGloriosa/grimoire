@@ -1,4 +1,5 @@
 import type { ZodiacSign } from "@/lib/types"
+import { ELEMENT_BADGE_STYLES } from "@/lib/design-tokens"
 
 const SIGN_ELEMENTS: Record<ZodiacSign, "Fire" | "Earth" | "Air" | "Water"> = {
   Aries: "Fire",
@@ -15,13 +16,6 @@ const SIGN_ELEMENTS: Record<ZodiacSign, "Fire" | "Earth" | "Air" | "Water"> = {
   Pisces: "Water",
 }
 
-const ELEMENT_STYLES: Record<string, string> = {
-  Fire: "bg-blush/15 text-blush",
-  Earth: "bg-sage-mist text-forest",
-  Air: "bg-gold-subtle text-umber",
-  Water: "bg-[var(--color-primary-subtle)] text-[var(--color-secondary)]",
-}
-
 interface SignBadgeProps {
   sign: string
   size?: "sm" | "md"
@@ -29,7 +23,7 @@ interface SignBadgeProps {
 
 export default function SignBadge({ sign, size = "sm" }: SignBadgeProps) {
   const element = SIGN_ELEMENTS[sign as ZodiacSign] ?? "Earth"
-  const colorClasses = ELEMENT_STYLES[element]
+  const colorClasses = ELEMENT_BADGE_STYLES[element]
 
   return (
     <span

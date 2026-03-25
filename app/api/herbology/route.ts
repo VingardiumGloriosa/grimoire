@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient as createSupabaseServerClient } from '@supabase/ssr'
 import { createServerClient } from '@/lib/supabase-server'
 import type { BlendHerb, Element } from '@/lib/types'
+import { validateBody, createBlendSchema } from '@/lib/validation'
 
 function getUserFromRequest(request: NextRequest) {
   return createSupabaseServerClient(
@@ -32,7 +33,7 @@ function computeBalance(herbs: BlendHerb[]) {
   }
 }
 
-// POST — Create a new blend
+// POST: Create a new blend
 export async function POST(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -40,17 +41,9 @@ export async function POST(request: NextRequest) {
     if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
     const body = await request.json()
-    const { name, description, herbs, intention, notes } = body as {
-      name: string
-      description: string | null
-      herbs: BlendHerb[]
-      intention: string | null
-      notes: string | null
-    }
-
-    if (!name || !herbs || herbs.length === 0) {
-      return NextResponse.json({ error: 'Missing required fields: name, herbs' }, { status: 400 })
-    }
+    const validation = validateBody(createBlendSchema, body)
+    if (!validation.success) return validation.error
+    const { name, description, herbs, intention, notes } = validation.data
 
     const { elemental_balance, planetary_influences } = computeBalance(herbs)
 
@@ -70,7 +63,7 @@ export async function POST(request: NextRequest) {
       .select()
       .single()
 
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+    if (error) return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
     return NextResponse.json(blend, { status: 201 })
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Internal server error'
@@ -78,29 +71,38 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// GET — List user's blends
+// GET: List user's blends
 export async function GET(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
     const { data: { user } } = await authClient.auth.getUser()
     if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
+    const { searchParams } = new URL(request.url)
+    const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10))
+    const limit = Math.min(100, Math.max(1, parseInt(searchParams.get('limit') || '50', 10)))
+    const from = (page - 1) * limit
+    const to = from + limit - 1
+
     const supabase = createServerClient()
-    const { data, error } = await supabase
+    const { data, error, count } = await supabase
       .from('herbology_blends')
-      .select('*')
+      .select('*', { count: 'exact' })
       .eq('user_id', user.id)
       .order('created_at', { ascending: false })
+      .range(from, to)
 
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
-    return NextResponse.json(data)
+    if (error) return NextResponse.json({ error: 'Failed to fetch blends' }, { status: 500 })
+    const response = NextResponse.json(data)
+    response.headers.set('X-Total-Count', String(count ?? 0))
+    return response
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Internal server error'
     return NextResponse.json({ error: message }, { status: 500 })
   }
 }
 
-// DELETE — Delete a blend
+// DELETE: Delete a blend
 export async function DELETE(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -123,7 +125,7 @@ export async function DELETE(request: NextRequest) {
     }
 
     const { error } = await supabase.from('herbology_blends').delete().eq('id', id)
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+    if (error) return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
     return NextResponse.json({ success: true })
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Internal server error'

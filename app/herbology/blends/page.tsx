@@ -34,20 +34,23 @@ export default async function BlendsPage() {
     redirect('/auth')
   }
 
-  const { data: blends } = await supabase
+  const { data: blends, count } = await supabase
     .from('herbology_blends')
-    .select('*')
+    .select('*', { count: 'exact' })
     .eq('user_id', user.id)
     .order('created_at', { ascending: false })
+    .range(0, 19)
+
+  const totalCount = count ?? (blends?.length ?? 0)
 
   return (
-    <main className="max-w-content mx-auto px-6 py-10">
+    <main className="max-w-content mx-auto px-6 sm:px-10 py-10">
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="font-display text-4xl mb-2">Your Blends</h1>
+          <h1 className="font-display text-2xl sm:text-4xl mb-2">Your Blends</h1>
           <p className="font-body text-[var(--color-text-muted)]">
-            {blends && blends.length > 0
-              ? `${blends.length} blend${blends.length === 1 ? '' : 's'} created.`
+            {totalCount > 0
+              ? `${totalCount} blend${totalCount === 1 ? '' : 's'} created.`
               : 'Your herbal blends are waiting.'}
           </p>
         </div>
@@ -58,7 +61,7 @@ export default async function BlendsPage() {
           </Button>
         </Link>
       </div>
-      <BlendList blends={(blends as HerbBlend[]) || []} />
+      <BlendList blends={(blends as HerbBlend[]) || []} totalCount={totalCount} />
     </main>
   )
 }

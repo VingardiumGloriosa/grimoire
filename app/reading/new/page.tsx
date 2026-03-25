@@ -162,7 +162,7 @@ export default function NewReadingPage() {
   }
 
   return (
-    <main className="max-w-content mx-auto px-3 sm:px-6 py-10">
+    <main className="max-w-content mx-auto px-6 sm:px-10 py-10">
       {/* Step indicator */}
       <div className="flex items-center gap-3 mb-8 font-body text-sm text-[var(--color-text-muted)]">
         <span className={step === 'setup' ? 'text-forest font-medium' : ''}>Setup</span>
@@ -288,7 +288,7 @@ export default function NewReadingPage() {
                   <div className="w-12 h-18 rounded overflow-hidden flex-shrink-0">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={`/cards/${card.image_path}`}
+                      src={card.image_path}
                       alt={card.card_name}
                       className={`w-full h-full object-cover ${card.orientation === 'reversed' ? 'rotate-180' : ''}`}
                     />

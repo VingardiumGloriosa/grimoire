@@ -52,7 +52,7 @@ async function fetchTemplateMap(): Promise<Record<TemplateRole, string>> {
       'Your {{spread_name}} spread calls upon {{card_count}} cards to illuminate the path before you.',
     major_arcana_note:
       map.major_arcana_note ??
-      ' {{major_arcana_count}} of them Major Arcana \u2014 pointing to themes that transcend the everyday.',
+      ' {{major_arcana_count}} of them Major Arcana, pointing to themes that transcend the everyday.',
     position_block:
       map.position_block ??
       'In the position of **{{position_label}}**, the {{card_name}} appears {{orientation}}. {{meaning}} Keywords that surface: {{keywords}}.',
@@ -61,7 +61,7 @@ async function fetchTemplateMap(): Promise<Record<TemplateRole, string>> {
       'Drawn in reversal, this energy may be blocked, internalised, or asking for your attention in a different way.',
     closing:
       map.closing ??
-      'Sit with what has surfaced. The cards reflect \u2014 they do not dictate.',
+      'Sit with what has surfaced. The cards reflect; they do not dictate.',
   }
 }
 
@@ -70,7 +70,7 @@ async function fetchTemplateMap(): Promise<Record<TemplateRole, string>> {
 /**
  * Generate a synthesis narrative for a tarot reading.
  *
- * No LLM calls — this is pure template interpolation against card data
+ * No LLM calls; this is pure template interpolation against card data
  * and user-editable templates stored in Supabase.
  */
 export async function generateSynthesis(

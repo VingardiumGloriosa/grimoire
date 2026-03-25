@@ -39,7 +39,7 @@ export default async function DreamEntryPage({ params }: PageProps) {
   }
 
   const { data: entry } = await supabase
-    .from('dream_entries')
+    .from('dreams_entries')
     .select('*')
     .eq('id', params.id)
     .eq('user_id', user.id)

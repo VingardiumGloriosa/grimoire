@@ -2,7 +2,9 @@
 
 import { useState, useMemo } from "react"
 import { useRouter } from "next/navigation"
+import { toast } from "sonner"
 import type { Herb, BlendHerb, Element } from "@/lib/types"
+import { ELEMENTS, ELEMENT_BAR_COLORS } from "@/lib/design-tokens"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
@@ -24,16 +26,6 @@ interface BlendBuilderProps {
 }
 
 type Step = "details" | "review" | "notes"
-
-const ELEMENTS: Element[] = ["Fire", "Water", "Earth", "Air", "Spirit"]
-
-const ELEMENT_BAR_COLORS: Record<Element, string> = {
-  Fire: "bg-blush",
-  Water: "bg-[var(--color-secondary)]",
-  Earth: "bg-forest",
-  Air: "bg-[var(--color-accent)]",
-  Spirit: "bg-[var(--color-text-muted)]",
-}
 
 export default function BlendBuilder({ herbs }: BlendBuilderProps) {
   const router = useRouter()
@@ -119,6 +111,7 @@ export default function BlendBuilder({ herbs }: BlendBuilderProps) {
 
       router.push("/herbology/blends")
     } catch {
+      toast.error("Failed to save blend. Please try again.")
       setSubmitting(false)
     }
   }
@@ -183,7 +176,7 @@ export default function BlendBuilder({ herbs }: BlendBuilderProps) {
                 {selectedHerbs.map((herb) => (
                   <span
                     key={herb.herb_id}
-                    className="inline-flex items-center gap-1.5 rounded-full bg-sage-mist px-3 py-1 text-xs font-medium text-forest"
+                    className="inline-flex items-center gap-1.5 rounded-full bg-sage-mist dark:bg-linen px-3 py-1 text-xs font-medium text-forest"
                   >
                     {herb.herb_name}
                     <button

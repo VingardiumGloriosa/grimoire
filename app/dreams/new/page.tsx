@@ -17,7 +17,7 @@ export default function NewDreamPage() {
   useEffect(() => {
     async function fetchSymbols() {
       const { data } = await supabase
-        .from('dream_symbols')
+        .from('dreams_symbols')
         .select('*')
         .order('name')
       setSymbols((data as DreamSymbol[]) || [])

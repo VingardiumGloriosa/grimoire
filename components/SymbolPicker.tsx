@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react'
 import type { DreamSymbol, DreamEntrySymbol } from '@/lib/types'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { Search, X, Plus } from 'lucide-react'
+import { Search, X, Plus, ChevronDown } from 'lucide-react'
 
 interface SymbolPickerProps {
   symbols: DreamSymbol[]
@@ -13,6 +13,22 @@ interface SymbolPickerProps {
   onRemove: (name: string) => void
 }
 
+const CATEGORIES = [
+  'All',
+  'Nature',
+  'Animals',
+  'Body',
+  'Objects',
+  'Actions',
+  'People',
+  'Places',
+] as const
+
+type Category = (typeof CATEGORIES)[number]
+
+const DEFAULT_VISIBLE = 12
+const EXPAND_INCREMENT = 24
+
 export default function SymbolPicker({
   symbols,
   selected,
@@ -20,24 +36,36 @@ export default function SymbolPicker({
   onRemove,
 }: SymbolPickerProps) {
   const [query, setQuery] = useState('')
+  const [category, setCategory] = useState<Category>('All')
   const [showCustomInput, setShowCustomInput] = useState(false)
   const [customName, setCustomName] = useState('')
+  const [visibleLimit, setVisibleLimit] = useState(DEFAULT_VISIBLE)
 
   const selectedNames = useMemo(
     () => new Set(selected.map((s) => s.symbol_name)),
     [selected]
   )
 
-  const matches = useMemo(() => {
-    if (!query.trim()) return []
-    const q = query.toLowerCase()
-    return symbols
-      .filter(
-        (s) =>
-          s.name.toLowerCase().includes(q) && !selectedNames.has(s.name)
+  const allMatches = useMemo(() => {
+    let result = symbols.filter((s) => !selectedNames.has(s.name))
+
+    if (category !== 'All') {
+      result = result.filter(
+        (s) => s.category.toLowerCase() === category.toLowerCase()
       )
-      .slice(0, 12)
-  }, [symbols, query, selectedNames])
+    }
+
+    if (query.trim()) {
+      const q = query.toLowerCase()
+      result = result.filter((s) => s.name.toLowerCase().includes(q))
+    }
+
+    return result
+  }, [symbols, query, category, selectedNames])
+
+  // Reset visible limit when filters change
+  const visibleMatches = allMatches.slice(0, visibleLimit)
+  const hasMore = allMatches.length > visibleLimit
 
   function handleSelectSymbol(symbol: DreamSymbol) {
     onAdd({
@@ -58,6 +86,20 @@ export default function SymbolPicker({
     })
     setCustomName('')
     setShowCustomInput(false)
+  }
+
+  function handleCategoryChange(cat: Category) {
+    setCategory(cat)
+    setVisibleLimit(DEFAULT_VISIBLE)
+  }
+
+  function handleQueryChange(value: string) {
+    setQuery(value)
+    setVisibleLimit(DEFAULT_VISIBLE)
+  }
+
+  function handleShowMore() {
+    setVisibleLimit((prev) => prev + EXPAND_INCREMENT)
   }
 
   return (
@@ -96,28 +138,67 @@ export default function SymbolPicker({
           type="text"
           placeholder="Search symbols..."
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => handleQueryChange(e.target.value)}
           className="pl-10 bg-[var(--color-surface)] border-[var(--color-border)] font-body italic placeholder:text-[var(--color-text-faint)]"
         />
       </div>
 
+      {/* Category filter chips */}
+      <div className="flex gap-1.5 flex-wrap">
+        {CATEGORIES.map((cat) => (
+          <button
+            key={cat}
+            type="button"
+            onClick={() => handleCategoryChange(cat)}
+            className={`rounded-full px-3 py-1 font-body text-xs transition-colors ${
+              category === cat
+                ? 'bg-[var(--color-primary)] text-[var(--color-bg)]'
+                : 'bg-[var(--color-surface-raised)] text-[var(--color-text-muted)] hover:text-[var(--color-text)] border border-[var(--color-border)]'
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
       {/* Matching symbols */}
-      {matches.length > 0 && (
-        <div className="flex flex-wrap gap-2">
-          {matches.map((symbol) => (
-            <button
-              key={symbol.id}
-              type="button"
-              onClick={() => handleSelectSymbol(symbol)}
-              className="rounded-sm border border-[var(--color-border)] bg-[var(--color-surface)] px-2.5 py-1 font-body text-xs text-[var(--color-text)] transition-colors hover:border-gold/60 hover:bg-[var(--color-accent-subtle)]"
-            >
-              {symbol.name}
-            </button>
-          ))}
+      {visibleMatches.length > 0 && (
+        <div className="space-y-2">
+          <div className="flex flex-wrap gap-2">
+            {visibleMatches.map((symbol) => (
+              <button
+                key={symbol.id}
+                type="button"
+                onClick={() => handleSelectSymbol(symbol)}
+                className="rounded-sm border border-[var(--color-border)] bg-[var(--color-surface)] px-2.5 py-1 font-body text-xs text-[var(--color-text)] transition-colors hover:border-gold/60 hover:bg-[var(--color-accent-subtle)]"
+              >
+                {symbol.name}
+              </button>
+            ))}
+          </div>
+
+          {/* Result count and show more */}
+          <div className="flex items-center gap-3">
+            {allMatches.length > DEFAULT_VISIBLE && (
+              <span className="font-body text-xs text-[var(--color-text-faint)]">
+                Showing {visibleMatches.length} of {allMatches.length}
+              </span>
+            )}
+            {hasMore && (
+              <button
+                type="button"
+                onClick={handleShowMore}
+                className="inline-flex items-center gap-1 font-body text-xs text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] transition-colors"
+              >
+                <ChevronDown size={14} strokeWidth={1.5} />
+                Show more
+              </button>
+            )}
+          </div>
         </div>
       )}
 
-      {query.trim() && matches.length === 0 && (
+      {visibleMatches.length === 0 && (query.trim() || category !== 'All') && (
         <p className="font-body text-xs text-[var(--color-text-muted)] italic">
           No matching symbols found.
         </p>

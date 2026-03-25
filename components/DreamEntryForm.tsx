@@ -112,7 +112,7 @@ export default function DreamEntryForm({
           type="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
-          className="bg-[var(--color-surface)] border-[var(--color-border)] font-body max-w-[200px]"
+          className="bg-[var(--color-surface)] border-[var(--color-border)] font-body w-full sm:max-w-[200px]"
         />
       </div>
 
@@ -154,7 +154,7 @@ export default function DreamEntryForm({
           value={mood ?? ''}
           onValueChange={(v) => setMood(v || null)}
         >
-          <SelectTrigger className="w-full max-w-[240px] bg-[var(--color-surface)] border-[var(--color-border)] font-body">
+          <SelectTrigger className="w-full sm:max-w-[240px] bg-[var(--color-surface)] border-[var(--color-border)] font-body">
             <SelectValue placeholder="How did this dream feel?" />
           </SelectTrigger>
           <SelectContent className="bg-[var(--color-surface)]">
@@ -172,18 +172,34 @@ export default function DreamEntryForm({
         <Label className="font-body text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wider">
           Vividness
         </Label>
-        <div className="flex items-center gap-2">
+        <div
+          className="flex items-center gap-2"
+          role="slider"
+          tabIndex={0}
+          aria-valuemin={1}
+          aria-valuemax={5}
+          aria-valuenow={vividness}
+          aria-valuetext={`${vividness} out of 5`}
+          aria-label="Vividness"
+          onKeyDown={(e) => {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
+              e.preventDefault()
+              setVividness((v) => Math.min(5, v + 1))
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') {
+              e.preventDefault()
+              setVividness((v) => Math.max(1, v - 1))
+            }
+          }}
+        >
           {Array.from({ length: 5 }, (_, i) => (
-            <button
+            <span
               key={i}
-              type="button"
               onClick={() => setVividness(i + 1)}
-              className={`h-4 w-4 rounded-full transition-all ${
+              className={`h-4 w-4 rounded-full transition-all cursor-pointer ${
                 i < vividness
                   ? 'bg-[var(--color-accent)] scale-110'
                   : 'bg-[var(--color-border)] hover:bg-[var(--color-text-faint)]'
               }`}
-              aria-label={`Vividness level ${i + 1}`}
             />
           ))}
           <span className="ml-2 font-body text-xs text-[var(--color-text-muted)]">

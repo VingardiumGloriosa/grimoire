@@ -1,26 +1,9 @@
 import Link from "next/link"
 import type { Crystal } from "@/lib/types"
+import { ELEMENT_BADGE_STYLES, CHAKRA_BADGE_STYLES } from "@/lib/design-tokens"
 
 interface CrystalCardProps {
   crystal: Crystal
-}
-
-const ELEMENT_COLORS: Record<string, string> = {
-  Fire: "bg-blush/15 text-blush",
-  Water: "bg-[#1a3a4a]/15 text-[#2e7a9b]",
-  Earth: "bg-gold-subtle text-umber",
-  Air: "bg-sage-mist text-forest",
-  Spirit: "bg-[var(--color-accent-subtle)] text-[var(--color-accent)]",
-}
-
-const CHAKRA_COLORS: Record<string, string> = {
-  Root: "bg-blush/15 text-blush",
-  Sacral: "bg-gold-subtle text-umber",
-  "Solar Plexus": "bg-gold-subtle text-[#9a7b2a]",
-  Heart: "bg-sage-mist text-forest",
-  Throat: "bg-[#1a3a4a]/15 text-[#2e7a9b]",
-  "Third Eye": "bg-[#2a1a4a]/15 text-[#6a4a9b]",
-  Crown: "bg-[var(--color-accent-subtle)] text-[var(--color-accent)]",
 }
 
 export default function CrystalCard({ crystal }: CrystalCardProps) {
@@ -53,14 +36,14 @@ export default function CrystalCard({ crystal }: CrystalCardProps) {
             <div className="flex flex-wrap gap-1.5">
               <span
                 className={`rounded-full px-2.5 py-0.5 text-xs font-medium uppercase tracking-wider ${
-                  ELEMENT_COLORS[crystal.element] ?? "bg-[var(--color-surface-raised)] text-[var(--color-text-muted)]"
+                  ELEMENT_BADGE_STYLES[crystal.element] ?? "bg-[var(--color-surface-raised)] text-[var(--color-text-muted)]"
                 }`}
               >
                 {crystal.element}
               </span>
               <span
                 className={`rounded-full px-2.5 py-0.5 text-xs font-medium uppercase tracking-wider ${
-                  CHAKRA_COLORS[crystal.chakra] ?? "bg-[var(--color-surface-raised)] text-[var(--color-text-muted)]"
+                  CHAKRA_BADGE_STYLES[crystal.chakra] ?? "bg-[var(--color-surface-raised)] text-[var(--color-text-muted)]"
                 }`}
               >
                 {crystal.chakra}

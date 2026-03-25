@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient as createSupabaseServerClient } from '@supabase/ssr'
 import { createServerClient } from '@/lib/supabase-server'
 import { computeMoonPhase } from '@/lib/moon'
+import { validateBody, createDreamSchema, updateDreamSchema } from '@/lib/validation'
 
 function getUserFromRequest(request: NextRequest) {
   return createSupabaseServerClient(
@@ -17,7 +18,7 @@ function getUserFromRequest(request: NextRequest) {
   )
 }
 
-// POST — Create a new dream entry
+// POST: Create a new dream entry
 export async function POST(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -25,11 +26,9 @@ export async function POST(request: NextRequest) {
     if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
     const body = await request.json()
-    const { date, title, content, mood, vividness, lucid, recurring, symbols, tags } = body
-
-    if (!title || !content) {
-      return NextResponse.json({ error: 'Missing required fields: title, content' }, { status: 400 })
-    }
+    const validation = validateBody(createDreamSchema, body)
+    if (!validation.success) return validation.error
+    const { date, title, content, mood, vividness, lucid, recurring, symbols, tags } = validation.data
 
     // Auto-populate moon phase for the dream date
     const dreamDate = date || new Date().toISOString().split('T')[0]
@@ -55,7 +54,7 @@ export async function POST(request: NextRequest) {
       .select()
       .single()
 
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+    if (error) return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
     return NextResponse.json(entry, { status: 201 })
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Internal server error'
@@ -63,7 +62,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// GET — List user's dream entries with optional filters
+// GET: List user's dream entries with optional filters
 export async function GET(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -88,14 +87,19 @@ export async function GET(request: NextRequest) {
 
       if (error) {
         if (error.code === 'PGRST116') return NextResponse.json({ error: 'Not found' }, { status: 404 })
-        return NextResponse.json({ error: error.message }, { status: 500 })
+        return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
       }
       return NextResponse.json(data)
     }
 
+    const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10))
+    const limit = Math.min(100, Math.max(1, parseInt(searchParams.get('limit') || '50', 10)))
+    const from = (page - 1) * limit
+    const to = from + limit - 1
+
     let query = supabase
       .from('dreams_entries')
-      .select('*')
+      .select('*', { count: 'exact' })
       .eq('user_id', user.id)
       .order('date', { ascending: false })
 
@@ -110,16 +114,18 @@ export async function GET(request: NextRequest) {
       query = query.eq('lucid', true)
     }
 
-    const { data, error } = await query
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
-    return NextResponse.json(data)
+    const { data, error, count } = await query.range(from, to)
+    if (error) return NextResponse.json({ error: 'Failed to fetch entries' }, { status: 500 })
+    const response = NextResponse.json(data)
+    response.headers.set('X-Total-Count', String(count ?? 0))
+    return response
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Internal server error'
     return NextResponse.json({ error: message }, { status: 500 })
   }
 }
 
-// PATCH — Update a dream entry
+// PATCH: Update a dream entry
 export async function PATCH(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -127,9 +133,9 @@ export async function PATCH(request: NextRequest) {
     if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
     const body = await request.json()
-    const { id, ...fields } = body
-
-    if (!id) return NextResponse.json({ error: 'Missing id' }, { status: 400 })
+    const validation = validateBody(updateDreamSchema, body)
+    if (!validation.success) return validation.error
+    const { id, ...fields } = validation.data
 
     const supabase = createServerClient()
     const { data: existing } = await supabase
@@ -143,7 +149,7 @@ export async function PATCH(request: NextRequest) {
     }
 
     const updates: Record<string, unknown> = { updated_at: new Date().toISOString() }
-    const allowed = ['title', 'content', 'mood', 'vividness', 'lucid', 'recurring', 'symbols', 'tags']
+    const allowed = ['title', 'content', 'mood', 'vividness', 'lucid', 'recurring', 'symbols', 'tags'] as const
     for (const key of allowed) {
       if (fields[key] !== undefined) updates[key] = fields[key]
     }
@@ -155,7 +161,7 @@ export async function PATCH(request: NextRequest) {
       .select()
       .single()
 
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+    if (error) return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
     return NextResponse.json(entry)
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Internal server error'
@@ -163,7 +169,7 @@ export async function PATCH(request: NextRequest) {
   }
 }
 
-// DELETE — Delete a dream entry
+// DELETE: Delete a dream entry
 export async function DELETE(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -186,7 +192,7 @@ export async function DELETE(request: NextRequest) {
     }
 
     const { error } = await supabase.from('dreams_entries').delete().eq('id', id)
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+    if (error) return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
     return NextResponse.json({ success: true })
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Internal server error'

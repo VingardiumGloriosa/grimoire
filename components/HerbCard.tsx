@@ -1,21 +1,14 @@
 import Link from "next/link"
 import type { Herb } from "@/lib/types"
+import { ELEMENT_BADGE_STYLES } from "@/lib/design-tokens"
 import { Leaf, Globe, Sparkles } from "lucide-react"
 
 interface HerbCardProps {
   herb: Herb
 }
 
-const ELEMENT_STYLES: Record<string, string> = {
-  Fire: "bg-blush/15 text-blush",
-  Water: "bg-[var(--color-primary-subtle)] text-[var(--color-secondary)]",
-  Earth: "bg-sage-mist text-forest",
-  Air: "bg-gold-subtle text-umber",
-  Spirit: "bg-[var(--color-surface-raised)] text-[var(--color-text-muted)]",
-}
-
 export default function HerbCard({ herb }: HerbCardProps) {
-  const elementStyle = ELEMENT_STYLES[herb.element] || ELEMENT_STYLES.Spirit
+  const elementStyle = ELEMENT_BADGE_STYLES[herb.element] || ELEMENT_BADGE_STYLES.Spirit
 
   return (
     <Link href={`/herbology/${herb.id}`}>
@@ -58,7 +51,7 @@ export default function HerbCard({ herb }: HerbCardProps) {
             </span>
 
             {/* Chakra Badge */}
-            <span className="inline-flex items-center gap-1 rounded-full bg-gold-subtle px-2.5 py-0.5 text-xs font-medium uppercase tracking-wider text-umber">
+            <span className="inline-flex items-center gap-1 rounded-full bg-gold-subtle dark:bg-linen px-2.5 py-0.5 text-xs font-medium uppercase tracking-wider text-umber dark:text-warm-grey">
               <Sparkles size={10} strokeWidth={1.5} />
               {herb.chakra}
             </span>

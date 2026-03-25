@@ -1,26 +1,9 @@
-import type { HerbBlend, Element } from "@/lib/types"
+import type { HerbBlend } from "@/lib/types"
+import { ELEMENTS, ELEMENT_BAR_COLORS, ELEMENT_BADGE_STYLES } from "@/lib/design-tokens"
 import { Leaf, Globe } from "lucide-react"
 
 interface BlendViewProps {
   blend: HerbBlend
-}
-
-const ELEMENTS: Element[] = ["Fire", "Water", "Earth", "Air", "Spirit"]
-
-const ELEMENT_BAR_COLORS: Record<Element, string> = {
-  Fire: "bg-blush",
-  Water: "bg-[var(--color-secondary)]",
-  Earth: "bg-forest",
-  Air: "bg-[var(--color-accent)]",
-  Spirit: "bg-[var(--color-text-muted)]",
-}
-
-const ELEMENT_BADGE_STYLES: Record<string, string> = {
-  Fire: "bg-blush/15 text-blush",
-  Water: "bg-[var(--color-primary-subtle)] text-[var(--color-secondary)]",
-  Earth: "bg-sage-mist text-forest",
-  Air: "bg-gold-subtle text-umber",
-  Spirit: "bg-[var(--color-surface-raised)] text-[var(--color-text-muted)]",
 }
 
 export default function BlendView({ blend }: BlendViewProps) {

@@ -6,8 +6,11 @@ import Link from 'next/link'
 import type { MoonJournalEntry } from '@/lib/types'
 import { getPhaseLabel } from '@/lib/moon'
 import { Card, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import ConfirmDialog from '@/components/ConfirmDialog'
 import MoonPhaseIcon from '@/components/MoonPhaseIcon'
-import { Moon, Trash2 } from 'lucide-react'
+import { Loader2, Moon, Trash2 } from 'lucide-react'
+import { toast } from 'sonner'
 
 // Approximate illumination/waxing for phase icons in the list
 const PHASE_DISPLAY: Record<string, { illumination: number; isWaxing: boolean }> = {
@@ -23,28 +26,62 @@ const PHASE_DISPLAY: Record<string, { illumination: number; isWaxing: boolean }>
 
 interface MoonJournalListProps {
   entries: MoonJournalEntry[]
+  totalCount: number
 }
 
-export default function MoonJournalList({ entries: initialEntries }: MoonJournalListProps) {
+export default function MoonJournalList({ entries: initialEntries, totalCount: initialTotalCount }: MoonJournalListProps) {
   const router = useRouter()
   const [entries, setEntries] = useState(initialEntries)
   const [deletingId, setDeletingId] = useState<string | null>(null)
+  const [deleteTarget, setDeleteTarget] = useState<string | null>(null)
+  const [page, setPage] = useState(1)
+  const [totalCount, setTotalCount] = useState<number>(initialTotalCount)
+  const [loadingMore, setLoadingMore] = useState(false)
 
-  async function handleDelete(e: React.MouseEvent, entryId: string) {
+  async function loadMore() {
+    setLoadingMore(true)
+    try {
+      const nextPage = page + 1
+      const res = await fetch(`/api/moon/journal?page=${nextPage}&limit=20`)
+      if (res.ok) {
+        const data: MoonJournalEntry[] = await res.json()
+        const headerCount = res.headers.get('X-Total-Count')
+        if (headerCount) setTotalCount(parseInt(headerCount, 10))
+        setEntries((prev) => [...prev, ...data])
+        setPage(nextPage)
+      }
+    } catch {
+      toast.error('Failed to load more journal entries')
+    } finally {
+      setLoadingMore(false)
+    }
+  }
+
+  function handleDeleteClick(e: React.MouseEvent, entryId: string) {
     e.preventDefault()
     e.stopPropagation()
+    setDeleteTarget(entryId)
+  }
 
-    if (!confirm('Delete this journal entry? This cannot be undone.')) return
+  async function confirmDelete() {
+    if (!deleteTarget) return
 
-    setDeletingId(entryId)
+    setDeletingId(deleteTarget)
     try {
-      const res = await fetch(`/api/moon/journal?id=${entryId}`, { method: 'DELETE' })
+      const res = await fetch(`/api/moon/journal?id=${deleteTarget}`, { method: 'DELETE' })
       if (res.ok) {
-        setEntries((prev) => prev.filter((entry) => entry.id !== entryId))
+        setEntries((prev) => prev.filter((entry) => entry.id !== deleteTarget))
+        setTotalCount((prev) => Math.max(0, prev - 1))
         router.refresh()
+        toast.success("Journal entry deleted")
+      } else {
+        toast.error("Failed to delete journal entry")
       }
+    } catch {
+      toast.error("Failed to delete journal entry")
     } finally {
       setDeletingId(null)
+      setDeleteTarget(null)
     }
   }
 
@@ -93,10 +130,10 @@ export default function MoonJournalList({ entries: initialEntries }: MoonJournal
                       {entry.title}
                     </h3>
                     <button
-                      onClick={(e) => handleDelete(e, entry.id)}
+                      onClick={(e) => handleDeleteClick(e, entry.id)}
                       disabled={deletingId === entry.id}
-                      className="shrink-0 rounded-md p-1.5 text-[var(--color-text-faint)] opacity-0 transition-all hover:bg-blush/10 hover:text-blush group-hover:opacity-100 disabled:opacity-50"
-                      title="Delete entry"
+                      className="shrink-0 rounded-md p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-[var(--color-text-faint)] opacity-60 transition-all hover:bg-blush/10 hover:text-blush hover:opacity-100 disabled:opacity-50"
+                      aria-label="Delete journal entry"
                     >
                       <Trash2 size={14} strokeWidth={1.5} />
                     </button>
@@ -141,6 +178,35 @@ export default function MoonJournalList({ entries: initialEntries }: MoonJournal
           </Link>
         )
       })}
+
+      {entries.length < totalCount && (
+        <div className="flex flex-col items-center gap-2 pt-6">
+          <p className="font-body text-sm text-[var(--color-text-muted)]">
+            Showing {entries.length} of {totalCount}
+          </p>
+          <Button
+            variant="outline"
+            onClick={loadMore}
+            disabled={loadingMore}
+            className="font-body"
+          >
+            {loadingMore ? (
+              <><Loader2 size={14} className="mr-2 animate-spin" />Loading...</>
+            ) : (
+              'Load more'
+            )}
+          </Button>
+        </div>
+      )}
+
+      <ConfirmDialog
+        open={deleteTarget !== null}
+        onOpenChange={(open) => { if (!open) setDeleteTarget(null) }}
+        title="Delete this journal entry?"
+        description="This action cannot be undone."
+        onConfirm={confirmDelete}
+        loading={deletingId === deleteTarget}
+      />
     </div>
   )
 }

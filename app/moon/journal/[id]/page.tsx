@@ -70,7 +70,7 @@ export default function MoonJournalDetailPage() {
       setEntry(updated)
       setEditing(false)
     } catch {
-      // Silently handle — user can retry
+      // Silently handle; user can retry
     } finally {
       setSubmitting(false)
     }

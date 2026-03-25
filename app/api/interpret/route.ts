@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@/lib/supabase-server'
 import { generateSynthesis } from '@/lib/interpret'
+import { checkRateLimit } from '@/lib/rate-limit'
 import type { ReadingCard } from '@/lib/types'
 
-// POST — Generate synthesis for a reading
+// POST: Generate synthesis for a reading
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -40,9 +41,14 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// PUT — Update synthesis templates (admin only) or verify admin password
+// PUT: Update synthesis templates (admin only) or verify admin password
 export async function PUT(request: NextRequest) {
   try {
+    const clientIp = request.headers.get('x-forwarded-for')?.split(',')[0] || 'unknown'
+    if (!checkRateLimit(`admin:${clientIp}`)) {
+      return NextResponse.json({ error: 'Too many attempts. Try again later.' }, { status: 429 })
+    }
+
     const adminPassword = process.env.ADMIN_PASSWORD
     const providedPassword = request.headers.get('X-Admin-Password')
 
@@ -79,7 +85,7 @@ export async function PUT(request: NextRequest) {
 
     if (error) {
       return NextResponse.json(
-        { error: `Failed to update template: ${error.message}` },
+        { error: 'Failed to update template' },
         { status: 500 }
       )
     }

@@ -60,9 +60,10 @@ export async function middleware(request: NextRequest) {
     '/herbology/blends',
     '/astrology/charts',
     '/crystals/collection',
-    '/numerology/profiles',
+    '/numerology/charts',
     '/moon/journal',
     '/dreams',
+    '/profile',
   ]
   const isProtected = protectedPaths.some((p) =>
     request.nextUrl.pathname.startsWith(p)
@@ -86,8 +87,9 @@ export const config = {
     '/herbology/blends/:path*',
     '/astrology/charts/:path*',
     '/crystals/collection/:path*',
-    '/numerology/profiles/:path*',
+    '/numerology/charts/:path*',
     '/moon/journal/:path*',
     '/dreams/:path*',
+    '/profile',
   ],
 }

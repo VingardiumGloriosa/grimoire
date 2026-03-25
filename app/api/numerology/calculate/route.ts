@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { computeAllNumbers } from '@/lib/numerology'
 
-// POST — Public calculation endpoint (no auth, no save)
+// POST: Public calculation endpoint (no auth, no save)
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()

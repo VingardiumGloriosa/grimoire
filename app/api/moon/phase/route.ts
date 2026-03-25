@@ -3,9 +3,9 @@ import { createServerClient } from '@/lib/supabase-server'
 import { computeMoonPhase } from '@/lib/moon'
 import type { MoonPhaseData } from '@/lib/types'
 
-// GET — Public moon phase endpoint
-// ?date=YYYY-MM-DD — single date
-// ?start=YYYY-MM-DD&end=YYYY-MM-DD — date range
+// GET: Public moon phase endpoint
+// ?date=YYYY-MM-DD for a single date
+// ?start=YYYY-MM-DD&end=YYYY-MM-DD for a date range
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url)

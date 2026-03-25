@@ -1,18 +1,11 @@
 import Link from "next/link"
 import type { Crystal } from "@/lib/types"
+import { ELEMENT_BADGE_STYLES } from "@/lib/design-tokens"
 import { Check } from "lucide-react"
 
 interface RitualPairingResultProps {
   stones: Crystal[]
   collectionIds: string[]
-}
-
-const ELEMENT_COLORS: Record<string, string> = {
-  Fire: "bg-blush/15 text-blush",
-  Water: "bg-[#1a3a4a]/15 text-[#2e7a9b]",
-  Earth: "bg-gold-subtle text-umber",
-  Air: "bg-sage-mist text-forest",
-  Spirit: "bg-[var(--color-accent-subtle)] text-[var(--color-accent)]",
 }
 
 export default function RitualPairingResult({ stones, collectionIds }: RitualPairingResultProps) {
@@ -54,7 +47,7 @@ export default function RitualPairingResult({ stones, collectionIds }: RitualPai
                   </h3>
                   <span
                     className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-medium uppercase tracking-wider ${
-                      ELEMENT_COLORS[stone.element] ?? "bg-[var(--color-surface-raised)] text-[var(--color-text-muted)]"
+                      ELEMENT_BADGE_STYLES[stone.element] ?? "bg-[var(--color-surface-raised)] text-[var(--color-text-muted)]"
                     }`}
                   >
                     {stone.element}

@@ -16,7 +16,7 @@ function getUserFromRequest(request: NextRequest) {
   )
 }
 
-// POST — Create/update a personal symbol meaning
+// POST: Create/update a personal symbol meaning
 export async function POST(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
       .select()
       .single()
 
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+    if (error) return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
     return NextResponse.json(data, { status: 201 })
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Internal server error'
@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// GET — List user's personal symbol meanings
+// GET: List user's personal symbol meanings
 export async function GET(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -68,7 +68,7 @@ export async function GET(request: NextRequest) {
       .eq('user_id', user.id)
       .order('symbol_name', { ascending: true })
 
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+    if (error) return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
     return NextResponse.json(data)
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Internal server error'
@@ -76,7 +76,7 @@ export async function GET(request: NextRequest) {
   }
 }
 
-// DELETE — Delete a personal symbol meaning
+// DELETE: Delete a personal symbol meaning
 export async function DELETE(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -99,7 +99,7 @@ export async function DELETE(request: NextRequest) {
     }
 
     const { error } = await supabase.from('dreams_user_symbols').delete().eq('id', id)
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+    if (error) return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
     return NextResponse.json({ success: true })
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Internal server error'

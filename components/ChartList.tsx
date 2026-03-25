@@ -6,7 +6,9 @@ import Link from "next/link"
 import type { BirthChart } from "@/lib/types"
 import SignBadge from "@/components/SignBadge"
 import { Card, CardContent } from "@/components/ui/card"
+import ConfirmDialog from "@/components/ConfirmDialog"
 import { Star, Trash2 } from "lucide-react"
+import { toast } from "sonner"
 
 interface ChartListProps {
   charts: BirthChart[]
@@ -16,24 +18,34 @@ export default function ChartList({ charts: initialCharts }: ChartListProps) {
   const router = useRouter()
   const [charts, setCharts] = useState(initialCharts)
   const [deletingId, setDeletingId] = useState<string | null>(null)
+  const [deleteTarget, setDeleteTarget] = useState<string | null>(null)
 
-  async function handleDelete(e: React.MouseEvent, chartId: string) {
+  function handleDeleteClick(e: React.MouseEvent, chartId: string) {
     e.preventDefault()
     e.stopPropagation()
+    setDeleteTarget(chartId)
+  }
 
-    if (!confirm("Delete this chart? This cannot be undone.")) return
+  async function confirmDelete() {
+    if (!deleteTarget) return
 
-    setDeletingId(chartId)
+    setDeletingId(deleteTarget)
     try {
-      const res = await fetch(`/api/astrology/charts?id=${chartId}`, {
+      const res = await fetch(`/api/astrology/charts?id=${deleteTarget}`, {
         method: "DELETE",
       })
       if (res.ok) {
-        setCharts((prev) => prev.filter((c) => c.id !== chartId))
+        setCharts((prev) => prev.filter((c) => c.id !== deleteTarget))
         router.refresh()
+        toast.success("Chart deleted")
+      } else {
+        toast.error("Failed to delete chart")
       }
+    } catch {
+      toast.error("Failed to delete chart")
     } finally {
       setDeletingId(null)
+      setDeleteTarget(null)
     }
   }
 
@@ -80,10 +92,10 @@ export default function ChartList({ charts: initialCharts }: ChartListProps) {
                       {chart.label}
                     </h3>
                     <button
-                      onClick={(e) => handleDelete(e, chart.id)}
+                      onClick={(e) => handleDeleteClick(e, chart.id)}
                       disabled={deletingId === chart.id}
-                      className="shrink-0 rounded-md p-1.5 text-[var(--color-text-faint)] opacity-0 transition-all hover:bg-blush/10 hover:text-blush group-hover:opacity-100 disabled:opacity-50"
-                      title="Delete chart"
+                      className="shrink-0 rounded-md p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-[var(--color-text-faint)] opacity-60 transition-all hover:bg-blush/10 hover:text-blush hover:opacity-100 disabled:opacity-50"
+                      aria-label="Delete chart"
                     >
                       <Trash2 size={14} strokeWidth={1.5} />
                     </button>
@@ -123,6 +135,15 @@ export default function ChartList({ charts: initialCharts }: ChartListProps) {
           </Link>
         )
       })}
+
+      <ConfirmDialog
+        open={deleteTarget !== null}
+        onOpenChange={(open) => { if (!open) setDeleteTarget(null) }}
+        title="Delete this chart?"
+        description="This action cannot be undone."
+        onConfirm={confirmDelete}
+        loading={deletingId === deleteTarget}
+      />
     </div>
   )
 }

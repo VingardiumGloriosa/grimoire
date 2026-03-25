@@ -1,26 +1,9 @@
 import type { Crystal } from "@/lib/types"
+import { ELEMENT_BADGE_STYLES, CHAKRA_BADGE_STYLES } from "@/lib/design-tokens"
 import { AlertTriangle } from "lucide-react"
 
 interface CrystalDetailProps {
   crystal: Crystal
-}
-
-const ELEMENT_COLORS: Record<string, string> = {
-  Fire: "bg-blush/15 text-blush",
-  Water: "bg-[#1a3a4a]/15 text-[#2e7a9b]",
-  Earth: "bg-gold-subtle text-umber",
-  Air: "bg-sage-mist text-forest",
-  Spirit: "bg-[var(--color-accent-subtle)] text-[var(--color-accent)]",
-}
-
-const CHAKRA_COLORS: Record<string, string> = {
-  Root: "bg-blush/15 text-blush",
-  Sacral: "bg-gold-subtle text-umber",
-  "Solar Plexus": "bg-gold-subtle text-[#9a7b2a]",
-  Heart: "bg-sage-mist text-forest",
-  Throat: "bg-[#1a3a4a]/15 text-[#2e7a9b]",
-  "Third Eye": "bg-[#2a1a4a]/15 text-[#6a4a9b]",
-  Crown: "bg-[var(--color-accent-subtle)] text-[var(--color-accent)]",
 }
 
 export default function CrystalDetail({ crystal }: CrystalDetailProps) {
@@ -55,7 +38,7 @@ export default function CrystalDetail({ crystal }: CrystalDetailProps) {
         <div className="flex flex-wrap gap-2">
           <span
             className={`rounded-full px-3 py-0.5 text-xs font-medium uppercase tracking-wider ${
-              ELEMENT_COLORS[crystal.element] ?? "bg-[var(--color-surface-raised)] text-[var(--color-text-muted)]"
+              ELEMENT_BADGE_STYLES[crystal.element] ?? "bg-[var(--color-surface-raised)] text-[var(--color-text-muted)]"
             }`}
           >
             {crystal.element}
@@ -64,7 +47,7 @@ export default function CrystalDetail({ crystal }: CrystalDetailProps) {
             <span
               key={chakra}
               className={`rounded-full px-3 py-0.5 text-xs font-medium uppercase tracking-wider ${
-                CHAKRA_COLORS[chakra] ?? "bg-[var(--color-surface-raised)] text-[var(--color-text-muted)]"
+                CHAKRA_BADGE_STYLES[chakra] ?? "bg-[var(--color-surface-raised)] text-[var(--color-text-muted)]"
               }`}
             >
               {chakra}
@@ -160,7 +143,7 @@ export default function CrystalDetail({ crystal }: CrystalDetailProps) {
             {crystal.cleansing_methods.map((method) => (
               <span
                 key={method}
-                className="rounded-full bg-sage-mist px-3 py-1 text-sm font-body font-medium text-forest"
+                className="rounded-full bg-sage-mist dark:bg-linen px-3 py-1 text-sm font-body font-medium text-forest"
               >
                 {method}
               </span>
@@ -179,7 +162,7 @@ export default function CrystalDetail({ crystal }: CrystalDetailProps) {
             {crystal.zodiac_signs.map((sign) => (
               <span
                 key={sign}
-                className="rounded-full bg-gold-subtle px-3 py-1 text-sm font-body font-medium text-umber"
+                className="rounded-full bg-gold-subtle dark:bg-linen px-3 py-1 text-sm font-body font-medium text-umber dark:text-warm-grey"
               >
                 {sign}
               </span>

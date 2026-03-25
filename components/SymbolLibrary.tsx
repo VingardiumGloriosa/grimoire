@@ -1,10 +1,12 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import type { DreamSymbol } from '@/lib/types'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
+import EmptyState from '@/components/EmptyState'
 import { Search } from 'lucide-react'
 
 interface SymbolLibraryProps {
@@ -25,7 +27,8 @@ const CATEGORIES = [
 type Category = (typeof CATEGORIES)[number]
 
 export default function SymbolLibrary({ symbols }: SymbolLibraryProps) {
-  const [query, setQuery] = useState('')
+  const searchParams = useSearchParams()
+  const [query, setQuery] = useState(searchParams.get('q') ?? '')
   const [category, setCategory] = useState<Category>('All')
 
   const filtered = useMemo(() => {
@@ -109,11 +112,7 @@ export default function SymbolLibrary({ symbols }: SymbolLibraryProps) {
           ))}
         </div>
       ) : (
-        <div className="py-12 text-center">
-          <p className="font-body text-[var(--color-text-muted)]">
-            No symbols match your search.
-          </p>
-        </div>
+        <EmptyState icon={Search} message="No symbols match your search" />
       )}
     </div>
   )

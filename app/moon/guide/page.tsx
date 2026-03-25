@@ -3,7 +3,7 @@ import MoonRitualView from '@/components/MoonRitualView'
 import type { MoonRitual, MoonPhaseKey } from '@/lib/types'
 
 export const metadata = {
-  title: 'Phase Guide — Grimoire',
+  title: 'Phase Guide | Grimoire',
   description: 'Ritual suggestions for each moon phase.',
 }
 

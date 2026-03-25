@@ -35,7 +35,7 @@
   },
   {
     "name": "Rose Quartz",
-    "description": "The stone of unconditional love, rose quartz opens the heart to all forms of love — romantic, familial, and self-directed. Its gentle pink energy soothes emotional wounds and encourages compassion and forgiveness.",
+    "description": "The stone of unconditional love, rose quartz opens the heart to all forms of love: romantic, familial, and self-directed. Its gentle pink energy soothes emotional wounds and encourages compassion and forgiveness.",
     "color": "Pink",
     "chakra": "Heart",
     "chakras": ["Heart"],
@@ -65,7 +65,7 @@
     "zodiac_signs": ["Aries", "Leo", "Gemini"],
     "planetary_ruler": "Sun",
     "affirmation": "I attract abundance and radiate confidence.",
-    "cautions": ["Heat-treated amethyst is often sold as citrine — natural citrine is pale yellow"]
+    "cautions": ["Heat-treated amethyst is often sold as citrine; natural citrine is pale yellow"]
   },
   {
     "name": "Black Tourmaline",
@@ -133,7 +133,7 @@
     "zodiac_signs": ["Scorpio", "Sagittarius"],
     "planetary_ruler": "Pluto",
     "affirmation": "I face my shadow with courage and emerge transformed.",
-    "cautions": ["Can bring up intense emotions — use with grounding stones"]
+    "cautions": ["Can bring up intense emotions, so use with grounding stones"]
   },
   {
     "name": "Selenite",
@@ -150,7 +150,7 @@
     "zodiac_signs": ["Cancer", "Taurus"],
     "planetary_ruler": "Moon",
     "affirmation": "I am filled with divine light and clarity.",
-    "cautions": ["Do not place in water — selenite dissolves", "Very soft and scratches easily"]
+    "cautions": ["Do not place in water, as selenite dissolves", "Very soft and scratches easily"]
   },
   {
     "name": "Tiger's Eye",
@@ -201,7 +201,7 @@
     "zodiac_signs": ["Scorpio", "Capricorn"],
     "planetary_ruler": "Venus",
     "affirmation": "I embrace positive transformation and release what no longer serves me.",
-    "cautions": ["Do not place in water — releases toxic copper compounds", "Handle polished form only; raw malachite dust is toxic"]
+    "cautions": ["Do not place in water, as it releases toxic copper compounds", "Handle polished form only; raw malachite dust is toxic"]
   },
   {
     "name": "Carnelian",
@@ -235,7 +235,7 @@
     "zodiac_signs": ["Pisces", "Capricorn"],
     "planetary_ruler": "Mercury",
     "affirmation": "My mind is clear, focused, and organized.",
-    "cautions": ["Do not place in water — some varieties contain fluorine", "Soft and chips easily"]
+    "cautions": ["Do not place in water, as some varieties contain fluorine", "Soft and chips easily"]
   },
   {
     "name": "Jade",
@@ -337,7 +337,7 @@
     "zodiac_signs": ["Leo", "Aries"],
     "planetary_ruler": "Mars",
     "affirmation": "I am a magnet for prosperity and I manifest my will with confidence.",
-    "cautions": ["Do not place in water — iron content rusts and may release sulfur compounds"]
+    "cautions": ["Do not place in water, as the iron content rusts and may release sulfur compounds"]
   },
   {
     "name": "Amazonite",
@@ -388,7 +388,7 @@
     "zodiac_signs": ["Sagittarius", "Scorpio", "Pisces"],
     "planetary_ruler": "Jupiter",
     "affirmation": "I walk in truth and am protected on all my journeys.",
-    "cautions": ["Porous stone — avoid water, oils, and chemicals"]
+    "cautions": ["Porous stone; avoid water, oils, and chemicals"]
   },
   {
     "name": "Hematite",
@@ -405,7 +405,7 @@
     "zodiac_signs": ["Aries", "Aquarius"],
     "planetary_ruler": "Mars",
     "affirmation": "I am grounded, centered, and protected by the earth.",
-    "cautions": ["Do not place in water — iron content rusts"]
+    "cautions": ["Do not place in water, as the iron content rusts"]
   },
   {
     "name": "Bloodstone",
@@ -439,7 +439,7 @@
     "zodiac_signs": ["Gemini", "Libra"],
     "planetary_ruler": "Neptune",
     "affirmation": "I am at peace and open to messages from the divine.",
-    "cautions": ["Very fragile — handle gently", "Fades in direct sunlight"]
+    "cautions": ["Very fragile, so handle gently", "Fades in direct sunlight"]
   },
   {
     "name": "Chrysocolla",
@@ -456,7 +456,7 @@
     "zodiac_signs": ["Taurus", "Gemini", "Virgo"],
     "planetary_ruler": "Venus",
     "affirmation": "I express myself with wisdom, calm, and authentic power.",
-    "cautions": ["Do not place in water — soft and porous"]
+    "cautions": ["Do not place in water, as it is soft and porous"]
   },
   {
     "name": "Kunzite",
@@ -473,7 +473,7 @@
     "zodiac_signs": ["Taurus", "Leo", "Scorpio"],
     "planetary_ruler": "Venus",
     "affirmation": "I open my heart to love and let go of old pain.",
-    "cautions": ["Fades quickly in direct sunlight — store in darkness"]
+    "cautions": ["Fades quickly in direct sunlight, so store in darkness"]
   },
   {
     "name": "Lepidolite",
@@ -490,7 +490,7 @@
     "zodiac_signs": ["Libra", "Pisces"],
     "planetary_ruler": "Jupiter",
     "affirmation": "I navigate change with grace and find peace within.",
-    "cautions": ["Do not place in water — contains lithium and is very soft"]
+    "cautions": ["Do not place in water, as it contains lithium and is very soft"]
   },
   {
     "name": "Black Onyx",
@@ -575,7 +575,7 @@
     "zodiac_signs": ["Gemini", "Virgo"],
     "planetary_ruler": "Moon",
     "affirmation": "I am calm, patient, and at peace with the present moment.",
-    "cautions": ["Porous — avoid prolonged soaking in water"]
+    "cautions": ["Porous; avoid prolonged soaking in water"]
   },
   {
     "name": "Kyanite",
@@ -592,7 +592,7 @@
     "zodiac_signs": ["Aries", "Taurus", "Libra"],
     "planetary_ruler": "Venus",
     "affirmation": "I am aligned, open, and communicating with clarity.",
-    "cautions": ["Very fragile along cleavage planes — handle with care"]
+    "cautions": ["Very fragile along cleavage planes, so handle with care"]
   },
   {
     "name": "Iolite",
@@ -643,7 +643,7 @@
     "zodiac_signs": ["Scorpio", "Aquarius"],
     "planetary_ruler": "Pluto",
     "affirmation": "I welcome rapid transformation and trust the process of evolution.",
-    "cautions": ["Can cause intense reactions — use gradually", "Widely counterfeited — verify authenticity"]
+    "cautions": ["Can cause intense reactions, so use gradually", "Widely counterfeited, so verify authenticity"]
   },
   {
     "name": "Agate",
@@ -677,7 +677,7 @@
     "zodiac_signs": ["Leo", "Aquarius"],
     "planetary_ruler": "Sun",
     "affirmation": "I carry the warmth of ancient wisdom and radiate healing light.",
-    "cautions": ["Dissolves in salt water", "Burns easily — do not expose to flame"]
+    "cautions": ["Dissolves in salt water", "Burns easily, so do not expose to flame"]
   },
   {
     "name": "Charoite",
@@ -711,7 +711,7 @@
     "zodiac_signs": ["Sagittarius", "Gemini", "Libra"],
     "planetary_ruler": "Jupiter",
     "affirmation": "I connect to higher wisdom and express my spiritual truth.",
-    "cautions": ["Relatively fragile — avoid ultrasonic cleaning and hard impacts"]
+    "cautions": ["Relatively fragile; avoid ultrasonic cleaning and hard impacts"]
   },
   {
     "name": "Opal",
@@ -728,7 +728,7 @@
     "zodiac_signs": ["Libra", "Scorpio", "Cancer"],
     "planetary_ruler": "Venus",
     "affirmation": "I embrace the full spectrum of my emotions and creative power.",
-    "cautions": ["Porous and fragile — avoid water and extreme temperature changes"]
+    "cautions": ["Porous and fragile; avoid water and extreme temperature changes"]
   },
   {
     "name": "Peridot",
@@ -813,7 +813,7 @@
     "zodiac_signs": ["Leo", "Scorpio"],
     "planetary_ruler": "Venus",
     "affirmation": "I love myself deeply and allow my heart to heal fully.",
-    "cautions": ["Soft and fragile — avoid water and rough handling"]
+    "cautions": ["Soft and fragile; avoid water and rough handling"]
   },
   {
     "name": "Shungite",
@@ -830,7 +830,7 @@
     "zodiac_signs": ["Scorpio", "Capricorn"],
     "planetary_ruler": "Saturn",
     "affirmation": "I am shielded from harmful energies and grounded in ancient strength.",
-    "cautions": ["Raw shungite can leave black residue — handle with care"]
+    "cautions": ["Raw shungite can leave black residue, so handle with care"]
   },
   {
     "name": "Apophyllite",
@@ -847,7 +847,7 @@
     "zodiac_signs": ["Gemini", "Libra"],
     "planetary_ruler": "Mercury",
     "affirmation": "I connect to the spiritual realm with ease and clarity.",
-    "cautions": ["Very fragile — handle gently and keep away from water"]
+    "cautions": ["Very fragile; handle gently and keep away from water"]
   },
   {
     "name": "Aragonite",
@@ -864,7 +864,7 @@
     "zodiac_signs": ["Capricorn"],
     "planetary_ruler": "Saturn",
     "affirmation": "I am deeply connected to the earth and patient in my growth.",
-    "cautions": ["Do not place in water — dissolves in acidic solutions"]
+    "cautions": ["Do not place in water, as it dissolves in acidic solutions"]
   },
   {
     "name": "Azurite",
@@ -881,7 +881,7 @@
     "zodiac_signs": ["Sagittarius", "Aquarius"],
     "planetary_ruler": "Jupiter",
     "affirmation": "I see beyond illusion and trust my inner vision.",
-    "cautions": ["Do not place in water — contains copper", "Fragile — handle gently"]
+    "cautions": ["Do not place in water, as it contains copper", "Fragile; handle gently"]
   },
   {
     "name": "Dalmatian Jasper",
@@ -915,7 +915,7 @@
     "zodiac_signs": ["Cancer", "Virgo"],
     "planetary_ruler": "Venus",
     "affirmation": "I release stagnant energy and renew my heart with fresh hope.",
-    "cautions": ["Do not place in water — calcite is water-soluble", "Very soft — scratches easily"]
+    "cautions": ["Do not place in water, as calcite is water-soluble", "Very soft and scratches easily"]
   },
   {
     "name": "Septarian",
@@ -1051,7 +1051,7 @@
     "zodiac_signs": ["Aquarius", "Pisces"],
     "planetary_ruler": "Uranus",
     "affirmation": "I am guided by angels and speak with compassion.",
-    "cautions": ["Do not place in water — reverts to gypsum"]
+    "cautions": ["Do not place in water, as it reverts to gypsum"]
   },
   {
     "name": "Serpentine",
@@ -1068,7 +1068,7 @@
     "zodiac_signs": ["Gemini", "Scorpio"],
     "planetary_ruler": "Saturn",
     "affirmation": "I awaken my inner serpent and rise through transformation.",
-    "cautions": ["Some varieties may contain asbestos — use polished specimens only"]
+    "cautions": ["Some varieties may contain asbestos, so use polished specimens only"]
   },
   {
     "name": "Danburite",

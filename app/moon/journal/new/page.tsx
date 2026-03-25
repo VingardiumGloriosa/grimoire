@@ -32,7 +32,7 @@ export default function NewMoonJournalPage() {
 
       router.push('/moon/journal')
     } catch {
-      // Silently handle — user can retry
+      // Silently handle; user can retry
       setSubmitting(false)
     }
   }

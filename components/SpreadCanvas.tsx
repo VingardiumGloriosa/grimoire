@@ -64,7 +64,7 @@ function DraggablePosition({
       <div
         className={`min-w-[120px] rounded-lg border bg-[var(--color-surface)] p-3 shadow-sm transition-shadow ${
           isDragging
-            ? "border-gold shadow-[0_0_12px_rgba(196,163,90,0.3)]"
+            ? "border-gold shadow-[0_0_12px_rgb(var(--color-accent-ch) / 0.3)]"
             : "border-[var(--color-border)] hover:border-sage"
         }`}
       >

@@ -5,45 +5,15 @@ import { useRouter } from "next/navigation"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
 import { Loader2, Sparkles, MapPin, ChevronDown } from "lucide-react"
+import { toast } from "sonner"
 
 interface GeoResult {
   display_name: string
   lat: number
   lon: number
+  timezone: string | null
 }
-
-const TIMEZONES = [
-  "UTC",
-  "America/New_York",
-  "America/Chicago",
-  "America/Denver",
-  "America/Los_Angeles",
-  "America/Anchorage",
-  "Pacific/Honolulu",
-  "America/Sao_Paulo",
-  "America/Argentina/Buenos_Aires",
-  "Europe/London",
-  "Europe/Paris",
-  "Europe/Berlin",
-  "Europe/Moscow",
-  "Africa/Cairo",
-  "Asia/Dubai",
-  "Asia/Kolkata",
-  "Asia/Bangkok",
-  "Asia/Shanghai",
-  "Asia/Tokyo",
-  "Asia/Seoul",
-  "Australia/Sydney",
-  "Pacific/Auckland",
-]
 
 export default function ChartCreator() {
   const router = useRouter()
@@ -82,7 +52,7 @@ export default function ChartCreator() {
         setShowGeoDropdown(results.length > 0)
       }
     } catch {
-      // Silently fail — user can enter coordinates manually
+      // Silently fail; user can enter coordinates manually
     } finally {
       setGeoLoading(false)
     }
@@ -101,6 +71,9 @@ export default function ChartCreator() {
     setBirthLocation(result.display_name)
     setLatitude(result.lat.toFixed(6))
     setLongitude(result.lon.toFixed(6))
+    if (result.timezone) {
+      setTimezone(result.timezone)
+    }
     setShowGeoDropdown(false)
     setGeoResults([])
   }
@@ -132,6 +105,7 @@ export default function ChartCreator() {
       }
 
       const data = await res.json()
+      toast.success("Chart saved")
       router.push(`/astrology/charts/${data.id}`)
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong")
@@ -249,6 +223,7 @@ export default function ChartCreator() {
                 <button
                   key={i}
                   type="button"
+                  onMouseDown={(e) => e.preventDefault()}
                   onClick={() => handleGeoSelect(result)}
                   className="w-full text-left px-4 py-2.5 font-body text-sm text-[var(--color-text)] hover:bg-[var(--color-surface-raised)] transition-colors border-b border-[var(--color-border)] last:border-b-0"
                 >
@@ -262,10 +237,11 @@ export default function ChartCreator() {
           )}
         </div>
 
-        {/* Coordinates display */}
+        {/* Coordinates and timezone display */}
         {latitude && longitude && (
           <p className="font-body text-xs text-[var(--color-text-faint)] italic">
             Coordinates: {latitude}, {longitude}
+            {timezone && <> &middot; {timezone.replace(/_/g, " ")}</>}
           </p>
         )}
       </div>
@@ -314,25 +290,6 @@ export default function ChartCreator() {
           </div>
         </div>
       )}
-
-      {/* Timezone */}
-      <div className="space-y-2">
-        <Label className="font-body text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wider">
-          Timezone
-        </Label>
-        <Select value={timezone} onValueChange={setTimezone}>
-          <SelectTrigger className="bg-[var(--color-surface)] border-[var(--color-border)] font-body">
-            <SelectValue placeholder="Select timezone" />
-          </SelectTrigger>
-          <SelectContent className="bg-[var(--color-surface)]">
-            {TIMEZONES.map((tz) => (
-              <SelectItem key={tz} value={tz} className="font-body">
-                {tz.replace(/_/g, " ")}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
 
       {/* Error */}
       {error && (

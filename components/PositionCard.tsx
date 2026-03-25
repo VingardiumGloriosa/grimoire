@@ -1,5 +1,7 @@
 "use client"
 
+import { useState } from "react"
+import Image from "next/image"
 import type { ReadingCard } from "@/lib/types"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowUp, ArrowDown } from "lucide-react"
@@ -11,6 +13,10 @@ interface PositionCardProps {
 export default function PositionCard({ card }: PositionCardProps) {
   const isReversed = card.orientation === "reversed"
   const meanings = isReversed ? card.meanings.shadow : card.meanings.light
+  const [showAllKeywords, setShowAllKeywords] = useState(false)
+  const keywordLimit = 5
+  const visibleKeywords = showAllKeywords ? card.keywords : card.keywords.slice(0, keywordLimit)
+  const hasMoreKeywords = card.keywords.length > keywordLimit
 
   return (
     <Card className="surface-gradient border border-[var(--color-border)] border-t-2 border-t-gold/30 rounded-lg p-6">
@@ -18,11 +24,12 @@ export default function PositionCard({ card }: PositionCardProps) {
         {/* Card Image */}
         <div className="flex justify-center">
           <div className="w-48 overflow-hidden rounded-md">
-            <img
+            <Image
               src={card.image_path}
               alt={card.card_name}
+              width={192}
+              height={288}
               className={`w-full object-cover ${isReversed ? "rotate-180" : ""}`}
-              style={{ aspectRatio: "2/3" }}
             />
           </div>
         </div>
@@ -43,7 +50,7 @@ export default function PositionCard({ card }: PositionCardProps) {
               Reversed
             </span>
           ) : (
-            <span className="inline-flex items-center gap-1 rounded-full bg-sage-mist px-2.5 py-0.5 text-xs font-medium uppercase tracking-wider text-forest">
+            <span className="inline-flex items-center gap-1 rounded-full bg-sage-mist dark:bg-linen px-2.5 py-0.5 text-xs font-medium uppercase tracking-wider text-forest">
               <ArrowUp className="h-3 w-3" strokeWidth={1.5} />
               Upright
             </span>
@@ -57,14 +64,23 @@ export default function PositionCard({ card }: PositionCardProps) {
 
         {/* Keywords */}
         <div className="flex flex-wrap gap-2">
-          {card.keywords.map((keyword) => (
+          {visibleKeywords.map((keyword) => (
             <span
               key={keyword}
-              className="rounded-sm bg-gold-subtle px-2 py-0.5 text-xs font-medium uppercase tracking-wider text-umber"
+              className="rounded-sm bg-gold-subtle dark:bg-linen px-2 py-0.5 text-xs font-medium uppercase tracking-wider text-umber dark:text-warm-grey"
             >
               {keyword}
             </span>
           ))}
+          {hasMoreKeywords && (
+            <button
+              type="button"
+              onClick={() => setShowAllKeywords(!showAllKeywords)}
+              className="rounded-sm px-2 py-0.5 text-xs font-medium tracking-wider text-forest hover:text-forest-deep dark:text-gold dark:hover:text-gold/80 transition-colors"
+            >
+              {showAllKeywords ? "Show less" : `Show all ${card.keywords.length}`}
+            </button>
+          )}
         </div>
 
         {/* Fortune Telling */}

@@ -120,7 +120,7 @@ export default function TemplateEditor({
         setTimeout(() => setSavedId(null), 2000)
       }
     } catch {
-      // Silently handle — user can retry
+      // Silently handle; user can retry
     } finally {
       setSaving(false)
     }

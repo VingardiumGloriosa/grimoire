@@ -89,7 +89,7 @@ export const MODULE_CONFIG: TableConfig = {
   table: 'modules',
   label: 'Modules',
   icon: 'Settings',
-  description: 'Manage feature modules — enable or disable sections of the app.',
+  description: 'Manage feature modules: enable or disable sections of the app.',
   nameField: 'name',
   defaultOrder: 'key',
   columns: [
@@ -112,7 +112,7 @@ export const HERBS_CONFIG: TableConfig = {
   table: 'herbology_herbs',
   label: 'Herbs',
   icon: 'Leaf',
-  description: 'Manage the herb reference library — properties, correspondences, and folklore.',
+  description: 'Manage the herb reference library: properties, correspondences, and folklore.',
   nameField: 'name',
   defaultOrder: 'name',
   columns: [
@@ -229,7 +229,7 @@ export const MOON_RITUALS_CONFIG: TableConfig = {
   table: 'moon_rituals',
   label: 'Moon Rituals',
   icon: 'Moon',
-  description: 'Manage ritual guidance for each moon phase — intentions, activities, and correspondences.',
+  description: 'Manage ritual guidance for each moon phase: intentions, activities, and correspondences.',
   nameField: 'phase_label',
   defaultOrder: 'phase',
   columns: [
@@ -256,7 +256,7 @@ export const ASTROLOGY_CONFIG: TableConfig = {
   table: 'astrology_interpretations',
   label: 'Astrology',
   icon: 'Star',
-  description: 'Manage astrological interpretations — signs, planets, houses, and aspects.',
+  description: 'Manage astrological interpretations: signs, planets, houses, and aspects.',
   nameField: 'title',
   defaultOrder: 'category,key',
   columns: [
@@ -268,7 +268,7 @@ export const ASTROLOGY_CONFIG: TableConfig = {
   fields: [
     { key: 'category', label: 'Category', type: 'select', options: ASTROLOGY_CATEGORIES, required: true },
     { key: 'key', label: 'Key', type: 'text', required: true, placeholder: 'e.g. aries, sun, 1st-house' },
-    { key: 'title', label: 'Title', type: 'text', required: true, placeholder: 'e.g. Aries — The Ram' },
+    { key: 'title', label: 'Title', type: 'text', required: true, placeholder: 'e.g. Aries: The Ram' },
     { key: 'description', label: 'Description', type: 'textarea', required: true },
     { key: 'keywords', label: 'Keywords', type: 'tags', placeholder: 'Add a keyword' },
     { key: 'element', label: 'Element', type: 'select', options: [...ELEMENTS, ''] },

@@ -44,7 +44,7 @@ export default function AdminPage() {
 
   if (!authenticated) {
     return (
-      <main className="min-h-screen flex items-center justify-center px-6">
+      <main className="min-h-screen flex items-center justify-center px-6 sm:px-10">
         <div className="w-full max-w-sm">
           <div className="text-center mb-8">
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-surface)]">

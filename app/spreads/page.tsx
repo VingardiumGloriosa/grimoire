@@ -4,11 +4,13 @@ import { useState, useEffect, useCallback } from 'react'
 import { createClient } from '@/lib/supabase'
 import type { SpreadTemplate, SpreadPosition } from '@/lib/types'
 import SpreadCanvas from '@/components/SpreadCanvas'
+import ConfirmDialog from '@/components/ConfirmDialog'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
 import { LayoutGrid, Plus, Pencil, Trash2, X, Loader2 } from 'lucide-react'
+import { toast } from 'sonner'
 
 type EditorMode = 'closed' | 'create' | 'edit'
 
@@ -18,6 +20,7 @@ export default function SpreadsPage() {
   const [spreads, setSpreads] = useState<SpreadTemplate[]>([])
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   // Editor state
   const [editorMode, setEditorMode] = useState<EditorMode>('closed')
@@ -64,6 +67,7 @@ export default function SpreadsPage() {
   const handleSave = async () => {
     if (!name.trim() || positions.length === 0) return
     setSaving(true)
+    setError(null)
 
     const payload = {
       name: name.trim(),
@@ -71,43 +75,77 @@ export default function SpreadsPage() {
       positions,
     }
 
-    if (editorMode === 'create') {
-      await fetch('/api/spreads', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      })
-    } else if (editorMode === 'edit' && editingId) {
-      await fetch('/api/spreads', {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: editingId, ...payload }),
-      })
-    }
+    try {
+      let res: Response
+      if (editorMode === 'create') {
+        res = await fetch('/api/spreads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        })
+      } else if (editorMode === 'edit' && editingId) {
+        res = await fetch('/api/spreads', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: editingId, ...payload }),
+        })
+      } else {
+        return
+      }
 
-    setSaving(false)
-    resetEditor()
-    fetchSpreads()
+      if (!res.ok) {
+        setError('Failed to save spread. Please try again.')
+        return
+      }
+
+      resetEditor()
+      fetchSpreads()
+    } catch {
+      setError('Failed to save spread. Please try again.')
+    } finally {
+      setSaving(false)
+    }
   }
 
-  const handleDelete = async (id: string) => {
-    await fetch(`/api/spreads?id=${id}`, { method: 'DELETE' })
-    fetchSpreads()
+  const [deleteTarget, setDeleteTarget] = useState<string | null>(null)
+  const [deletingSpread, setDeletingSpread] = useState(false)
+
+  const confirmDelete = async () => {
+    if (!deleteTarget) return
+    setError(null)
+    setDeletingSpread(true)
+
+    try {
+      const res = await fetch(`/api/spreads?id=${deleteTarget}`, { method: 'DELETE' })
+      if (!res.ok) {
+        setError('Failed to delete spread. Please try again.')
+        toast.error("Failed to delete spread")
+        return
+      }
+      toast.success("Spread deleted")
+      fetchSpreads()
+    } catch {
+      setError('Something went wrong. Please try again.')
+      toast.error("Failed to delete spread")
+    } finally {
+      setDeletingSpread(false)
+      setDeleteTarget(null)
+    }
   }
 
   if (loading) {
     return (
-      <main className="max-w-content mx-auto px-6 py-10 flex items-center justify-center min-h-[50vh]">
+      <main className="max-w-content mx-auto px-6 sm:px-10 py-10 flex items-center justify-center min-h-[50vh]">
         <Loader2 size={24} className="animate-spin text-[var(--color-text-muted)]" />
       </main>
     )
   }
 
   return (
-    <main className="max-w-content mx-auto px-6 py-10">
+    <main className="max-w-content mx-auto px-6 sm:px-10 py-10">
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="font-display text-4xl">Spread Templates</h1>
+          <h1 className="font-display text-2xl sm:text-4xl">Spread Templates</h1>
           <p className="mt-1 font-body text-sm text-[var(--color-text-muted)]">
             Create and manage your spread layouts.
           </p>
@@ -122,6 +160,11 @@ export default function SpreadsPage() {
           </Button>
         )}
       </div>
+
+      {/* Error display */}
+      {error && (
+        <p className="font-body text-sm text-blush text-center py-2 mb-4">{error}</p>
+      )}
 
       {/* Editor */}
       {editorMode !== 'closed' && (
@@ -231,7 +274,7 @@ export default function SpreadsPage() {
                     <Pencil size={16} strokeWidth={1.5} />
                   </button>
                   <button
-                    onClick={() => handleDelete(spread.id)}
+                    onClick={() => setDeleteTarget(spread.id)}
                     className="p-2 rounded-md text-[var(--color-text-muted)] hover:text-blush hover:bg-blush/10 transition-colors"
                   >
                     <Trash2 size={16} strokeWidth={1.5} />
@@ -256,6 +299,15 @@ export default function SpreadsPage() {
           ))}
         </div>
       )}
+
+      <ConfirmDialog
+        open={deleteTarget !== null}
+        onOpenChange={(open) => { if (!open) setDeleteTarget(null) }}
+        title="Delete this spread?"
+        description="This action cannot be undone. Existing readings using this spread will not be affected."
+        onConfirm={confirmDelete}
+        loading={deletingSpread}
+      />
     </main>
   )
 }

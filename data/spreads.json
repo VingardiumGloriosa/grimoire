@@ -37,7 +37,7 @@
   },
   {
     "name": "Horseshoe Spread",
-    "description": "A seven-card arc — more depth than a three-card reading, yet simpler than most advanced spreads.",
+    "description": "A seven-card arc offering more depth than a three-card reading, yet simpler than most advanced spreads.",
     "positions": [
       { "id": "p1", "label": "Past events", "x": 0, "y": 2, "order": 1 },
       { "id": "p2", "label": "Current state", "x": 1, "y": 1, "order": 2 },
@@ -65,7 +65,7 @@
   },
   {
     "name": "Celtic Cross",
-    "description": "The most well-known tarot spread — ten cards covering situation, challenges, past, future, and outcome.",
+    "description": "The most well-known tarot spread, with ten cards covering situation, challenges, past, future, and outcome.",
     "positions": [
       { "id": "p1", "label": "Present situation", "x": 1, "y": 2, "order": 1 },
       { "id": "p2", "label": "Challenge or crossing", "x": 1.5, "y": 2, "order": 2 },
@@ -86,10 +86,10 @@
       { "id": "p1", "label": "First significator", "x": 1, "y": 0, "order": 1 },
       { "id": "p2", "label": "Second significator", "x": 2, "y": 0, "order": 2 },
       { "id": "p3", "label": "Current influence", "x": 1.5, "y": 1, "order": 3 },
-      { "id": "p4", "label": "Waxing Moon — approaching", "x": 3, "y": 1, "order": 4 },
-      { "id": "p5", "label": "Waning Moon — receding", "x": 0, "y": 1, "order": 5 },
-      { "id": "p6", "label": "Dark — subconscious", "x": 0, "y": 2, "order": 6 },
-      { "id": "p7", "label": "Light — conscious", "x": 3, "y": 2, "order": 7 },
+      { "id": "p4", "label": "Waxing Moon: approaching", "x": 3, "y": 1, "order": 4 },
+      { "id": "p5", "label": "Waning Moon: receding", "x": 0, "y": 1, "order": 5 },
+      { "id": "p6", "label": "Dark: subconscious", "x": 0, "y": 2, "order": 6 },
+      { "id": "p7", "label": "Light: conscious", "x": 3, "y": 2, "order": 7 },
       { "id": "p8", "label": "Next step", "x": 1.5, "y": 2, "order": 8 },
       { "id": "p9", "label": "Secret of the High Priestess", "x": 1.5, "y": 3, "order": 9 }
     ]

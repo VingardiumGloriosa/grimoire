@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+const lookupTz = require('@photostructure/tz-lookup') as (lat: number, lon: number) => string
 
 interface NominatimResult {
   display_name: string
@@ -6,7 +7,7 @@ interface NominatimResult {
   lon: string
 }
 
-// GET — Geocode a location string via OpenStreetMap Nominatim
+// GET: Geocode a location string via OpenStreetMap Nominatim
 // ?q=London,UK
 export async function GET(request: NextRequest) {
   try {
@@ -41,11 +42,18 @@ export async function GET(request: NextRequest) {
 
     const raw: NominatimResult[] = await res.json()
 
-    const results = raw.map((r) => ({
-      display_name: r.display_name,
-      lat: parseFloat(r.lat),
-      lon: parseFloat(r.lon),
-    }))
+    const results = raw.map((r) => {
+      const lat = parseFloat(r.lat)
+      const lon = parseFloat(r.lon)
+      let timezone: string | null = null
+      try {
+        const tzResult = lookupTz(lat, lon)
+        if (tzResult) timezone = tzResult
+      } catch {
+        // Timezone lookup failed, leave as null
+      }
+      return { display_name: r.display_name, lat, lon, timezone }
+    })
 
     return NextResponse.json(results)
   } catch (err) {

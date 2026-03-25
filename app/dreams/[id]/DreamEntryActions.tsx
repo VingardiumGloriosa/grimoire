@@ -3,7 +3,9 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
+import ConfirmDialog from '@/components/ConfirmDialog'
 import { Pencil, Trash2, Loader2 } from 'lucide-react'
+import { toast } from 'sonner'
 
 interface DreamEntryActionsProps {
   entryId: string
@@ -12,20 +14,25 @@ interface DreamEntryActionsProps {
 export default function DreamEntryActions({ entryId }: DreamEntryActionsProps) {
   const router = useRouter()
   const [deleting, setDeleting] = useState(false)
+  const [showConfirm, setShowConfirm] = useState(false)
 
-  async function handleDelete() {
-    if (!confirm('Delete this dream entry? This cannot be undone.')) return
-
+  async function confirmDelete() {
     setDeleting(true)
     try {
       const res = await fetch(`/api/dreams/entries?id=${entryId}`, {
         method: 'DELETE',
       })
       if (res.ok) {
+        toast.success("Dream entry deleted")
         router.push('/dreams')
+      } else {
+        toast.error("Failed to delete dream entry")
       }
+    } catch {
+      toast.error("Failed to delete dream entry")
     } finally {
       setDeleting(false)
+      setShowConfirm(false)
     }
   }
 
@@ -43,7 +50,7 @@ export default function DreamEntryActions({ entryId }: DreamEntryActionsProps) {
       <Button
         variant="ghost"
         size="sm"
-        onClick={handleDelete}
+        onClick={() => setShowConfirm(true)}
         disabled={deleting}
         className="font-body text-[var(--color-blush)] hover:bg-[var(--color-blush)]/10"
       >
@@ -54,6 +61,15 @@ export default function DreamEntryActions({ entryId }: DreamEntryActionsProps) {
         )}
         Delete
       </Button>
+
+      <ConfirmDialog
+        open={showConfirm}
+        onOpenChange={setShowConfirm}
+        title="Delete this dream entry?"
+        description="This action cannot be undone."
+        onConfirm={confirmDelete}
+        loading={deleting}
+      />
     </div>
   )
 }

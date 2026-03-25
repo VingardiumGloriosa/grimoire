@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient as createSupabaseServerClient } from '@supabase/ssr'
 import { createServerClient } from '@/lib/supabase-server'
 import type { SpreadPosition } from '@/lib/types'
+import { validateBody, createSpreadSchema, updateSpreadSchema } from '@/lib/validation'
 
 function getUserFromRequest(request: NextRequest) {
   return createSupabaseServerClient(
@@ -19,7 +20,7 @@ function getUserFromRequest(request: NextRequest) {
   )
 }
 
-// POST — Create a new spread template
+// POST: Create a new spread template
 export async function POST(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -32,22 +33,9 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json()
-    const {
-      name,
-      description,
-      positions,
-    }: {
-      name: string
-      description: string | null
-      positions: SpreadPosition[]
-    } = body
-
-    if (!name || !positions || positions.length === 0) {
-      return NextResponse.json(
-        { error: 'Missing required fields: name, positions' },
-        { status: 400 }
-      )
-    }
+    const validation = validateBody(createSpreadSchema, body)
+    if (!validation.success) return validation.error
+    const { name, description, positions } = validation.data
 
     const supabase = createServerClient()
     const { data: spread, error } = await supabase
@@ -63,7 +51,7 @@ export async function POST(request: NextRequest) {
 
     if (error) {
       return NextResponse.json(
-        { error: `Failed to create spread: ${error.message}` },
+        { error: 'Failed to create spread' },
         { status: 500 }
       )
     }
@@ -75,7 +63,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// GET — List user's spread templates
+// GET: List user's spread templates
 export async function GET(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -87,28 +75,37 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
+    const { searchParams } = new URL(request.url)
+    const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10))
+    const limit = Math.min(100, Math.max(1, parseInt(searchParams.get('limit') || '50', 10)))
+    const from = (page - 1) * limit
+    const to = from + limit - 1
+
     const supabase = createServerClient()
-    const { data: spreads, error } = await supabase
+    const { data: spreads, error, count } = await supabase
       .from('tarot_spread_templates')
-      .select('*')
+      .select('*', { count: 'exact' })
       .eq('user_id', user.id)
       .order('created_at', { ascending: false })
+      .range(from, to)
 
     if (error) {
       return NextResponse.json(
-        { error: `Failed to fetch spreads: ${error.message}` },
+        { error: 'Failed to fetch spreads' },
         { status: 500 }
       )
     }
 
-    return NextResponse.json(spreads)
+    const response = NextResponse.json(spreads)
+    response.headers.set('X-Total-Count', String(count ?? 0))
+    return response
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Internal server error'
     return NextResponse.json({ error: message }, { status: 500 })
   }
 }
 
-// PATCH — Update a spread template
+// PATCH: Update a spread template
 export async function PATCH(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -121,24 +118,9 @@ export async function PATCH(request: NextRequest) {
     }
 
     const body = await request.json()
-    const {
-      id,
-      name,
-      description,
-      positions,
-    }: {
-      id: string
-      name: string
-      description: string | null
-      positions: SpreadPosition[]
-    } = body
-
-    if (!id || !name || !positions || positions.length === 0) {
-      return NextResponse.json(
-        { error: 'Missing required fields: id, name, positions' },
-        { status: 400 }
-      )
-    }
+    const validation = validateBody(updateSpreadSchema, body)
+    if (!validation.success) return validation.error
+    const { id, name, description, positions } = validation.data
 
     const supabase = createServerClient()
 
@@ -167,7 +149,7 @@ export async function PATCH(request: NextRequest) {
 
     if (error) {
       return NextResponse.json(
-        { error: `Failed to update spread: ${error.message}` },
+        { error: 'Failed to update spread' },
         { status: 500 }
       )
     }
@@ -179,7 +161,7 @@ export async function PATCH(request: NextRequest) {
   }
 }
 
-// DELETE — Delete a spread template
+// DELETE: Delete a spread template
 export async function DELETE(request: NextRequest) {
   try {
     const authClient = getUserFromRequest(request)
@@ -218,7 +200,7 @@ export async function DELETE(request: NextRequest) {
 
     if (error) {
       return NextResponse.json(
-        { error: `Failed to delete spread: ${error.message}` },
+        { error: 'Failed to delete spread' },
         { status: 500 }
       )
     }

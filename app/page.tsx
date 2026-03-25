@@ -43,13 +43,13 @@ const tarotModules = [
 const esotericModules = [
   {
     title: 'Herbology',
-    description: 'The green craft — herbs, their properties, and magical correspondences.',
+    description: 'The green craft: herbs, their properties, and magical correspondences.',
     href: '/herbology',
     icon: Leaf,
   },
   {
     title: 'Astrology',
-    description: 'The celestial language — planetary wisdom and daily guidance.',
+    description: 'The celestial language: planetary wisdom and daily guidance.',
     href: '/astrology',
     icon: Star,
   },
@@ -67,7 +67,7 @@ const esotericModules = [
   },
   {
     title: 'Moon Phases',
-    description: 'Track the lunar cycle and align your rituals.',
+    description: 'Track the lunar cycle and align your rituals with the celestial forces.',
     href: '/moon',
     icon: Moon,
   },
@@ -81,28 +81,31 @@ const esotericModules = [
 
 export default function DashboardPage() {
   return (
-    <main className="max-w-content mx-auto px-6 py-16">
+    <main className="max-w-content mx-auto px-6 sm:px-10 py-16">
       {/* Header */}
       <div className="text-center mb-16">
-        <div className="mx-auto w-[500px] h-[420px] overflow-hidden flex items-center justify-center">
+        <div className="mx-auto w-full max-w-[400px] flex items-center justify-center">
           <Image
-            src="/logo-dark.png"
+            src="/logo-dark-nobg.png"
             alt="Grimoire"
-            width={600}
-            height={600}
-            className="mix-blend-multiply scale-125 dark:hidden"
+            width={1012}
+            height={830}
+            className="w-full h-auto dark:hidden"
             priority
           />
           <Image
-            src="/logo-dark.png"
+            src="/logo-light-nobg.png"
             alt="Grimoire"
-            width={600}
-            height={600}
-            className="scale-125 hidden dark:block dark:invert dark:mix-blend-screen"
+            width={1029}
+            height={843}
+            className="w-full h-auto hidden dark:block"
             priority
           />
         </div>
-        <p className="-mt-4 font-body text-lg italic text-[var(--color-text-muted)]">
+        <h1 className="-mt-4 font-wordmark text-4xl sm:text-5xl tracking-wide text-charcoal">
+          Grimoire
+        </h1>
+        <p className="mt-2 font-body text-lg italic text-[var(--color-text-muted)]">
           Your personal divination companion
         </p>
       </div>

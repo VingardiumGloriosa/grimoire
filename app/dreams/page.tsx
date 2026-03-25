@@ -1,4 +1,7 @@
+import { pageMetadata } from '@/lib/metadata'
 import { createServerClient as createSupabaseServerClient } from '@supabase/ssr'
+
+export const metadata = pageMetadata('Dream Journal', 'Your personal dream log with symbol tracking.')
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
@@ -33,16 +36,23 @@ export default async function DreamsPage() {
     redirect('/auth')
   }
 
-  const { data: entries } = await supabase
-    .from('dream_entries')
-    .select('*')
+  const { data: entries, error, count } = await supabase
+    .from('dreams_entries')
+    .select('*', { count: 'exact' })
     .eq('user_id', user.id)
     .order('date', { ascending: false })
+    .range(0, 19)
+
+  if (error) {
+    console.error('Failed to load dream entries:', error.message)
+  }
+
+  const totalCount = count ?? (entries?.length ?? 0)
 
   return (
-    <main className="max-w-journal mx-auto px-6 py-10">
+    <main className="max-w-journal mx-auto px-6 sm:px-10 py-10">
       <div className="flex items-center justify-between mb-2">
-        <h1 className="font-display text-4xl">Dream Journal</h1>
+        <h1 className="font-display text-2xl sm:text-4xl">Dream Journal</h1>
         <Link
           href="/dreams/new"
           className="inline-flex items-center gap-1.5 rounded-md bg-[var(--color-primary)] px-4 py-2 font-body text-sm text-[var(--color-bg)] transition-colors hover:bg-[var(--color-primary-hover)]"
@@ -52,11 +62,11 @@ export default async function DreamsPage() {
         </Link>
       </div>
       <p className="font-body text-[var(--color-text-muted)] mb-8">
-        {entries && entries.length > 0
-          ? `${entries.length} dream${entries.length === 1 ? '' : 's'} recorded.`
+        {totalCount > 0
+          ? `${totalCount} dream${totalCount === 1 ? '' : 's'} recorded.`
           : 'Your dream journal is waiting.'}
       </p>
-      <DreamJournalList entries={(entries as DreamEntry[]) || []} />
+      <DreamJournalList entries={(entries as DreamEntry[]) || []} totalCount={totalCount} />
     </main>
   )
 }
