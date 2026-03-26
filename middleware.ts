@@ -54,7 +54,6 @@ export async function middleware(request: NextRequest) {
   } = await supabase.auth.getUser()
 
   const protectedPaths = [
-    '/reading',
     '/journal',
     '/spreads',
     '/herbology/blends',
@@ -80,7 +79,6 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/reading/:path*',
     '/journal/:path*',
     '/spreads/:path*',
     '/admin/:path*',

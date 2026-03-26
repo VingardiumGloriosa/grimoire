@@ -7,6 +7,11 @@ import type { ReadingCard } from '@/lib/types'
 // POST: Generate synthesis for a reading
 export async function POST(request: NextRequest) {
   try {
+    const clientIp = request.headers.get('x-forwarded-for')?.split(',')[0] || 'unknown'
+    if (!checkRateLimit(`interpret:${clientIp}`)) {
+      return NextResponse.json({ error: 'Too many requests. Try again later.' }, { status: 429 })
+    }
+
     const body = await request.json()
     const {
       spread_name,

@@ -45,15 +45,23 @@ export default async function BlendsPage() {
 
   return (
     <main className="max-w-content mx-auto px-6 sm:px-10 py-10">
+      <h1 className="font-display text-2xl sm:text-4xl mb-2">Herbology</h1>
+      <p className="font-body text-[var(--color-text-muted)] mb-4">
+        The green craft: herbs, their properties, and magical correspondences.
+      </p>
+      <nav className="flex gap-4 mb-8 font-body text-sm">
+        <Link href="/herbology" className="text-[var(--color-text-muted)] hover:text-forest transition-colors pb-1">
+          Herb Library
+        </Link>
+        <span className="text-forest font-medium border-b border-gold pb-1">My Blends</span>
+      </nav>
+
       <div className="flex items-center justify-between mb-8">
-        <div>
-          <h1 className="font-display text-2xl sm:text-4xl mb-2">Your Blends</h1>
-          <p className="font-body text-[var(--color-text-muted)]">
-            {totalCount > 0
-              ? `${totalCount} blend${totalCount === 1 ? '' : 's'} created.`
-              : 'Your herbal blends are waiting.'}
-          </p>
-        </div>
+        <p className="font-body text-[var(--color-text-muted)]">
+          {totalCount > 0
+            ? `${totalCount} blend${totalCount === 1 ? '' : 's'} created.`
+            : 'Your herbal blends are waiting.'}
+        </p>
         <Link href="/herbology/blends/new">
           <Button className="bg-forest text-parchment hover:bg-forest-deep font-body">
             <Plus size={16} strokeWidth={1.5} className="mr-2" />

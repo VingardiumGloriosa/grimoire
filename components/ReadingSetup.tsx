@@ -36,11 +36,13 @@ interface SetupData {
 interface ReadingSetupProps {
   spreads: SpreadTemplate[]
   onComplete: (data: SetupData) => void
+  isAuthenticated?: boolean
 }
 
 export default function ReadingSetup({
   spreads,
   onComplete,
+  isAuthenticated = true,
 }: ReadingSetupProps) {
   const today = new Date().toISOString().split("T")[0]
 
@@ -134,31 +136,33 @@ export default function ReadingSetup({
         </Select>
       </div>
 
-      {/* Visibility */}
-      <div className="space-y-2">
-        <Label className="font-body text-sm font-semibold text-charcoal">
-          Visibility
-        </Label>
-        <Select
-          value={visibility}
-          onValueChange={(v) => setVisibility(v as Visibility)}
-        >
-          <SelectTrigger className="bg-[var(--color-surface)] border-[var(--color-border)] font-body">
-            <SelectValue />
-          </SelectTrigger>
-          <SelectContent className="bg-[var(--color-surface)]">
-            <SelectItem value="private" className="font-body">
-              Private
-            </SelectItem>
-            <SelectItem value="public" className="font-body">
-              Public
-            </SelectItem>
-          </SelectContent>
-        </Select>
-        <p className="font-body text-xs text-warm-grey">
-          Private readings are visible only to you.
-        </p>
-      </div>
+      {/* Visibility — only shown for authenticated users */}
+      {isAuthenticated && (
+        <div className="space-y-2">
+          <Label className="font-body text-sm font-semibold text-charcoal">
+            Visibility
+          </Label>
+          <Select
+            value={visibility}
+            onValueChange={(v) => setVisibility(v as Visibility)}
+          >
+            <SelectTrigger className="bg-[var(--color-surface)] border-[var(--color-border)] font-body">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent className="bg-[var(--color-surface)]">
+              <SelectItem value="private" className="font-body">
+                Private
+              </SelectItem>
+              <SelectItem value="public" className="font-body">
+                Public
+              </SelectItem>
+            </SelectContent>
+          </Select>
+          <p className="font-body text-xs text-warm-grey">
+            Private readings are visible only to you.
+          </p>
+        </div>
+      )}
 
       {/* Spread Template */}
       <div className="space-y-2">

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { createServerClient } from '@/lib/supabase-server'
 import MoonRitualView from '@/components/MoonRitualView'
 import type { MoonRitual, MoonPhaseKey } from '@/lib/types'
@@ -36,9 +37,22 @@ export default async function PhaseGuidePage() {
 
   return (
     <main className="max-w-reading mx-auto px-6 py-10">
-      <h1 className="font-display text-4xl text-[var(--color-text)] mb-3">
-        Phase Guide
+      <h1 className="font-display text-2xl sm:text-4xl text-[var(--color-text)] mb-2">
+        Moon Phases
       </h1>
+      <p className="font-body text-[var(--color-text-muted)] mb-4">
+        Track lunar cycles and align with the moon.
+      </p>
+      <nav className="flex gap-4 mb-8 font-body text-sm">
+        <Link href="/moon" className="text-[var(--color-text-muted)] hover:text-forest transition-colors pb-1">
+          Phases
+        </Link>
+        <Link href="/moon/journal" className="text-[var(--color-text-muted)] hover:text-forest transition-colors pb-1">
+          Moon Journal
+        </Link>
+        <span className="text-forest font-medium border-b border-gold pb-1">Phase Guide</span>
+      </nav>
+
       <p className="font-body text-[var(--color-text-muted)] mb-8">
         Each lunar phase carries its own energy. Here is a guide to working with them.
       </p>

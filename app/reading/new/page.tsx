@@ -1,14 +1,16 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { createClient } from '@/lib/supabase'
 import type { SpreadTemplate, SpreadPosition, ReadingCard, TarotCard, Orientation, Visibility } from '@/lib/types'
+import type { User } from '@supabase/supabase-js'
 import ReadingSetup from '@/components/ReadingSetup'
 import CardPicker from '@/components/CardPicker'
 import SpreadLayout from '@/components/SpreadLayout'
+import PositionCard from '@/components/PositionCard'
 import { Button } from '@/components/ui/button'
-import { ArrowLeft, ArrowRight, Check, Loader2 } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Check, Loader2, LogIn } from 'lucide-react'
 
 interface SetupData {
   spreadTemplate: SpreadTemplate
@@ -18,10 +20,25 @@ interface SetupData {
   visibility: Visibility
 }
 
-type Step = 'setup' | 'cards' | 'review'
+interface PendingReading {
+  spread_name: string
+  spread_positions: SpreadPosition[]
+  cards: ReadingCard[]
+  intention: string | null
+  date: string
+  mood: string | null
+  visibility: Visibility
+  timestamp: number
+}
+
+const PENDING_READING_KEY = 'grimoire:pending-reading'
+const PENDING_READING_MAX_AGE = 24 * 60 * 60 * 1000 // 24 hours
+
+type Step = 'setup' | 'cards' | 'review' | 'complete'
 
 export default function NewReadingPage() {
   const router = useRouter()
+  const searchParams = useSearchParams()
   const supabase = createClient()
 
   const [step, setStep] = useState<Step>('setup')
@@ -31,10 +48,76 @@ export default function NewReadingPage() {
   const [submitting, setSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
 
+  // Auth state
+  const [user, setUser] = useState<User | null>(null)
+  const [authChecked, setAuthChecked] = useState(false)
+
   // Reading state
   const [setupData, setSetupData] = useState<SetupData | null>(null)
   const [selectedCards, setSelectedCards] = useState<ReadingCard[]>([])
   const [currentPositionIndex, setCurrentPositionIndex] = useState(0)
+
+  // Synthesis state (for unauthenticated complete step)
+  const [synthesis, setSynthesis] = useState<string | null>(null)
+
+  // Check auth state on mount
+  useEffect(() => {
+    supabase.auth.getUser().then(({ data: { user: u } }) => {
+      setUser(u)
+      setAuthChecked(true)
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // Restore pending reading after login
+  useEffect(() => {
+    if (!authChecked || !user) return
+    if (searchParams.get('restore') !== 'true') return
+
+    const raw = localStorage.getItem(PENDING_READING_KEY)
+    if (!raw) return
+
+    try {
+      const pending: PendingReading = JSON.parse(raw)
+
+      // Check expiry
+      if (Date.now() - pending.timestamp > PENDING_READING_MAX_AGE) {
+        localStorage.removeItem(PENDING_READING_KEY)
+        return
+      }
+
+      // Auto-save the pending reading
+      setSubmitting(true)
+      fetch('/api/readings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          spread_name: pending.spread_name,
+          spread_positions: pending.spread_positions,
+          cards: pending.cards,
+          intention: pending.intention,
+          date: pending.date,
+          mood: pending.mood,
+          visibility: pending.visibility,
+        }),
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error('Failed to save')
+          return res.json()
+        })
+        .then((data) => {
+          localStorage.removeItem(PENDING_READING_KEY)
+          router.push(`/reading/${data.id}`)
+        })
+        .catch(() => {
+          setSubmitting(false)
+          setSubmitError('Failed to save your reading. Please try again.')
+          localStorage.removeItem(PENDING_READING_KEY)
+        })
+    } catch {
+      localStorage.removeItem(PENDING_READING_KEY)
+    }
+  }, [authChecked, user, searchParams, router])
 
   // Fetch spreads and cards on mount
   useEffect(() => {
@@ -125,41 +208,108 @@ export default function NewReadingPage() {
   const handleSubmit = async () => {
     if (!setupData) return
     setSubmitting(true)
+    setSubmitError(null)
+
+    const readingPayload = {
+      spread_name: setupData.spreadTemplate.name,
+      spread_positions: setupData.spreadTemplate.positions,
+      cards: selectedCards,
+      intention: setupData.intention || null,
+      date: setupData.date,
+      mood: setupData.mood || null,
+      visibility: setupData.visibility,
+    }
 
     try {
-      const response = await fetch('/api/readings', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          spread_name: setupData.spreadTemplate.name,
-          spread_positions: setupData.spreadTemplate.positions,
-          cards: selectedCards,
-          intention: setupData.intention || null,
-          date: setupData.date,
-          mood: setupData.mood || null,
-          visibility: setupData.visibility,
-        }),
-      })
+      if (user) {
+        // Authenticated: save directly
+        const response = await fetch('/api/readings', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(readingPayload),
+        })
 
-      if (!response.ok) {
-        throw new Error('Failed to save reading')
+        if (!response.ok) throw new Error('Failed to save reading')
+
+        const data = await response.json()
+        router.push(`/reading/${data.id}`)
+      } else {
+        // Unauthenticated: get synthesis only, show inline
+        const response = await fetch('/api/interpret', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            spread_name: readingPayload.spread_name,
+            cards: readingPayload.cards,
+            intention: readingPayload.intention,
+            mood: readingPayload.mood,
+          }),
+        })
+
+        if (!response.ok) throw new Error('Failed to generate interpretation')
+
+        const data = await response.json()
+        setSynthesis(data.synthesis)
+        setStep('complete')
+        setSubmitting(false)
       }
-
-      const data = await response.json()
-      router.push(`/reading/${data.id}`)
     } catch {
       setSubmitting(false)
-      setSubmitError('Failed to save reading. Please try again.')
+      setSubmitError('Something went wrong. Please try again.')
     }
   }
 
-  if (loading) {
+  const handleSaveReading = () => {
+    if (!setupData) return
+
+    const pending: PendingReading = {
+      spread_name: setupData.spreadTemplate.name,
+      spread_positions: setupData.spreadTemplate.positions,
+      cards: selectedCards,
+      intention: setupData.intention || null,
+      date: setupData.date,
+      mood: setupData.mood || null,
+      visibility: setupData.visibility,
+      timestamp: Date.now(),
+    }
+
+    localStorage.setItem(PENDING_READING_KEY, JSON.stringify(pending))
+    router.push(`/auth?redirect=${encodeURIComponent('/reading/new?restore=true')}`)
+  }
+
+  // Render synthesis paragraphs with **bold** markdown
+  function renderWithBold(text: string) {
+    const parts = text.split(/\*\*(.+?)\*\*/g)
+    return parts.map((part, i) =>
+      i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+    )
+  }
+
+  if (loading || (searchParams.get('restore') === 'true' && !authChecked)) {
     return (
       <main className="max-w-reading mx-auto px-6 py-10 flex items-center justify-center min-h-[50vh]">
         <Loader2 size={24} className="animate-spin text-[var(--color-text-muted)]" />
       </main>
     )
   }
+
+  // Show a loading state while restoring a pending reading
+  if (searchParams.get('restore') === 'true' && user && submitting) {
+    return (
+      <main className="max-w-reading mx-auto px-6 py-10 flex flex-col items-center justify-center min-h-[50vh] gap-4">
+        <Loader2 size={24} className="animate-spin text-[var(--color-text-muted)]" />
+        <p className="font-body text-sm text-[var(--color-text-muted)]">Saving your reading...</p>
+      </main>
+    )
+  }
+
+  const synthesisParagraphs = synthesis
+    ? synthesis.split('\n\n').filter((p) => p.trim())
+    : []
+
+  const sortedCards = [...selectedCards].sort(
+    (a, b) => a.position_order - b.position_order
+  )
 
   return (
     <main className="max-w-content mx-auto px-6 sm:px-10 py-10">
@@ -170,11 +320,21 @@ export default function NewReadingPage() {
         <span className={step === 'cards' ? 'text-forest font-medium' : ''}>Cards</span>
         <span className="text-[var(--color-border)]">/</span>
         <span className={step === 'review' ? 'text-forest font-medium' : ''}>Review</span>
+        {step === 'complete' && (
+          <>
+            <span className="text-[var(--color-border)]">/</span>
+            <span className="text-forest font-medium">Reading</span>
+          </>
+        )}
       </div>
 
       {/* Setup Step */}
       {step === 'setup' && (
-        <ReadingSetup spreads={spreads} onComplete={handleSetupComplete} />
+        <ReadingSetup
+          spreads={spreads}
+          onComplete={handleSetupComplete}
+          isAuthenticated={!!user}
+        />
       )}
 
       {/* Card Selection Step */}
@@ -330,7 +490,7 @@ export default function NewReadingPage() {
               {submitting ? (
                 <>
                   <Loader2 size={16} className="mr-2 animate-spin" />
-                  Saving...
+                  {user ? 'Saving...' : 'Generating...'}
                 </>
               ) : (
                 <>
@@ -346,6 +506,89 @@ export default function NewReadingPage() {
               {submitError}
             </p>
           )}
+        </div>
+      )}
+
+      {/* Complete Step — unauthenticated reading result */}
+      {step === 'complete' && setupData && synthesis && (
+        <div className="max-w-reading mx-auto space-y-10">
+          {/* Header */}
+          <header className="space-y-3">
+            <h1 className="font-display text-4xl text-[var(--color-text)]">
+              {setupData.spreadTemplate.name}
+            </h1>
+            <div className="flex items-center gap-3">
+              <span className="font-body text-sm text-[var(--color-text-muted)]">
+                {new Date(setupData.date).toLocaleDateString('en-GB', {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric',
+                })}
+              </span>
+              {setupData.mood && (
+                <span className="rounded-full bg-sage-mist dark:bg-linen px-3 py-0.5 text-xs font-medium uppercase tracking-wider text-forest">
+                  {setupData.mood}
+                </span>
+              )}
+            </div>
+          </header>
+
+          {/* Intention */}
+          {setupData.intention && (
+            <div className="border-l-2 border-gold pl-4">
+              <p className="font-body text-lg italic text-[var(--color-text)] leading-relaxed">
+                {setupData.intention}
+              </p>
+            </div>
+          )}
+
+          {/* Synthesis */}
+          {synthesisParagraphs.length > 0 && (
+            <section className="space-y-4">
+              <div className="divider-ornament mb-2" aria-hidden="true" />
+              <h2 className="font-display text-2xl text-[var(--color-text)]">Synthesis</h2>
+              <div className="space-y-4">
+                {synthesisParagraphs.map((paragraph, i) => (
+                  <p
+                    key={i}
+                    className="font-body text-lg leading-relaxed text-[var(--color-text)]"
+                  >
+                    {renderWithBold(paragraph)}
+                  </p>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Cards */}
+          <section className="space-y-6">
+            <h2 className="font-display text-2xl text-[var(--color-text)]">The Cards</h2>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {sortedCards.map((card) => (
+                <PositionCard key={card.card_id} card={card} />
+              ))}
+            </div>
+          </section>
+
+          {/* Save CTA */}
+          <section className="pt-8">
+            <div className="divider-ornament mb-6" aria-hidden="true" />
+            <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg p-6 text-center space-y-4">
+              <h3 className="font-display text-xl text-[var(--color-text)]">
+                Keep this reading?
+              </h3>
+              <p className="font-body text-sm text-[var(--color-text-muted)] max-w-md mx-auto">
+                Sign in to save this reading to your journal, add personal notes, and revisit it anytime.
+              </p>
+              <Button
+                onClick={handleSaveReading}
+                className="bg-forest text-parchment hover:bg-forest-deep font-body"
+              >
+                <LogIn size={16} strokeWidth={1.5} className="mr-2" />
+                Sign in to save
+              </Button>
+            </div>
+          </section>
         </div>
       )}
     </main>

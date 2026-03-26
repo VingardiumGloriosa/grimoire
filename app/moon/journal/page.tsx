@@ -35,19 +35,33 @@ export default async function MoonJournalPage() {
 
   if (!user) {
     return (
-      <main className="max-w-reading mx-auto px-6 py-10 text-center">
-        <h1 className="font-display text-4xl text-[var(--color-text)] mb-4">
-          Moon Journal
+      <main className="max-w-reading mx-auto px-6 py-10">
+        <h1 className="font-display text-2xl sm:text-4xl text-[var(--color-text)] mb-2">
+          Moon Phases
         </h1>
-        <p className="font-body text-[var(--color-text-muted)] mb-6">
-          Sign in to begin tracking your lunar reflections.
+        <p className="font-body text-[var(--color-text-muted)] mb-4">
+          Track lunar cycles and align with the moon.
         </p>
-        <Link
-          href="/auth"
-          className="font-body text-sm text-[var(--color-secondary)] hover:text-[var(--color-primary)] underline underline-offset-4"
-        >
-          Sign in
-        </Link>
+        <nav className="flex gap-4 mb-8 font-body text-sm">
+          <Link href="/moon" className="text-[var(--color-text-muted)] hover:text-forest transition-colors pb-1">
+            Phases
+          </Link>
+          <span className="text-forest font-medium border-b border-gold pb-1">Moon Journal</span>
+          <Link href="/moon/guide" className="text-[var(--color-text-muted)] hover:text-forest transition-colors pb-1">
+            Phase Guide
+          </Link>
+        </nav>
+        <div className="text-center py-10">
+          <p className="font-body text-[var(--color-text-muted)] mb-6">
+            Sign in to begin tracking your lunar reflections.
+          </p>
+          <Link
+            href="/auth"
+            className="font-body text-sm text-[var(--color-secondary)] hover:text-[var(--color-primary)] underline underline-offset-4"
+          >
+            Sign in
+          </Link>
+        </div>
       </main>
     )
   }
@@ -69,10 +83,23 @@ export default async function MoonJournalPage() {
 
   return (
     <main className="max-w-reading mx-auto px-6 py-10">
+      <h1 className="font-display text-2xl sm:text-4xl text-[var(--color-text)] mb-2">
+        Moon Phases
+      </h1>
+      <p className="font-body text-[var(--color-text-muted)] mb-4">
+        Track lunar cycles and align with the moon.
+      </p>
+      <nav className="flex gap-4 mb-8 font-body text-sm">
+        <Link href="/moon" className="text-[var(--color-text-muted)] hover:text-forest transition-colors pb-1">
+          Phases
+        </Link>
+        <span className="text-forest font-medium border-b border-gold pb-1">Moon Journal</span>
+        <Link href="/moon/guide" className="text-[var(--color-text-muted)] hover:text-forest transition-colors pb-1">
+          Phase Guide
+        </Link>
+      </nav>
+
       <div className="flex items-center justify-between mb-8">
-        <h1 className="font-display text-4xl text-[var(--color-text)]">
-          Moon Journal
-        </h1>
         <Link href="/moon/journal/new">
           <Button className="bg-forest text-parchment hover:bg-forest-deep font-body">
             <Plus size={16} strokeWidth={1.5} className="mr-2" />

@@ -1,11 +1,11 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { createClient } from "@/lib/supabase"
 import type { Crystal, CrystalIntention } from "@/lib/types"
 import IntentionPicker from "@/components/IntentionPicker"
 import RitualPairingResult from "@/components/RitualPairingResult"
-import { ArrowLeft, Loader2 } from "lucide-react"
+import { Loader2 } from "lucide-react"
 import Link from "next/link"
 
 export default function RitualPairingPage() {
@@ -17,6 +17,7 @@ export default function RitualPairingPage() {
   const [collectionIds, setCollectionIds] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
   const [loadingStones, setLoadingStones] = useState(false)
+  const resultsRef = useRef<HTMLElement>(null)
 
   // Fetch intentions on mount
   useEffect(() => {
@@ -68,6 +69,9 @@ export default function RitualPairingPage() {
 
     setStones((data as Crystal[]) || [])
     setLoadingStones(false)
+    setTimeout(() => {
+      resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
+    }, 50)
   }
 
   if (loading) {
@@ -80,15 +84,21 @@ export default function RitualPairingPage() {
 
   return (
     <main className="max-w-content mx-auto px-6 py-10">
-      <Link
-        href="/crystals"
-        className="inline-flex items-center gap-1.5 font-body text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors mb-6"
-      >
-        <ArrowLeft size={14} strokeWidth={1.5} />
-        Back to Crystals
-      </Link>
+      <h1 className="font-display text-2xl sm:text-4xl mb-2">Crystals</h1>
+      <p className="font-body text-[var(--color-text-muted)] mb-4">
+        Stones, their properties, and healing correspondences.
+      </p>
+      <nav className="flex gap-4 mb-8 font-body text-sm">
+        <Link href="/crystals" className="text-[var(--color-text-muted)] hover:text-forest transition-colors pb-1">
+          Stone Library
+        </Link>
+        <Link href="/crystals/collection" className="text-[var(--color-text-muted)] hover:text-forest transition-colors pb-1">
+          My Collection
+        </Link>
+        <span className="text-forest font-medium border-b border-gold pb-1">Ritual Pairing</span>
+      </nav>
 
-      <h1 className="font-display text-4xl mb-2">Ritual Pairing</h1>
+      <h2 className="font-display text-2xl mb-2">Ritual Pairing</h2>
       <p className="font-body text-[var(--color-text-muted)] mb-8">
         Choose an intention and discover which stones support it.
       </p>
@@ -103,7 +113,7 @@ export default function RitualPairingPage() {
 
       {/* Results */}
       {selectedIntention && (
-        <section>
+        <section ref={resultsRef}>
           <div className="divider-ornament mb-6" aria-hidden="true" />
           <h2 className="font-display text-2xl text-[var(--color-text)] mb-2">
             Stones for {selectedIntention.name}
